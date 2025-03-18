@@ -34,8 +34,8 @@
   </head>
 
   <body>
-    <div class="py-2 bg-primary">
-      <div class="container">
+    <div class="py-0">
+      <!-- <div class="container">
         <div
           class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0"
         >
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light"
@@ -511,204 +511,166 @@
         background-image: url(images/bg_5x.jpg);
         background-size: cover;
         padding: 50px 0;
+        display: flex;
+        justify-content: center;
       "
     >
-      <div style="display: flex; justify-content: end">
-        <div
-          style="
-            width: 50%;
-            background: #007bff;
-            padding: 30px;
-            border-radius: 10px;
-            color: white;
-          "
-        >
-          <div style="text-align: center; margin-bottom: 20px">
-            <h2>Request A Quote</h2>
-            <p>
-              You can connect with us via email, send a message, request a quote
-              using the Request for Quotation (RFQ) document, and fill out this
-              form and submit it.
-            </p>
-          </div>
-          <form action="#">
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Child Name"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Father Name"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <select
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              >
-                <option value="">Select your program*</option>
-                <option value="Pre-Nursery">Pre-Nursery</option>
-                <option value="Nursery">Nursery</option>
-                <option value="LKG">LKG</option>
-                <option value="UKG">UKG</option>
-              </select>
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Phone"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Alternate Phone"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="email"
-                placeholder="Email ID"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <select
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              >
-                <option value="">Select gender*</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Address"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <select
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              >
-                <option value="">Select Enquiry type*</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Google">Google</option>
-                <option value="Website">Website</option>
-                <option value="Newspaper">Newspaper</option>
-                <option value="Banners/Hoardings">Banners/Hoardings</option>
-                <option value="Referral">Referral</option>
-                <option value="Outdoor Campaigns/Events">
-                  Outdoor Campaigns/Events
-                </option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div style="margin-bottom: 15px">
-              <textarea
-                placeholder="Message"
-                rows="2"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              ></textarea>
-            </div>
-            <div style="text-align: center">
-              <input
-                type="submit"
-                value="Request A Quote"
-                style="
-                  padding: 10px 20px;
-                  border: none;
-                  border-radius: 5px;
-                  background: white;
-                  color: #007bff;
-                  font-size: 16px;
-                  cursor: pointer;
-                  transition: background 0.3s, color 0.3s;
-                "
-                onmouseover="this.style.background='#0ba306'; this.style.color='white';"
-                onmouseout="this.style.background='white'; this.style.color='#007bff';"
-              />
-            </div>
-          </form>
+      <div
+        style="
+          width: 90%;
+          max-width: 600px;
+          background: #007bff;
+          padding: 30px;
+          border-radius: 10px;
+          color: white;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 20px">
+          <h2>Request A Quote</h2>
+          <p>
+            You can connect with us via email, send a message, request a quote
+            using the Request for Quotation (RFQ) document, and fill out this
+            form and submit it.
+          </p>
         </div>
+        <form action="#">
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Child Name"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Father Name"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            >
+              <option value="">Select your program*</option>
+              <option value="Pre-Nursery">Pre-Nursery</option>
+              <option value="Nursery">Nursery</option>
+              <option value="LKG">LKG</option>
+              <option value="UKG">UKG</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Phone"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="email"
+              placeholder="Email ID"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            >
+              <option value="">Select gender*</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Address"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <textarea
+              placeholder="Message"
+              rows="2"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            ></textarea>
+          </div>
+          <div style="text-align: center">
+            <input
+              type="submit"
+              value="Submit Request"
+              style="
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                background: white;
+                color: #007bff;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s, color 0.3s;
+              "
+              onmouseover="this.style.background='#0ba306'; this.style.color='white';"
+              onmouseout="this.style.background='white'; this.style.color='#007bff';"
+            />
+          </div>
+        </form>
       </div>
     </section>
 

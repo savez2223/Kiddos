@@ -34,8 +34,8 @@
   </head>
 
   <body>
-    <div class="py-2 bg-primary">
-      <div class="container">
+    <div class="py-0">
+      <!-- <div class="container">
         <div
           class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0"
         >
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light"
@@ -922,204 +922,166 @@
         background-image: url(images/bg_5x.jpg);
         background-size: cover;
         padding: 50px 0;
+        display: flex;
+        justify-content: center;
       "
     >
-      <div style="display: flex; justify-content: end">
-        <div
-          style="
-            width: 50%;
-            background: #007bff;
-            padding: 30px;
-            border-radius: 10px;
-            color: white;
-          "
-        >
-          <div style="text-align: center; margin-bottom: 20px">
-            <h2>Request A Quote</h2>
-            <p>
-              You can connect with us via email, send a message, request a quote
-              using the Request for Quotation (RFQ) document, and fill out this
-              form and submit it.
-            </p>
-          </div>
-          <form action="#">
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Child Name"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Father Name"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <select
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              >
-                <option value="">Select your program*</option>
-                <option value="Pre-Nursery">Pre-Nursery</option>
-                <option value="Nursery">Nursery</option>
-                <option value="LKG">LKG</option>
-                <option value="UKG">UKG</option>
-              </select>
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Phone"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Alternate Phone"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="email"
-                placeholder="Email ID"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <select
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              >
-                <option value="">Select gender*</option>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </div>
-            <div style="margin-bottom: 15px">
-              <input
-                type="text"
-                placeholder="Address"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              />
-            </div>
-            <div style="margin-bottom: 15px">
-              <select
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              >
-                <option value="">Select Enquiry type*</option>
-                <option value="Facebook">Facebook</option>
-                <option value="Instagram">Instagram</option>
-                <option value="Google">Google</option>
-                <option value="Website">Website</option>
-                <option value="Newspaper">Newspaper</option>
-                <option value="Banners/Hoardings">Banners/Hoardings</option>
-                <option value="Referral">Referral</option>
-                <option value="Outdoor Campaigns/Events">
-                  Outdoor Campaigns/Events
-                </option>
-                <option value="Other">Other</option>
-              </select>
-            </div>
-            <div style="margin-bottom: 15px">
-              <textarea
-                placeholder="Message"
-                rows="2"
-                style="
-                  width: 100%;
-                  padding: 10px;
-                  border: none;
-                  border-radius: 5px;
-                  background: #cce5ff;
-                  color: black;
-                "
-              ></textarea>
-            </div>
-            <div style="text-align: center">
-              <input
-                type="submit"
-                value="Submit Request"
-                style="
-                  padding: 10px 20px;
-                  border: none;
-                  border-radius: 5px;
-                  background: white;
-                  color: #007bff;
-                  font-size: 16px;
-                  cursor: pointer;
-                  transition: background 0.3s, color 0.3s;
-                "
-                onmouseover="this.style.background='#0ba306'; this.style.color='white';"
-                onmouseout="this.style.background='white'; this.style.color='#007bff';"
-              />
-            </div>
-          </form>
+      <div
+        style="
+          width: 90%;
+          max-width: 600px;
+          background: #007bff;
+          padding: 30px;
+          border-radius: 10px;
+          color: white;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 20px">
+          <h2>Request A Quote</h2>
+          <p>
+            You can connect with us via email, send a message, request a quote
+            using the Request for Quotation (RFQ) document, and fill out this
+            form and submit it.
+          </p>
         </div>
+        <form action="#">
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Child Name"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Father Name"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            >
+              <option value="">Select your program*</option>
+              <option value="Pre-Nursery">Pre-Nursery</option>
+              <option value="Nursery">Nursery</option>
+              <option value="LKG">LKG</option>
+              <option value="UKG">UKG</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Phone"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="email"
+              placeholder="Email ID"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <select
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            >
+              <option value="">Select gender*</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 15px">
+            <input
+              type="text"
+              placeholder="Address"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            />
+          </div>
+          <div style="margin-bottom: 15px">
+            <textarea
+              placeholder="Message"
+              rows="2"
+              style="
+                width: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background: #cce5ff;
+                color: black;
+              "
+            ></textarea>
+          </div>
+          <div style="text-align: center">
+            <input
+              type="submit"
+              value="Submit Request"
+              style="
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                background: white;
+                color: #007bff;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s, color 0.3s;
+              "
+              onmouseover="this.style.background='#0ba306'; this.style.color='white';"
+              onmouseout="this.style.background='white'; this.style.color='#007bff';"
+            />
+          </div>
+        </form>
       </div>
     </section>
 
@@ -1250,61 +1212,21 @@
           <div class="col-md-8 heading-section ftco-animate">
             <h2 class="mb-4"><span>Contact</span> Us</h2>
             <p>
-              Get in touch with us! Reach out via phone, email, or visit our
-              office. We're here to assist you with all your needs.
+              Find us easily on the map and visit our location for any
+              assistance you need.
             </p>
           </div>
         </div>
-        <div class="row d-flex align-items-center">
-          <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
-            <form action="#">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                />
-              </div>
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Email"
-                />
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject" />
-              </div>
-              <div class="form-group">
-                <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="7"
-                  class="form-control"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div class="form-group">
-                <input
-                  type="submit"
-                  value="Send Message"
-                  class="btn btn-primary py-3 px-5"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5770.25294010507!2d77.0026832039565!3d28.09937084600962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d327f5e7cf84d%3A0x103c193f28df5143!2sBus%20Station%20Nuh!5e1!3m2!1sen!2sin!4v1741282989981!5m2!1sen!2sin"
-              width="600"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+        <div class="d-flex justify-content-center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2804.018194156114!2d76.97740647442866!3d28.123101675946746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d32436aaaaaab%3A0xf93e7a52bb850865!2sMewat%20Engineering%20College%2C%20Nuh!5e1!3m2!1sen!2sin!4v1742306956342!5m2!1sen!2sin"
+            width="100%"
+            height="400"
+            style="border: 0; max-width: 800px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </section>
