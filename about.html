@@ -31,103 +31,336 @@
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      @keyframes typewriter {
+        0% {
+          width: 0;
+        }
+        50% {
+          width: 100%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0) translateX(-50%);
+        }
+        40% {
+          transform: translateY(-10px) translateX(-50%);
+        }
+        60% {
+          transform: translateY(-5px) translateX(-50%);
+        }
+      }
+      @keyframes slide {
+        0% {
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        40% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-15px);
+        }
+        60% {
+          transform: translateY(-7px);
+        }
+      }
+      @keyframes flip {
+        0% {
+          transform: rotateX(0deg);
+        }
+        50% {
+          transform: rotateX(180deg);
+        }
+        100% {
+          transform: rotateX(360deg);
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div class="py-0">
-      <!-- <div class="container">
-        <div
-          class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0"
-        >
-          <div class="col-lg-12 d-block">
-            <div class="row d-flex">
-              <div class="col-md-5 pr-4 d-flex topper align-items-center">
-                <div
-                  class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-map"></span>
-                </div>
-                <span class="text"
-                  >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA - 122107
-                </span>
-              </div>
-              <div class="col-md pr-4 d-flex topper align-items-center">
-                <div
-                  class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-paper-plane"></span>
-                </div>
-                <span class="text">googlaischool@email.com</span>
-              </div>
-              <div class="col-md pr-4 d-flex topper align-items-center">
-                <div
-                  class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-phone2"></span>
-                </div>
-                <span class="text">+91 8000007583</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </div>
+    <div class="py-0"></div>
     <nav
-      class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light"
-      id="ftco-navbar"
+      style="
+        background: linear-gradient(135deg, #ff5722, #0288d1);
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      "
     >
-      <div class="container d-flex align-items-center">
-        <a class="navbar-brand" href="index.html">
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          flex-wrap: wrap;
+        "
+      >
+        <!-- Logo -->
+        <a
+          href="index.html"
+          style="
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+          "
+          onmouseover="this.style.transform='scale(1.1)'"
+          onmouseout="this.style.transform='scale(1)'"
+        >
           <img
             src="./images/logo_school.jpg"
             alt="GOOGLAi SCHOOL"
-            height="46"
+            style="
+              height: 46px;
+              border-radius: 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            "
           />
         </a>
 
+        <!-- Toggler Button -->
         <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#ftco-nav"
-          aria-controls="ftco-nav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          style="
+            background: none;
+            border: none;
+            color: #fff;
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+          "
+          onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';"
         >
-          <span class="oi oi-menu"></span> Menu
+          <span style="margin-right: 5px">☰</span> Menu
         </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a href="index.html" class="nav-link pl-0">Home</a>
+        <!-- Navigation Links -->
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            flex-wrap: wrap;
+            gap: 10px;
+          "
+          id="ftco-nav"
+        >
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 15px;
+            "
+          >
+            <li style="position: relative">
+              <a
+                href="index.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Home</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
+            <li style="position: relative">
+              <a
+                href="about.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >About</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="teacher.html" class="nav-link">Teacher</a>
+            <li style="position: relative">
+              <a
+                href="teacher.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Teacher</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="courses.html" class="nav-link">Courses</a>
+            <li style="position: relative">
+              <a
+                href="courses.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Courses</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="blog.html" class="nav-link">Blog</a>
+            <li style="position: relative">
+              <a
+                href="Gallary.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Gallary</a
+              >
             </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
+            <li style="position: relative">
+              <a
+                href="contact.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Contact</a
+              >
             </li>
           </ul>
+          <!-- Academy Button -->
           <a
             href="./Academy.html"
-            class="btn btn-primary ml-3"
-            style="background-color: #0ba306; border-color: #00ffee"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background: #4caf50;
+              color: #fff;
+              border-radius: 25px;
+              text-decoration: none;
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 16px;
+              margin-left: 20px;
+              animation: pulse 2s infinite;
+              transition: background 0.3s ease;
+            "
+            onmouseover="this.style.background='#ff5722'"
+            onmouseout="this.style.background='#4caf50'"
+            >GOOGLAi Academy</a
           >
-            GOOGLAi Academy
-          </a>
         </div>
       </div>
     </nav>
+
+    <!-- Inline JavaScript for Mobile Toggle -->
+    <script>
+      window.addEventListener("resize", function () {
+        const nav = document.getElementById("ftco-nav");
+        const toggler = document.querySelector("button");
+        if (window.innerWidth <= 991) {
+          toggler.style.display = "block";
+          nav.style.display = "none";
+        } else {
+          toggler.style.display = "none";
+          nav.style.display = "flex";
+        }
+      });
+      // Trigger resize on load
+      window.dispatchEvent(new Event("resize"));
+    </script>
     <!-- END nav -->
 
     <section
@@ -154,142 +387,625 @@
     </section>
 
     <!-- // welcome section -->
-    <section class="ftco-section ftco-no-pt ftc-no-pb">
-      <div class="container">
-        <div class="row">
+    <section
+      style="
+        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+        padding: 40px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px">
+          <!-- About Section -->
           <div
-            class="col-md-5 order-md-last wrap-about py-5 wrap-about bg-light"
+            style="
+              flex: 1 1 40%;
+              order: 2;
+              background: #ffffff;
+              padding: 30px;
+              border-radius: 20px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            "
           >
-            <div class="text px-4 ftco-animate">
-              <h2 class="mb-4">Welcome to GOOGLAi SCHOOL</h2>
-              <p>
+            <div style="padding: 0 20px">
+              <h2
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  color: #0288d1;
+                  font-size: 32px;
+                  margin-bottom: 20px;
+                  display: inline-block;
+                "
+              >
+                <span
+                  style="display: inline-block; animation: bounce 2s infinite"
+                  >W</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.1s;
+                  "
+                  >e</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.2s;
+                  "
+                  >l</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.3s;
+                  "
+                  >c</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.4s;
+                  "
+                  >o</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.5s;
+                  "
+                  >m</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.6s;
+                  "
+                  >e</span
+                >
+                <span style="display: inline-block"> </span>
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.7s;
+                  "
+                  >t</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.8s;
+                  "
+                  >o</span
+                >
+                <span style="display: inline-block"> </span>
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 0.9s;
+                  "
+                  >G</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1s;
+                  "
+                  >O</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.1s;
+                  "
+                  >O</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.2s;
+                  "
+                  >G</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.3s;
+                  "
+                  >L</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.4s;
+                  "
+                  >A</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.5s;
+                  "
+                  >i</span
+                >
+                <span style="display: inline-block"> </span>
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.6s;
+                  "
+                  >S</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.7s;
+                  "
+                  >C</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.8s;
+                  "
+                  >H</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 1.9s;
+                  "
+                  >O</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 2s;
+                  "
+                  >O</span
+                >
+                <span
+                  style="
+                    display: inline-block;
+                    animation: bounce 2s infinite 2.1s;
+                  "
+                  >L</span
+                >
+              </h2>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #333;
+                  font-size: 16px;
+                  line-height: 1.6;
+                  margin-bottom: 15px;
+                "
+              >
                 GOOGLAi SCHOOL is an innovative and technologically advanced
                 educational institution that started its journey in 2024. Our
                 aim is to provide children with a safe, secure, and interactive
                 learning environment.
               </p>
-              <p>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #333;
+                  font-size: 16px;
+                  line-height: 1.6;
+                  margin-bottom: 15px;
+                "
+              >
                 Our school's curriculum is specially designed to take into
                 account each child's individual learning needs. At GOOGLAi
                 SCHOOL, we use advanced intelligent systems that make each
                 student's learning experience personalized and efficient.
               </p>
-              <p>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #333;
+                  font-size: 16px;
+                  line-height: 1.6;
+                  margin-bottom: 15px;
+                "
+              >
                 By using AI and advanced technologies in our school, our
                 AI-powered approach provides children with a dynamic and
                 adaptive learning environment where they can grow at their own
                 learning pace.
               </p>
               <p>
-                <a href="/about.html" class="btn btn-secondary px-4 py-3"
+                <a
+                  href="/about.html"
+                  style="
+                    display: inline-block;
+                    background: #0288d1;
+                    color: #fff;
+                    padding: 12px 25px;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    transition: background 0.3s ease;
+                  "
+                  onmouseover="this.style.background='#0277bd'"
+                  onmouseout="this.style.background='#0288d1'"
                   >Read More</a
                 >
               </p>
             </div>
           </div>
-          <div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-            <h2 class="mb-4">What We Offer</h2>
-            <p>
+
+          <!-- What We Offer Section -->
+          <div style="flex: 1 1 55%; padding: 30px 0">
+            <h2
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                color: #ff5722;
+                font-size: 32px;
+                margin-bottom: 20px;
+                display: inline-block;
+              "
+            >
+              <span style="display: inline-block; animation: bounce 2s infinite"
+                >W</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.1s;
+                "
+                >h</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.2s;
+                "
+                >a</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.3s;
+                "
+                >t</span
+              >
+              <span style="display: inline-block"> </span>
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.4s;
+                "
+                >W</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.5s;
+                "
+                >e</span
+              >
+              <span style="display: inline-block"> </span>
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.6s;
+                "
+                >O</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.7s;
+                "
+                >f</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.8s;
+                "
+                >f</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.9s;
+                "
+                >e</span
+              >
+              <span
+                style="display: inline-block; animation: bounce 2s infinite 1s"
+                >r</span
+              >
+            </h2>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                font-size: 16px;
+                line-height: 1.6;
+                margin-bottom: 30px;
+              "
+            >
               At GOOGLAi SCHOOL, we provide a safe, enriching, and well-equipped
               learning environment to help children build a brighter future.
             </p>
-            <div class="row mt-5">
-              <div class="col-lg-6">
-                <div class="services-2 d-flex">
+            <div style="display: flex; flex-wrap: wrap; gap: 20px">
+              <!-- Safety First -->
+              <div
+                style="
+                  flex: 1 1 45%;
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 15px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  transition: transform 0.3s ease;
+                "
+                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseout="this.style.transform='scale(1)'"
+              >
+                <div style="display: flex; align-items: flex-start">
                   <div
-                    class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"
+                    style="
+                      margin: 5px 15px 0 0;
+                      width: 50px;
+                      height: 50px;
+                      background: #ffca28;
+                      border-radius: 50%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
                   >
-                    <span class="flaticon-security"></span>
+                    <span
+                      class="flaticon-security"
+                      style="font-size: 30px; color: #fff"
+                    ></span>
                   </div>
-                  <div class="text">
-                    <h3>Safety First</h3>
-                    <p>
+                  <div>
+                    <h3
+                      style="
+                        font-family: 'Comic Sans MS', cursive;
+                        color: #ffca28;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      Safety First
+                    </h3>
+                    <p
+                      style="
+                        font-family: 'Arial', sans-serif;
+                        color: #333;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                      "
+                    >
                       We ensure a secure school environment with CCTV
                       surveillance and awareness programs to keep students safe.
                     </p>
-                    <ul>
-                      <li>Secure and comfortable atmosphere</li>
-                      <li>Awareness of safety protocols</li>
+                    <ul
+                      style="
+                        list-style: none;
+                        padding: 0;
+                        font-family: 'Arial', sans-serif;
+                        color: #666;
+                        font-size: 14px;
+                      "
+                    >
+                      <li style="margin-bottom: 5px">
+                        • Secure and comfortable atmosphere
+                      </li>
+                      <li>• Awareness of safety protocols</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="services-2 d-flex">
+              <!-- Regular Classes -->
+              <div
+                style="
+                  flex: 1 1 45%;
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 15px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  transition: transform 0.3s ease;
+                "
+                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseout="this.style.transform='scale(1)'"
+              >
+                <div style="display: flex; align-items: flex-start">
                   <div
-                    class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"
+                    style="
+                      margin: 5px 15px 0 0;
+                      width: 50px;
+                      height: 50px;
+                      background: #0288d1;
+                      border-radius: 50%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
                   >
-                    <span class="flaticon-reading"></span>
+                    <span
+                      class="flaticon-reading"
+                      style="font-size: 30px; color: #fff"
+                    ></span>
                   </div>
-                  <div class="text">
-                    <h3>Regular Classes</h3>
-                    <p>
+                  <div>
+                    <h3
+                      style="
+                        font-family: 'Comic Sans MS', cursive;
+                        color: #0288d1;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      Regular Classes
+                    </h3>
+                    <p
+                      style="
+                        font-family: 'Arial', sans-serif;
+                        color: #333;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                      "
+                    >
                       Consistent attendance fosters knowledge and skill
                       development.
                     </p>
-                    <ul>
-                      <li>Structured learning</li>
-                      <li>Face-to-face interaction</li>
+                    <ul
+                      style="
+                        list-style: none;
+                        padding: 0;
+                        font-family: 'Arial', sans-serif;
+                        color: #666;
+                        font-size: 14px;
+                      "
+                    >
+                      <li style="margin-bottom: 5px">• Structured learning</li>
+                      <li>• Face-to-face interaction</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-6">
-                <div class="services-2 d-flex">
+              <!-- Sufficient Classrooms -->
+              <div
+                style="
+                  flex: 1 1 45%;
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 15px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  transition: transform 0.3s ease;
+                "
+                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseout="this.style.transform='scale(1)'"
+              >
+                <div style="display: flex; align-items: flex-start">
                   <div
-                    class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"
+                    style="
+                      margin: 5px 15px 0 0;
+                      width: 50px;
+                      height: 50px;
+                      background: #ff5722;
+                      border-radius: 50%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
                   >
-                    <span class="flaticon-education"></span>
+                    <span
+                      class="flaticon-education"
+                      style="font-size: 30px; color: #fff"
+                    ></span>
                   </div>
-                  <div class="text">
-                    <h3>Sufficient Classrooms</h3>
-                    <p>
+                  <div>
+                    <h3
+                      style="
+                        font-family: 'Comic Sans MS', cursive;
+                        color: #ff5722;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      Sufficient Classrooms
+                    </h3>
+                    <p
+                      style="
+                        font-family: 'Arial', sans-serif;
+                        color: #333;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                      "
+                    >
                       Adequate space enhances learning, ensuring personalized
                       attention (1:20 teacher-student ratio).
                     </p>
-                    <ul>
-                      <li>Well-organized, comfortable environment</li>
-                      <li>Proper lighting and facilities</li>
+                    <ul
+                      style="
+                        list-style: none;
+                        padding: 0;
+                        font-family: 'Arial', sans-serif;
+                        color: #666;
+                        font-size: 14px;
+                      "
+                    >
+                      <li style="margin-bottom: 5px">
+                        • Well-organized, comfortable environment
+                      </li>
+                      <li>• Proper lighting and facilities</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <!-- <div class="col-lg-6">
-                <div class="services-2 d-flex">
+              <!-- Sports Facilities -->
+              <div
+                style="
+                  flex: 1 1 45%;
+                  background: #fff;
+                  padding: 20px;
+                  border-radius: 15px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  transition: transform 0.3s ease;
+                "
+                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseout="this.style.transform='scale(1)'"
+              >
+                <div style="display: flex; align-items: flex-start">
                   <div
-                    class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"
+                    style="
+                      margin: 5px 15px 0 0;
+                      width: 50px;
+                      height: 50px;
+                      background: #4caf50;
+                      border-radius: 50%;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                    "
                   >
-                    <span class="flaticon-jigsaw"></span>
+                    <span
+                      class="flaticon-kids"
+                      style="font-size: 30px; color: #fff"
+                    ></span>
                   </div>
-                  <div class="text">
-                    <h3>Creative Lessons</h3>
-                    <p>
-                      Innovative teaching methods, AI tools, and hands-on
-                      activities inspire creativity.
-                    </p>
-                    <ul>
-                      <li>Brainstorming & debates</li>
-                      <li>Arts, science experiments, and storytelling</li>
-                    </ul>
-                  </div>
-                </div>
-              </div> -->
-              <div class="col-lg-6">
-                <div class="services-2 d-flex">
-                  <div
-                    class="icon mt-2 mr-3 d-flex justify-content-center align-items-center"
-                  >
-                    <span class="flaticon-kids"></span>
-                  </div>
-                  <div class="text">
-                    <h3>Sports Facilities</h3>
-                    <p>
+                  <div>
+                    <h3
+                      style="
+                        font-family: 'Comic Sans MS', cursive;
+                        color: #4caf50;
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                      "
+                    >
+                      Sports Facilities
+                    </h3>
+                    <p
+                      style="
+                        font-family: 'Arial', sans-serif;
+                        color: #333;
+                        font-size: 14px;
+                        margin-bottom: 10px;
+                      "
+                    >
                       Physical education is prioritized with rooftop outdoor
                       areas and multi-use indoor facilities.
                     </p>
-                    <ul>
-                      <li>Design challenges & field trips</li>
-                      <li>Fitness and extracurricular engagement</li>
+                    <ul
+                      style="
+                        list-style: none;
+                        padding: 0;
+                        font-family: 'Arial', sans-serif;
+                        color: #666;
+                        font-size: 14px;
+                      "
+                    >
+                      <li style="margin-bottom: 5px">
+                        • Design challenges & field trips
+                      </li>
+                      <li>• Fitness and extracurricular engagement</li>
                     </ul>
                   </div>
                 </div>
@@ -301,70 +1017,251 @@
     </section>
 
     <section
-      class="ftco-section ftco-counter img"
-      id="section-counter"
-      style="background-image: url(images/bg_4.jpg)"
+      style="
+        background: url('images/bg_4.jpg') no-repeat center center;
+        background-size: cover;
+        position: relative;
+        padding: 60px 0;
+      "
       data-stellar-background-ratio="0.5"
     >
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-          <div
-            class="col-md-8 text-center heading-section heading-section-black ftco-animate"
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(33, 150, 243, 0.7);
+          z-index: 1;
+        "
+      ></div>
+      <div
+        style="
+          position: relative;
+          z-index: 2;
+          max-width: 1200px;
+          margin: 0 auto;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 40px; padding: 0 15px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 40px;
+              color: #ffeb3b;
+              margin-bottom: 20px;
+              display: inline-block;
+              perspective: 1000px;
+            "
           >
-            <h2 class="mb-4"><span>20 Years of</span> Experience</h2>
-            <p>
-              Separated they live in. A small river named Duden flows by their
-              place and supplies it with the necessary regelialia. It is a
-              paradisematic country
-            </p>
-          </div>
+            <span
+              style="
+                display: inline-block;
+                color: #ff5722;
+                transform-style: preserve-3d;
+                animation: flip 4s infinite;
+              "
+              >20 Years of</span
+            >
+            Experience
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #fff;
+              font-size: 18px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 0 auto;
+            "
+          >
+            Separated they live in. A small river named Duden flows by their
+            place and supplies it with the necessary regelialia. It is a
+            paradisematic country
+          </p>
         </div>
-        <div class="row d-md-flex align-items-center justify-content-center">
-          <div class="col-lg-10">
-            <div class="row d-md-flex align-items-center">
-              <div
-                class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18">
-                  <div class="icon"><span class="flaticon-doctor"></span></div>
-                  <div class="text">
-                    <strong class="number" data-number="18">0</strong>
-                    <span>Certified Teachers</span>
-                  </div>
-                </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+          "
+        >
+          <!-- Certified Teachers -->
+          <div
+            style="
+              flex: 1 1 22%;
+              min-width: 200px;
+              text-align: center;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                background: #ff5722;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+              "
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
               </div>
-              <div
-                class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18">
-                  <div class="icon"><span class="flaticon-doctor"></span></div>
-                  <div class="text">
-                    <strong class="number" data-number="351">0</strong>
-                    <span>Successful Kids</span>
-                  </div>
-                </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="18"
+                  >18</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Certified Teachers</span
+                >
               </div>
-              <div
-                class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18">
-                  <div class="icon"><span class="flaticon-doctor"></span></div>
-                  <div class="text">
-                    <strong class="number" data-number="564">0</strong>
-                    <span>Happy Parents</span>
-                  </div>
-                </div>
+            </div>
+          </div>
+          <!-- Successful Kids -->
+          <div
+            style="
+              flex: 1 1 22%;
+              min-width: 200px;
+              text-align: center;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                background: #0288d1;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+              "
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
               </div>
-              <div
-                class="col-md d-flex justify-content-center counter-wrap ftco-animate"
-              >
-                <div class="block-18">
-                  <div class="icon"><span class="flaticon-doctor"></span></div>
-                  <div class="text">
-                    <strong class="number" data-number="300">0</strong>
-                    <span>Awards Won</span>
-                  </div>
-                </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="351"
+                  >351</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Successful Kids</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Happy Parents -->
+          <div
+            style="
+              flex: 1 1 22%;
+              min-width: 200px;
+              text-align: center;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                background: #4caf50;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+              "
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
+              </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="564"
+                  >564</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Happy Parents</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Awards Won -->
+          <div
+            style="
+              flex: 1 1 22%;
+              min-width: 200px;
+              text-align: center;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                background: #ff4081;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+              "
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
+              </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="300"
+                  >300</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Awards Won</span
+                >
               </div>
             </div>
           </div>
@@ -372,206 +1269,591 @@
       </div>
     </section>
 
-    <section class="ftco-section testimony-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <span class="subheading">Testimonial</span>
-            <h2 class="mb-4"><span>What Parents</span> Says About Us</h2>
-            <p>
-              Separated they live in. A small river named Duden flows by their
-              place and supplies it with the necessary regelialia. It is a
-              paradisematic country
-            </p>
-          </div>
-        </div>
-        <div class="row ftco-animate justify-content-center">
-          <div class="col-md-12">
-            <div class="carousel-testimony owl-carousel">
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div
-                    class="user-img mr-4"
-                    style="background-image: url(images/teacher-1.jpg)"
-                  ></div>
-                  <div class="text ml-2 bg-light">
-                    <span
-                      class="quote d-flex align-items-center justify-content-center"
-                    >
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <p class="name">Racky Henderson</p>
-                    <span class="position">Father</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div
-                    class="user-img mr-4"
-                    style="background-image: url(images/teacher-2.jpg)"
-                  ></div>
-                  <div class="text ml-2 bg-light">
-                    <span
-                      class="quote d-flex align-items-center justify-content-center"
-                    >
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <p class="name">Henry Dee</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div
-                    class="user-img mr-4"
-                    style="background-image: url(images/teacher-3.jpg)"
-                  ></div>
-                  <div class="text ml-2 bg-light">
-                    <span
-                      class="quote d-flex align-items-center justify-content-center"
-                    >
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <p class="name">Mark Huff</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div
-                    class="user-img mr-4"
-                    style="background-image: url(images/teacher-4.jpg)"
-                  ></div>
-                  <div class="text ml-2 bg-light">
-                    <span
-                      class="quote d-flex align-items-center justify-content-center"
-                    >
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <p class="name">Rodel Golez</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="testimony-wrap d-flex">
-                  <div
-                    class="user-img mr-4"
-                    style="background-image: url(images/teacher-1.jpg)"
-                  ></div>
-                  <div class="text ml-2 bg-light">
-                    <span
-                      class="quote d-flex align-items-center justify-content-center"
-                    >
-                      <i class="icon-quote-left"></i>
-                    </span>
-                    <p>
-                      Far far away, behind the word mountains, far from the
-                      countries Vokalia and Consonantia, there live the blind
-                      texts.
-                    </p>
-                    <p class="name">Ken Bosh</p>
-                    <span class="position">Mother</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- request a quote  -->
+    <!-- // testimonial section -->
     <section
-      class="ftco-section"
       style="
-        background-image: url(images/bg_5x.jpg);
+        background: linear-gradient(135deg, #e0f7fa, #f8bbd0);
+        padding: 60px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div style="text-align: center; margin-bottom: 40px; padding: 0 15px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 40px;
+              color: #ff5722;
+              margin-bottom: 20px;
+              display: inline-block;
+            "
+          >
+            <span style="color: #0288d1">What Parents</span> Say About Us
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 18px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 0 auto;
+            "
+          >
+            Separated they live in. A small river named Duden flows by their
+            place and supplies it with the necessary regelialia. It is a
+            paradisematic country
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+          "
+        >
+          <!-- Testimonial 1 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              border-radius: 50px;
+              padding: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              position: relative;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <div style="display: flex; align-items: center">
+              <div
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: url('images/teacher-1x.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  border: 3px solid #ff5722;
+                "
+              ></div>
+              <div style="flex: 1">
+                <span
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    background: #ffeb3b;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: bounce 2s infinite;
+                  "
+                >
+                  <i
+                    class="icon-quote-left"
+                    style="font-size: 20px; color: #ff5722"
+                  ></i>
+                </span>
+                <p
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #666;
+                    font-size: 16px;
+                    margin: 20px 0 10px;
+                  "
+                >
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <p
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    color: #ff5722;
+                    font-size: 18px;
+                    margin: 0;
+                  "
+                >
+                  Racky Henderson
+                </p>
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #0288d1;
+                    font-size: 14px;
+                  "
+                  >Father</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              border-radius: 50px;
+              padding: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              position: relative;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <div style="display: flex; align-items: center">
+              <div
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: url('images/teacher-2x.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  border: 3px solid #0288d1;
+                "
+              ></div>
+              <div style="flex: 1">
+                <span
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    background: #ffeb3b;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: bounce 2s infinite;
+                  "
+                >
+                  <i
+                    class="icon-quote-left"
+                    style="font-size: 20px; color: #0288d1"
+                  ></i>
+                </span>
+                <p
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #666;
+                    font-size: 16px;
+                    margin: 20px 0 10px;
+                  "
+                >
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <p
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    color: #0288d1;
+                    font-size: 18px;
+                    margin: 0;
+                  "
+                >
+                  Henry Dee
+                </p>
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #ff5722;
+                    font-size: 14px;
+                  "
+                  >Mother</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              border-radius: 50px;
+              padding: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              position: relative;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <div style="display: flex; align-items: center">
+              <div
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: url('images/teacher-3x.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  border: 3px solid #4caf50;
+                "
+              ></div>
+              <div style="flex: 1">
+                <span
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    background: #ffeb3b;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: bounce 2s infinite;
+                  "
+                >
+                  <i
+                    class="icon-quote-left"
+                    style="font-size: 20px; color: #4caf50"
+                  ></i>
+                </span>
+                <p
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #666;
+                    font-size: 16px;
+                    margin: 20px 0 10px;
+                  "
+                >
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <p
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    color: #4caf50;
+                    font-size: 18px;
+                    margin: 0;
+                  "
+                >
+                  Mark Huff
+                </p>
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #ff5722;
+                    font-size: 14px;
+                  "
+                  >Mother</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 4 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              border-radius: 50px;
+              padding: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              position: relative;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <div style="display: flex; align-items: center">
+              <div
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: url('images/teacher-4x.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  border: 3px solid #ff4081;
+                "
+              ></div>
+              <div style="flex: 1">
+                <span
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    background: #ffeb3b;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: bounce 2s infinite;
+                  "
+                >
+                  <i
+                    class="icon-quote-left"
+                    style="font-size: 20px; color: #ff4081"
+                  ></i>
+                </span>
+                <p
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #666;
+                    font-size: 16px;
+                    margin: 20px 0 10px;
+                  "
+                >
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <p
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    color: #ff4081;
+                    font-size: 18px;
+                    margin: 0;
+                  "
+                >
+                  Rodel Golez
+                </p>
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #0288d1;
+                    font-size: 14px;
+                  "
+                  >Mother</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 5 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              border-radius: 50px;
+              padding: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              position: relative;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <div style="display: flex; align-items: center">
+              <div
+                style="
+                  width: 80px;
+                  height: 80px;
+                  background: url('images/teacher-1x.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border-radius: 50%;
+                  margin-right: 20px;
+                  border: 3px solid #ff5722;
+                "
+              ></div>
+              <div style="flex: 1">
+                <span
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 40px;
+                    height: 40px;
+                    background: #ffeb3b;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    animation: bounce 2s infinite;
+                  "
+                >
+                  <i
+                    class="icon-quote-left"
+                    style="font-size: 20px; color: #ff5722"
+                  ></i>
+                </span>
+                <p
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #666;
+                    font-size: 16px;
+                    margin: 20px 0 10px;
+                  "
+                >
+                  Far far away, behind the word mountains, far from the
+                  countries Vokalia and Consonantia, there live the blind texts.
+                </p>
+                <p
+                  style="
+                    font-family: 'Comic Sans MS', cursive;
+                    color: #ff5722;
+                    font-size: 18px;
+                    margin: 0;
+                  "
+                >
+                  Ken Bosh
+                </p>
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    color: #0288d1;
+                    font-size: 14px;
+                  "
+                  >Mother</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- // request a quote -->
+    <section
+      style="
+        background: url('images/bg_5x.jpg') no-repeat center center;
         background-size: cover;
-        padding: 50px 0;
+        position: relative;
+        padding: 60px 0;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 600px;
       "
     >
       <div
         style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            135deg,
+            rgba(255, 87, 34, 0.7),
+            rgba(33, 150, 243, 0.7)
+          );
+          z-index: 1;
+        "
+      ></div>
+      <div
+        style="
           width: 90%;
           max-width: 600px;
-          background: #007bff;
-          padding: 30px;
-          border-radius: 10px;
-          color: white;
+          background: #fff;
+          padding: 40px;
+          border-radius: 20px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          position: relative;
+          z-index: 2;
+          transition: transform 0.3s ease;
+          margin-right: 20px;
+          flex: 0 0 auto;
         "
+        onmouseover="this.style.transform='translateY(-10px)'"
+        onmouseout="this.style.transform='translateY(0)'"
       >
-        <div style="text-align: center; margin-bottom: 20px">
-          <h2>Request A Quote</h2>
-          <p>
+        <div style="text-align: center; margin-bottom: 25px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 36px;
+              color: #ff5722;
+              margin: 0;
+              animation: pulse 2s infinite;
+            "
+          >
+            Request A Quote
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 16px;
+              line-height: 1.6;
+              margin: 10px 0 0;
+            "
+          >
             You can connect with us via email, send a message, request a quote
             using the Request for Quotation (RFQ) document, and fill out this
             form and submit it.
           </p>
         </div>
-        <form action="#">
-          <div style="margin-bottom: 15px">
+        <form action="#" style="display: flex; flex-wrap: wrap; gap: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
               placeholder="Child Name"
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #ff5722;
+                border-radius: 10px;
+                background: #fff3e0;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#0288d1'"
+              onblur="this.style.borderColor='#ff5722'"
             />
           </div>
-          <div style="margin-bottom: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
               placeholder="Father Name"
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #0288d1;
+                border-radius: 10px;
+                background: #e0f7fa;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#ff5722'"
+              onblur="this.style.borderColor='#0288d1'"
             />
           </div>
-          <div style="margin-bottom: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <select
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #4caf50;
+                border-radius: 10px;
+                background: #c8e6c9;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#ff5722'"
+              onblur="this.style.borderColor='#4caf50'"
             >
               <option value="">Select your program*</option>
               <option value="Pre-Nursery">Pre-Nursery</option>
@@ -580,336 +1862,590 @@
               <option value="UKG">UKG</option>
             </select>
           </div>
-          <div style="margin-bottom: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
               placeholder="Phone"
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #ff4081;
+                border-radius: 10px;
+                background: #f8bbd0;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#0288d1'"
+              onblur="this.style.borderColor='#ff4081'"
             />
           </div>
-          <div style="margin-bottom: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="email"
               placeholder="Email ID"
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #ff5722;
+                border-radius: 10px;
+                background: #fff3e0;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#0288d1'"
+              onblur="this.style.borderColor='#ff5722'"
             />
           </div>
-          <div style="margin-bottom: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <select
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #0288d1;
+                border-radius: 10px;
+                background: #e0f7fa;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#ff5722'"
+              onblur="this.style.borderColor='#0288d1'"
             >
               <option value="">Select gender*</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
           </div>
-          <div style="margin-bottom: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
               placeholder="Address"
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #4caf50;
+                border-radius: 10px;
+                background: #c8e6c9;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#ff5722'"
+              onblur="this.style.borderColor='#4caf50'"
             />
           </div>
-          <div style="margin-bottom: 15px">
+          <div style="flex: 1 1 100%; margin-bottom: 15px">
             <textarea
               placeholder="Message"
-              rows="2"
+              rows="3"
               style="
                 width: 100%;
-                padding: 10px;
-                border: none;
-                border-radius: 5px;
-                background: #cce5ff;
-                color: black;
+                padding: 12px;
+                border: 2px solid #ff4081;
+                border-radius: 10px;
+                background: #f8bbd0;
+                color: #333;
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                outline: none;
+                resize: none;
+                transition: border-color 0.3s ease;
               "
+              onfocus="this.style.borderColor='#0288d1'"
+              onblur="this.style.borderColor='#ff4081'"
             ></textarea>
           </div>
-          <div style="text-align: center">
+          <div style="flex: 1 1 100%; text-align: center">
             <input
               type="submit"
               value="Submit Request"
               style="
-                padding: 10px 20px;
+                padding: 12px 25px;
                 border: none;
-                border-radius: 5px;
-                background: white;
-                color: #007bff;
-                font-size: 16px;
+                border-radius: 25px;
+                background: #ff5722;
+                color: #fff;
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 18px;
                 cursor: pointer;
-                transition: background 0.3s, color 0.3s;
+                transition: background 0.3s ease, transform 0.3s ease;
               "
-              onmouseover="this.style.background='#0ba306'; this.style.color='white';"
-              onmouseout="this.style.background='white'; this.style.color='#007bff';"
+              onmouseover="this.style.background='#0288d1'; this.style.transform='scale(1.1)'"
+              onmouseout="this.style.background='#ff5722'; this.style.transform='scale(1)'"
             />
           </div>
         </form>
       </div>
     </section>
 
-    <!-- <section class="ftco-gallery">
-      <div class="container-wrap">
-        <div class="row no-gutters">
-          <div class="col-md-3 ftco-animate">
-            <a
-              href="images/image_1.jpg"
-              class="gallery image-popup img d-flex align-items-center"
-              style="background-image: url(images/course-1.jpg)"
-            >
-              <div
-                class="icon mb-4 d-flex align-items-center justify-content-center"
+    <footer
+      style="
+        background: linear-gradient(135deg, #0288d1, #ff5722);
+        padding: 60px 0;
+        color: #fff;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px"
+        >
+          <!-- Contact Info -->
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 24px;
+                  color: #ffeb3b;
+                  margin-bottom: 20px;
+                  animation: bounce 2s infinite;
+                "
               >
-                <span class="icon-instagram"></span>
-              </div>
-            </a>
+                Have a Question?
+              </h2>
+              <ul style="list-style: none; padding: 0">
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <span style="font-size: 20px; color: #fff; margin-right: 10px"
+                    >📍</span
+                  >
+                  <span
+                    style="font-family: 'Arial', sans-serif; font-size: 16px"
+                    >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA -
+                    122107</span
+                  >
+                </li>
+                <li
+                  style="
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <a
+                    href="tel:+918000007583"
+                    style="
+                      text-decoration: none;
+                      color: #fff;
+                      display: flex;
+                      align-items: center;
+                    "
+                  >
+                    <span style="font-size: 20px; margin-right: 10px">📞</span>
+                    <span
+                      style="
+                        font-family: 'Arial', sans-serif;
+                        font-size: 16px;
+                        transition: color 0.3s ease;
+                      "
+                      onmouseover="this.style.color='#ffeb3b'"
+                      onmouseout="this.style.color='#fff'"
+                      >+91 8000007583</span
+                    >
+                  </a>
+                </li>
+                <li style="display: flex; align-items: center">
+                  <a
+                    href="mailto:googlaischool@email.com"
+                    style="
+                      text-decoration: none;
+                      color: #fff;
+                      display: flex;
+                      align-items: center;
+                    "
+                  >
+                    <span style="font-size: 20px; margin-right: 10px">✉️</span>
+                    <span
+                      style="
+                        font-family: 'Arial', sans-serif;
+                        font-size: 16px;
+                        transition: color 0.3s ease;
+                      "
+                      onmouseover="this.style.color='#ffeb3b'"
+                      onmouseout="this.style.color='#fff'"
+                      >googlaischool@email.com</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-3 ftco-animate">
-            <a
-              href="images/image_2.jpg"
-              class="gallery image-popup img d-flex align-items-center"
-              style="background-image: url(images/image_2.jpg)"
-            >
-              <div
-                class="icon mb-4 d-flex align-items-center justify-content-center"
-              >
-                <span class="icon-instagram"></span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 ftco-animate">
-            <a
-              href="images/image_3.jpg"
-              class="gallery image-popup img d-flex align-items-center"
-              style="background-image: url(images/image_3.jpg)"
-            >
-              <div
-                class="icon mb-4 d-flex align-items-center justify-content-center"
-              >
-                <span class="icon-instagram"></span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-3 ftco-animate">
-            <a
-              href="images/image_4.jpg"
-              class="gallery image-popup img d-flex align-items-center"
-              style="background-image: url(images/image_4.jpg)"
-            >
-              <div
-                class="icon mb-4 d-flex align-items-center justify-content-center"
-              >
-                <span class="icon-instagram"></span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
-    <footer class="ftco-footer ftco-bg-dark ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Have a Questions?</h2>
-              <div class="block-23 mb-3">
-                <ul>
-                  <li>
-                    <span class="icon icon-map-marker"></span
-                    ><span class="text"
-                      >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA - 122107
-                    </span>
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon icon-phone"></span
-                      ><span class="text">+91 8000007583</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"
-                      ><span class="icon icon-envelope"></span
-                      ><span class="text">googlaischool@email.com</span></a
-                    >
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
+          <!-- Recent Blog -->
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 24px;
+                  color: #ffeb3b;
+                  margin-bottom: 20px;
+                  animation: bounce 2s infinite;
+                "
+              >
+                Recent Blog
+              </h2>
+              <div style="display: flex; margin-bottom: 20px">
                 <a
-                  class="blog-img mr-4"
-                  style="background-image: url(images/image_1.jpg)"
+                  href="#"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: url('images/image_1.jpg') no-repeat center
+                      center;
+                    background-size: cover;
+                    border-radius: 5px;
+                    margin-right: 15px;
+                  "
                 ></a>
-                <div class="text">
-                  <h3 class="heading">
-                    <a href="#"
-                      >Even the all-powerful Pointing has no control about</a
+                <div>
+                  <h3
+                    style="
+                      font-family: 'Comic Sans MS', cursive;
+                      font-size: 16px;
+                      margin: 0 0 5px;
+                    "
+                  >
+                    <a
+                      href="#"
+                      style="
+                        color: #fff;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+                      "
+                      onmouseover="this.style.color='#ff5722'"
+                      onmouseout="this.style.color='#fff'"
+                      >How AI Helps Kids Learn Faster</a
                     >
                   </h3>
-                  <div class="meta">
-                    <div>
-                      <a href="#"
-                        ><span class="icon-calendar"></span> Dec 25, 2018</a
-                      >
-                    </div>
-                    <div>
-                      <a href="#"><span class="icon-person"></span> Admin</a>
-                    </div>
-                    <div>
-                      <a href="#"><span class="icon-chat"></span> 19</a>
-                    </div>
+                  <div
+                    style="
+                      font-family: 'Arial', sans-serif;
+                      font-size: 14px;
+                      color: #e0f7fa;
+                    "
+                  >
+                    <span style="margin-right: 10px">📅 Mar 20, 2025</span>
+                    <span style="margin-right: 10px">👤 Admin</span>
+                    <span>💬 5</span>
                   </div>
                 </div>
               </div>
-              <div class="block-21 mb-5 d-flex">
+              <div style="display: flex">
                 <a
-                  class="blog-img mr-4"
-                  style="background-image: url(images/image_2.jpg)"
+                  href="#"
+                  style="
+                    width: 60px;
+                    height: 60px;
+                    background: url('images/image_2.jpg') no-repeat center
+                      center;
+                    background-size: cover;
+                    border-radius: 5px;
+                    margin-right: 15px;
+                  "
                 ></a>
-                <div class="text">
-                  <h3 class="heading">
-                    <a href="#"
-                      >Even the all-powerful Pointing has no control about</a
+                <div>
+                  <h3
+                    style="
+                      font-family: 'Comic Sans MS', cursive;
+                      font-size: 16px;
+                      margin: 0 0 5px;
+                    "
+                  >
+                    <a
+                      href="#"
+                      style="
+                        color: #fff;
+                        text-decoration: none;
+                        transition: color 0.3s ease;
+                      "
+                      onmouseover="this.style.color='#0288d1'"
+                      onmouseout="this.style.color='#fff'"
+                      >Fun Coding Activities for Kids</a
                     >
                   </h3>
-                  <div class="meta">
-                    <div>
-                      <a href="#"
-                        ><span class="icon-calendar"></span> Dec 25, 2018</a
-                      >
-                    </div>
-                    <div>
-                      <a href="#"><span class="icon-person"></span> Admin</a>
-                    </div>
-                    <div>
-                      <a href="#"><span class="icon-chat"></span> 19</a>
-                    </div>
+                  <div
+                    style="
+                      font-family: 'Arial', sans-serif;
+                      font-size: 14px;
+                      color: #e0f7fa;
+                    "
+                  >
+                    <span style="margin-right: 10px">📅 Mar 18, 2025</span>
+                    <span style="margin-right: 10px">👤 Admin</span>
+                    <span>💬 4</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="/index.html"
-                    ><span class="ion-ios-arrow-round-forward mr-2"></span
-                    >Home</a
+          <!-- Links -->
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 24px;
+                  color: #ffeb3b;
+                  margin-bottom: 20px;
+                  animation: bounce 2s infinite;
+                "
+              >
+                Quick Links
+              </h2>
+              <ul style="list-style: none; padding: 0">
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/index.html"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Home</a
                   >
                 </li>
-                <li>
-                  <a href="/about.html"
-                    ><span class="ion-ios-arrow-round-forward mr-2"></span
-                    >About</a
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/about.html"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>About</a
                   >
                 </li>
-                <li>
-                  <a href="/career.html"
-                    ><span class="ion-ios-arrow-round-forward mr-2"></span
-                    >Career</a
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/career.html"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Career</a
                   >
                 </li>
-                <li>
-                  <a href="/courses.html"
-                    ><span class="ion-ios-arrow-round-forward mr-2"></span
-                    >Courses</a
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/courses.html"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Courses</a
                   >
                 </li>
-                <li>
-                  <a href="/contact.html"
-                    ><span class="ion-ios-arrow-round-forward mr-2"></span
-                    >Contact</a
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/contact.html"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Contact</a
                   >
                 </li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Subscribe Us!</h2>
-              <form action="#" class="subscribe-form">
-                <div class="form-group">
-                  <input
-                    type="text"
-                    class="form-control mb-2 text-center"
-                    placeholder="Enter email address"
-                  />
-                  <input
-                    type="submit"
-                    value="Subscribe"
-                    class="form-control submit px-3"
-                  />
-                </div>
+          <!-- Subscribe & Social -->
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 24px;
+                  color: #ffeb3b;
+                  margin-bottom: 20px;
+                  animation: bounce 2s infinite;
+                "
+              >
+                Subscribe Us!
+              </h2>
+              <form
+                action="#"
+                style="display: flex; flex-direction: column; gap: 10px"
+              >
+                <input
+                  type="text"
+                  placeholder="Enter email address"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 20px;
+                    background: #fff;
+                    color: #333;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    text-align: center;
+                    outline: none;
+                  "
+                />
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  style="
+                    width: 100%;
+                    padding: 12px;
+                    border: none;
+                    border-radius: 20px;
+                    background: #ff5722;
+                    color: #fff;
+                    font-family: 'Comic Sans MS', cursive;
+                    font-size: 16px;
+                    cursor: pointer;
+                    transition: background 0.3s ease;
+                  "
+                  onmouseover="this.style.background='#0288d1'"
+                  onmouseout="this.style.background='#ff5722'"
+                />
               </form>
             </div>
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
-              <ul
-                class="ftco-footer-social list-unstyled float-md-left float-lft mt-3"
+            <div>
+              <h2
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 24px;
+                  color: #ffeb3b;
+                  margin-bottom: 15px;
+                "
               >
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-twitter"></span></a>
+                Connect With Us
+              </h2>
+              <ul
+                style="list-style: none; padding: 0; display: flex; gap: 15px"
+              >
+                <li>
+                  <a
+                    href="#"
+                    style="
+                      display: block;
+                      width: 40px;
+                      height: 40px;
+                      background: #fff;
+                      border-radius: 50%;
+                      color: #0288d1;
+                      font-size: 20px;
+                      text-align: center;
+                      line-height: 40px;
+                      transition: transform 0.3s ease, background 0.3s ease;
+                    "
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    >𝕏</a
+                  >
                 </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-facebook"></span></a>
+                <li>
+                  <a
+                    href="#"
+                    style="
+                      display: block;
+                      width: 40px;
+                      height: 40px;
+                      background: #fff;
+                      border-radius: 50%;
+                      color: #0288d1;
+                      font-size: 20px;
+                      text-align: center;
+                      line-height: 40px;
+                      transition: transform 0.3s ease, background 0.3s ease;
+                    "
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    >f</a
+                  >
                 </li>
-                <li class="ftco-animate">
-                  <a href="#"><span class="icon-instagram"></span></a>
+                <li>
+                  <a
+                    href="#"
+                    style="
+                      display: block;
+                      width: 40px;
+                      height: 40px;
+                      background: #fff;
+                      border-radius: 50%;
+                      color: #0288d1;
+                      font-size: 20px;
+                      text-align: center;
+                      line-height: 40px;
+                      transition: transform 0.3s ease, background 0.3s ease;
+                    "
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    >📷</a
+                  >
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
-              <script>
-                document.write(new Date().getFullYear());
-              </script>
-              All rights reserved | Developed by
-              <a
-                href="https://zuridox.com"
-                target="_blank"
-                style="color: orange"
-                >Zuridox</a
-              >
-            </p>
-          </div>
+        <div style="text-align: center">
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              font-size: 14px;
+              color: #e0f7fa;
+              margin: 0;
+            "
+          >
+            Copyright ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            All rights reserved | Developed by
+            <a
+              href="https://zuridox.com"
+              target="_blank"
+              style="
+                color: #ffeb3b;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#fff'"
+              onmouseout="this.style.color='#ffeb3b'"
+              >Zuridox</a
+            >
+          </p>
         </div>
       </div>
     </footer>

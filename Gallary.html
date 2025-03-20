@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Consolidated Keyframes -->
+    <!-- Inline CSS Animation -->
     <style>
       @keyframes bounce {
         0%,
@@ -98,7 +98,7 @@
           onmouseout="this.style.transform='scale(1)'"
         >
           <img
-            src="./images/logo_academy.jpg"
+            src="./images/logo_school.jpg"
             alt="GOOGLAi SCHOOL"
             style="
               height: 46px;
@@ -210,9 +210,9 @@
                 >Courses</a
               >
             </li>
-            <li style="position: relative">
+            <!-- <li style="position: relative">
               <a
-                href="Gallary.html"
+                href="blog.html"
                 style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 18px;
@@ -223,9 +223,9 @@
                 "
                 onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Gallery</a
+                >Blog</a
               >
-            </li>
+            </li> -->
             <li style="position: relative">
               <a
                 href="contact.html"
@@ -243,6 +243,26 @@
               >
             </li>
           </ul>
+          <!-- Academy Button -->
+          <a
+            href="./Academy.html"
+            style="
+              display: inline-block;
+              padding: 10px 20px;
+              background: #4caf50;
+              color: #fff;
+              border-radius: 25px;
+              text-decoration: none;
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 16px;
+              margin-left: 20px;
+              animation: pulse 2s infinite;
+              transition: background 0.3s ease;
+            "
+            onmouseover="this.style.background='#ff5722'"
+            onmouseout="this.style.background='#4caf50'"
+            >GOOGLAi Academy</a
+          >
         </div>
       </div>
     </nav>
@@ -265,544 +285,450 @@
     </script>
     <!-- END nav -->
 
-    <!-- Hero Section -->
     <section
       style="
-        background: url('images/bg_2.jpg') no-repeat center center/cover;
-        position: relative;
-        padding: 100px 0;
+        background: linear-gradient(135deg, #fff3e0, #b2ebf2);
+        padding: 60px 0;
       "
     >
-      <div
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            135deg,
-            rgba(255, 87, 34, 0.7),
-            rgba(33, 150, 243, 0.7)
-          );
-          z-index: 1;
-        "
-      ></div>
-      <div
-        style="
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 15px;
-          position: relative;
-          z-index: 2;
-        "
-      >
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-          "
-        >
-          <div style="max-width: 900px">
-            <h1
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 60px">
+          <h1
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 48px;
+              color: #ff5722;
+              margin: 0;
+              animation: bounce 2s infinite;
+            "
+          >
+            <span style="color: #0288d1">GOOGLAi</span> Gallery
+          </h1>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 20px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 10px auto;
+            "
+          >
+            Explore the exciting events and moments that make GOOGLAi SCHOOL
+            special!
+          </p>
+        </div>
+
+        <!-- Section 1: Learning Moments -->
+        <div style="margin-bottom: 60px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 36px;
+              color: #0288d1;
+              text-align: center;
+              margin-bottom: 30px;
+              animation: pulse 2s infinite;
+            "
+          >
+            Learning Moments
+          </h2>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
+            "
+          >
+            <div
               style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 48px;
-                color: #ffeb3b;
-                margin-bottom: 15px;
-                animation: bounce 2s infinite;
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(-3deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
               "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(-3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
             >
-              Googlai Academy
-            </h1>
-            <p
+              <a
+                href="images/bg_2.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/bg_2.jpg') no-repeat center center;
+                  background-size: cover;
+                  border: 5px solid #0288d1;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
+              >
+                Math Olympiad Prep
+              </p>
+            </div>
+            <div
               style="
-                font-family: 'Arial', sans-serif;
-                font-size: 18px;
-                color: #fff;
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(2deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
               "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
             >
-              <span style="margin-right: 10px">
-                <a
-                  href="index.html"
-                  style="
-                    color: #ffeb3b;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                  "
-                  onmouseover="this.style.color='#fff'"
-                  onmouseout="this.style.color='#ffeb3b'"
-                  >Home ➔</a
-                >
-              </span>
-              <span>Academy ➔</span>
-            </p>
+              <a
+                href="images/learning_2.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/learning_2.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border: 5px solid #0288d1;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
+              >
+                Science Quiz Day
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- About Section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #e0f7fa, #fff3e0);
-        padding: 60px 0;
-        text-align: center;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <h2
-          style="
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 40px;
-            color: #ff5722;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-          "
-        >
-          GOOGLAi Academy
-        </h2>
-        <p
-          style="
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-          "
-        >
-          GOOGLAi ACADEMY is an innovative and technologically advanced
-          educational institution. We aim to provide children with a safe,
-          secure, and interactive learning environment that takes into account
-          the individual learning needs of each child. Our AI-powered approach
-          provides children with a dynamic and adaptive learning environment
-          where they can grow at their own pace.
-        </p>
-      </div>
-    </section>
-
-    <!-- Program Section -->
-    <section style="background: #fff; padding: 60px 0; text-align: center">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <h2
-          style="
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 40px;
-            color: #0288d1;
-            margin-bottom: 20px;
-          "
-        >
-          Our Program - i30 (Intelligent-30)
-        </h2>
-        <p
-          style="
-            font-family: 'Arial', sans-serif;
-            color: #666;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
-          "
-        >
-          The academy is running a program named (Intelligent-30) i30, coaching
-          30 children from Mewat, preparing them fully for competitive exams.
-        </p>
+        <!-- Section 2: Tech Adventures -->
         <div
           style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            background: linear-gradient(135deg, #e0f7fa, #fff);
+            padding: 40px 0;
+            margin-bottom: 60px;
+            border-radius: 20px;
           "
         >
+          <h2
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 36px;
+              color: #ff5722;
+              text-align: center;
+              margin-bottom: 30px;
+              animation: pulse 2s infinite;
+            "
+          >
+            Tech Adventures
+          </h2>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
           >
-            <h4
+            <div
               style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(-1deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
               "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(-1deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
             >
-              🎯 Who Can Apply?
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Students from <b style="color: #ff5722">5th and 8th grades</b> in
-              Mewat are eligible. We help them prepare for school entrance exams
-              in top government institutions.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
-              "
-            >
-              📚 Exam Preparation
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Our coaching covers
-              <b style="color: #0288d1"
-                >Jawahar Navodaya Vidyalaya, Jamia Millia Islamia, AMU, Sainik
-                School, Olympiad exams, and more</b
-              >.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #4caf50;
-                margin: 0 0 10px;
-              "
-            >
-              🚀 Holistic Development
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We provide
-              <b style="color: #4caf50"
-                >career counseling, motivation sessions, and competitive exam
-                guidance</b
+              <a
+                href="images/tech_1.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/tech_1.jpg') no-repeat center center;
+                  background-size: cover;
+                  border: 5px solid #ff5722;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
               >
-              to help students achieve their goals.
-            </p>
+                Coding Bootcamp
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(3deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
+            >
+              <a
+                href="images/tech_2.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/tech_2.jpg') no-repeat center center;
+                  background-size: cover;
+                  border: 5px solid #ff5722;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
+              >
+                Robotics Workshop
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Areas of Focus Section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #f8bbd0, #c8e6c9);
-        padding: 60px 0;
-        text-align: center;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <h2
-          style="
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 40px;
-            color: #ff4081;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-          "
-        >
-          Areas of Focus
-        </h2>
-        <p
-          style="
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
-          "
-        >
-          At GOOGLAi Academy, we focus on
-          <b style="color: #ff4081"
-            >academic excellence, skill development, and holistic education</b
+        <!-- Section 3: Outdoor Fun -->
+        <div style="margin-bottom: 60px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 36px;
+              color: #4caf50;
+              text-align: center;
+              margin-bottom: 30px;
+              animation: pulse 2s infinite;
+            "
           >
-          to prepare students for future success.
-        </p>
+            Outdoor Fun
+          </h2>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
+            "
+          >
+            <div
+              style="
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(-2deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(-2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
+            >
+              <a
+                href="images/outdoor_1.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/outdoor_1.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border: 5px solid #4caf50;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
+              >
+                Sports Day
+              </p>
+            </div>
+            <div
+              style="
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(1deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(1deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
+            >
+              <a
+                href="images/outdoor_2.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/outdoor_2.jpg') no-repeat center
+                    center;
+                  background-size: cover;
+                  border: 5px solid #4caf50;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
+              >
+                Nature Walk
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 4: Creative Arts -->
         <div
           style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            background: linear-gradient(135deg, #f8bbd0, #fff);
+            padding: 40px 0;
+            border-radius: 20px;
           "
         >
+          <h2
+            style="
+              font-family: 'Comic Sans MS', cursive;
+              font-size: 36px;
+              color: #ff4081;
+              text-align: center;
+              margin-bottom: 30px;
+              animation: pulse 2s infinite;
+            "
+          >
+            Creative Arts
+          </h2>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 20px;
+              justify-content: center;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
           >
-            <h4
+            <div
               style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(-3deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
               "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(-3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
             >
-              📖 Competitive Exam Training
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We ensure students are fully prepared for
-              <b style="color: #ff5722"
-                >school-level competitive exams (after 5th & 8th grade)</b
-              >.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
-              "
-            >
-              💻 Digital Literacy
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We equip students with
-              <b style="color: #0288d1">modern digital skills</b>, enabling them
-              to adapt to
-              <b style="color: #0288d1">technology-driven education</b>.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #4caf50;
-                margin: 0 0 10px;
-              "
-            >
-              🔬 STEM Education
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We emphasize
-              <b style="color: #4caf50"
-                >Science, Technology, Engineering, and Mathematics (STEM)</b
+              <a
+                href="images/arts_1.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/arts_1.jpg') no-repeat center center;
+                  background-size: cover;
+                  border: 5px solid #ff4081;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
               >
-              to enhance critical thinking and innovation.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
+                Art Exhibition
+              </p>
+            </div>
+            <div
               style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff4081;
-                margin: 0 0 10px;
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(2deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
               "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
             >
-              🌍 Holistic Development
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Our boarding facilities provide a
-              <b style="color: #ff4081">safe environment</b> where students gain
-              <b style="color: #ff4081">life skills, discipline, and values</b>.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
-              "
-            >
-              🛠 Practical Learning
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Students engage in
-              <b style="color: #ff5722">hands-on projects</b> that develop
-              <b style="color: #ff5722">problem-solving abilities</b> and
-              creativity.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
-              "
-            >
-              🌿 Organic Farming
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We introduce
-              <b style="color: #0288d1">agriculture-based learning</b> by
-              engaging students in
-              <b style="color: #0288d1">organic farming</b> on our campus.
-            </p>
+              <a
+                href="images/arts_2.jpg"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('images/arts_2.jpg') no-repeat center center;
+                  background-size: cover;
+                  border: 5px solid #ff4081;
+                  border-radius: 5px;
+                "
+              ></a>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 14px;
+                  text-align: center;
+                  margin: 10px 0 0;
+                "
+              >
+                Music Fest
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1310,6 +1236,5 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
