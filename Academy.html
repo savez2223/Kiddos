@@ -32,98 +32,39 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <!-- Consolidated Keyframes -->
     <style>
-      /* Global Styles */
-      body {
-        font-family: Arial, sans-serif;
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
       }
-
-      .section-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-      }
-
-      /* About Section */
-      .about-section {
-        background: url("https://source.unsplash.com/1600x900/?education,school")
-          no-repeat center center/cover;
-        color: rgba(0, 0, 0, 0.644);
-        padding: 60px 0;
-      }
-
-      .about-section p {
-        font-size: 1.2rem;
-        line-height: 1.8;
-      }
-
-      /* Program Section */
-      .program-section {
-        background-color: #f8f9fa;
-        padding: 100px 0;
-      }
-
-      .program-section .card {
-        border: none;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Focus Area Section */
-      .focus-section {
-        background: url("https://source.unsplash.com/1600x900/?students,technology")
-          no-repeat center center/cover;
-        color: rgba(2, 2, 2, 0.536);
-        padding: 100px 0;
-      }
-
-      .focus-section .card {
-        background: rgba(255, 255, 255, 0.1);
-        border: none;
-        color: rgba(2, 2, 2, 0.536);
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
       }
     </style>
   </head>
 
   <body>
-    <div class="py-0">
-      <!-- <div class="container">
-        <div
-          class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0"
-        >
-          <div class="col-lg-12 d-block">
-            <div class="row d-flex">
-              <div class="col-md-5 pr-4 d-flex topper align-items-center">
-                <div
-                  class="icon bg-fifth mr-2 d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-map"></span>
-                </div>
-                <span class="text"
-                  >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA - 122107
-                </span>
-              </div>
-              <div class="col-md pr-4 d-flex topper align-items-center">
-                <div
-                  class="icon bg-secondary mr-2 d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-paper-plane"></span>
-                </div>
-                <span class="text">googlaischool@email.com</span>
-              </div>
-              <div class="col-md pr-4 d-flex topper align-items-center">
-                <div
-                  class="icon bg-tertiary mr-2 d-flex justify-content-center align-items-center"
-                >
-                  <span class="icon-phone2"></span>
-                </div>
-                <span class="text">+91 8000007583</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    </div>
+    <div class="py-0"></div>
     <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark ftco_navbar ftco-navbar-light"
       id="ftco-navbar"
@@ -175,23 +116,79 @@
     </nav>
     <!-- END nav -->
 
+    <!-- Hero Section -->
     <section
-      class="hero-wrap hero-wrap-2"
-      style="background-image: url('images/bg_2.jpg')"
+      style="
+        background: url('images/bg_2.jpg') no-repeat center center/cover;
+        position: relative;
+        padding: 100px 0;
+      "
     >
-      <div class="overlay"></div>
-      <div class="container">
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            135deg,
+            rgba(255, 87, 34, 0.7),
+            rgba(33, 150, 243, 0.7)
+          );
+          z-index: 1;
+        "
+      ></div>
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+          position: relative;
+          z-index: 2;
+        "
+      >
         <div
-          class="row no-gutters slider-text align-items-center justify-content-center"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          "
         >
-          <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Googlai Academy</h1>
-            <p class="breadcrumbs">
-              <span class="mr-2"
-                ><a href="index.html"
-                  >Home <i class="ion-ios-arrow-forward"></i></a
-              ></span>
-              <span>Academy <i class="ion-ios-arrow-forward"></i></span>
+          <div style="max-width: 900px">
+            <h1
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 48px;
+                color: #ffeb3b;
+                margin-bottom: 15px;
+                animation: bounce 2s infinite;
+              "
+            >
+              Googlai Academy
+            </h1>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 18px;
+                color: #fff;
+              "
+            >
+              <span style="margin-right: 10px">
+                <a
+                  href="index.html"
+                  style="
+                    color: #ffeb3b;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                  "
+                  onmouseover="this.style.color='#fff'"
+                  onmouseout="this.style.color='#ffeb3b'"
+                  >Home ➔</a
+                >
+              </span>
+              <span>Academy ➔</span>
             </p>
           </div>
         </div>
@@ -199,138 +196,464 @@
     </section>
 
     <!-- About Section -->
-    <section class="about-section text-center">
-      <div class="container">
-        <h2 class="section-title bread">GOOGLAi Academy</h2>
-        <p>
+    <section
+      style="
+        background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+        padding: 60px 0;
+        text-align: center;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <h2
+          style="
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 40px;
+            color: #ff5722;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+          "
+        >
+          GOOGLAi Academy
+        </h2>
+        <p
+          style="
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+          "
+        >
           GOOGLAi ACADEMY is an innovative and technologically advanced
           educational institution. We aim to provide children with a safe,
-          secure and interactive learning environment that takes into account
+          secure, and interactive learning environment that takes into account
           the individual learning needs of each child. Our AI-powered approach
           provides children with a dynamic and adaptive learning environment
-          where they can grow at their own learning pace.
+          where they can grow at their own pace.
         </p>
       </div>
     </section>
 
     <!-- Program Section -->
-    <section class="program-section text-center">
-      <div class="container">
-        <h2 class="section-title">Our Program - i30 (Intelligent-30)</h2>
-        <p class="mb-5">
-          The academy is running a program, this program is named
-          (Intelligent-30) i30, and it means coaching 30 children from the whole
-          of Mewat, preparing them fully for competitive exams.
+    <section style="background: #fff; padding: 60px 0; text-align: center">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <h2
+          style="
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 40px;
+            color: #0288d1;
+            margin-bottom: 20px;
+          "
+        >
+          Our Program - i30 (Intelligent-30)
+        </h2>
+        <p
+          style="
+            font-family: 'Arial', sans-serif;
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px;
+          "
+        >
+          The academy is running a program named (Intelligent-30) i30, coaching
+          30 children from Mewat, preparing them fully for competitive exams.
         </p>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>🎯 Who Can Apply?</h4>
-              <p>
-                Students from
-                <b style="color: rgba(0, 0, 0, 0.692)">5th and 8th grades</b> in
-                Mewat are eligible. We help them prepare for school entrance
-                exams in top government institutions.
-              </p>
-            </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+          "
+        >
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #ff5722;
+                margin: 0 0 10px;
+              "
+            >
+              🎯 Who Can Apply?
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              Students from <b style="color: #ff5722">5th and 8th grades</b> in
+              Mewat are eligible. We help them prepare for school entrance exams
+              in top government institutions.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>📚 Exam Preparation</h4>
-              <p>
-                Our coaching covers
-                <b style="color: rgba(0, 0, 0, 0.692)"
-                  >Jawahar Navodaya Vidyalaya, Jamia Millia Islamia, AMU, Sainik
-                  School, Olympiad exams, and more</b
-                >.
-              </p>
-            </div>
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #0288d1;
+                margin: 0 0 10px;
+              "
+            >
+              📚 Exam Preparation
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              Our coaching covers
+              <b style="color: #0288d1"
+                >Jawahar Navodaya Vidyalaya, Jamia Millia Islamia, AMU, Sainik
+                School, Olympiad exams, and more</b
+              >.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>🚀 Holistic Development</h4>
-              <p>
-                We provide
-                <b style="color: rgba(0, 0, 0, 0.692)"
-                  >career counseling, motivation sessions, and competitive exam
-                  guidance
-                </b>
-                to help students achieve their goals.
-              </p>
-            </div>
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #4caf50;
+                margin: 0 0 10px;
+              "
+            >
+              🚀 Holistic Development
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              We provide
+              <b style="color: #4caf50"
+                >career counseling, motivation sessions, and competitive exam
+                guidance</b
+              >
+              to help students achieve their goals.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Areas of Focus Section -->
-    <section class="focus-section text-center">
-      <div class="container">
-        <h2 class="section-title">Areas of Focus</h2>
-        <p class="mb-5">
-          At GOOGLAi Academy, we focus on **academic excellence, skill
-          development, and holistic education** to prepare students for future
-          success.
+    <section
+      style="
+        background: linear-gradient(135deg, #f8bbd0, #c8e6c9);
+        padding: 60px 0;
+        text-align: center;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <h2
+          style="
+            font-family: 'Comic Sans MS', cursive;
+            font-size: 40px;
+            color: #ff4081;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+          "
+        >
+          Areas of Focus
+        </h2>
+        <p
+          style="
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 40px;
+          "
+        >
+          At GOOGLAi Academy, we focus on
+          <b style="color: #ff4081"
+            >academic excellence, skill development, and holistic education</b
+          >
+          to prepare students for future success.
         </p>
-
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>📖 Competitive Exam Training</h4>
-              <p>
-                We ensure students are fully prepared for **school-level
-                competitive exams (after 5th & 8th grade)**.
-              </p>
-            </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+          "
+        >
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #ff5722;
+                margin: 0 0 10px;
+              "
+            >
+              📖 Competitive Exam Training
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              We ensure students are fully prepared for
+              <b style="color: #ff5722"
+                >school-level competitive exams (after 5th & 8th grade)</b
+              >.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>💻 Digital Literacy</h4>
-              <p>
-                We equip students with **modern digital skills**, enabling them
-                to adapt to **technology-driven education**.
-              </p>
-            </div>
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #0288d1;
+                margin: 0 0 10px;
+              "
+            >
+              💻 Digital Literacy
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              We equip students with
+              <b style="color: #0288d1">modern digital skills</b>, enabling them
+              to adapt to
+              <b style="color: #0288d1">technology-driven education</b>.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>🔬 STEM Education</h4>
-              <p>
-                We emphasize **Science, Technology, Engineering, and Mathematics
-                (STEM)** to enhance critical thinking and innovation.
-              </p>
-            </div>
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #4caf50;
+                margin: 0 0 10px;
+              "
+            >
+              🔬 STEM Education
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              We emphasize
+              <b style="color: #4caf50"
+                >Science, Technology, Engineering, and Mathematics (STEM)</b
+              >
+              to enhance critical thinking and innovation.
+            </p>
           </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>🌍 Holistic Development</h4>
-              <p>
-                Our boarding facilities provide a **safe environment** where
-                students gain **life skills, discipline, and values**.
-              </p>
-            </div>
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              margin-top: 20px;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #ff4081;
+                margin: 0 0 10px;
+              "
+            >
+              🌍 Holistic Development
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              Our boarding facilities provide a
+              <b style="color: #ff4081">safe environment</b> where students gain
+              <b style="color: #ff4081">life skills, discipline, and values</b>.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>🛠 Practical Learning</h4>
-              <p>
-                Students engage in **hands-on projects** that develop
-                **problem-solving abilities** and creativity.
-              </p>
-            </div>
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              margin-top: 20px;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #ff5722;
+                margin: 0 0 10px;
+              "
+            >
+              🛠 Practical Learning
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              Students engage in
+              <b style="color: #ff5722">hands-on projects</b> that develop
+              <b style="color: #ff5722">problem-solving abilities</b> and
+              creativity.
+            </p>
           </div>
-          <div class="col-md-4">
-            <div class="card p-4">
-              <h4>🌿 Organic Farming</h4>
-              <p>
-                We introduce **agriculture-based learning** by engaging students
-                in **organic farming** on our academy campus.
-              </p>
-            </div>
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 280px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              margin-top: 20px;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h4
+              style="
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 22px;
+                color: #0288d1;
+                margin: 0 0 10px;
+              "
+            >
+              🌿 Organic Farming
+            </h4>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                margin: 0;
+              "
+            >
+              We introduce
+              <b style="color: #0288d1">agriculture-based learning</b> by
+              engaging students in
+              <b style="color: #0288d1">organic farming</b> on our campus.
+            </p>
           </div>
         </div>
       </div>
