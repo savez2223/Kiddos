@@ -31,6 +31,56 @@
   </head>
 
   <style>
+    .slider-item {
+      min-height: 600px; /* Default for laptops/desktops */
+    }
+
+    @media (max-width: 768px) {
+      .slider-item {
+        min-height: 400px; /* Adjusted for mobile */
+      }
+      .slider-item h1 {
+        font-size: 32px; /* Smaller heading for mobile */
+      }
+      .slider-item a {
+        padding: 10px 20px; /* Smaller button for mobile */
+        font-size: 16px;
+      }
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      40% {
+        opacity: 1;
+      }
+      60% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
     @keyframes typewriter {
       0% {
         width: 0;
@@ -329,7 +379,7 @@
               color: #fff;
               border-radius: 25px;
               text-decoration: none;
-              font-family: 'Comic Sans MS';
+              font-family: 'Comic Sans MS', cursive;
               font-size: 16px;
               margin-left: 20px;
               animation: pulse 2s infinite;
@@ -369,12 +419,12 @@
           background: url('images/banner_bg_1.jpg') no-repeat center
             center/cover;
           position: relative;
-          min-height: 600px;
           display: flex;
           align-items: center;
           justify-content: center;
           animation: slide 10s infinite;
         "
+        class="slider-item"
       >
         <div
           style="
@@ -444,13 +494,13 @@
           top: 0;
           left: 0;
           width: 100%;
-          min-height: 600px;
           display: flex;
           align-items: center;
           justify-content: center;
           opacity: 0;
           animation: slide 10s infinite 5s;
         "
+        class="slider-item"
       >
         <div
           style="
