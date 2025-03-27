@@ -1810,13 +1810,18 @@
             onmouseover="this.style.transform='scale(1.05)'"
             onmouseout="this.style.transform='scale(1)'"
           >
-            <div
-              style="
-                height: 200px;
-                background: url('images/teacher-1.jpg') no-repeat center center;
-                background-size: cover;
-              "
-            ></div>
+            <div style="width: 100%">
+              <img
+                src="images/teacher-1.jpg"
+                alt="Bianca Wilson"
+                style="
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  object-fit: contain;
+                "
+              />
+            </div>
             <div style="padding: 20px; text-align: center">
               <h3
                 style="
@@ -1914,6 +1919,7 @@
               </div>
             </div>
           </div>
+          <!-- Repeat similar changes for Teacher 2, 3, and 4 -->
           <!-- Teacher 2 -->
           <div
             style="
@@ -1928,13 +1934,18 @@
             onmouseover="this.style.transform='scale(1.05)'"
             onmouseout="this.style.transform='scale(1)'"
           >
-            <div
-              style="
-                height: 200px;
-                background: url('images/teacher-2.jpg') no-repeat center center;
-                background-size: cover;
-              "
-            ></div>
+            <div style="width: 100%">
+              <img
+                src="images/teacher-2.jpg"
+                alt="Mitch Parker"
+                style="
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  object-fit: contain;
+                "
+              />
+            </div>
             <div style="padding: 20px; text-align: center">
               <h3
                 style="
@@ -2046,13 +2057,18 @@
             onmouseover="this.style.transform='scale(1.05)'"
             onmouseout="this.style.transform='scale(1)'"
           >
-            <div
-              style="
-                height: 200px;
-                background: url('images/teacher-3.jpg') no-repeat center center;
-                background-size: cover;
-              "
-            ></div>
+            <div style="width: 100%">
+              <img
+                src="images/teacher-3.jpg"
+                alt="Stella Smith"
+                style="
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  object-fit: contain;
+                "
+              />
+            </div>
             <div style="padding: 20px; text-align: center">
               <h3
                 style="
@@ -2164,13 +2180,18 @@
             onmouseover="this.style.transform='scale(1.05)'"
             onmouseout="this.style.transform='scale(1)'"
           >
-            <div
-              style="
-                height: 200px;
-                background: url('images/teacher-4.jpg') no-repeat center center;
-                background-size: cover;
-              "
-            ></div>
+            <div style="width: 100%">
+              <img
+                src="images/teacher-4.jpg"
+                alt="Monshe Henderson"
+                style="
+                  width: 100%;
+                  height: auto;
+                  display: block;
+                  object-fit: contain;
+                "
+              />
+            </div>
             <div style="padding: 20px; text-align: center">
               <h3
                 style="
@@ -3450,10 +3471,11 @@
             form and submit it.
           </p>
         </div>
-        <form action="#" style="display: flex; flex-wrap: wrap; gap: 15px">
+        <form id="quoteForm" style="display: flex; flex-wrap: wrap; gap: 15px">
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
+              id="childName"
               placeholder="Child Name"
               style="
                 width: 100%;
@@ -3469,11 +3491,13 @@
               "
               onfocus="this.style.borderColor='#0288d1'"
               onblur="this.style.borderColor='#ff5722'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
+              id="fatherName"
               placeholder="Father Name"
               style="
                 width: 100%;
@@ -3489,10 +3513,12 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#0288d1'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <select
+              id="program"
               style="
                 width: 100%;
                 padding: 12px;
@@ -3507,6 +3533,7 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#4caf50'"
+              required
             >
               <option value="">Select your program*</option>
               <option value="Pre-Nursery">Pre-Nursery</option>
@@ -3517,7 +3544,8 @@
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
-              type="text"
+              type="tel"
+              id="phone"
               placeholder="Phone"
               style="
                 width: 100%;
@@ -3533,11 +3561,13 @@
               "
               onfocus="this.style.borderColor='#0288d1'"
               onblur="this.style.borderColor='#ff4081'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="email"
+              id="email"
               placeholder="Email ID"
               style="
                 width: 100%;
@@ -3553,10 +3583,12 @@
               "
               onfocus="this.style.borderColor='#0288d1'"
               onblur="this.style.borderColor='#ff5722'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <select
+              id="gender"
               style="
                 width: 100%;
                 padding: 12px;
@@ -3571,6 +3603,7 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#0288d1'"
+              required
             >
               <option value="">Select gender*</option>
               <option value="Male">Male</option>
@@ -3580,6 +3613,7 @@
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
+              id="address"
               placeholder="Address"
               style="
                 width: 100%;
@@ -3595,10 +3629,12 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#4caf50'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <textarea
+              id="message"
               placeholder="Message"
               rows="3"
               style="
@@ -5311,6 +5347,21 @@
                     ><span style="margin-right: 10px">➔</span>Contact</a
                   >
                 </li>
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/admin.html"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Admin</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -5516,5 +5567,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <!-- Import Firebase JS as a module -->
+    <script type="module" src="firebase//firebase.js"></script>
   </body>
 </html>

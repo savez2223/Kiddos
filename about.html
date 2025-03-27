@@ -2405,10 +2405,11 @@
             form and submit it.
           </p>
         </div>
-        <form action="#" style="display: flex; flex-wrap: wrap; gap: 15px">
+        <form id="quoteForm" style="display: flex; flex-wrap: wrap; gap: 15px">
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
+              id="childName"
               placeholder="Child Name"
               style="
                 width: 100%;
@@ -2424,11 +2425,13 @@
               "
               onfocus="this.style.borderColor='#0288d1'"
               onblur="this.style.borderColor='#ff5722'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
+              id="fatherName"
               placeholder="Father Name"
               style="
                 width: 100%;
@@ -2444,10 +2447,12 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#0288d1'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <select
+              id="program"
               style="
                 width: 100%;
                 padding: 12px;
@@ -2462,6 +2467,7 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#4caf50'"
+              required
             >
               <option value="">Select your program*</option>
               <option value="Pre-Nursery">Pre-Nursery</option>
@@ -2472,7 +2478,8 @@
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
-              type="text"
+              type="tel"
+              id="phone"
               placeholder="Phone"
               style="
                 width: 100%;
@@ -2488,11 +2495,13 @@
               "
               onfocus="this.style.borderColor='#0288d1'"
               onblur="this.style.borderColor='#ff4081'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="email"
+              id="email"
               placeholder="Email ID"
               style="
                 width: 100%;
@@ -2508,10 +2517,12 @@
               "
               onfocus="this.style.borderColor='#0288d1'"
               onblur="this.style.borderColor='#ff5722'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <select
+              id="gender"
               style="
                 width: 100%;
                 padding: 12px;
@@ -2526,6 +2537,7 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#0288d1'"
+              required
             >
               <option value="">Select gender*</option>
               <option value="Male">Male</option>
@@ -2535,6 +2547,7 @@
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <input
               type="text"
+              id="address"
               placeholder="Address"
               style="
                 width: 100%;
@@ -2550,10 +2563,12 @@
               "
               onfocus="this.style.borderColor='#ff5722'"
               onblur="this.style.borderColor='#4caf50'"
+              required
             />
           </div>
           <div style="flex: 1 1 100%; margin-bottom: 15px">
             <textarea
+              id="message"
               placeholder="Message"
               rows="3"
               style="
@@ -2777,6 +2792,7 @@
           </div>
 
           <!-- Founder Message -->
+
           <div
             style="
               flex: 1 1 65%;
@@ -2860,7 +2876,331 @@
         </div>
       </div>
     </section>
+    <!-- Add this after the closing </section> of the "Certified Teachers" section -->
+    <section
+      style="
+        background: linear-gradient(135deg, #e3f2fd, #b3e5fc);
+        padding: 40px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div style="text-align: center; margin-bottom: 40px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 36px;
+              color: #0288d1;
+              margin-bottom: 20px;
+              display: inline-block;
+              overflow: hidden;
+              white-space: nowrap;
+              animation: typewriter 3s steps(20) infinite;
+            "
+          >
+            <span style="color: #ff5722">Admission</span> Guidelines
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 18px;
+              line-height: 1.6;
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            Everything you need to know to join the GOOGLAI SCHOOL Family.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+          "
+        >
+          <!-- Guidelines Text -->
+          <div
+            style="
+              flex: 1 1 55%;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              padding: 30px;
+              min-width: 300px;
+            "
+          >
+            <h3
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                color: #ff5722;
+                font-size: 24px;
+                margin: 0 0 15px;
+              "
+            >
+              Policies & Requirements
+            </h3>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                line-height: 1.6;
+                margin: 0 0 15px;
+              "
+            >
+              Parents must follow the policies made by the schools. Please
+              inform the school authority about any pre-existing physical,
+              emotional issues or illnesses that the child may have or is likely
+              to have. You must allow the child to participate in events or
+              trips planned/organized by the school authority.
+            </p>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                line-height: 1.6;
+                margin: 0;
+              "
+            >
+              Parents must provide consent to the school authority to post their
+              child's photographs/videos taken in school or outside during any
+              school activity/event/trip in school or outside school on the
+              GOOGLAi official pages whether on social media or our own website
+              where it will be visible to the public.
+            </p>
+          </div>
+          <!-- Steps to Apply -->
+          <div
+            style="
+              flex: 1 1 35%;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              padding: 30px;
+              min-width: 300px;
+            "
+          >
+            <h3
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                color: #ff5722;
+                font-size: 24px;
+                margin: 0 0 15px;
+              "
+            >
+              Steps to Apply
+            </h3>
+            <ol
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #666;
+                font-size: 16px;
+                line-height: 1.6;
+                padding-left: 20px;
+                margin: 0;
+              "
+            >
+              <li style="margin-bottom: 10px">
+                Fill the school admission inquiry form on the website.
+              </li>
+              <li style="margin-bottom: 10px">
+                We will invite you to the nearest preschool.
+              </li>
+              <li style="margin-bottom: 10px">
+                Visit the school for a campus tour.
+              </li>
+              <li>Join the GOOGLAI SCHOOL Family.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Add this after the closing </section> of the "Admission Guidelines" section -->
+    <section
+      style="
+        background: linear-gradient(135deg, #f3e5f5, #ce93d8);
+        padding: 40px 0;
+        width: 100%;
+        box-sizing: border-box;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 40px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: clamp(24px, 5vw, 36px);
+              color: #0288d1;
+              margin-bottom: 20px;
+              display: inline-block;
+              overflow: hidden;
+              white-space: nowrap;
+              animation: typewriter 3s steps(20) infinite;
+            "
+          >
+            <span style="color: #ff5722">Teacher</span> Training Programme
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: clamp(16px, 3vw, 18px);
+              line-height: 1.6;
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            Empowering educators with world-class training for early childhood
+            education.
+          </p>
+        </div>
+        <div
+          style="
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: clamp(20px, 5vw, 30px);
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+          "
+        >
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #666;
+              font-size: clamp(14px, 2.5vw, 16px);
+              line-height: 1.6;
+              margin: 0 0 15px;
+            "
+          >
+            The Preschool Teacher Training Program is an initiative of GOOGLAI
+            School Learning. As a pioneer in ECCE (Early Childhood Care and
+            Education), we have set unmatched standards in the CDE (Child
+            Development and Education) space.
+          </p>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #666;
+              font-size: clamp(14px, 2.5vw, 16px);
+              line-height: 1.6;
+              margin: 0;
+            "
+          >
+            With the introduction of NEP regulating preschool education in
+            India, it is mandatory that all preschool teachers are trained in
+            early childhood education to be able to teach at the foundational
+            stage.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Add this before the "Certified Teachers" section -->
+    <section
+      style="
+        background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+        padding: 40px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div style="text-align: center; margin-bottom: 40px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 36px;
+              color: #0288d1;
+              margin-bottom: 20px;
+              display: inline-block;
+              overflow: hidden;
+              white-space: nowrap;
+              animation: typewriter 3s steps(20) infinite;
+            "
+          >
+            <span style="color: #ff5722">Child</span> Introduction
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 18px;
+              line-height: 1.6;
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            Nurturing young minds for a lifetime of learning and growth.
+          </p>
+        </div>
+        <div
+          style="
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+          "
+        >
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #666;
+              font-size: 16px;
+              line-height: 1.6;
+              margin: 0 0 15px;
+            "
+          >
+            Children receive their most important education even before the age
+            of six. Until this age, each morning for children is the dawn of
+            another wonderful adventure. Our focus is not only on developing
+            academic skills, but also intellectual, emotional, linguistic,
+            physical, social, and moral skills, which will ensure the all-round
+            development of children.
+          </p>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #666;
+              font-size: 16px;
+              line-height: 1.6;
+              margin: 0 0 15px;
+            "
+          >
+            We believe that children are active learners who learn best by
+            interacting with nature, other children, and adults in
+            child-centered activities. We provide opportunities for the child to
+            grow and develop while reading, listening, and playing.
+          </p>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #666;
+              font-size: 16px;
+              line-height: 1.6;
+              margin: 0;
+            "
+          >
+            Love and affection are the hallmarks of all these activities.
+            Child-friendly equipment, engaging toys, and games help the child to
+            listen and discover, imagine and create.
+          </p>
+        </div>
+      </div>
+    </section>
     <footer
       style="
         background: linear-gradient(135deg, #0288d1, #ff5722);
@@ -3363,5 +3703,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <!-- Import Firebase JS as a module -->
+    <script type="module" src="firebase//firebase.js"></script>
   </body>
 </html>
