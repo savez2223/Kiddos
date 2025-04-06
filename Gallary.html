@@ -1,100 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>GOOGLAi School - Gallery</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<head>
-  <title>Googlai School</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fredericka+the+Great"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-  <link rel="stylesheet" href="css/animate.css" />
-
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-  <link rel="stylesheet" href="css/magnific-popup.css" />
-
-  <link rel="stylesheet" href="css/aos.css" />
-
-  <link rel="stylesheet" href="css/ionicons.min.css" />
-
-  <link rel="stylesheet" href="css/flaticon.css" />
-  <link rel="stylesheet" href="css/icomoon.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Inline CSS Animation -->
-  <style>
-    @keyframes bounce {
-
-      0%,
-      20%,
-      50%,
-      80%,
-      100% {
-        transform: translateY(0);
+    <!-- Inline CSS Animation -->
+    <style>
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
       }
 
-      40% {
-        transform: translateY(-10px);
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
       }
 
-      60% {
-        transform: translateY(-5px);
-      }
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
+      /* Gallery-specific styles */
+      .gallery-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
       }
 
-      50% {
-        transform: scale(1.05);
+      .gallery-item {
+        flex: 1 1 22%;
+        min-width: 250px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
       }
 
-      100% {
-        transform: scale(1);
+      .gallery-item:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="py-0"></div>
-  <nav style="
+      .gallery-item img,
+      .gallery-item iframe {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border: 5px solid #0288d1;
+        border-radius: 5px;
+        pointer-events: none; /* Prevents direct interaction */
+      }
+
+      .gallery-item .overlay {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: 200px;
+        background: transparent;
+        z-index: 10; /* Places overlay above image/video */
+      }
+
+      /* Disable download in Magnific Popup */
+      .mfp-img {
+        pointer-events: none;
+      }
+      .mfp-container {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation (unchanged) -->
+    <nav
+      style="
         background: linear-gradient(135deg, #ff5722, #0288d1);
         padding: 15px 0;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         position: sticky;
         top: 0;
         z-index: 1000;
-      ">
-    <div style="
+      "
+    >
+      <div
+        style="
           max-width: 1200px;
           margin: 0 auto;
           display: flex;
           align-items: center;
           padding: 0 15px;
           flex-wrap: wrap;
-        ">
-      <!-- Logo -->
-      <a href="index.html" style="
+        "
+      >
+        <a
+          href="index.html"
+          style="
             display: flex;
             align-items: center;
             text-decoration: none;
             transition: transform 0.3s ease;
-          " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="./images/logo_school.jpg" alt="GOOGLAi SCHOOL" style="
+          "
+          onmouseover="this.style.transform='scale(1.1)'"
+          onmouseout="this.style.transform='scale(1)'"
+        >
+          <img
+            src="./images/logo_school.jpg"
+            alt="GOOGLAi SCHOOL"
+            style="
               height: 46px;
               border-radius: 5px;
               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            " />
-      </a>
-
-      <!-- Toggler Button -->
-      <button style="
+            "
+          />
+        </a>
+        <button
+          style="
             background: none;
             border: none;
             color: #fff;
@@ -104,73 +168,33 @@
             cursor: pointer;
             display: none;
           "
-        onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';">
-        <span style="margin-right: 5px">☰</span> Menu
-      </button>
-
-      <!-- Navigation Links -->
-      <div style="
+          onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';"
+        >
+          <span style="margin-right: 5px">☰</span> Menu
+        </button>
+        <div
+          style="
             display: flex;
             align-items: center;
             margin-left: auto;
             flex-wrap: wrap;
             gap: 10px;
-          " id="ftco-nav">
-        <ul style="
+          "
+          id="ftco-nav"
+        >
+          <ul
+            style="
               list-style: none;
               padding: 0;
               margin: 0;
               display: flex;
               flex-wrap: wrap;
               gap: 15px;
-            ">
-          <li style="position: relative">
-            <a href="index.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Home</a>
-          </li>
-          <li style="position: relative">
-            <a href="about.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">About</a>
-          </li>
-          <li style="position: relative">
-            <a href="teacher.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Teacher</a>
-          </li>
-          <li style="position: relative">
-            <a href="courses.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Courses</a>
-          </li>
-          <!-- <li style="position: relative">
+            "
+          >
+            <li>
               <a
-                href="blog.html"
+                href="index.html"
                 style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 18px;
@@ -181,23 +205,93 @@
                 "
                 onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Blog</a
+                >Home</a
               >
-            </li> -->
-          <li style="position: relative">
-            <a href="contact.html" style="
+            </li>
+            <li>
+              <a
+                href="about.html"
+                style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Contact</a>
-          </li>
-        </ul>
-        <!-- Academy Button -->
-        <a href="./Academy.html" style="
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="teacher.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Teacher</a
+              >
+            </li>
+            <li>
+              <a
+                href="courses.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Program</a
+              >
+            </li>
+            <li>
+              <a
+                href="gallery.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Gallery</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                style="
+                  font-family: 'Comic Sans MS', cursive;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <a
+            href="./Academy.html"
+            style="
               display: inline-block;
               padding: 10px 20px;
               background: #4caf50;
@@ -209,481 +303,667 @@
               margin-left: 20px;
               animation: pulse 2s infinite;
               transition: background 0.3s ease;
-            " onmouseover="this.style.background='#ff5722'" onmouseout="this.style.background='#4caf50'">GOOGLAi
-          Academy</a>
+            "
+            onmouseover="this.style.background='#ff5722'"
+            onmouseout="this.style.background='#4caf50'"
+            >GOOGLAi Academy</a
+          >
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- Inline JavaScript for Mobile Toggle -->
-  <script>
-    window.addEventListener("resize", function () {
-      const nav = document.getElementById("ftco-nav");
-      const toggler = document.querySelector("button");
-      if (window.innerWidth <= 991) {
-        toggler.style.display = "block";
-        nav.style.display = "none";
-      } else {
-        toggler.style.display = "none";
-        nav.style.display = "flex";
-      }
-    });
-    // Trigger resize on load
-    window.dispatchEvent(new Event("resize"));
-  </script>
-  <!-- END nav -->
-
-  <section style="
+    <!-- Gallery Section -->
+    <section
+      style="
         background: linear-gradient(135deg, #fff3e0, #b2ebf2);
         padding: 60px 0;
-      ">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-      <!-- Header -->
-      <div style="text-align: center; margin-bottom: 60px">
-        <h1 style="
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div style="text-align: center; margin-bottom: 60px">
+          <h1
+            style="
               font-family: 'Comic Sans MS', cursive;
               font-size: 48px;
               color: #ff5722;
               margin: 0;
               animation: bounce 2s infinite;
-            ">
-          <span style="color: #0288d1">GOOGLAi</span> Gallery
-        </h1>
-        <p style="
+            "
+          >
+            <span style="color: #0288d1">GOOGLAi</span> Gallery
+          </h1>
+          <p
+            style="
               font-family: 'Arial', sans-serif;
               color: #333;
               font-size: 20px;
               line-height: 1.6;
               max-width: 700px;
               margin: 10px auto;
-            ">
-          Explore the exciting events and moments that make GOOGLAi SCHOOL
-          special!
-        </p>
-      </div>
+            "
+          >
+            Relive the vibrant moments of our school through photos and videos!
+          </p>
+        </div>
 
-      <!-- Section 1: Learning Moments -->
-      <div style="margin-bottom: 60px">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #0288d1;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Learning Moments
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-3deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/bg_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/bg_2.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #0288d1;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Math Olympiad Prep
-            </p>
+        <!-- Gallery Grid -->
+        <div class="gallery-grid magnific-gallery">
+          <!-- YouTube Video -->
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              class="video-popup"
+            >
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="overlay"></div>
+            </a>
           </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(2deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/learning.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/learning.jpg') no-repeat center
-                    center;
-                  background-size: cover;
-                  border: 5px solid #0288d1;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Science Quiz Day
-            </p>
+
+          <!-- Cloudinary Images -->
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0026_kg4dqx.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0026_kg4dqx.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0013_d5a93j.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0013_d5a93j.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0002_mdujec.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0002_mdujec.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0037_icr0o0.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0037_icr0o0.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0036_xsh4gc.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0036_xsh4gc.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0035_hq7ewp.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0035_hq7ewp.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0034_uls2hz.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0034_uls2hz.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0033_otnter.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0033_otnter.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0032_fqg4v6.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0032_fqg4v6.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0031_eu7uac.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0031_eu7uac.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0030_qddjow.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0030_qddjow.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0029_db6ezo.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0029_db6ezo.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0028_fxv3ls.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0028_fxv3ls.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0027_wvbacq.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567275/IMG-20250328-WA0027_wvbacq.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0025_rogc72.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0025_rogc72.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0024_cwliaa.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0024_cwliaa.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0023_esjf0u.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0023_esjf0u.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0022_se718r.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0022_se718r.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0021_ctvhlt.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0021_ctvhlt.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0020_zllrfn.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0020_zllrfn.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0019_jbgi5i.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0019_jbgi5i.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0018_hrhbtg.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0018_hrhbtg.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0017_abud7d.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0017_abud7d.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0016_v02fgk.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0016_v02fgk.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0015_r8jeyf.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0015_r8jeyf.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0014_gjar0z.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0014_gjar0z.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="http://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0012_veoghh.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="http://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0012_veoghh.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0011_s2ft7m.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0011_s2ft7m.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0010_apwjve.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0010_apwjve.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0009_mof4fw.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0009_mof4fw.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0008_z8ums0.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0008_z8ums0.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567277/IMG-20250328-WA0007_cw45x7.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567277/IMG-20250328-WA0007_cw45x7.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0006_hhiu1y.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0006_hhiu1y.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0005_dchedo.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0005_dchedo.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0004_ljyenb.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0004_ljyenb.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0003_dvz5a9.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0003_dvz5a9.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Section 2: Tech Adventures -->
-      <div style="
-            background: linear-gradient(135deg, #e0f7fa, #fff);
-            padding: 40px 0;
-            margin-bottom: 60px;
-            border-radius: 20px;
-          ">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #ff5722;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Tech Adventures
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-1deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-1deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/tech_1.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/tech_1.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff5722;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Play Game
-            </p>
-          </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(3deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/tech_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/tech_2.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff5722;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Drawing
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 3: Outdoor Fun -->
-      <div style="margin-bottom: 60px">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #4caf50;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Outdoor Fun
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-2deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/outdoor_1.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/outdoor_1.jpg') no-repeat center
-                    center;
-                  background-size: cover;
-                  border: 5px solid #4caf50;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Sports Day
-            </p>
-          </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(1deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(1deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/outdoor_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/outdoor_2.jpg') no-repeat center
-                    center;
-                  background-size: cover;
-                  border: 5px solid #4caf50;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Nature Walk
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 4: Creative Arts -->
-      <div style="
-            background: linear-gradient(135deg, #f8bbd0, #fff);
-            padding: 40px 0;
-            border-radius: 20px;
-          ">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #ff4081;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Creative Arts
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-3deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/arts_1.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/arts_1.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff4081;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Art Exhibition
-            </p>
-          </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(2deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/arts_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/arts_2.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff4081;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Music Fest
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer style="
+    <!-- Footer (unchanged) -->
+    <footer
+      style="
         background: linear-gradient(135deg, #0288d1, #ff5722);
         padding: 60px 0;
         color: #fff;
-      ">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-      <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px">
-        <!-- Contact Info -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px"
+        >
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 24px;
                   color: #ffeb3b;
                   margin-bottom: 20px;
                   animation: bounce 2s infinite;
-                ">
-              Have a Question?
-            </h2>
-            <ul style="list-style: none; padding: 0">
-              <li style="
+                "
+              >
+                Have a Question?
+              </h2>
+              <ul style="list-style: none; padding: 0">
+                <li
+                  style="
                     display: flex;
                     align-items: center;
                     margin-bottom: 15px;
-                  ">
-                <span style="font-size: 20px; color: #fff; margin-right: 10px">📍</span>
-                <span style="font-family: 'Arial', sans-serif; font-size: 16px">HIDAYAT COLONY, WARD NO. 04, CITY NUH,
-                  HARYANA -
-                  122107</span>
-              </li>
-              <li style="
+                  "
+                >
+                  <span style="font-size: 20px; color: #fff; margin-right: 10px"
+                    >📍</span
+                  >
+                  <span
+                    style="font-family: 'Arial', sans-serif; font-size: 16px"
+                    >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA -
+                    122107</span
+                  >
+                </li>
+                <li
+                  style="
                     display: flex;
                     align-items: center;
                     margin-bottom: 15px;
-                  ">
-                <a href="tel:+918000007583" style="
+                  "
+                >
+                  <a
+                    href="tel:+918000007583"
+                    style="
                       text-decoration: none;
                       color: #fff;
                       display: flex;
                       align-items: center;
-                    ">
-                  <span style="font-size: 20px; margin-right: 10px">📞</span>
-                  <span style="
+                    "
+                  >
+                    <span style="font-size: 20px; margin-right: 10px">📞</span>
+                    <span
+                      style="
                         font-family: 'Arial', sans-serif;
                         font-size: 16px;
                         transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#ffeb3b'" onmouseout="this.style.color='#fff'">+91
-                    8000007583</span>
-                </a>
-              </li>
-              <li style="display: flex; align-items: center">
-                <a href="mailto:googlaischool@email.com" style="
+                      "
+                      onmouseover="this.style.color='#ffeb3b'"
+                      onmouseout="this.style.color='#fff'"
+                      >+91 8000007583</span
+                    >
+                  </a>
+                </li>
+                <li style="display: flex; align-items: center">
+                  <a
+                    href="mailto:googlaischool@email.com"
+                    style="
                       text-decoration: none;
                       color: #fff;
                       display: flex;
                       align-items: center;
-                    ">
-                  <span style="font-size: 20px; margin-right: 10px">✉️</span>
-                  <span style="
+                    "
+                  >
+                    <span style="font-size: 20px; margin-right: 10px">✉️</span>
+                    <span
+                      style="
                         font-family: 'Arial', sans-serif;
                         font-size: 16px;
                         transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'">googlaischool@email.com</span>
-                </a>
-              </li>
-            </ul>
+                      "
+                      onmouseover="this.style.color='#ffeb3b'"
+                      onmouseout="this.style.color='#fff'"
+                      >googlaischool@email.com</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-
-        <!-- Recent Blog -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 24px;
                   color: #ffeb3b;
                   margin-bottom: 20px;
                   animation: bounce 2s infinite;
-                ">
-              Recent Blog
-            </h2>
-            <div style="display: flex; margin-bottom: 20px">
-              <a href="#" style="
+                "
+              >
+                Recent Blog
+              </h2>
+              <div style="display: flex; margin-bottom: 20px">
+                <a
+                  href="#"
+                  style="
                     width: 60px;
                     height: 60px;
                     background: url('images/image_1.jpg') no-repeat center
@@ -691,33 +971,45 @@
                     background-size: cover;
                     border-radius: 5px;
                     margin-right: 15px;
-                  "></a>
-              <div>
-                <h3 style="
+                  "
+                ></a>
+                <div>
+                  <h3
+                    style="
                       font-family: 'Comic Sans MS', cursive;
                       font-size: 16px;
                       margin: 0 0 5px;
-                    ">
-                  <a href="#" style="
+                    "
+                  >
+                    <a
+                      href="#"
+                      style="
                         color: #fff;
                         text-decoration: none;
                         transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'">How AI Helps Kids
-                    Learn Faster</a>
-                </h3>
-                <div style="
+                      "
+                      onmouseover="this.style.color='#ff5722'"
+                      onmouseout="this.style.color='#fff'"
+                      >How AI Helps Kids Learn Faster</a
+                    >
+                  </h3>
+                  <div
+                    style="
                       font-family: 'Arial', sans-serif;
                       font-size: 14px;
                       color: #e0f7fa;
-                    ">
-                  <span style="margin-right: 10px">📅 Mar 20, 2025</span>
-                  <span style="margin-right: 10px">👤 Admin</span>
-                  <span>💬 5</span>
+                    "
+                  >
+                    <span style="margin-right: 10px">📅 Mar 20, 2025</span>
+                    <span style="margin-right: 10px">👤 Admin</span>
+                    <span>💬 5</span>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div style="display: flex">
-              <a href="#" style="
+              <div style="display: flex">
+                <a
+                  href="#"
+                  style="
                     width: 60px;
                     height: 60px;
                     background: url('images/image_2.jpg') no-repeat center
@@ -725,113 +1017,171 @@
                     background-size: cover;
                     border-radius: 5px;
                     margin-right: 15px;
-                  "></a>
-              <div>
-                <h3 style="
+                  "
+                ></a>
+                <div>
+                  <h3
+                    style="
                       font-family: 'Comic Sans MS', cursive;
                       font-size: 16px;
                       margin: 0 0 5px;
-                    ">
-                  <a href="#" style="
+                    "
+                  >
+                    <a
+                      href="#"
+                      style="
                         color: #fff;
                         text-decoration: none;
                         transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#0288d1'" onmouseout="this.style.color='#fff'">Fun Coding
-                    Activities for Kids</a>
-                </h3>
-                <div style="
+                      "
+                      onmouseover="this.style.color='#0288d1'"
+                      onmouseout="this.style.color='#fff'"
+                      >Fun Coding Activities for Kids</a
+                    >
+                  </h3>
+                  <div
+                    style="
                       font-family: 'Arial', sans-serif;
                       font-size: 14px;
                       color: #e0f7fa;
-                    ">
-                  <span style="margin-right: 10px">📅 Mar 18, 2025</span>
-                  <span style="margin-right: 10px">👤 Admin</span>
-                  <span>💬 4</span>
+                    "
+                  >
+                    <span style="margin-right: 10px">📅 Mar 18, 2025</span>
+                    <span style="margin-right: 10px">👤 Admin</span>
+                    <span>💬 4</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- Links -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 24px;
                   color: #ffeb3b;
                   margin-bottom: 20px;
                   animation: bounce 2s infinite;
-                ">
-              Quick Links
-            </h2>
-            <ul style="list-style: none; padding: 0">
-              <li style="margin-bottom: 10px">
-                <a href="/index.html" style="
+                "
+              >
+                Quick Links
+              </h2>
+              <ul style="list-style: none; padding: 0">
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/index.html"
+                    style="
                       color: #fff;
                       text-decoration: none;
                       font-family: 'Arial', sans-serif;
                       font-size: 16px;
                       transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Home</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/about.html" style="
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Home</a
+                  >
+                </li>
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/about.html"
+                    style="
                       color: #fff;
                       text-decoration: none;
                       font-family: 'Arial', sans-serif;
                       font-size: 16px;
                       transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>About</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/career.html" style="
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>About</a
+                  >
+                </li>
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/career.html"
+                    style="
                       color: #fff;
                       text-decoration: none;
                       font-family: 'Arial', sans-serif;
                       font-size: 16px;
                       transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Career</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/courses.html" style="
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Career</a
+                  >
+                </li>
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/courses.html"
+                    style="
                       color: #fff;
                       text-decoration: none;
                       font-family: 'Arial', sans-serif;
                       font-size: 16px;
                       transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Courses</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/contact.html" style="
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Program</a
+                  >
+                </li>
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/gallery.html"
+                    style="
                       color: #fff;
                       text-decoration: none;
                       font-family: 'Arial', sans-serif;
                       font-size: 16px;
                       transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Contact</a>
-              </li>
-            </ul>
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Gallery</a
+                  >
+                </li>
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="/contact.html"
+                    style="
+                      color: #fff;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ff5722'"
+                    onmouseout="this.style.color='#fff'"
+                    ><span style="margin-right: 10px">➔</span>Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <!-- Subscribe & Social -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
+          <div style="flex: 1 1 22%; min-width: 250px">
+            <div style="margin-bottom: 40px">
+              <h2
+                style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 24px;
                   color: #ffeb3b;
                   margin-bottom: 20px;
                   animation: bounce 2s infinite;
-                ">
-              Subscribe Us!
-            </h2>
-            <form action="#" style="display: flex; flex-direction: column; gap: 10px">
-              <input type="text" placeholder="Enter email address" style="
+                "
+              >
+                Subscribe Us!
+              </h2>
+              <form
+                action="#"
+                style="display: flex; flex-direction: column; gap: 10px"
+              >
+                <input
+                  type="text"
+                  placeholder="Enter email address"
+                  style="
                     width: 100%;
                     padding: 12px;
                     border: none;
@@ -842,8 +1192,12 @@
                     font-size: 16px;
                     text-align: center;
                     outline: none;
-                  " />
-              <input type="submit" value="Subscribe" style="
+                  "
+                />
+                <input
+                  type="submit"
+                  value="Subscribe"
+                  style="
                     width: 100%;
                     padding: 12px;
                     border: none;
@@ -854,21 +1208,30 @@
                     font-size: 16px;
                     cursor: pointer;
                     transition: background 0.3s ease;
-                  " onmouseover="this.style.background='#0288d1'" onmouseout="this.style.background='#ff5722'" />
-            </form>
-          </div>
-          <div>
-            <h2 style="
+                  "
+                  onmouseover="this.style.background='#0288d1'"
+                  onmouseout="this.style.background='#ff5722'"
+                />
+              </form>
+            </div>
+            <div>
+              <h2
+                style="
                   font-family: 'Comic Sans MS', cursive;
                   font-size: 24px;
                   color: #ffeb3b;
                   margin-bottom: 15px;
-                ">
-              Connect With Us
-            </h2>
-            <ul style="list-style: none; padding: 0; display: flex; gap: 15px">
-              <li>
-                <a href="#" style="
+                "
+              >
+                Connect With Us
+              </h2>
+              <ul
+                style="list-style: none; padding: 0; display: flex; gap: 15px"
+              >
+                <li>
+                  <a
+                    href="#"
+                    style="
                       display: block;
                       width: 40px;
                       height: 40px;
@@ -880,11 +1243,15 @@
                       line-height: 40px;
                       transition: transform 0.3s ease, background 0.3s ease;
                     "
-                  onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                  onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'">𝕏</a>
-              </li>
-              <li>
-                <a href="#" style="
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    >𝕏</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    style="
                       display: block;
                       width: 40px;
                       height: 40px;
@@ -896,11 +1263,15 @@
                       line-height: 40px;
                       transition: transform 0.3s ease, background 0.3s ease;
                     "
-                  onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                  onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'">f</a>
-              </li>
-              <li>
-                <a href="#" style="
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    >f</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    style="
                       display: block;
                       width: 40px;
                       height: 40px;
@@ -912,60 +1283,165 @@
                       line-height: 40px;
                       transition: transform 0.3s ease, background 0.3s ease;
                     "
-                  onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                  onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'">📷</a>
-              </li>
-            </ul>
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    >📷</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div style="text-align: center">
-        <p style="
+        <div style="text-align: center">
+          <p
+            style="
               font-family: 'Arial', sans-serif;
               font-size: 14px;
               color: #e0f7fa;
               margin: 0;
-            ">
-          Copyright ©
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          All rights reserved | Developed by
-          <a href="https://zuridox.com" target="_blank" style="
+            "
+          >
+            Copyright ©
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            All rights reserved | Developed by
+            <a
+              href="https://zuridox.com"
+              target="_blank"
+              style="
                 color: #ffeb3b;
                 text-decoration: none;
                 transition: color 0.3s ease;
-              " onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#ffeb3b'">Zuridox</a>
-        </p>
+              "
+              onmouseover="this.style.color='#fff'"
+              onmouseout="this.style.color='#ffeb3b'"
+              >Zuridox</a
+            >
+          </p>
+        </div>
       </div>
+    </footer>
+
+    <!-- Loader (unchanged) -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"
+        />
+      </svg>
     </div>
-  </footer>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
-    </svg>
-  </div>
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0 W2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <!-- Inline JavaScript for Mobile Toggle, Magnific Popup, and Image Protection -->
+    <script>
+      // Mobile Navigation Toggle
+      window.addEventListener("resize", function () {
+        const nav = document.getElementById("ftco-nav");
+        const toggler = document.querySelector("button");
+        if (window.innerWidth <= 991) {
+          toggler.style.display = "block";
+          nav.style.display = "none";
+        } else {
+          toggler.style.display = "none";
+          nav.style.display = "flex";
+        }
+      });
+      window.dispatchEvent(new Event("resize"));
 
+      // Magnific Popup Initialization
+      $(document).ready(function () {
+        $(".magnific-gallery").magnificPopup({
+          delegate: "a.image-popup",
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
+          image: {
+            markup:
+              '<div class="mfp-figure">' +
+              '<div class="mfp-close"></div>' +
+              '<div class="mfp-img"></div>' +
+              "</div>",
+            tError: '<a href="%url%">The image</a> could not be loaded.',
+          },
+          callbacks: {
+            markupParse: function (template, values, item) {
+              // Disable right-click and drag on popup image
+              template.find("img").attr("oncontextmenu", "return false;");
+              template.find("img").attr("ondragstart", "return false;");
+            },
+          },
+        });
+
+        $(".magnific-gallery").magnificPopup({
+          delegate: "a.video-popup",
+          type: "iframe",
+          iframe: {
+            markup:
+              '<div class="mfp-iframe-scaler">' +
+              '<div class="mfp-close"></div>' +
+              '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+              "</div>",
+          },
+        });
+      });
+
+      // Disable keyboard shortcuts for saving or inspecting
+      document.onkeydown = function (e) {
+        if (
+          e.ctrlKey &&
+          (e.keyCode === 83 || // Ctrl+S
+            e.keyCode === 67 || // Ctrl+C
+            e.keyCode === 85 || // Ctrl+U
+            e.keyCode === 73) // Ctrl+I or Ctrl+Shift+I
+        ) {
+          return false;
+        }
+        if (e.keyCode === 123) {
+          // F12
+          return false;
+        }
+      };
+
+      // Disable drag on images
+      document.querySelectorAll("img").forEach((img) => {
+        img.ondragstart = function () {
+          return false;
+        };
+      });
+    </script>
+  </body>
 </html>
