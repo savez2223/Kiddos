@@ -31,6 +31,48 @@
   </head>
 
   <style>
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-7px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 24px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px !important;
+      }
+    }
     .slider-item {
       min-height: 600px; /* Default for laptops/desktops */
     }
@@ -133,6 +175,33 @@
       }
       100% {
         opacity: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 24px !important;
+      }
+      p {
+        font-size: 16px !important;
+      }
+      div[style*="flex: 1 1 70%"] {
+        flex: 1 1 100% !important;
+      }
+      div[style*="flex: 1 1 25%"] {
+        flex: 1 1 100% !important;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px !important;
+      }
+      p {
+        font-size: 14px !important;
+      }
+      section {
+        padding: 40px 0 !important;
       }
     }
     @keyframes bounce {
@@ -838,163 +907,166 @@
                   color: #0288d1;
                   font-size: 32px;
                   margin-bottom: 20px;
-                  display: inline-block;
+                  text-align: center;
                 "
               >
-                <span
-                  style="display: inline-block; animation: bounce 2s infinite"
-                  >W</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.1s;
-                  "
-                  >e</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.2s;
-                  "
-                  >l</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.3s;
-                  "
-                  >c</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.4s;
-                  "
-                  >o</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.5s;
-                  "
-                  >m</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.6s;
-                  "
-                  >e</span
-                >
-                <span style="display: inline-block"> </span>
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.7s;
-                  "
-                  >t</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.8s;
-                  "
-                  >o</span
-                >
-                <span style="display: inline-block"> </span>
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.9s;
-                  "
-                  >G</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.1s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.2s;
-                  "
-                  >G</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.3s;
-                  "
-                  >L</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.4s;
-                  "
-                  >A</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.5s;
-                  "
-                  >i</span
-                >
-                <span style="display: inline-block"> </span>
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.6s;
-                  "
-                  >S</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.7s;
-                  "
-                  >C</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.8s;
-                  "
-                  >H</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.9s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 2s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 2.1s;
-                  "
-                  >L</span
-                >
+                <span style="display: block; white-space: nowrap">
+                  <span
+                    style="display: inline-block; animation: bounce 2s infinite"
+                    >W</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.1s;
+                    "
+                    >e</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.2s;
+                    "
+                    >l</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.3s;
+                    "
+                    >c</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.4s;
+                    "
+                    >o</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.5s;
+                    "
+                    >m</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.6s;
+                    "
+                    >e</span
+                  >
+                  <span style="display: inline-block"> </span>
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.7s;
+                    "
+                    >t</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.8s;
+                    "
+                    >o</span
+                  >
+                </span>
+                <span style="display: block; white-space: nowrap">
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.9s;
+                    "
+                    >G</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.1s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.2s;
+                    "
+                    >G</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.3s;
+                    "
+                    >L</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.4s;
+                    "
+                    >A</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.5s;
+                    "
+                    >i</span
+                  >
+                  <span style="display: inline-block"> </span>
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.6s;
+                    "
+                    >S</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.7s;
+                    "
+                    >C</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.8s;
+                    "
+                    >H</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.9s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 2s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 2.1s;
+                    "
+                    >L</span
+                  >
+                </span>
               </h2>
               <p
                 style="
@@ -1470,6 +1542,7 @@
           z-index: 2;
           max-width: 1200px;
           margin: 0 auto;
+          padding: 0 15px;
         "
       >
         <div
@@ -1482,7 +1555,8 @@
                 font-size: 36px;
                 color: #ffeb3b;
                 margin-bottom: 20px;
-                display: inline-block;
+                display: block;
+                line-height: 1.2;
               "
             >
               <span style="display: inline-block; animation: bounce 2s infinite"
@@ -1599,7 +1673,7 @@
                 "
                 >d</span
               >
-              <span style="display: inline-block"> </span>
+              <br />
               <span
                 style="
                   display: inline-block;
@@ -1626,7 +1700,7 @@
                 >e</span
               >
               <span style="display: inline-block"> </span>
-              <span
+              <!-- <span
                 style="
                   display: inline-block;
                   animation: bounce 2s infinite 2.1s;
@@ -1700,7 +1774,117 @@
                   animation: bounce 2s infinite 3.1s;
                 "
                 >s</span
+              > -->
+
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.2s;
+                "
+                >G</span
               >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.3s;
+                "
+                >o</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.4s;
+                "
+                >o</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.5s;
+                "
+                >d</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.6s;
+                "
+              >
+              </span>
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.6s;
+                "
+                >M</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.8s;
+                "
+                >a</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.9s;
+                "
+                >n</span
+              >
+              <span
+                style="display: inline-block; animation: bounce 2s infinite 4s"
+                >n</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.1s;
+                "
+                >e</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.2s;
+                "
+                >r</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.3s;
+                "
+                >s</span
+              >
+              <!-- <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.4s;
+                "
+                >t</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.5s;
+                "
+                >e</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.6s;
+                "
+                >r</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.7s;
+                "
+                >s</span
+              > -->
             </h2>
             <p
               style="
@@ -1711,9 +1895,11 @@
                 margin: 0;
               "
             >
-              A small river named Duden flows by their place and supplies it
-              with the necessary regelialia. It is a paradisematic country, in
-              which roasted parts of sentences fly into your mouth.
+              Good Manners, Great Character: Teaching Your Child the Right Way!
+              emphasizes the importance of instilling good manners in children
+              to help build strong character. It suggests that teaching kids
+              proper etiquette is key to shaping their personality and behavior
+              in a positive direction.
             </p>
           </div>
           <div
@@ -1751,260 +1937,590 @@
 
     <!-- // All Teachers -->
     <section
-  style="
-    background: linear-gradient(135deg, #f0f4c3, #b2dfdb);
-    padding: 40px 0;
-  "
->
-  <div style="max-width: 1200px; margin: 0 auto">
-    <div style="display: flex; justify-content: center; margin-bottom: 40px">
-      <div style="text-align: center; max-width: 800px; padding: 0 15px">
+      style="
+        background: linear-gradient(135deg, #f0f4c3, #b2dfdb);
+        padding: 40px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div
+          style="display: flex; justify-content: center; margin-bottom: 40px"
+        >
+          <div style="text-align: center; max-width: 800px; padding: 0 15px">
+            <h2
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 36px;
+                color: #0288d1;
+                margin-bottom: 20px;
+              "
+            >
+              <span style="color: #ff5722">Certified</span> Teachers
+            </h2>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                font-size: 18px;
+                line-height: 1.6;
+              "
+            >
+              Our team consists of highly qualified educators dedicated to
+              providing the best learning experience.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+          "
+        >
+          <!-- Teacher Card Template -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-1.jpg"
+                alt="Bianca Wilson"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Bianca Wilson
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Math Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Passionate about numbers and problem-solving.
+            </p>
+          </div>
+
+          <!-- Repeat for Other Teachers -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-2.jpg"
+                alt="Mitch Parker"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Mitch Parker
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >English Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Dedicated to inspiring students through language.
+            </p>
+          </div>
+
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-3.jpg"
+                alt="Stella Smith"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Stella Smith
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Art Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Creativity starts with imagination.
+            </p>
+          </div>
+
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-4.jpg"
+                alt="Monshe Henderson"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Monshe Henderson
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Science Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Making science fun and engaging.
+            </p>
+          </div>
+        </div>
+        <br />
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+          "
+        >
+          <!-- Teacher Card Template -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-1.jpg"
+                alt="Bianca Wilson"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Bianca Wilson
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Math Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Passionate about numbers and problem-solving.
+            </p>
+          </div>
+
+          <!-- Repeat for Other Teachers -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-2.jpg"
+                alt="Mitch Parker"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Mitch Parker
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >English Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Dedicated to inspiring students through language.
+            </p>
+          </div>
+
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-3.jpg"
+                alt="Stella Smith"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Stella Smith
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Art Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Creativity starts with imagination.
+            </p>
+          </div>
+
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <img
+                src="images/teacher-4.jpg"
+                alt="Monshe Henderson"
+                loading="lazy"
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  object-fit: cover;
+                  object-position: center;
+                  border: 4px solid #0288d1;
+                "
+              />
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Monshe Henderson
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Science Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Making science fun and engaging.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- // our program section -->
+    <section
+      style="
+        background: linear-gradient(135deg, #fff3e0, #e0f7fa);
+        padding: 50px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center">
         <h2
           style="
-            font-family: 'Arial', sans-serif;
+            font-family: 'Comic Sans MS', sans-serif;
             font-size: 36px;
-            color: #0288d1;
+            color: #ff5722;
             margin-bottom: 20px;
           "
         >
-          <span style="color: #ff5722">Certified</span> Teachers
+          <span style="color: #0288d1">Our</span> Program
         </h2>
         <p
           style="
             font-family: 'Arial', sans-serif;
             color: #333;
             font-size: 18px;
-            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 40px;
           "
         >
-          Our team consists of highly qualified educators dedicated to providing
-          the best learning experience.
+          Play school programs help children develop social, language, and motor
+          skills. They also learn sharing, taking turns, and following
+          directions.
         </p>
-      </div>
-    </div>
-    <div
-      style="
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-      "
-    >
-      <!-- Teacher Card Template -->
-      <div
-        style="
-          flex: 1 1 250px;
-          background: #fff;
-          border-radius: 20px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-          transition: transform 0.3s ease;
-          text-align: center;
-          padding: 20px;
-        "
-        onmouseover="this.style.transform='scale(1.05)'"
-        onmouseout="this.style.transform='scale(1)'"
-      >
-        <div style="display: flex; justify-content: center; margin-bottom: 15px">
-          <img
-            src="images/teacher-1.jpg"
-            alt="Bianca Wilson"
-            loading="lazy"
-            style="
-              width: 120px;
-              height: 120px;
-              border-radius: 50%;
-              object-fit: cover;
-              object-position: center;
-              border: 4px solid #0288d1;
-            "
-          />
-        </div>
-        <h3 style="color: #ff5722; font-size: 22px; margin: 0">Bianca Wilson</h3>
-        <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
-          >Math Teacher</span
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+          "
         >
-        <p style="color: #666; font-size: 14px; margin: 10px 0">
-          Passionate about numbers and problem-solving.
-        </p>
-      </div>
-
-      <!-- Repeat for Other Teachers -->
-      <div
-        style="
-          flex: 1 1 250px;
-          background: #fff;
-          border-radius: 20px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-          transition: transform 0.3s ease;
-          text-align: center;
-          padding: 20px;
-        "
-        onmouseover="this.style.transform='scale(1.05)'"
-        onmouseout="this.style.transform='scale(1)'"
-      >
-        <div style="display: flex; justify-content: center; margin-bottom: 15px">
-          <img
-            src="images/teacher-2.jpg"
-            alt="Mitch Parker"
-            loading="lazy"
-            style="
-              width: 120px;
-              height: 120px;
-              border-radius: 50%;
-              object-fit: cover;
-              object-position: center;
-              border: 4px solid #0288d1;
-            "
-          />
-        </div>
-        <h3 style="color: #ff5722; font-size: 22px; margin: 0">Mitch Parker</h3>
-        <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
-          >English Teacher</span
-        >
-        <p style="color: #666; font-size: 14px; margin: 10px 0">
-          Dedicated to inspiring students through language.
-        </p>
-      </div>
-
-      <div
-        style="
-          flex: 1 1 250px;
-          background: #fff;
-          border-radius: 20px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-          transition: transform 0.3s ease;
-          text-align: center;
-          padding: 20px;
-        "
-        onmouseover="this.style.transform='scale(1.05)'"
-        onmouseout="this.style.transform='scale(1)'"
-      >
-        <div style="display: flex; justify-content: center; margin-bottom: 15px">
-          <img
-            src="images/teacher-3.jpg"
-            alt="Stella Smith"
-            loading="lazy"
-            style="
-              width: 120px;
-              height: 120px;
-              border-radius: 50%;
-              object-fit: cover;
-              object-position: center;
-              border: 4px solid #0288d1;
-            "
-          />
-        </div>
-        <h3 style="color: #ff5722; font-size: 22px; margin: 0">Stella Smith</h3>
-        <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
-          >Art Teacher</span
-        >
-        <p style="color: #666; font-size: 14px; margin: 10px 0">
-          Creativity starts with imagination.
-        </p>
-      </div>
-
-      <div
-        style="
-          flex: 1 1 250px;
-          background: #fff;
-          border-radius: 20px;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-          overflow: hidden;
-          transition: transform 0.3s ease;
-          text-align: center;
-          padding: 20px;
-        "
-        onmouseover="this.style.transform='scale(1.05)'"
-        onmouseout="this.style.transform='scale(1)'"
-      >
-        <div style="display: flex; justify-content: center; margin-bottom: 15px">
-          <img
-            src="images/teacher-4.jpg"
-            alt="Monshe Henderson"
-            loading="lazy"
-            style="
-              width: 120px;
-              height: 120px;
-              border-radius: 50%;
-              object-fit: cover;
-              object-position: center;
-              border: 4px solid #0288d1;
-            "
-          />
-        </div>
-        <h3 style="color: #ff5722; font-size: 22px; margin: 0">
-          Monshe Henderson
-        </h3>
-        <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
-          >Science Teacher</span
-        >
-        <p style="color: #666; font-size: 14px; margin: 10px 0">
-          Making science fun and engaging.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-    <!-- // our program section -->
-    <section style="background: linear-gradient(135deg, #fff3e0, #e0f7fa); padding: 50px 0;">
-      <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-        <h2 style="font-family: 'Comic Sans MS', sans-serif; font-size: 36px; color: #ff5722; margin-bottom: 20px;">
-          <span style="color: #0288d1">Our</span> Program
-        </h2>
-        <p style="font-family: 'Arial', sans-serif; color: #333; font-size: 18px; max-width: 700px; margin: 0 auto 40px;">
-          Play school programs help children develop social, language, and motor skills. They also learn sharing, taking turns, and following directions.
-        </p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 20px;">
-          
           <!-- Card Template -->
-          <div style="background: #ffccbc; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); overflow: hidden;">
-            <div style="height: 150px; background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572423/course-1_df1ivr.jpg') center/cover;"></div>
-            <div style="padding: 15px; background: #fff;">
-              <h3 style="color: #ff5722; font-size: 20px;">Pre-Nursery</h3>
-              <p style="color: #333; font-size: 14px;"><strong>Duration:</strong> 4-4½ hours per day</p>
-              <p style="color: #333; font-size: 14px;"><strong>Seats:</strong> 20</p>
-              <p style="color: #666; font-size: 14px;">Basic mannerisms, social skills, and language.</p>
+          <div
+            style="
+              background: #ffccbc;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                height: 150px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572423/course-1_df1ivr.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 15px; background: #fff">
+              <h3 style="color: #ff5722; font-size: 20px">Pre-Nursery</h3>
+              <p style="color: #333; font-size: 14px">
+                <strong>Duration:</strong> 4-4½ hours per day
+              </p>
+              <p style="color: #333; font-size: 14px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #666; font-size: 14px">
+                Basic mannerisms, social skills, and language.
+              </p>
             </div>
           </div>
-    
-          <div style="background: #b2ebf2; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); overflow: hidden;">
-            <div style="height: 150px; background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572422/course-2_rzpwoo.jpg') center/cover;"></div>
-            <div style="padding: 15px; background: #fff;">
-              <h3 style="color: #0288d1; font-size: 20px;">Nursery</h3>
-              <p style="color: #333; font-size: 14px;"><strong>Duration:</strong> 4-4½ hours per day</p>
-              <p style="color: #333; font-size: 14px;"><strong>Seats:</strong> 20</p>
-              <p style="color: #666; font-size: 14px;">Early literacy and numeracy introduction.</p>
+
+          <div
+            style="
+              background: #b2ebf2;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                height: 150px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572422/course-2_rzpwoo.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 15px; background: #fff">
+              <h3 style="color: #0288d1; font-size: 20px">Nursery</h3>
+              <p style="color: #333; font-size: 14px">
+                <strong>Duration:</strong> 4-4½ hours per day
+              </p>
+              <p style="color: #333; font-size: 14px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #666; font-size: 14px">
+                Early literacy and numeracy introduction.
+              </p>
             </div>
           </div>
-          
-          <div style="background: #c8e6c9; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); overflow: hidden;">
-            <div style="height: 150px; background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572422/course-3_kalfoa.jpg') center/cover;"></div>
-            <div style="padding: 15px; background: #fff;">
-              <h3 style="color: #4caf50; font-size: 20px;">LKG</h3>
-              <p style="color: #333; font-size: 14px;"><strong>Duration:</strong> 4-4½ hours per day</p>
-              <p style="color: #333; font-size: 14px;"><strong>Seats:</strong> 20</p>
-              <p style="color: #666; font-size: 14px;">Prepares for formal schooling.</p>
+
+          <div
+            style="
+              background: #c8e6c9;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                height: 150px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572422/course-3_kalfoa.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 15px; background: #fff">
+              <h3 style="color: #4caf50; font-size: 20px">LKG</h3>
+              <p style="color: #333; font-size: 14px">
+                <strong>Duration:</strong> 4-4½ hours per day
+              </p>
+              <p style="color: #333; font-size: 14px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #666; font-size: 14px">
+                Prepares for formal schooling.
+              </p>
             </div>
           </div>
-          
-          <div style="background: #f8bbd0; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); overflow: hidden;">
-            <div style="height: 150px; background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572421/course-4_xdyqxk.jpg') center/cover;"></div>
-            <div style="padding: 15px; background: #fff;">
-              <h3 style="color: #ff4081; font-size: 20px;">UKG</h3>
-              <p style="color: #333; font-size: 14px;"><strong>Duration:</strong> 4-4½ hours per day</p>
-              <p style="color: #333; font-size: 14px;"><strong>Seats:</strong> 20</p>
-              <p style="color: #666; font-size: 14px;">Refines academic and social skills.</p>
+
+          <div
+            style="
+              background: #f8bbd0;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+            "
+          >
+            <div
+              style="
+                height: 150px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572421/course-4_xdyqxk.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 15px; background: #fff">
+              <h3 style="color: #ff4081; font-size: 20px">UKG</h3>
+              <p style="color: #333; font-size: 14px">
+                <strong>Duration:</strong> 4-4½ hours per day
+              </p>
+              <p style="color: #333; font-size: 14px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #666; font-size: 14px">
+                Refines academic and social skills.
+              </p>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
+
     <!-- // counter section -->
     <section
       style="
@@ -2066,9 +2582,12 @@
               margin: 0 auto;
             "
           >
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
+            With 5 years of experience, we specialize in nurturing young minds
+            and building strong foundations for the future. Our focus is on
+            creating a positive, engaging learning environment where students
+            can thrive. Through dedicated teaching and personalized attention,
+            we guide each child toward success. Together, we shape tomorrow’s
+            leaders, one lesson at a time.
           </p>
         </div>
         <div
@@ -2110,7 +2629,7 @@
                     display: block;
                   "
                   data-number="18"
-                  >18</strong
+                  >10+</strong
                 >
                 <span
                   style="
@@ -2154,7 +2673,7 @@
                     display: block;
                   "
                   data-number="351"
-                  >351</strong
+                  >300+</strong
                 >
                 <span
                   style="
@@ -2198,7 +2717,7 @@
                     display: block;
                   "
                   data-number="564"
-                  >564</strong
+                  >200+</strong
                 >
                 <span
                   style="
@@ -2242,7 +2761,7 @@
                     display: block;
                   "
                   data-number="300"
-                  >300</strong
+                  >2</strong
                 >
                 <span
                   style="
@@ -2289,9 +2808,14 @@
               margin: 0 auto;
             "
           >
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
+            Our parents are our biggest supporters, and their words speak
+            volumes about the impact we’ve had on their children’s lives. In
+            this video, hear directly from parents who’ve seen their children
+            grow, learn, and succeed in our nurturing environment. Their
+            testimonials highlight the dedication, care, and personalized
+            attention we provide to ensure every child’s success. Watch and
+            discover why our community trusts us to shape their children's
+            future!
           </p>
         </div>
         <div
@@ -2702,7 +3226,7 @@
               animation: pulse 2s infinite;
             "
           >
-            Admission Enquiry
+            Admission Inquiry form
           </h2>
           <p
             style="
@@ -2713,9 +3237,9 @@
               margin: 10px 0 0;
             "
           >
-            You can connect with us via email, send a message, request a quote
-            using the Request for Quotation (RFQ) document, and fill out this
-            form and submit it.
+            You can connect with us via email, send a message, request admission
+            details using the Admission Inquiry form, or simply fill out and
+            submit this form.
           </p>
         </div>
         <form id="quoteForm" style="display: flex; flex-wrap: wrap; gap: 15px">
@@ -3048,7 +3572,7 @@
             onmouseout="this.style.transform='rotate(0deg) scale(1)'"
           >
             <a
-              href="blog-single.html"
+              href="#"
               style="
                 display: block;
                 height: 200px;
@@ -3105,9 +3629,7 @@
                   margin: 0 0 10px;
                 "
               >
-                <a
-                  href="blog-single.html"
-                  style="text-decoration: none; color: #ff5722"
+                <a href="#" style="text-decoration: none; color: #ff5722"
                   >How AI Helps Kids Learn Faster</a
                 >
               </h3>
@@ -3187,7 +3709,7 @@
             onmouseout="this.style.transform='rotate(0deg) scale(1)'"
           >
             <a
-              href="blog-single.html"
+              href="#"
               style="
                 display: block;
                 height: 200px;
@@ -3244,9 +3766,7 @@
                   margin: 0 0 10px;
                 "
               >
-                <a
-                  href="blog-single.html"
-                  style="text-decoration: none; color: #0288d1"
+                <a href="#" style="text-decoration: none; color: #0288d1"
                   >Fun Coding Activities for Kids</a
                 >
               </h3>
@@ -3326,7 +3846,7 @@
             onmouseout="this.style.transform='rotate(0deg) scale(1)'"
           >
             <a
-              href="blog-single.html"
+              href="#"
               style="
                 display: block;
                 height: 200px;
@@ -3383,9 +3903,7 @@
                   margin: 0 0 10px;
                 "
               >
-                <a
-                  href="blog-single.html"
-                  style="text-decoration: none; color: #4caf50"
+                <a href="#" style="text-decoration: none; color: #4caf50"
                   >Top 5 Tech Toys for Learning</a
                 >
               </h3>
@@ -4129,399 +4647,299 @@
 
     <footer
       style="
-        background: linear-gradient(135deg, #0288d1, #ff5722);
-        padding: 60px 0;
+        background: linear-gradient(135deg, #ff66cc, #66ff66);
+        padding: 50px 0;
         color: #fff;
+        border-top: 5px solid #ffd700;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px">
         <div
-          style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: space-around;
+          "
         >
           <!-- Contact Info -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
+          <div style="flex: 1 1 30%; min-width: 220px">
+            <h2
+              style="
+                font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
+                font-size: 28px;
+                color: #ffff00;
+                margin-bottom: 15px;
+                text-shadow: 2px 2px #ff3366;
+                animation: bounce 2s infinite;
+              "
+            >
+              Say Hello!
+            </h2>
+            <ul style="list-style: none; padding: 0">
+              <li
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: pulse 2s infinite;
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 12px;
+                  font-size: 16px;
                 "
               >
-                Have a Question?
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li
+                <span style="font-size: 24px; margin-right: 10px">🏠</span>
+                <span style="font-family: 'Arial', sans-serif; color: #fff"
+                  >Hidayat Colony, Ward No. 04, Nuh, Haryana - 122107</span
+                >
+              </li>
+              <li
+                style="display: flex; align-items: center; margin-bottom: 12px"
+              >
+                <a
+                  href="tel:+918000007583"
                   style="
+                    text-decoration: none;
+                    color: #fff;
                     display: flex;
                     align-items: center;
-                    margin-bottom: 15px;
                   "
                 >
-                  <span style="font-size: 20px; color: #fff; margin-right: 10px"
-                    >📍</span
-                  >
+                  <span style="font-size: 24px; margin-right: 10px">📞</span>
                   <span
-                    style="font-family: 'Arial', sans-serif; font-size: 16px"
-                    >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA -
-                    122107</span
+                    style="
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >+91 8000007583</span
                   >
-                </li>
-                <li
+                </a>
+              </li>
+              <li style="display: flex; align-items: center">
+                <a
+                  href="mailto:googlaischool@email.com"
                   style="
+                    text-decoration: none;
+                    color: #fff;
                     display: flex;
                     align-items: center;
-                    margin-bottom: 15px;
                   "
                 >
-                  <a
-                    href="tel:+918000007583"
+                  <span style="font-size: 24px; margin-right: 10px">📧</span>
+                  <span
                     style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 16px;
+                      transition: color 0.3s ease;
                     "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >googlaischool@email.com</span
                   >
-                    <span style="font-size: 20px; margin-right: 10px">📞</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >+91 8000007583</span
-                    >
-                  </a>
-                </li>
-                <li style="display: flex; align-items: center">
-                  <a
-                    href="mailto:googlaischool@email.com"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">✉️</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >googlaischool@email.com</span
-                    >
-                  </a>
-                </li>
-              </ul>
-            </div>
+                </a>
+              </li>
+            </ul>
           </div>
-          <!-- Recent Blog -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                "
-              >
-                Recent Blog
-              </h2>
-              <div style="display: flex; margin-bottom: 20px">
+
+          <!-- Quick Links -->
+          <div style="flex: 1 1 30%; min-width: 220px">
+            <h2
+              style="
+                font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
+                font-size: 28px;
+                color: #ffff00;
+                margin-bottom: 15px;
+                text-shadow: 2px 2px #ff3366;
+              "
+            >
+              Fun Places!
+            </h2>
+            <ul style="list-style: none; padding: 0">
+              <li style="margin-bottom: 10px">
                 <a
-                  href="#"
+                  href="/index.html"
                   style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_1.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', sans-serif;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ff5722'"
-                      onmouseout="this.style.color='#fff'"
-                      >How AI Helps Kids Learn Faster</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 20, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 5</span>
-                  </div>
-                </div>
-              </div>
-              <div style="display: flex">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_2.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', sans-serif;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#0288d1'"
-                      onmouseout="this.style.color='#fff'"
-                      >Fun Coding Activities for Kids</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 18, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 4</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Links -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                "
-              >
-                Quick Links
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/index.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Home</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/about.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>About</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/career.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Career</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/courses.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Program</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/contact.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Contact</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/admin.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Admin</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Subscribe & Social -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                "
-              >
-                Subscribe Us!
-              </h2>
-              <form
-                action="#"
-                style="display: flex; flex-direction: column; gap: 10px"
-              >
-                <input
-                  type="text"
-                  placeholder="Enter email address"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #fff;
-                    color: #333;
+                    color: #fff;
+                    text-decoration: none;
                     font-family: 'Arial', sans-serif;
                     font-size: 16px;
-                    text-align: center;
-                    outline: none;
+                    transition: color 0.3s ease;
                   "
-                />
-                <input
-                  type="submit"
-                  value="Subscribe"
+                  onmouseover="this.style.color='#00ccff'"
+                  onmouseout="this.style.color='#fff'"
+                  ><span style="margin-right: 10px">🌟</span>Home</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a
+                  href="/about.html"
                   style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #ff5722;
                     color: #fff;
-                    font-family: 'Comic Sans MS', sans-serif;
+                    text-decoration: none;
+                    font-family: 'Arial', sans-serif;
                     font-size: 16px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
+                    transition: color 0.3s ease;
                   "
-                  onmouseover="this.style.background='#0288d1'"
-                  onmouseout="this.style.background='#ff5722'"
-                />
-              </form>
-            </div>
-            <div>
+                  onmouseover="this.style.color='#00ccff'"
+                  onmouseout="this.style.color='#fff'"
+                  ><span style="margin-right: 10px">🌟</span>About</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a
+                  href="/career.html"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    transition: color 0.3s ease;
+                  "
+                  onmouseover="this.style.color='#00ccff'"
+                  onmouseout="this.style.color='#fff'"
+                  ><span style="margin-right: 10px">🌟</span>Career</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a
+                  href="/courses.html"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    transition: color 0.3s ease;
+                  "
+                  onmouseover="this.style.color='#00ccff'"
+                  onmouseout="this.style.color='#fff'"
+                  ><span style="margin-right: 10px">🌟</span>Program</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a
+                  href="/contact.html"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    transition: color 0.3s ease;
+                  "
+                  onmouseover="this.style.color='#00ccff'"
+                  onmouseout="this.style.color='#fff'"
+                  ><span style="margin-right: 10px">🌟</span>Contact</a
+                >
+              </li>
+              <li style="margin-bottom: 10px">
+                <a
+                  href="/admin.html"
+                  style="
+                    color: #fff;
+                    text-decoration: none;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    transition: color 0.3s ease;
+                  "
+                  onmouseover="this.style.color='#00ccff'"
+                  onmouseout="this.style.color='#fff'"
+                  ><span style="margin-right: 10px">🌟</span>Admin</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Subscribe & Social -->
+          <div style="flex: 1 1 30%; min-width: 220px">
+            <h2
+              style="
+                font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
+                font-size: 28px;
+                color: #ffff00;
+                margin-bottom: 15px;
+                text-shadow: 2px 2px #ff3366;
+              "
+            >
+              Join the Fun!
+            </h2>
+            <form
+              action="#"
+              style="display: flex; flex-direction: column; gap: 10px"
+            >
+              <input
+                type="text"
+                placeholder="Your Email!"
+                style="
+                  width: 100%;
+                  padding: 12px;
+                  border: 3px solid #ff3366;
+                  border-radius: 25px;
+                  background: #fff;
+                  color: #333;
+                  font-family: 'Bubblegum Sans', 'Arial', sans-serif;
+                  font-size: 16px;
+                  text-align: center;
+                  outline: none;
+                "
+              />
+              <input
+                type="submit"
+                value="Join Now!"
+                style="
+                  width: 100%;
+                  padding: 12px;
+                  border: none;
+                  border-radius: 25px;
+                  background: #ff3366;
+                  color: #fff;
+                  font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
+                  font-size: 16px;
+                  cursor: pointer;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px #ffd700;
+                "
+                onmouseover="this.style.background='#00ccff'; this.style.boxShadow='4px 4px #ffd700'"
+                onmouseout="this.style.background='#ff3366'; this.style.boxShadow='2px 2px #ffd700'"
+              />
+            </form>
+            <div style="margin-top: 20px">
               <h2
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
+                  font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
                   font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 15px;
+                  color: #ffff00;
+                  margin-bottom: 10px;
+                  text-shadow: 2px 2px #ff3366;
                 "
               >
-                Connect With Us
+                Be Our Friend!
               </h2>
               <ul
-                style="list-style: none; padding: 0; display: flex; gap: 15px"
+                style="
+                  list-style: none;
+                  padding: 0;
+                  display: flex;
+                  gap: 15px;
+                  justify-content: center;
+                "
               >
                 <li>
                   <a
                     href="#"
                     style="
                       display: block;
-                      width: 40px;
-                      height: 40px;
+                      width: 45px;
+                      height: 45px;
                       background: #fff;
                       border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
+                      color: #ff3366;
+                      font-size: 24px;
                       text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
+                      line-height: 45px;
+                      transition: all 0.3s ease;
+                      box-shadow: 2px 2px #ffd700;
                     "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#00ccff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'"
                     >𝕏</a
                   >
                 </li>
@@ -4530,18 +4948,19 @@
                     href="#"
                     style="
                       display: block;
-                      width: 40px;
-                      height: 40px;
+                      width: 45px;
+                      height: 45px;
                       background: #fff;
                       border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
+                      color: #ff3366;
+                      font-size: 24px;
                       text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
+                      line-height: 45px;
+                      transition: all 0.3s ease;
+                      box-shadow: 2px 2px #ffd700;
                     "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#00ccff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'"
                     >f</a
                   >
                 </li>
@@ -4550,18 +4969,19 @@
                     href="#"
                     style="
                       display: block;
-                      width: 40px;
-                      height: 40px;
+                      width: 45px;
+                      height: 45px;
                       background: #fff;
                       border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
+                      color: #ff3366;
+                      font-size: 24px;
                       text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
+                      line-height: 45px;
+                      transition: all 0.3s ease;
+                      box-shadow: 2px 2px #ffd700;
                     "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
+                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#00ccff'"
+                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'"
                     >📷</a
                   >
                 </li>
@@ -4569,30 +4989,33 @@
             </div>
           </div>
         </div>
-        <div style="text-align: center">
+
+        <!-- Copyright -->
+        <div style="text-align: center; margin-top: 30px">
           <p
             style="
-              font-family: 'Arial', sans-serif;
+              font-family: 'Bubblegum Sans', 'Arial', sans-serif;
               font-size: 14px;
-              color: #e0f7fa;
+              color: #fff;
               margin: 0;
+              text-shadow: 1px 1px #ff3366;
             "
           >
-            Copyright ©
+            ©
             <script>
               document.write(new Date().getFullYear());
             </script>
-            All rights reserved | Developed by
+            Made with ❤️ by
             <a
               href="https://zuridox.com"
               target="_blank"
               style="
-                color: #ffeb3b;
+                color: #ffff00;
                 text-decoration: none;
                 transition: color 0.3s ease;
               "
-              onmouseover="this.style.color='#fff'"
-              onmouseout="this.style.color='#ffeb3b'"
+              onmouseover="this.style.color='#ff3366'"
+              onmouseout="this.style.color='#ffff00'"
               >Zuridox</a
             >
           </p>
