@@ -31,6 +31,94 @@
   </head>
 
   <style>
+    /* popup start  */
+    /* Popup Animations */
+    @keyframes popupEnter {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+      }
+      70% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    @keyframes popupExit {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      30% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+        display: none;
+      }
+    }
+
+    /* Popup Show/Hide Classes */
+    #inquiryPopup.show {
+      display: block;
+      animation: popupEnter 0.4s ease-out forwards;
+    }
+
+    #inquiryPopup.hide {
+      animation: popupExit 0.4s ease-in forwards;
+    }
+
+    /* Popup Overlay */
+    #popupOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: none;
+    }
+
+    #popupOverlay.show {
+      display: block;
+      opacity: 1;
+    }
+
+    #popupOverlay.hide {
+      opacity: 0;
+    }
+
+    /* Optional: Global Styles */
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Responsive Button */
+    #openPopupBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    /* popup end  */
+
     @keyframes bounce {
       0%,
       20%,
@@ -272,7 +360,7 @@
     >
       <div
         style="
-          max-width: 1200px;
+          max-width: 1350px;
           margin: 0 auto;
           display: flex;
           align-items: center;
@@ -1578,8 +1666,15 @@
       </div>
     </section>
 
+    <!-- <button id="openPopupBtn" onclick="openPopup()">
+      Open Admission Inquiry
+    </button> -->
+
     <!-- popup  -->
 
+    <div id="popupOverlay"></div>
+
+    <!-- Inquiry Popup -->
     <section
       id="inquiryPopup"
       style="
@@ -1587,31 +1682,30 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 90%; /* Flexible width for smaller screens */
-        max-width: 600px; /* Max width for larger screens */
-        min-width: 280px; /* Minimum width for very small screens */
+        width: clamp(280px, 90%, 600px);
+        max-width: 95vw;
         background: rgba(255, 255, 255, 0.95);
         border-radius: 20px;
-        padding: 20px; /* Reduced padding for smaller screens */
+        padding: clamp(15px, 3vw, 20px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         text-align: center;
         z-index: 1000;
-        display: none; /* Initially hidden */
-        box-sizing: border-box; /* Ensures padding doesn’t increase width */
+        display: none;
+        box-sizing: border-box;
       "
     >
-      <!-- Cross Icon in Top-Right -->
+      <!-- Close Icon -->
       <span
         style="
           position: absolute;
-          top: 10px;
-          right: 15px;
-          font-size: 24px;
+          top: clamp(8px, 2vw, 10px);
+          right: clamp(12px, 2vw, 15px);
+          font-size: clamp(20px, 4vw, 24px);
           color: #ff5722;
           cursor: pointer;
           transition: transform 0.3s ease;
         "
-        onclick="document.getElementById('inquiryPopup').style.display='none'; document.body.style.overflow='auto';"
+        onclick="closePopup()"
         onmouseover="this.style.transform='scale(1.2)'"
         onmouseout="this.style.transform='scale(1)'"
         >✖</span
@@ -1621,44 +1715,47 @@
       <h2
         style="
           font-family: 'Comic Sans MS', sans-serif;
-          font-size: clamp(20px, 5vw, 28px); /* Responsive font size */
+          font-size: clamp(20px, 5vw, 28px);
           color: #ff5722;
-          margin-bottom: 15px; /* Reduced margin for smaller screens */
+          margin-bottom: clamp(12px, 2vw, 15px);
           text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
           line-height: 1.2;
         "
       >
         Admission Open for 2025-26<br />
-        <span
-          style="
-            font-size: clamp(16px, 4vw, 20px); /* Responsive span font size */
-            color: #0288d1;
-          "
-          >Pre-Nursery, Nursery, UKG, and LKG</span
-        >
+        <span style="font-size: clamp(16px, 4vw, 20px); color: #0288d1">
+          Pre-Nursery, Nursery, UKG, and LKG
+        </span>
       </h2>
 
-      <!-- Inquiry Form with 3 Fields -->
+      <!-- Inquiry Form -->
       <form
+        id="admissionForm"
         style="
           display: flex;
           flex-direction: column;
-          gap: 10px; /* Reduced gap for smaller screens */
+          align-items: center;
+          width: 100%;
+          gap: clamp(6px, 1.5vw, 10px);
         "
+        onsubmit="submitForm(event)"
       >
         <input
           type="text"
+          name="guardianName"
           placeholder="Guardian's Name"
           style="
-            padding: 10px; /* Slightly reduced padding */
+            padding: clamp(6px, 2vw, 10px);
             font-family: 'Comic Sans MS', sans-serif;
-            font-size: clamp(14px, 4vw, 16px); /* Responsive font size */
+            font-size: clamp(12px, 3vw, 16px);
             border: 2px solid #ffeb3b;
             border-radius: 10px;
             outline: none;
             transition: border-color 0.3s ease;
-            width: 100%; /* Full width for flexibility */
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 44px);
             box-sizing: border-box;
+            text-align: center;
           "
           onfocus="this.style.borderColor='#ff5722'"
           onblur="this.style.borderColor='#ffeb3b'"
@@ -1666,34 +1763,41 @@
         />
         <input
           type="tel"
+          name="phoneNumber"
           placeholder="Phone Number"
+          pattern="[0-9]{10}"
           style="
-            padding: 10px;
+            padding: clamp(6px, 2vw, 10px);
             font-family: 'Comic Sans MS', sans-serif;
-            font-size: clamp(14px, 4vw, 16px);
+            font-size: clamp(12px, 3vw, 16px);
             border: 2px solid #ffeb3b;
             border-radius: 10px;
             outline: none;
             transition: border-color 0.3s ease;
-            width: 100%;
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 44px);
             box-sizing: border-box;
+            text-align: center;
           "
           onfocus="this.style.borderColor='#ff5722'"
           onblur="this.style.borderColor='#ffeb3b'"
           required
         />
         <select
+          name="selectedClass"
           style="
-            padding: 10px;
+            padding: clamp(6px, 2vw, 10px);
             font-family: 'Comic Sans MS', sans-serif;
-            font-size: clamp(14px, 4vw, 16px);
+            font-size: clamp(12px, 3vw, 16px);
             border: 2px solid #ffeb3b;
             border-radius: 10px;
             outline: none;
             background: #fff;
             transition: border-color 0.3s ease;
-            width: 100%;
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 44px);
             box-sizing: border-box;
+            text-align: center;
           "
           onfocus="this.style.borderColor='#ff5722'"
           onblur="this.style.borderColor='#ffeb3b'"
@@ -1708,16 +1812,17 @@
         <button
           type="submit"
           style="
-            padding: 12px; /* Slightly reduced padding */
+            padding: clamp(8px, 2vw, 12px);
             background: #ff5722;
             color: #fff;
             border: none;
             border-radius: 15px;
             font-family: 'Comic Sans MS', sans-serif;
-            font-size: clamp(16px, 4vw, 18px); /* Responsive font size */
+            font-size: clamp(14px, 3.5vw, 18px);
             cursor: pointer;
             transition: transform 0.3s ease, background 0.3s ease;
-            width: 100%; /* Full width for smaller screens */
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 48px);
             box-sizing: border-box;
           "
           onmouseover="this.style.transform='scale(1.05)'; this.style.background='#e64a19'"
@@ -5285,6 +5390,146 @@
         document.getElementById("inquiryPopup").style.display = "block";
         document.body.style.overflow = "hidden"; // Locks scrolling
       }, 3000); // 4000 milliseconds = 5 seconds
+    </script>
+    <script>
+      function openPopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        // Disable scroll on body
+        document.body.style.overflow = "hidden";
+
+        // Show overlay and popup
+        overlay.classList.remove("hide");
+        overlay.classList.add("show");
+
+        popup.classList.remove("hide");
+        popup.classList.add("show");
+      }
+
+      function closePopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        // Re-enable scroll on body
+        document.body.style.overflow = "auto";
+
+        // Hide popup and overlay
+        popup.classList.remove("show");
+        popup.classList.add("hide");
+
+        overlay.classList.remove("show");
+        overlay.classList.add("hide");
+
+        // Remove classes after animation completes
+        setTimeout(() => {
+          popup.classList.remove("hide");
+          popup.style.display = "none";
+          overlay.classList.remove("hide");
+          overlay.style.display = "none";
+        }, 400);
+      }
+
+      // Optional: Add a button to trigger popup
+      // function createOpenPopupButton() {
+      //   const button = document.createElement("button");
+      //   button.textContent = "Open Inquiry Popup";
+      //   button.onclick = openPopup;
+      //   document.body.appendChild(button);
+      // }
+
+      // Uncomment the line below to create a test button
+      // createOpenPopupButton();
+    </script>
+    <script>
+      // Popup Functions
+      function openPopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        // Disable scroll on body
+        document.body.style.overflow = "hidden";
+
+        // Show overlay and popup
+        overlay.classList.remove("hide");
+        overlay.classList.add("show");
+
+        popup.classList.remove("hide");
+        popup.classList.add("show");
+
+        // Add ESC key listener to close popup
+        document.addEventListener("keydown", handleEscapeKey);
+      }
+
+      function closePopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        // Re-enable scroll on body
+        document.body.style.overflow = "auto";
+
+        // Hide popup and overlay
+        popup.classList.remove("show");
+        popup.classList.add("hide");
+
+        overlay.classList.remove("show");
+        overlay.classList.add("hide");
+
+        // Remove classes after animation completes
+        setTimeout(() => {
+          popup.classList.remove("hide");
+          popup.style.display = "none";
+          overlay.classList.remove("hide");
+          overlay.style.display = "none";
+        }, 400);
+
+        // Remove ESC key listener
+        document.removeEventListener("keydown", handleEscapeKey);
+      }
+
+      // Handle Escape Key to Close Popup
+      function handleEscapeKey(event) {
+        if (event.key === "Escape") {
+          closePopup();
+        }
+      }
+
+      // Form Submission Handler
+      function submitForm(event) {
+        event.preventDefault();
+
+        // Get form data
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Create object from form data
+        const data = {
+          guardianName: formData.get("guardianName"),
+          phoneNumber: formData.get("phoneNumber"),
+          selectedClass: formData.get("selectedClass"),
+        };
+
+        // Basic validation
+        if (data.phoneNumber.length !== 10) {
+          alert("Please enter a valid 10-digit phone number");
+          return;
+        }
+
+        // Simulate form submission (replace with actual API call)
+        console.log("Form Submitted:", data);
+        alert("Thank you! We will contact you soon.");
+
+        // Close popup after submission
+        closePopup();
+
+        // Reset form
+        form.reset();
+      }
+
+      // Optional: Auto-open popup after page load
+      // window.addEventListener("load", () => {
+      //   setTimeout(openPopup, 4000); // Open after 2 seconds
+      // });
     </script>
   </body>
 </html>
