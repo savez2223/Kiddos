@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Googlai School</title>
+    <title>GOOGLAi SCHOOL</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -102,7 +102,7 @@
             background: none;
             border: none;
             color: #fff;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', sans-serif;
             font-size: 18px;
             padding: 10px;
             cursor: pointer;
@@ -138,7 +138,7 @@
               <a
                 href="index.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
@@ -150,75 +150,415 @@
                 >Home</a
               >
             </li>
-            <li style="position: relative">
+
+            <!-- About with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="about.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >About</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Founder Message</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Teacher with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="teacher.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >Teacher</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teachers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teacher Training Programme</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Child Introduction</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Program with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="courses.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >Program</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Program</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >What We Offer</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Inquiry Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Guidelines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >FAQ for Kids</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Gallery with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="Gallary.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Gallary</a
+                >Gallery</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Photos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Videos</a
+                  >
+                </li>
+              </ul>
             </li>
+
             <li style="position: relative">
               <a
                 href="contact.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
@@ -230,22 +570,6 @@
                 >Contact</a
               >
             </li>
-            <!-- <li style="position: relative">
-              <a
-                href="career.html"
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Career</a
-              >
-            </li> -->
           </ul>
           <!-- Academy Button -->
           <a
@@ -257,7 +581,7 @@
               color: #fff;
               border-radius: 25px;
               text-decoration: none;
-              font-family: 'Comic Sans MS', cursive;
+              font-family: 'Comic Sans MS', sans-serif;
               font-size: 16px;
               margin-left: 20px;
               animation: pulse 2s infinite;
@@ -270,6 +594,8 @@
         </div>
       </div>
     </nav>
+
+    <!-- JavaScript to manage dropdowns -->
 
     <!-- Inline JavaScript for Mobile Toggle -->
     <script>
@@ -414,7 +740,7 @@
                 margin: 0 0 15px;
               "
             >
-              🏫 GOOGLAI SCHOOL
+              🏫 GOOGLAi SCHOOL
             </h3>
             <p
               style="
@@ -615,7 +941,7 @@
                 margin: 0 0 15px;
               "
             >
-              🎓 GOOGLAI ACADEMY
+              🎓 GOOGLAi ACADEMY
             </h3>
             <p
               style="
@@ -964,7 +1290,7 @@
         border-top: 5px solid #ffd700;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px">
+      <div style="max-width: 1300px; margin: 0 auto; padding: 0 20px">
         <div
           style="
             display: flex;
@@ -974,7 +1300,7 @@
           "
         >
           <!-- Contact Info -->
-          <div style="flex: 1 1 25%; min-width: 220px">
+          <div style="flex: 1 1 30%; min-width: 250px">
             <h2
               style="
                 font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
@@ -983,6 +1309,7 @@
                 margin-bottom: 15px;
                 text-shadow: 2px 2px #ff3366;
                 animation: bounce 2s infinite;
+                text-align: center;
               "
             >
               Say Hello!
@@ -990,7 +1317,7 @@
             <div
               style="
                 display: flex;
-                flex-wrap: wrap;
+                flex-wrap: nowrap;
                 gap: 15px;
                 justify-content: space-between;
               "
@@ -1002,7 +1329,7 @@
                   padding: 15px;
                   border-radius: 15px;
                   box-shadow: 3px 3px #ffd700;
-                  flex: 1 1 45%;
+                  flex: 1 1 48%;
                   min-width: 180px;
                 "
               >
@@ -1015,7 +1342,7 @@
                     margin-bottom: 10px;
                   "
                 >
-                  Googlaí School
+                  GOOGLAi SCHOOL
                 </h3>
                 <ul style="list-style: none; padding: 0">
                   <li
@@ -1094,7 +1421,7 @@
                   padding: 15px;
                   border-radius: 15px;
                   box-shadow: 3px 3px #ff3366;
-                  flex: 1 1 45%;
+                  flex: 1 1 48%;
                   min-width: 180px;
                 "
               >
@@ -1107,7 +1434,7 @@
                     margin-bottom: 10px;
                   "
                 >
-                  Googlaí Academy
+                  GOOGLAi ACADEMY
                 </h3>
                 <ul style="list-style: none; padding: 0">
                   <li
@@ -1120,8 +1447,9 @@
                   >
                     <span style="font-size: 20px; margin-right: 8px">🏠</span>
                     <span style="font-family: 'Arial', sans-serif; color: #fff"
-                      >Plot No. 05, Block D, Laibrary Lane, Near MANUU Regional
-                      Centre, University, District Nuh, Haryana – 122107</span
+                      >PLOT NO. 05, BLOCK D, LIBRARY LANE, NEAR MANUU UNIVERSITY
+                      - SUB REGIONAL CENTRE, DISTRICT NUH,
+                      HARYANA – 122107</span
                     >
                   </li>
                   <li
@@ -1182,7 +1510,7 @@
           </div>
 
           <!-- Quick Links -->
-          <div style="flex: 1 1 30%; min-width: 220px">
+          <div style="flex: 1 1 5%; min-width: 220px">
             <h2
               style="
                 font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
@@ -1190,11 +1518,12 @@
                 color: #ffff00;
                 margin-bottom: 15px;
                 text-shadow: 2px 2px #ff3366;
+                text-align: center;
               "
             >
               Fun Places!
             </h2>
-            <ul style="list-style: none; padding: 0">
+            <ul style="list-style: none; padding: 0 items-center">
               <li style="margin-bottom: 10px">
                 <a
                   href="/index.html"
@@ -1289,7 +1618,7 @@
           </div>
 
           <!-- Subscribe & Social -->
-          <div style="flex: 1 1 30%; min-width: 220px">
+          <div style="flex: 1 1 5%; min-width: 220px">
             <h2
               style="
                 font-family: 'Bubblegum Sans', 'Comic Sans MS', sans-serif;
@@ -1503,5 +1832,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
+      }
+
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
   </body>
 </html>
