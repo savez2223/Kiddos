@@ -60,6 +60,259 @@
           transform: scale(1);
         }
       }
+      @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@400&display=swap");
+
+      @keyframes neonGlow {
+        from {
+          text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #10b981;
+        }
+        to {
+          text-shadow: 0 0 20px #3b82f6, 0 0 30px #3b82f6, 0 0 40px #10b981;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@600&family=Inter:wght@400&display=swap");
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes cardPop {
+        from {
+          opacity: 0;
+          transform: scale(0.95);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.3;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Nunito:wght@400&display=swap");
+
+      @keyframes zoomIn {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeSlide {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes flipIn {
+        from {
+          opacity: 0;
+          transform: rotateY(20deg);
+        }
+        to {
+          opacity: 1;
+          transform: rotateY(0);
+        }
+      }
+
+      @keyframes orbit {
+        from {
+          transform: rotate(0deg) translateX(50px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(50px) rotate(-360deg);
+        }
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Nunito:wght@400&display=swap");
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes floatGlow {
+        0% {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translateY(-15px);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Nunito:wght@400&display=swap");
+
+      @media (max-width: 991px) {
+        #ftco-nav {
+          width: 100%;
+          flex-direction: column;
+          background: #2d1a5a;
+          padding: 20px;
+          border-radius: 0 0 8px 8px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+          position: absolute;
+          top: 100%;
+          left: 0;
+          display: none;
+        }
+        #ftco-nav ul {
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+        }
+        #ftco-nav ul li {
+          width: 100%;
+        }
+        #ftco-nav ul li a {
+          display: block;
+          text-align: center;
+          padding: 15px;
+        }
+        .dropdown {
+          position: static !important;
+          box-shadow: none !important;
+          background: #3c2f6b !important;
+          margin: 10px 0;
+          border-radius: 6px;
+        }
+        .nav-item:hover .dropdown {
+          display: block;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&family=Nunito:wght@400&display=swap");
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulseGlow {
+        0% {
+          transform: scale(1);
+          opacity: 0.4;
+        }
+        50% {
+          transform: scale(1.3);
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.4;
+        }
+      }
+
+      @media (max-width: 768px) {
+        section {
+          padding: 80px 0;
+          min-height: 400px;
+        }
+        h1 {
+          font-size: 40px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        h1 {
+          font-size: 32px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
     </style>
   </head>
 
@@ -67,9 +320,9 @@
     <div class="py-0"></div>
     <nav
       style="
-        background: linear-gradient(135deg, #ff5722, #0288d1);
-        padding: 15px 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #1e1e4a, #3a2a7a);
+        padding: 20px 0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -81,13 +334,13 @@
           margin: 0 auto;
           display: flex;
           align-items: center;
-          padding: 0 15px;
+          padding: 0 20px;
           flex-wrap: wrap;
         "
       >
         <!-- Logo -->
         <a
-          href="index.html"
+          href="Academy.html"
           style="
             display: flex;
             align-items: center;
@@ -101,9 +354,9 @@
             src="./images/logo_academy.jpg"
             alt="GOOGLAi SCHOOL"
             style="
-              height: 46px;
-              border-radius: 5px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+              height: 50px;
+              border-radius: 8px;
+              box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
             "
           />
         </a>
@@ -113,16 +366,19 @@
           style="
             background: none;
             border: none;
-            color: #fff;
-            font-family: 'Comic Sans MS', sans-serif;
-            font-size: 18px;
+            color: #a5b4fc;
+            font-family: 'Rubik', sans-serif;
+            font-size: 20px;
             padding: 10px;
             cursor: pointer;
             display: none;
+            transition: color 0.3s ease;
           "
-          onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';"
+          onclick="toggleNav()"
+          onmouseover="this.style.color='#ffffff'"
+          onmouseout="this.style.color='#a5b4fc'"
         >
-          <span style="margin-right: 5px">☰</span> Menu
+          <span style="margin-right: 8px">☰</span> Menu
         </button>
 
         <!-- Navigation Links -->
@@ -132,7 +388,7 @@
             align-items: center;
             margin-left: auto;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 15px;
           "
           id="ftco-nav"
         >
@@ -143,22 +399,23 @@
               margin: 0;
               display: flex;
               flex-wrap: wrap;
-              gap: 15px;
+              gap: 20px;
             "
           >
             <li style="position: relative">
               <a
                 href="index.html"
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
+                  font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #fff;
+                  color: #a5b4fc;
                   text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
+                  padding: 12px 18px;
+                  border-radius: 6px;
+                  transition: all 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'"
+                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
                 >Home</a
               >
             </li>
@@ -168,15 +425,16 @@
               <a
                 href="about.html"
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
+                  font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #fff;
+                  color: #a5b4fc;
                   text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
+                  padding: 12px 18px;
+                  border-radius: 6px;
+                  transition: all 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
                 >About</a
               >
               <ul
@@ -185,32 +443,34 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #0288d1;
+                  background: #2d1a5a;
                   list-style: none;
-                  padding: 10px;
+                  padding: 15px;
                   margin: 0;
-                  min-width: 200px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                  border-radius: 5px;
+                  min-width: 220px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  border-radius: 8px;
                   z-index: 1001;
+                  opacity: 0;
+                  transform: translateY(10px);
+                  transition: opacity 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.display='block'"
-                onmouseout="hideDropdown(this)"
+                class="dropdown"
               >
                 <li>
                   <a
                     href="about.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >About Us</a
                   >
                 </li>
@@ -218,16 +478,16 @@
                   <a
                     href="about.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Our Mission</a
                   >
                 </li>
@@ -235,16 +495,16 @@
                   <a
                     href="about.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Our Vision</a
                   >
                 </li>
@@ -252,16 +512,16 @@
                   <a
                     href="about.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Founder Message</a
                   >
                 </li>
@@ -273,15 +533,16 @@
               <a
                 href="teacher.html"
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
+                  font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #fff;
+                  color: #a5b4fc;
                   text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
+                  padding: 12px 18px;
+                  border-radius: 6px;
+                  transition: all 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
                 >Teacher</a
               >
               <ul
@@ -290,32 +551,34 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #0288d1;
+                  background: #2d1a5a;
                   list-style: none;
-                  padding: 10px;
+                  padding: 15px;
                   margin: 0;
-                  min-width: 200px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                  border-radius: 5px;
+                  min-width: 220px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  border-radius: 8px;
                   z-index: 1001;
+                  opacity: 0;
+                  transform: translateY(10px);
+                  transition: opacity 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.display='block'"
-                onmouseout="hideDropdown(this)"
+                class="dropdown"
               >
                 <li>
                   <a
                     href="teacher.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Teachers</a
                   >
                 </li>
@@ -323,16 +586,16 @@
                   <a
                     href="teacher.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Experience</a
                   >
                 </li>
@@ -340,16 +603,16 @@
                   <a
                     href="teacher.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Teacher Training Programme</a
                   >
                 </li>
@@ -357,16 +620,16 @@
                   <a
                     href="teacher.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Child Introduction</a
                   >
                 </li>
@@ -378,15 +641,16 @@
               <a
                 href="courses.html"
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
+                  font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #fff;
+                  color: #a5b4fc;
                   text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
+                  padding: 12px 18px;
+                  border-radius: 6px;
+                  transition: all 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
                 >Program</a
               >
               <ul
@@ -395,32 +659,34 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #0288d1;
+                  background: #2d1a5a;
                   list-style: none;
-                  padding: 10px;
+                  padding: 15px;
                   margin: 0;
-                  min-width: 200px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                  border-radius: 5px;
+                  min-width: 220px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  border-radius: 8px;
                   z-index: 1001;
+                  opacity: 0;
+                  transform: translateY(10px);
+                  transition: opacity 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.display='block'"
-                onmouseout="hideDropdown(this)"
+                class="dropdown"
               >
                 <li>
                   <a
                     href="courses.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Our Program</a
                   >
                 </li>
@@ -428,16 +694,16 @@
                   <a
                     href="courses.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >What We Offer</a
                   >
                 </li>
@@ -445,16 +711,16 @@
                   <a
                     href="courses.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Admission Inquiry Form</a
                   >
                 </li>
@@ -462,16 +728,16 @@
                   <a
                     href="courses.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Admission Guidelines</a
                   >
                 </li>
@@ -479,16 +745,16 @@
                   <a
                     href="courses.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >FAQ for Kids</a
                   >
                 </li>
@@ -500,15 +766,16 @@
               <a
                 href="Gallary.html"
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
+                  font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #fff;
+                  color: #a5b4fc;
                   text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
+                  padding: 12px 18px;
+                  border-radius: 6px;
+                  transition: all 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
                 >Gallery</a
               >
               <ul
@@ -517,32 +784,34 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #0288d1;
+                  background: #2d1a5a;
                   list-style: none;
-                  padding: 10px;
+                  padding: 15px;
                   margin: 0;
-                  min-width: 200px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                  border-radius: 5px;
+                  min-width: 220px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  border-radius: 8px;
                   z-index: 1001;
+                  opacity: 0;
+                  transform: translateY(10px);
+                  transition: opacity 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.display='block'"
-                onmouseout="hideDropdown(this)"
+                class="dropdown"
               >
                 <li>
                   <a
                     href="Gallary.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Photos</a
                   >
                 </li>
@@ -550,16 +819,16 @@
                   <a
                     href="Gallary.html"
                     style="
-                      font-family: 'Comic Sans MS', sans-serif;
+                      font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #fff;
+                      color: #d8b4fe;
                       text-decoration: none;
-                      padding: 8px 15px;
+                      padding: 10px 15px;
                       display: block;
-                      transition: color 0.3s ease;
+                      transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'"
+                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
+                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
                     >Videos</a
                   >
                 </li>
@@ -570,15 +839,16 @@
               <a
                 href="contact.html"
                 style="
-                  font-family: 'Comic Sans MS', sans-serif;
+                  font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #fff;
+                  color: #a5b4fc;
                   text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
+                  padding: 12px 18px;
+                  border-radius: 6px;
+                  transition: all 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'"
+                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
                 >Contact</a
               >
             </li>
@@ -586,27 +856,37 @@
         </div>
       </div>
     </nav>
+
     <script>
       function showDropdown(dropdown) {
-        // Hide all dropdowns first
-        const allDropdowns = document.querySelectorAll("nav ul ul");
+        const allDropdowns = document.querySelectorAll(".dropdown");
         allDropdowns.forEach((dd) => {
           dd.style.display = "none";
+          dd.style.opacity = "0";
+          dd.style.transform = "translateY(10px)";
         });
-        // Show the current dropdown
         dropdown.style.display = "block";
+        setTimeout(() => {
+          dropdown.style.opacity = "1";
+          dropdown.style.transform = "translateY(0)";
+        }, 10);
       }
 
       function hideDropdown(dropdown) {
         dropdown.style.display = "none";
+        dropdown.style.opacity = "0";
+        dropdown.style.transform = "translateY(10px)";
       }
-    </script>
 
-    <!-- Inline JavaScript for Mobile Toggle -->
-    <script>
-      window.addEventListener("resize", function () {
+      function toggleNav() {
         const nav = document.getElementById("ftco-nav");
-        const toggler = document.querySelector("button");
+        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+      }
+
+      // Handle resize for mobile toggle
+      window.addEventListener("resize", () => {
+        const nav = document.getElementById("ftco-nav");
+        const toggler = document.querySelector("nav button");
         if (window.innerWidth <= 991) {
           toggler.style.display = "block";
           nav.style.display = "none";
@@ -615,8 +895,22 @@
           nav.style.display = "flex";
         }
       });
+
       // Trigger resize on load
       window.dispatchEvent(new Event("resize"));
+
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", (e) => {
+        const dropdowns = document.querySelectorAll(".dropdown");
+        const navItems = document.querySelectorAll(".nav-item");
+        if (!e.target.closest(".nav-item")) {
+          dropdowns.forEach((dropdown) => {
+            dropdown.style.display = "none";
+            dropdown.style.opacity = "0";
+            dropdown.style.transform = "translateY(10px)";
+          });
+        }
+      });
     </script>
     <!-- END nav -->
 
@@ -626,9 +920,13 @@
         background: url(https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps)
           no-repeat center center/cover;
         position: relative;
-        padding: 100px 0;
+        padding: 120px 0;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
       "
     >
+      <!-- Overlay -->
       <div
         style="
           position: absolute;
@@ -638,802 +936,1049 @@
           height: 100%;
           background: linear-gradient(
             135deg,
-            rgba(255, 87, 34, 0.7),
-            rgba(33, 150, 243, 0.7)
+            rgba(30, 30, 74, 0.7),
+            rgba(107, 70, 193, 0.7)
           );
           z-index: 1;
         "
       ></div>
+
+      <!-- Content -->
       <div
         style="
           max-width: 1200px;
           margin: 0 auto;
-          padding: 0 15px;
+          padding: 0 20px;
           position: relative;
           z-index: 2;
+          text-align: center;
+        "
+      >
+        <div>
+          <h1
+            style="
+              font-family: 'Rubik', sans-serif;
+              font-size: 60px;
+              color: #ffffff;
+              margin-bottom: 20px;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              animation: fadeInDown 1s ease-out;
+              text-shadow: 0 0 10px rgba(165, 180, 252, 0.8);
+            "
+          >
+            GOOGLAi ACADEMY
+          </h1>
+          <p
+            style="
+              font-family: 'Nunito', sans-serif;
+              font-size: 22px;
+              color: #d8b4fe;
+              margin: 0;
+              opacity: 0;
+              animation: fadeInUp 1s ease-out 0.3s forwards;
+            "
+          >
+            <span style="margin-right: 15px">
+              <a
+                href="index.html"
+                style="
+                  color: #6ff1b8;
+                  text-decoration: none;
+                  font-weight: 600;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffffff'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#6ff1b8'; this.style.transform='scale(1)'"
+                >Home ➔</a
+              >
+            </span>
+            <span>Academy ➔</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Background Animation Elements -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
         "
       >
         <div
           style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(
+              circle,
+              rgba(165, 180, 252, 0.2),
+              transparent
+            );
+            top: 15%;
+            left: 10%;
+            animation: pulseGlow 6s ease-in-out infinite;
           "
-        >
-          <div style="max-width: 900px">
-            <h1
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 48px;
-                color: #ffeb3b;
-                margin-bottom: 15px;
-                animation: bounce 2s infinite;
-              "
-            >
-              GOOGLAi ACADEMY
-            </h1>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 18px;
-                color: #fff;
-              "
-            >
-              <span style="margin-right: 10px">
-                <a
-                  href="index.html"
-                  style="
-                    color: #ffeb3b;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                  "
-                  onmouseover="this.style.color='#fff'"
-                  onmouseout="this.style.color='#ffeb3b'"
-                  >Home ➔</a
-                >
-              </span>
-              <span>Academy ➔</span>
-            </p>
-          </div>
-        </div>
+        ></div>
+        <div
+          style="
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(
+              circle,
+              rgba(111, 241, 184, 0.2),
+              transparent
+            );
+            bottom: 20%;
+            right: 15%;
+            animation: pulseGlow 8s ease-in-out infinite;
+          "
+        ></div>
       </div>
     </section>
 
     <!-- About Section -->
     <section
       style="
-        background: linear-gradient(135deg, #e0f7fa, #fff3e0);
-        padding: 60px 0;
+        background: linear-gradient(135deg, #1e3a8a, #10b981);
+        padding: 80px 0;
         text-align: center;
+        position: relative;
+        overflow: hidden;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          position: relative;
+          z-index: 2;
+        "
+      >
         <h2
           style="
-            font-family: 'Comic Sans MS', sans-serif;
-            font-size: 40px;
-            color: #ff5722;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 48px;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: neonGlow 1.5s ease-in-out infinite alternate;
           "
         >
           GOOGLAi ACADEMY
         </h2>
         <p
           style="
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: 'Poppins', sans-serif;
+            color: #e2e8f0;
+            font-size: 20px;
+            line-height: 1.8;
+            max-width: 900px;
             margin: 0 auto;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
           "
         >
-          GOOGLAi ACADEMY is an innovative and technologically advanced
-          educational institution. We aim to provide children with a safe,
-          secure, and interactive learning environment that takes into account
-          the individual learning needs of each child. Our AI-powered approach
-          provides children with a dynamic and adaptive learning environment
-          where they can grow at their own pace.
+          GOOGLAi ACADEMY is your ultimate tech-powered learning hub! We create
+          a safe, epic, and interactive space where you can level up your skills
+          at your own pace. Our AI-driven platform adapts to YOU, making
+          learning fun, dynamic, and totally next-gen.
         </p>
+      </div>
+      <!-- Background Animation Elements -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(
+              circle,
+              rgba(59, 130, 246, 0.3),
+              transparent
+            );
+            top: 10%;
+            left: 5%;
+            animation: float 6s ease-in-out infinite;
+          "
+        ></div>
+        <div
+          style="
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(
+              circle,
+              rgba(16, 185, 129, 0.3),
+              transparent
+            );
+            bottom: 15%;
+            right: 10%;
+            animation: float 8s ease-in-out infinite;
+          "
+        ></div>
       </div>
     </section>
 
     <!-- Program Section -->
-    <section style="background: #fff; padding: 60px 0; text-align: center">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+    <section
+      style="
+        background: linear-gradient(135deg, #0f172a, #334155);
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          position: relative;
+          z-index: 2;
+        "
+      >
         <h2
           style="
-            font-family: 'Comic Sans MS', sans-serif;
-            font-size: 40px;
-            color: #0288d1;
-            margin-bottom: 20px;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 46px;
+            color: #22d3ee;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: slideIn 1s ease-out;
           "
         >
-          Our Program - i30 (intelligent-30)
+          i30: Intelligent-30 Program
         </h2>
         <p
           style="
-            font-family: 'Arial', sans-serif;
-            color: #666;
+            font-family: 'Inter', sans-serif;
+            color: #cbd5e1;
             font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out 0.3s forwards;
           "
         >
-          The academy is running a program named (intelligent-30) i30, coaching
-          30 children from Mewat, preparing them fully for competitive exams.
+          The i30 program is your ticket to greatness! We're coaching 30 awesome
+          kids from Mewat, powering them up for epic competitive exams with
+          next-level training.
         </p>
         <div
           style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-items: center;
           "
         >
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              background: #1e293b;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: cardPop 1s ease-out 0.5s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(34, 211, 238, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
+                font-family: 'Exo 2', sans-serif;
+                font-size: 24px;
+                color: #facc15;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              🎯 Who Can Apply?
+              🎯 Who’s In?
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Inter', sans-serif;
+                color: #94a3b8;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              Students from
-              <b style="color: #ff5722">4th,5th,7th and 8th grades in Mewat</b>
-              are eligible. We help them prepare for school entrance exams in
-              top government institutions.
+              Kids in
+              <b style="color: #facc15">4th, 5th, 7th, or 8th grade</b> from
+              Mewat can join. We prep you for top government school entrance
+              exams!
             </p>
           </div>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              background: #1e293b;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: cardPop 1s ease-out 0.7s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(34, 211, 238, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
+                font-family: 'Exo 2', sans-serif;
+                font-size: 24px;
+                color: #22d3ee;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              📚 Exam Preparation
+              📚 Exam Domination
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Inter', sans-serif;
+                color: #94a3b8;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              Our coaching covers
-              <b style="color: #0288d1"
-                >JNV, JMI, AMU, RMS, AISSEE, RAI-SONIPAT, NAVYUG SCHOOLS,
-                RAHMANI-30, OLYMPIAD EXAMS, and more.</b
-              >.
+              We train for
+              <b style="color: #22d3ee"
+                >JNV, JMI, AMU, RMS, AISSEE, RAI-Sonipat, Navyug Schools,
+                Rahmani-30, Olympiads</b
+              >, and more!
             </p>
           </div>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              background: #1e293b;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: cardPop 1s ease-out 0.9s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(34, 211, 238, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 22px;
-                color: #4caf50;
-                margin: 0 0 10px;
+                font-family: 'Exo 2', sans-serif;
+                font-size: 24px;
+                color: #10b981;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              🚀 Holistic Development
+              🚀 Level Up
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Inter', sans-serif;
+                color: #94a3b8;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              We provide
-              <b style="color: #4caf50"
-                >career counseling, motivation sessions, and competitive exam
-                guidance</b
+              Get
+              <b style="color: #10b981"
+                >career advice, motivation boosts, and pro exam tips</b
               >
-              to help students achieve their goals.
+              to crush your goals and soar high!
             </p>
           </div>
         </div>
+      </div>
+      <!-- Background Animation -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(
+              circle,
+              rgba(34, 211, 238, 0.2),
+              transparent
+            );
+            top: 15%;
+            left: 10%;
+            animation: pulse 5s ease-in-out infinite;
+          "
+        ></div>
+        <div
+          style="
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(
+              circle,
+              rgba(16, 185, 129, 0.2),
+              transparent
+            );
+            bottom: 20%;
+            right: 15%;
+            animation: pulse 7s ease-in-out infinite;
+          "
+        ></div>
       </div>
     </section>
 
     <!-- Areas of Focus Section -->
     <section
       style="
-        background: linear-gradient(135deg, #f8bbd0, #c8e6c9);
-        padding: 60px 0;
+        background: linear-gradient(135deg, #2a0845, #6441a5);
+        padding: 80px 0;
         text-align: center;
+        position: relative;
+        overflow: hidden;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 20px;
+          position: relative;
+          z-index: 2;
+        "
+      >
         <h2
           style="
-            font-family: 'Comic Sans MS', sans-serif;
-            font-size: 40px;
-            color: #ff4081;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
+            font-family: 'Rubik', sans-serif;
+            font-size: 48px;
+            color: #ffcb77;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: zoomIn 1s ease-out;
           "
         >
           Areas of Focus
         </h2>
         <p
           style="
-            font-family: 'Arial', sans-serif;
-            color: #333;
+            font-family: 'Nunito', sans-serif;
+            color: #e9d8fd;
             font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            opacity: 0;
+            animation: fadeSlide 1.2s ease-out 0.3s forwards;
           "
         >
-          At GOOGLAi ACADEMY, we focus on
-          <b style="color: #ff4081"
-            >academic excellence, skill development, and holistic education</b
+          At GOOGLAi ACADEMY, we’re all about smashing it with
+          <b style="color: #ffcb77"
+            >epic academics, killer skills, and all-around awesomeness</b
           >
-          to prepare students for future success.
+          to get you ready to rule the future!
         </p>
         <div
           style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-items: center;
           "
         >
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              background: #3c1c6d;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: flipIn 1s ease-out 0.5s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
+                font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
+                color: #ff6b6b;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              📖 Competitive Exam Training
+              📖 Exam Mastery
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Nunito', sans-serif;
+                color: #d1c4e9;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              We ensure students are fully prepared for
-              <b style="color: #ff5722"
-                >school-level competitive exams (after 5th & 8th grade)</b
-              >.
+              We gear you up to
+              <b style="color: #ff6b6b">crush school-level competitive exams</b>
+              after 5th & 8th grade like a pro!
             </p>
           </div>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              background: #3c1c6d;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: flipIn 1s ease-out 0.6s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
+                font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
+                color: #4ed8ff;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              💻 Digital Literacy
+              💻 Tech Wizardry
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Nunito', sans-serif;
+                color: #d1c4e9;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              We equip students with
-              <b style="color: #0288d1">modern digital skills</b>, enabling them
-              to adapt to
-              <b style="color: #0288d1">technology-driven education</b>.
+              Learn <b style="color: #4ed8ff">next-gen digital skills</b> to
+              dominate <b style="color: #4ed8ff">tech-driven learning</b> like a
+              boss!
             </p>
           </div>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
+              background: #3c1c6d;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: flipIn 1s ease-out 0.7s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
+                font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #4caf50;
-                margin: 0 0 10px;
+                color: #00ff9f;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              🔬 STEM Education
+              🔬 STEM Power
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Nunito', sans-serif;
+                color: #d1c4e9;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              We emphasize
-              <b style="color: #4caf50"
-                >Science, Technology, Engineering, and Mathematics (STEM)</b
-              >
-              to enhance critical thinking and innovation.
+              Dive into
+              <b style="color: #00ff9f">Science, Tech, Engineering, & Math</b>
+              to boost your brain and spark innovation!
             </p>
           </div>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
+              background: #3c1c6d;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: flipIn 1s ease-out 0.8s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
+                font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #ff4081;
-                margin: 0 0 10px;
+                color: #ff85f2;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              🌍 Holistic Development
+              🌍 Epic Growth
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Nunito', sans-serif;
+                color: #d1c4e9;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              Our boarding facilities provide a
-              <b style="color: #ff4081">safe environment</b> where students gain
-              <b style="color: #ff4081">life skills, discipline, and values</b>.
+              Our boarding setup offers a
+              <b style="color: #ff85f2">safe space</b> to build
+              <b style="color: #ff85f2">skills, discipline, & values</b>!
             </p>
           </div>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
+              background: #3c1c6d;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: flipIn 1s ease-out 0.9s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
+                font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
+                color: #ffd166;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              🛠 Practical Learning
+              🛠 Hands-On Vibes
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Nunito', sans-serif;
+                color: #d1c4e9;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              Students engage in
-              <b style="color: #ff5722">hands-on projects</b> that develop
-              <b style="color: #ff5722">problem-solving abilities</b> and
-              creativity.
+              Tackle <b style="color: #ffd166">real-world projects</b> to
+              sharpen
+              <b style="color: #ffd166">problem-solving & creativity</b>!
             </p>
           </div>
           <div
             style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
+              background: #3c1c6d;
+              padding: 25px;
+              border-radius: 12px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              transition: transform 0.4s ease, box-shadow 0.4s ease;
+              opacity: 0;
+              animation: flipIn 1s ease-out 1s forwards;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
           >
             <h4
               style="
-                font-family: 'Comic Sans MS', sans-serif;
+                font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
+                color: #06d6a0;
+                margin: 0 0 15px;
+                text-transform: uppercase;
               "
             >
-              🌿 Organic Farming
+              🌿 Green Learning
             </h4>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
+                font-family: 'Nunito', sans-serif;
+                color: #d1c4e9;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              We introduce
-              <b style="color: #0288d1">agriculture-based learning</b> by
-              engaging students in
-              <b style="color: #0288d1">organic farming</b> on our campus.
+              Get your hands dirty with
+              <b style="color: #06d6a0">organic farming</b> and learn
+              <b style="color: #06d6a0">agri-skills</b> on campus!
             </p>
           </div>
         </div>
+      </div>
+      <!-- Background Animation -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          pointer-events: none;
+        "
+      >
+        <div
+          style="
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(
+              circle,
+              rgba(255, 203, 119, 0.25),
+              transparent
+            );
+            top: 10%;
+            left: 15%;
+            animation: orbit 6s linear infinite;
+          "
+        ></div>
+        <div
+          style="
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(
+              circle,
+              rgba(100, 65, 165, 0.25),
+              transparent
+            );
+            bottom: 15%;
+            right: 10%;
+            animation: orbit 8s linear infinite reverse;
+          "
+        ></div>
       </div>
     </section>
 
     <footer
       style="
-        background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
-        padding: 40px 15px;
-        color: #fff;
-        font-family: 'Comic Sans MS', sans-serif;
+        background: linear-gradient(120deg, #1a1a3d, #3b1e66, #5d2a8c);
+        padding: 60px 20px;
+        color: #ffffff;
         position: relative;
         overflow: hidden;
       "
     >
-      <!-- Fun Background Shapes -->
+      <!-- Background Animation Elements -->
       <div
         style="
           position: absolute;
-          top: 10px;
-          left: 20px;
-          width: 80px;
-          height: 80px;
-          background: rgba(255, 255, 255, 0.3);
-          border-radius: 20px;
-          transform: rotate(45deg);
+          top: 20%;
+          left: 5%;
+          width: 100px;
+          height: 100px;
+          background: radial-gradient(
+            circle,
+            rgba(255, 111, 241, 0.3),
+            transparent
+          );
+          border-radius: 50%;
+          animation: floatGlow 5s ease-in-out infinite;
         "
       ></div>
       <div
         style="
           position: absolute;
-          bottom: 20px;
-          right: 30px;
-          width: 100px;
-          height: 100px;
-          background: rgba(255, 255, 255, 0.2);
+          bottom: 15%;
+          right: 10%;
+          width: 80px;
+          height: 80px;
+          background: radial-gradient(
+            circle,
+            rgba(111, 255, 184, 0.3),
+            transparent
+          );
           border-radius: 50%;
+          animation: floatGlow 7s ease-in-out infinite;
         "
       ></div>
 
       <div
         style="
-          max-width: 1000px;
+          max-width: 1200px;
           margin: 0 auto;
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-          gap: 20px;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 30px;
           text-align: center;
           position: relative;
-          z-index: 1;
+          z-index: 2;
         "
       >
         <!-- Contact Info -->
         <div>
           <h2
             style="
-              font-size: clamp(22px, 5vw, 28px);
-              color: #fff;
-              margin-bottom: 15px;
-              text-shadow: 2px 2px #ff4081;
-              animation: bounce 2s infinite;
+              font-family: 'Rubik', sans-serif;
+              font-size: clamp(24px, 5vw, 30px);
+              color: #ff6ff1;
+              margin-bottom: 20px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              animation: fadeInUp 1s ease-out;
             "
           >
-            Let’s Talk!
+            Connect With Us!
           </h2>
           <p
             style="
-              font-size: 14px;
-              margin: 0 0 10px;
+              font-family: 'Nunito', sans-serif;
+              font-size: 15px;
+              margin: 0 0 12px;
               display: flex;
               align-items: flex-start;
               justify-content: center;
-              gap: 8px;
-              line-height: 1.4;
+              gap: 10px;
+              line-height: 1.5;
+              color: #d8b4fe;
             "
           >
-            <span style="font-size: 24px">🏡</span> PLOT NO. 05, BLOCK D,
-            LIBRARY LANE, NEAR MANUU REGIONAL CENTRE, UNIVERSITY, DISTRICT NUH,
-            HARYANA – 122107
+            <span style="font-size: 22px">🏡</span> Plot No. 05, Block D,
+            Library Lane, Near MANUU Regional Centre, University, District Nuh,
+            Haryana – 122107
           </p>
           <p
             style="
-              font-size: 14px;
-              margin: 0 0 10px;
+              font-family: 'Nunito', sans-serif;
+              font-size: 15px;
+              margin: 0 0 12px;
               display: flex;
               align-items: center;
               justify-content: center;
-              gap: 8px;
+              gap: 10px;
+              color: #d8b4fe;
             "
           >
-            <span style="font-size: 24px">📞</span>
+            <span style="font-size: 22px">📞</span>
             <a
               href="tel:+917056655514"
               style="
-                color: #fff;
+                color: #6ff1b8;
                 text-decoration: none;
-                transition: color 0.3s ease;
+                transition: color 0.3s ease, transform 0.3s ease;
               "
-              onmouseover="this.style.color='#ffeb3b'"
-              onmouseout="this.style.color='#fff'"
+              onmouseover="this.style.color='#ffffff'; this.style.transform='scale(1.1)'"
+              onmouseout="this.style.color='#6ff1b8'; this.style.transform='scale(1)'"
               >+91 70566-55514</a
             >
           </p>
           <p
             style="
-              font-size: 14px;
+              font-family: 'Nunito', sans-serif;
+              font-size: 15px;
               margin: 0;
               display: flex;
               align-items: center;
               justify-content: center;
-              gap: 8px;
+              gap: 10px;
+              color: #d8b4fe;
             "
           >
-            <span style="font-size: 24px">✉️</span>
+            <span style="font-size: 22px">✉️</span>
             <a
               href="mailto:googlaiacademy@gmail.com"
               style="
-                color: #fff;
+                color: #6ff1b8;
                 text-decoration: none;
-                transition: color 0.3s ease;
+                transition: color 0.3s ease, transform 0.3s ease;
               "
-              onmouseover="this.style.color='#ffeb3b'"
-              onmouseout="this.style.color='#fff'"
+              onmouseover="this.style.color='#ffffff'; this.style.transform='scale(1.1)'"
+              onmouseout="this.style.color='#6ff1b8'; this.style.transform='scale(1)'"
               >googlaiacademy@gmail.com</a
             >
           </p>
         </div>
 
-        <!-- Fun Links -->
+        <!-- Navigation Links -->
         <div>
           <h2
             style="
-              font-size: clamp(22px, 5vw, 28px);
-              color: #fff;
-              margin-bottom: 15px;
-              text-shadow: 2px 2px #3f51b5;
-              animation: bounce 2s infinite;
+              font-family: 'Rubik', sans-serif;
+              font-size: clamp(24px, 5vw, 30px);
+              color: #ff6ff1;
+              margin-bottom: 20px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              animation: fadeInUp 1s ease-out 0.2s;
             "
           >
-            Play & Learn!
+            Explore the Galaxy!
           </h2>
           <ul style="list-style: none; padding: 0">
-            <li style="margin-bottom: 10px">
+            <li style="margin-bottom: 12px">
               <a
                 href="/index.html"
                 style="
-                  color: #fff;
+                  font-family: 'Nunito', sans-serif;
+                  color: #d8b4fe;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  gap: 8px;
+                  gap: 10px;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                ><span style="font-size: 20px">🌟</span> Home</a
+                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                ><span style="font-size: 18px">🚀</span> Home</a
               >
             </li>
-            <li style="margin-bottom: 10px">
+            <li style="margin-bottom: 12px">
               <a
                 href="/about.html"
                 style="
-                  color: #fff;
+                  font-family: 'Nunito', sans-serif;
+                  color: #d8b4fe;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  gap: 8px;
+                  gap: 10px;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                ><span style="font-size: 20px">🌟</span> About</a
+                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                ><span style="font-size: 18px">🚀</span> About</a
               >
             </li>
-            <li style="margin-bottom: 10px">
+            <li style="margin-bottom: 12px">
               <a
                 href="/career.html"
                 style="
-                  color: #fff;
+                  font-family: 'Nunito', sans-serif;
+                  color: #d8b4fe;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  gap: 8px;
+                  gap: 10px;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                ><span style="font-size: 20px">🌟</span> Career</a
+                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                ><span style="font-size: 18px">🚀</span> Career</a
               >
             </li>
-            <li style="margin-bottom: 10px">
+            <li style="margin-bottom: 12px">
               <a
                 href="/courses.html"
                 style="
-                  color: #fff;
+                  font-family: 'Nunito', sans-serif;
+                  color: #d8b4fe;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  gap: 8px;
+                  gap: 10px;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                ><span style="font-size: 20px">🌟</span> Program</a
+                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                ><span style="font-size: 18px">🚀</span> Program</a
               >
             </li>
-            <li style="margin-bottom: 10px">
+            <li style="margin-bottom: 12px">
               <a
                 href="/contact.html"
                 style="
-                  color: #fff;
+                  font-family: 'Nunito', sans-serif;
+                  color: #d8b4fe;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  gap: 8px;
+                  gap: 10px;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                ><span style="font-size: 20px">🌟</span> Contact</a
+                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                ><span style="font-size: 18px">🚀</span> Contact</a
               >
             </li>
-            <li style="margin-bottom: 10px">
+            <li style="margin-bottom: 12px">
               <a
                 href="/admin.html"
                 style="
-                  color: #fff;
+                  font-family: 'Nunito', sans-serif;
+                  color: #d8b4fe;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  gap: 8px;
+                  gap: 10px;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                ><span style="font-size: 20px">🌟</span> Admin</a
+                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                ><span style="font-size: 18px">🚀</span> Admin</a
               >
             </li>
           </ul>
         </div>
 
-        <!-- Social Fun -->
+        <!-- Social Media -->
         <div>
           <h2
             style="
-              font-size: clamp(22px, 5vw, 28px);
-              color: #fff;
-              margin-bottom: 15px;
-              text-shadow: 2px 2px #ff4081;
-              animation: bounce 2s infinite;
+              font-family: 'Rubik', sans-serif;
+              font-size: clamp(24px, 5vw, 30px);
+              color: #ff6ff1;
+              margin-bottom: 20px;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              animation: fadeInUp 1s ease-out 0.4s;
             "
           >
-            Be Our Buddy!
+            Join the Crew!
           </h2>
           <ul
             style="
               list-style: none;
               padding: 0;
               display: flex;
-              gap: 15px;
+              gap: 20px;
               justify-content: center;
-              margin-bottom: 20px;
+              margin-bottom: 25px;
             "
           >
             <li>
@@ -1445,16 +1990,16 @@
                   justify-content: center;
                   width: 50px;
                   height: 50px;
-                  background: #ffeb3b;
+                  background: #3c1c6d;
                   border-radius: 50%;
-                  color: #ff4081;
+                  color: #6ff1b8;
                   font-size: 24px;
                   text-decoration: none;
                   transition: all 0.3s ease;
-                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
                 "
-                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
-                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6ff1b8'; this.style.color='#1a1a3d'; this.style.transform='rotate(360deg)'"
+                onmouseout="this.style.background='#3c1c6d'; this.style.color='#6ff1b8'; this.style.transform='rotate(0deg)'"
                 >𝕏</a
               >
             </li>
@@ -1467,16 +2012,16 @@
                   justify-content: center;
                   width: 50px;
                   height: 50px;
-                  background: #ffeb3b;
+                  background: #3c1c6d;
                   border-radius: 50%;
-                  color: #ff4081;
+                  color: #6ff1b8;
                   font-size: 24px;
                   text-decoration: none;
                   transition: all 0.3s ease;
-                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
                 "
-                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
-                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6ff1b8'; this.style.color='#1a1a3d'; this.style.transform='rotate(360deg)'"
+                onmouseout="this.style.background='#3c1c6d'; this.style.color='#6ff1b8'; this.style.transform='rotate(0deg)'"
                 >f</a
               >
             </li>
@@ -1489,31 +2034,38 @@
                   justify-content: center;
                   width: 50px;
                   height: 50px;
-                  background: #ffeb3b;
+                  background: #3c1c6d;
                   border-radius: 50%;
-                  color: #ff4081;
+                  color: #6ff1b8;
                   font-size: 24px;
                   text-decoration: none;
                   transition: all 0.3s ease;
-                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
                 "
-                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
-                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                onmouseover="this.style.background='#6ff1b8'; this.style.color='#1a1a3d'; this.style.transform='rotate(360deg)'"
+                onmouseout="this.style.background='#3c1c6d'; this.style.color='#6ff1b8'; this.style.transform='rotate(0deg)'"
                 >📷</a
               >
             </li>
           </ul>
-          <p style="font-size: 14px; margin: 0; text-shadow: 1px 1px #3f51b5">
-            Made with ❤️ by
+          <p
+            style="
+              font-family: 'Nunito', sans-serif;
+              font-size: 14px;
+              margin: 0;
+              color: #d8b4fe;
+            "
+          >
+            Powered by
             <a
               href="https://zuridox.com"
               style="
-                color: #ffeb3b;
+                color: #6ff1b8;
                 text-decoration: none;
                 transition: color 0.3s ease;
               "
-              onmouseover="this.style.color='#fff'"
-              onmouseout="this.style.color='#ffeb3b'"
+              onmouseover="this.style.color='#ffffff'"
+              onmouseout="this.style.color='#6ff1b8'"
               >Zuridox</a
             >
           </p>
@@ -1524,16 +2076,17 @@
       <div
         style="
           text-align: center;
-          margin-top: 30px;
-          font-size: clamp(12px, 3vw, 14px);
-          text-shadow: 1px 1px #ff4081;
+          margin-top: 40px;
+          font-family: 'Nunito', sans-serif;
+          font-size: clamp(13px, 3vw, 15px);
+          color: #d8b4fe;
         "
       >
         ©
         <script>
           document.write(new Date().getFullYear());
         </script>
-        GOOGLAi ACADEMY - Let’s Have Fun Together! 🌟
+        GOOGLAi ACADEMY - Blast Off to Greatness! 🚀
       </div>
     </footer>
 
