@@ -656,6 +656,21 @@
         </div>
       </div>
     </nav>
+    <script>
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
+      }
+
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
 
     <section
       style="

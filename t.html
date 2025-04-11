@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GOOGLAi Academy</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f0f4f8;
+        color: #333;
+        overflow-x: hidden;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: url("https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps")
+          no-repeat center center/cover;
+        padding: 20px;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          135deg,
+          rgba(255, 87, 34, 0.6),
+          rgba(33, 150, 243, 0.6)
+        );
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        color: #fff;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        color: #ffeb3b;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        animation: bounce 2s infinite;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+
+      .hero-content a {
+        color: #ffeb3b;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .hero-content a:hover {
+        color: #fff;
+      }
+
+      /* About Section */
+      .about-section {
+        position: relative;
+        padding: 80px 20px;
+        background: url("https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0032_fqg4v6.jpg?_s=public-apps")
+          no-repeat center center/cover;
+        text-align: center;
+        color: #fff;
+      }
+
+      .about-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .about-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        margin: 0 auto;
+        animation: slideInUp 1s ease-out;
+      }
+
+      .about-content h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #facc15;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      }
+
+      .about-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+
+      .about-content a {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: #facc15;
+        color: #1e3a8a;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .about-content a:hover {
+        background-color: #eab308;
+        transform: scale(1.05);
+      }
+
+      /* Program Section */
+      .program-section {
+        padding: 60px 20px;
+        background: #fff;
+        text-align: center;
+      }
+
+      .program-section h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #0288d1;
+        margin-bottom: 20px;
+        animation: pulse 2s infinite;
+      }
+
+      .program-section p {
+        font-size: 1.1rem;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+      }
+
+      .program-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .program-card {
+        flex: 1 1 300px;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .program-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .program-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .program-card p {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      /* Areas of Focus Section */
+      .focus-section {
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #f8bbd0, #c8e6c9);
+        text-align: center;
+      }
+
+      .focus-section h2 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #ff4081;
+        margin-bottom: 20px;
+        animation: pulse 2s infinite;
+      }
+
+      .focus-section p {
+        font-size: 1.1rem;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto 40px;
+        line-height: 1.6;
+      }
+
+      .focus-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .focus-card {
+        flex: 1 1 300px;
+        background: #fff;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .focus-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .focus-card h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .focus-card p {
+        font-size: 1rem;
+        color: #666;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          transform: translateY(30px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-content p {
+          font-size: 1rem;
+        }
+
+        .about-content h2 {
+          font-size: 2rem;
+        }
+
+        .about-content p {
+          font-size: 1rem;
+        }
+
+        .program-section h2,
+        .focus-section h2 {
+          font-size: 2rem;
+        }
+
+        .program-card,
+        .focus-card {
+          flex: 1 1 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .about-content h2 {
+          font-size: 1.8rem;
+        }
+
+        .program-section h2,
+        .focus-section h2 {
+          font-size: 1.8rem;
+        }
+
+        .about-content a {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h1>GOOGLAi ACADEMY</h1>
+        <p><a href="index.html">Home ➔</a> ACADEMY ➔</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <div class="about-content">
+        <h2>GOOGLAi ACADEMY</h2>
+        <p>
+          GOOGLAi Academy is a cutting-edge platform designed for young men to
+          unleash their potential. Our AI-driven learning environment adapts to
+          your unique goals, empowering you to master skills, explore
+          technology, and build a future-ready mindset. Join a community where
+          innovation meets ambition, and grow at your own pace.
+        </p>
+        <a href="#learn-more">Discover Your Path</a>
+      </div>
+    </section>
+
+    <!-- Program Section -->
+    <section class="program-section">
+      <h2>Our Program - i30 (intelligent-30)</h2>
+      <p>
+        The academy is running a program named (intelligent-30) i30, coaching 30
+        children from Mewat, preparing them fully for competitive exams.
+      </p>
+      <div class="program-cards">
+        <div class="program-card">
+          <h4 style="color: #ff5722">🎯 Who Can Apply?</h4>
+          <p>
+            Students from <b>4th, 5th, 7th, and 8th grades in Mewat</b> are
+            eligible. We help them prepare for school entrance exams in top
+            government institutions.
+          </p>
+        </div>
+        <div class="program-card">
+          <h4 style="color: #0288d1">📚 Exam Preparation</h4>
+          <p>
+            Our coaching covers
+            <b
+              >JNV, JMI, AMU, RMS, AISSEE, RAI-SONIPAT, NAVYUG SCHOOLS,
+              RAHMANI-30, OLYMPIAD EXAMS, and more.</b
+            >
+          </p>
+        </div>
+        <div class="program-card">
+          <h4 style="color: #4caf50">🚀 Holistic Development</h4>
+          <p>
+            We provide
+            <b
+              >career counseling, motivation sessions, and competitive exam
+              guidance</b
+            >
+            to help students achieve their goals.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Areas of Focus Section -->
+    <section class="focus-section">
+      <h2>Areas of Focus</h2>
+      <p>
+        At GOOGLAi ACADEMY, we focus on
+        <b>academic excellence, skill development, and holistic education</b> to
+        prepare students for future success.
+      </p>
+      <div class="focus-cards">
+        <div class="focus-card">
+          <h4 style="color: #ff5722">📖 Competitive Exam Training</h4>
+          <p>
+            We ensure students are fully prepared for
+            <b>school-level competitive exams (after 5th & 8th grade)</b>.
+          </p>
+        </div>
+        <div class="focus-card">
+          <h4 style="color: #0288d1">💻 Digital Literacy</h4>
+          <p>
+            We equip students with <b>modern digital skills</b>, enabling them
+            to adapt to <b>technology-driven education</b>.
+          </p>
+        </div>
+        <div class="focus-card">
+          <h4 style="color: #4caf50">🔬 STEM Education</h4>
+          <p>
+            We emphasize
+            <b>Science, Technology, Engineering, and Mathematics (STEM)</b> to
+            enhance critical thinking and innovation.
+          </p>
+        </div>
+        <div class="focus-card">
+          <h4 style="color: #ff4081">🌍 Holistic Development</h4>
+          <p>
+            Our boarding facilities provide a <b>safe environment</b> where
+            students gain <b>life skills, discipline, and values</b>.
+          </p>
+        </div>
+        <div class="focus-card">
+          <h4 style="color: #ff5722">🛠 Practical Learning</h4>
+          <p>
+            Students engage in <b>hands-on projects</b> that develop
+            <b>problem-solving abilities</b> and creativity.
+          </p>
+        </div>
+        <div class="focus-card">
+          <h4 style="color: #0288d1">🌿 Organic Farming</h4>
+          <p>
+            We introduce <b>agriculture-based learning</b> by engaging students
+            in <b>organic farming</b> on our campus.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
