@@ -34,6 +34,152 @@
 
     <!-- Consolidated Keyframes -->
     <style>
+      @keyframes floatGlow {
+        0% {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translateY(-20px);
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes zoomIn {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes fadeSlide {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes flipIn {
+        from {
+          opacity: 0;
+          transform: rotateY(90deg);
+        }
+        to {
+          opacity: 1;
+          transform: rotateY(0);
+        }
+      }
+
+      @keyframes orbit {
+        from {
+          transform: rotate(0deg) translateX(50px) rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) translateX(50px) rotate(-360deg);
+        }
+      }
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes cardPop {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+      }
+      @keyframes neonGlow {
+        from {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(96, 165, 250, 0.6), 0 0 30px rgba(96, 165, 250, 0.4);
+        }
+        to {
+          text-shadow: 0 0 20px rgba(255, 255, 255, 1),
+            0 0 30px rgba(96, 165, 250, 0.8), 0 0 40px rgba(96, 165, 250, 0.6);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
       @keyframes bounce {
         0%,
         20%,
@@ -320,9 +466,9 @@
     <div class="py-0"></div>
     <nav
       style="
-        background: linear-gradient(135deg, #1e1e4a, #3a2a7a);
+        background: linear-gradient(135deg, #e0e7ff, #a5b4fc);
         padding: 20px 0;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         position: sticky;
         top: 0;
         z-index: 1000;
@@ -356,7 +502,7 @@
             style="
               height: 50px;
               border-radius: 8px;
-              box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+              box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
             "
           />
         </a>
@@ -366,7 +512,7 @@
           style="
             background: none;
             border: none;
-            color: #a5b4fc;
+            color: #4b5dfa;
             font-family: 'Rubik', sans-serif;
             font-size: 20px;
             padding: 10px;
@@ -375,8 +521,8 @@
             transition: color 0.3s ease;
           "
           onclick="toggleNav()"
-          onmouseover="this.style.color='#ffffff'"
-          onmouseout="this.style.color='#a5b4fc'"
+          onmouseover="this.style.color='#1e3a8a'"
+          onmouseout="this.style.color='#4b5dfa'"
         >
           <span style="margin-right: 8px">☰</span> Menu
         </button>
@@ -408,14 +554,14 @@
                 style="
                   font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #a5b4fc;
+                  color: #4b5dfa;
                   text-decoration: none;
                   padding: 12px 18px;
                   border-radius: 6px;
                   transition: all 0.3s ease;
                 "
-                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'"
-                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
+                onmouseover="this.style.background='#c7d2fe'; this.style.color='#1e3a8a'"
+                onmouseout="this.style.background='none'; this.style.color='#4b5dfa'"
                 >Home</a
               >
             </li>
@@ -427,14 +573,14 @@
                 style="
                   font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #a5b4fc;
+                  color: #4b5dfa;
                   text-decoration: none;
                   padding: 12px 18px;
                   border-radius: 6px;
                   transition: all 0.3s ease;
                 "
-                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
+                onmouseover="this.style.background='#c7d2fe'; this.style.color='#1e3a8a'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#4b5dfa'"
                 >About</a
               >
               <ul
@@ -443,12 +589,12 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #2d1a5a;
+                  background: #e0e7ff;
                   list-style: none;
                   padding: 15px;
                   margin: 0;
                   min-width: 220px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
                   border-radius: 8px;
                   z-index: 1001;
                   opacity: 0;
@@ -463,14 +609,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >About Us</a
                   >
                 </li>
@@ -480,14 +626,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Our Mission</a
                   >
                 </li>
@@ -497,14 +643,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Our Vision</a
                   >
                 </li>
@@ -514,14 +660,17 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
+                      text-decoration: sans-serif;
+                      font-size: 16px;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Founder Message</a
                   >
                 </li>
@@ -535,14 +684,14 @@
                 style="
                   font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #a5b4fc;
+                  color: #4b5dfa;
                   text-decoration: none;
                   padding: 12px 18px;
                   border-radius: 6px;
                   transition: all 0.3s ease;
                 "
-                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
+                onmouseover="this.style.background='#c7d2fe'; this.style.color='#1e3a8a'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#4b5dfa'"
                 >Teacher</a
               >
               <ul
@@ -551,12 +700,12 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #2d1a5a;
+                  background: #e0e7ff;
                   list-style: none;
                   padding: 15px;
                   margin: 0;
                   min-width: 220px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
                   border-radius: 8px;
                   z-index: 1001;
                   opacity: 0;
@@ -571,14 +720,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Teachers</a
                   >
                 </li>
@@ -588,14 +737,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Experience</a
                   >
                 </li>
@@ -605,14 +754,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Teacher Training Programme</a
                   >
                 </li>
@@ -622,14 +771,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Child Introduction</a
                   >
                 </li>
@@ -643,14 +792,14 @@
                 style="
                   font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #a5b4fc;
+                  color: #4b5dfa;
                   text-decoration: none;
                   padding: 12px 18px;
                   border-radius: 6px;
                   transition: all 0.3s ease;
                 "
-                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
+                onmouseover="this.style.background='#c7d2fe'; this.style.color='#1e3a8a'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#4b5dfa'"
                 >Program</a
               >
               <ul
@@ -659,12 +808,12 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #2d1a5a;
+                  background: #e0e7ff;
                   list-style: none;
                   padding: 15px;
                   margin: 0;
                   min-width: 220px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
                   border-radius: 8px;
                   z-index: 1001;
                   opacity: 0;
@@ -679,14 +828,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Our Program</a
                   >
                 </li>
@@ -696,14 +845,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >What We Offer</a
                   >
                 </li>
@@ -713,31 +862,32 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#cepsis2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Admission Inquiry Form</a
                   >
                 </li>
+
                 <li>
                   <a
                     href="courses.html"
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#cepsis2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Admission Guidelines</a
                   >
                 </li>
@@ -747,14 +897,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >FAQ for Kids</a
                   >
                 </li>
@@ -768,14 +918,14 @@
                 style="
                   font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #a5b4fc;
+                  color: #4b5dfa;
                   text-decoration: none;
                   padding: 12px 18px;
                   border-radius: 6px;
                   transition: all 0.3s ease;
                 "
-                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'; showDropdown(this.nextElementSibling)"
-                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
+                onmouseover="this.style.background='#c7d2fe'; this.style.color='#1e3a8a'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.background='none'; this.style.color='#4b5dfa'"
                 >Gallery</a
               >
               <ul
@@ -784,12 +934,12 @@
                   position: absolute;
                   top: 100%;
                   left: 0;
-                  background: #2d1a5a;
+                  background: #e0e7ff;
                   list-style: none;
                   padding: 15px;
                   margin: 0;
                   min-width: 220px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
                   border-radius: 8px;
                   z-index: 1001;
                   opacity: 0;
@@ -804,14 +954,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Photos</a
                   >
                 </li>
@@ -821,14 +971,14 @@
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
-                      color: #d8b4fe;
+                      color: #4b5dfa;
                       text-decoration: none;
                       padding: 10px 15px;
                       display: block;
                       transition: color 0.3s ease, background 0.3s ease;
                     "
-                    onmouseover="this.style.color='#ffffff'; this.style.background='#6b46c1'"
-                    onmouseout="this.style.color='#d8b4fe'; this.style.background='none'"
+                    onmouseover="this.style.color='#1e3a8a'; this.style.background='#c7d2fe'"
+                    onmouseout="this.style.color='#4b5dfa'; this.style.background='none'"
                     >Videos</a
                   >
                 </li>
@@ -841,14 +991,14 @@
                 style="
                   font-family: 'Rubik', sans-serif;
                   font-size: 18px;
-                  color: #a5b4fc;
+                  color: #4b5dfa;
                   text-decoration: none;
                   padding: 12px 18px;
                   border-radius: 6px;
                   transition: all 0.3s ease;
                 "
-                onmouseover="this.style.background='#6b46c1'; this.style.color='#ffffff'"
-                onmouseout="this.style.background='none'; this.style.color='#a5b4fc'"
+                onmouseover="this.style.background='#c7d2fe'; this.style.color='#1e3a8a'"
+                onmouseout="this.style.background='none'; this.style.color='#4b5dfa'"
                 >Contact</a
               >
             </li>
@@ -934,11 +1084,11 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(
+          /* background: linear-gradient(
             135deg,
             rgba(30, 30, 74, 0.7),
             rgba(107, 70, 193, 0.7)
-          );
+          ); */
           z-index: 1;
         "
       ></div>
@@ -959,9 +1109,8 @@
             style="
               font-family: 'Rubik', sans-serif;
               font-size: 60px;
-              color: #ffffff;
+              color: #000000;
               margin-bottom: 20px;
-              text-transform: uppercase;
               letter-spacing: 2px;
               animation: fadeInDown 1s ease-out;
               text-shadow: 0 0 10px rgba(165, 180, 252, 0.8);
@@ -1046,7 +1195,7 @@
     <!-- About Section -->
     <section
       style="
-        background: linear-gradient(135deg, #1e3a8a, #10b981);
+        background: linear-gradient(135deg, #bfdbfe, #6ee7b7);
         padding: 80px 0;
         text-align: center;
         position: relative;
@@ -1068,7 +1217,6 @@
             font-size: 48px;
             color: #ffffff;
             margin-bottom: 30px;
-            text-transform: uppercase;
             letter-spacing: 3px;
             animation: neonGlow 1.5s ease-in-out infinite alternate;
           "
@@ -1078,7 +1226,7 @@
         <p
           style="
             font-family: 'Poppins', sans-serif;
-            color: #e2e8f0;
+            color: #f1f5f9;
             font-size: 20px;
             line-height: 1.8;
             max-width: 900px;
@@ -1112,7 +1260,7 @@
             height: 300px;
             background: radial-gradient(
               circle,
-              rgba(59, 130, 246, 0.3),
+              rgba(96, 165, 250, 0.3),
               transparent
             );
             top: 10%;
@@ -1127,7 +1275,7 @@
             height: 200px;
             background: radial-gradient(
               circle,
-              rgba(16, 185, 129, 0.3),
+              rgba(110, 231, 183, 0.3),
               transparent
             );
             bottom: 15%;
@@ -1141,7 +1289,7 @@
     <!-- Program Section -->
     <section
       style="
-        background: linear-gradient(135deg, #0f172a, #334155);
+        background: linear-gradient(135deg, #ffedd5, #a7f3d0);
         padding: 80px 0;
         text-align: center;
         position: relative;
@@ -1161,9 +1309,8 @@
           style="
             font-family: 'Exo 2', sans-serif;
             font-size: 46px;
-            color: #22d3ee;
+            color: #f97316;
             margin-bottom: 30px;
-            text-transform: uppercase;
             letter-spacing: 2px;
             animation: slideIn 1s ease-out;
           "
@@ -1173,7 +1320,7 @@
         <p
           style="
             font-family: 'Inter', sans-serif;
-            color: #cbd5e1;
+            color: #475569;
             font-size: 18px;
             line-height: 1.7;
             max-width: 900px;
@@ -1196,22 +1343,22 @@
         >
           <div
             style="
-              background: #1e293b;
+              background: #fef3c7;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: cardPop 1s ease-out 0.5s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(34, 211, 238, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(251, 113, 133, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
           >
             <h4
               style="
                 font-family: 'Exo 2', sans-serif;
                 font-size: 24px;
-                color: #facc15;
+                color: #fb7185;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1221,35 +1368,35 @@
             <p
               style="
                 font-family: 'Inter', sans-serif;
-                color: #94a3b8;
+                color: #64748b;
                 font-size: 16px;
                 margin: 0;
               "
             >
               Kids in
-              <b style="color: #facc15">4th, 5th, 7th, or 8th grade</b> from
+              <b style="color: #fb7185">4th, 5th, 7th, or 8th grade</b> from
               Mewat can join. We prep you for top government school entrance
               exams!
             </p>
           </div>
           <div
             style="
-              background: #1e293b;
+              background: #fef3c7;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: cardPop 1s ease-out 0.7s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(34, 211, 238, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(251, 113, 133, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
           >
             <h4
               style="
                 font-family: 'Exo 2', sans-serif;
                 font-size: 24px;
-                color: #22d3ee;
+                color: #f97316;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1259,13 +1406,13 @@
             <p
               style="
                 font-family: 'Inter', sans-serif;
-                color: #94a3b8;
+                color: #64748b;
                 font-size: 16px;
                 margin: 0;
               "
             >
               We train for
-              <b style="color: #22d3ee"
+              <b style="color: #f97316"
                 >JNV, JMI, AMU, RMS, AISSEE, RAI-Sonipat, Navyug Schools,
                 Rahmani-30, Olympiads</b
               >, and more!
@@ -1273,16 +1420,16 @@
           </div>
           <div
             style="
-              background: #1e293b;
+              background: #fef3c7;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: cardPop 1s ease-out 0.9s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(34, 211, 238, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(251, 113, 133, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.2)'"
           >
             <h4
               style="
@@ -1298,7 +1445,7 @@
             <p
               style="
                 font-family: 'Inter', sans-serif;
-                color: #94a3b8;
+                color: #64748b;
                 font-size: 16px;
                 margin: 0;
               "
@@ -1331,7 +1478,7 @@
             height: 250px;
             background: radial-gradient(
               circle,
-              rgba(34, 211, 238, 0.2),
+              rgba(251, 113, 133, 0.2),
               transparent
             );
             top: 15%;
@@ -1346,7 +1493,7 @@
             height: 200px;
             background: radial-gradient(
               circle,
-              rgba(16, 185, 129, 0.2),
+              rgba(110, 231, 183, 0.2),
               transparent
             );
             bottom: 20%;
@@ -1360,7 +1507,7 @@
     <!-- Areas of Focus Section -->
     <section
       style="
-        background: linear-gradient(135deg, #2a0845, #6441a5);
+        background: linear-gradient(135deg, #f5f7fa, #d6bcfa);
         padding: 80px 0;
         text-align: center;
         position: relative;
@@ -1380,7 +1527,7 @@
           style="
             font-family: 'Rubik', sans-serif;
             font-size: 48px;
-            color: #ffcb77;
+            color: #7c3aed;
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -1392,7 +1539,7 @@
         <p
           style="
             font-family: 'Nunito', sans-serif;
-            color: #e9d8fd;
+            color: #2d3748;
             font-size: 18px;
             line-height: 1.7;
             max-width: 900px;
@@ -1402,7 +1549,7 @@
           "
         >
           At GOOGLAi ACADEMY, we’re all about smashing it with
-          <b style="color: #ffcb77"
+          <b style="color: #7c3aed"
             >epic academics, killer skills, and all-around awesomeness</b
           >
           to get you ready to rule the future!
@@ -1417,22 +1564,22 @@
         >
           <div
             style="
-              background: #3c1c6d;
+              background: #ffffff;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: flipIn 1s ease-out 0.5s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(236, 72, 153, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)'"
           >
             <h4
               style="
                 font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #ff6b6b;
+                color: #ec4899;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1442,34 +1589,34 @@
             <p
               style="
                 font-family: 'Nunito', sans-serif;
-                color: #d1c4e9;
+                color: #4b5563;
                 font-size: 16px;
                 margin: 0;
               "
             >
               We gear you up to
-              <b style="color: #ff6b6b">crush school-level competitive exams</b>
+              <b style="color: #ec4899">crush school-level competitive exams</b>
               after 5th & 8th grade like a pro!
             </p>
           </div>
           <div
             style="
-              background: #3c1c6d;
+              background: #ffffff;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: flipIn 1s ease-out 0.6s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(59, 130, 246, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)'"
           >
             <h4
               style="
                 font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #4ed8ff;
+                color: #3b82f6;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1479,34 +1626,34 @@
             <p
               style="
                 font-family: 'Nunito', sans-serif;
-                color: #d1c4e9;
+                color: #4b5563;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              Learn <b style="color: #4ed8ff">next-gen digital skills</b> to
-              dominate <b style="color: #4ed8ff">tech-driven learning</b> like a
+              Learn <b style="color: #3b82f6">next-gen digital skills</b> to
+              dominate <b style="color: #3b82f6">tech-driven learning</b> like a
               boss!
             </p>
           </div>
           <div
             style="
-              background: #3c1c6d;
+              background: #ffffff;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: flipIn 1s ease-out 0.7s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(16, 185, 129, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)'"
           >
             <h4
               style="
                 font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #00ff9f;
+                color: #10b981;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1516,34 +1663,34 @@
             <p
               style="
                 font-family: 'Nunito', sans-serif;
-                color: #d1c4e9;
+                color: #4b5563;
                 font-size: 16px;
                 margin: 0;
               "
             >
               Dive into
-              <b style="color: #00ff9f">Science, Tech, Engineering, & Math</b>
+              <b style="color: #10b981">Science, Tech, Engineering, & Math</b>
               to boost your brain and spark innovation!
             </p>
           </div>
           <div
             style="
-              background: #3c1c6d;
+              background: #ffffff;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: flipIn 1s ease-out 0.8s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(236, 72, 153, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)'"
           >
             <h4
               style="
                 font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #ff85f2;
+                color: #ec4899;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1553,34 +1700,34 @@
             <p
               style="
                 font-family: 'Nunito', sans-serif;
-                color: #d1c4e9;
+                color: #4b5563;
                 font-size: 16px;
                 margin: 0;
               "
             >
               Our boarding setup offers a
-              <b style="color: #ff85f2">safe space</b> to build
-              <b style="color: #ff85f2">skills, discipline, & values</b>!
+              <b style="color: #ec4899">safe space</b> to build
+              <b style="color: #ec4899">skills, discipline, & values</b>!
             </p>
           </div>
           <div
             style="
-              background: #3c1c6d;
+              background: #ffffff;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: flipIn 1s ease-out 0.9s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(250, 204, 21, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)'"
           >
             <h4
               style="
                 font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #ffd166;
+                color: #facc15;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1590,34 +1737,34 @@
             <p
               style="
                 font-family: 'Nunito', sans-serif;
-                color: #d1c4e9;
+                color: #4b5563;
                 font-size: 16px;
                 margin: 0;
               "
             >
-              Tackle <b style="color: #ffd166">real-world projects</b> to
+              Tackle <b style="color: #facc15">real-world projects</b> to
               sharpen
-              <b style="color: #ffd166">problem-solving & creativity</b>!
+              <b style="color: #facc15">problem-solving & creativity</b>!
             </p>
           </div>
           <div
             style="
-              background: #3c1c6d;
+              background: #ffffff;
               padding: 25px;
               border-radius: 12px;
-              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
               transition: transform 0.4s ease, box-shadow 0.4s ease;
               opacity: 0;
               animation: flipIn 1s ease-out 1s forwards;
             "
-            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(255, 203, 119, 0.4)'"
-            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.3)'"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 25px rgba(59, 130, 246, 0.4)'"
+            onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 8px 20px rgba(0, 0, 0, 0.15)'"
           >
             <h4
               style="
                 font-family: 'Rubik', sans-serif;
                 font-size: 22px;
-                color: #06d6a0;
+                color: #3b82f6;
                 margin: 0 0 15px;
                 text-transform: uppercase;
               "
@@ -1627,14 +1774,14 @@
             <p
               style="
                 font-family: 'Nunito', sans-serif;
-                color: #d1c4e9;
+                color: #4b5563;
                 font-size: 16px;
                 margin: 0;
               "
             >
               Get your hands dirty with
-              <b style="color: #06d6a0">organic farming</b> and learn
-              <b style="color: #06d6a0">agri-skills</b> on campus!
+              <b style="color: #3b82f6">organic farming</b> and learn
+              <b style="color: #3b82f6">agri-skills</b> on campus!
             </p>
           </div>
         </div>
@@ -1658,7 +1805,7 @@
             height: 200px;
             background: radial-gradient(
               circle,
-              rgba(255, 203, 119, 0.25),
+              rgba(59, 130, 246, 0.25),
               transparent
             );
             top: 10%;
@@ -1673,7 +1820,7 @@
             height: 150px;
             background: radial-gradient(
               circle,
-              rgba(100, 65, 165, 0.25),
+              rgba(236, 72, 153, 0.25),
               transparent
             );
             bottom: 15%;
@@ -1686,9 +1833,9 @@
 
     <footer
       style="
-        background: linear-gradient(120deg, #1a1a3d, #3b1e66, #5d2a8c);
+        background: linear-gradient(120deg, #e6f3ff, #a5d6ff, #d1e7ff);
         padding: 60px 20px;
-        color: #ffffff;
+        color: #1e40af;
         position: relative;
         overflow: hidden;
       "
@@ -1703,7 +1850,7 @@
           height: 100px;
           background: radial-gradient(
             circle,
-            rgba(255, 111, 241, 0.3),
+            rgba(6, 182, 212, 0.3),
             transparent
           );
           border-radius: 50%;
@@ -1719,7 +1866,7 @@
           height: 80px;
           background: radial-gradient(
             circle,
-            rgba(111, 255, 184, 0.3),
+            rgba(236, 72, 153, 0.3),
             transparent
           );
           border-radius: 50%;
@@ -1745,7 +1892,7 @@
             style="
               font-family: 'Rubik', sans-serif;
               font-size: clamp(24px, 5vw, 30px);
-              color: #ff6ff1;
+              color: #06b6d4;
               margin-bottom: 20px;
               text-transform: uppercase;
               letter-spacing: 1px;
@@ -1764,7 +1911,7 @@
               justify-content: center;
               gap: 10px;
               line-height: 1.5;
-              color: #d8b4fe;
+              color: #1e40af;
             "
           >
             <span style="font-size: 22px">🏡</span> Plot No. 05, Block D,
@@ -1780,19 +1927,19 @@
               align-items: center;
               justify-content: center;
               gap: 10px;
-              color: #d8b4fe;
+              color: #1e40af;
             "
           >
             <span style="font-size: 22px">📞</span>
             <a
               href="tel:+917056655514"
               style="
-                color: #6ff1b8;
+                color: #ec4899;
                 text-decoration: none;
                 transition: color 0.3s ease, transform 0.3s ease;
               "
-              onmouseover="this.style.color='#ffffff'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#6ff1b8'; this.style.transform='scale(1)'"
+              onmouseover="this.style.color='#1e40af'; this.style.transform='scale(1.1)'"
+              onmouseout="this.style.color='#ec4899'; this.style.transform='scale(1)'"
               >+91 70566-55514</a
             >
           </p>
@@ -1805,19 +1952,19 @@
               align-items: center;
               justify-content: center;
               gap: 10px;
-              color: #d8b4fe;
+              color: #1e40af;
             "
           >
             <span style="font-size: 22px">✉️</span>
             <a
               href="mailto:googlaiacademy@gmail.com"
               style="
-                color: #6ff1b8;
+                color: #ec4899;
                 text-decoration: none;
                 transition: color 0.3s ease, transform 0.3s ease;
               "
-              onmouseover="this.style.color='#ffffff'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#6ff1b8'; this.style.transform='scale(1)'"
+              onmouseover="this.style.color='#1e40af'; this.style.transform='scale(1.1)'"
+              onmouseout="this.style.color='#ec4899'; this.style.transform='scale(1)'"
               >googlaiacademy@gmail.com</a
             >
           </p>
@@ -1829,7 +1976,7 @@
             style="
               font-family: 'Rubik', sans-serif;
               font-size: clamp(24px, 5vw, 30px);
-              color: #ff6ff1;
+              color: #06b6d4;
               margin-bottom: 20px;
               text-transform: uppercase;
               letter-spacing: 1px;
@@ -1844,7 +1991,7 @@
                 href="/index.html"
                 style="
                   font-family: 'Nunito', sans-serif;
-                  color: #d8b4fe;
+                  color: #1e40af;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
@@ -1853,8 +2000,8 @@
                   justify-content: center;
                   gap: 10px;
                 "
-                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                onmouseover="this.style.color='#ec4899'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#1e40af'; this.style.transform='scale(1)'"
                 ><span style="font-size: 18px">🚀</span> Home</a
               >
             </li>
@@ -1863,7 +2010,7 @@
                 href="/about.html"
                 style="
                   font-family: 'Nunito', sans-serif;
-                  color: #d8b4fe;
+                  color: #1e40af;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
@@ -1872,8 +2019,8 @@
                   justify-content: center;
                   gap: 10px;
                 "
-                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                onmouseover="this.style.color='#ec4899'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#1e40af'; this.style.transform='scale(1)'"
                 ><span style="font-size: 18px">🚀</span> About</a
               >
             </li>
@@ -1882,7 +2029,7 @@
                 href="/career.html"
                 style="
                   font-family: 'Nunito', sans-serif;
-                  color: #d8b4fe;
+                  color: #1e40af;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
@@ -1891,8 +2038,8 @@
                   justify-content: center;
                   gap: 10px;
                 "
-                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                onmouseover="this.style.color='#ec4899'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#1e40af'; this.style.transform='scale(1)'"
                 ><span style="font-size: 18px">🚀</span> Career</a
               >
             </li>
@@ -1901,7 +2048,7 @@
                 href="/courses.html"
                 style="
                   font-family: 'Nunito', sans-serif;
-                  color: #d8b4fe;
+                  color: #1e40af;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
@@ -1910,8 +2057,8 @@
                   justify-content: center;
                   gap: 10px;
                 "
-                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                onmouseover="this.style.color='#ec4899'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#1e40af'; this.style.transform='scale(1)'"
                 ><span style="font-size: 18px">🚀</span> Program</a
               >
             </li>
@@ -1920,7 +2067,7 @@
                 href="/contact.html"
                 style="
                   font-family: 'Nunito', sans-serif;
-                  color: #d8b4fe;
+                  color: #1e40af;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
@@ -1929,8 +2076,8 @@
                   justify-content: center;
                   gap: 10px;
                 "
-                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                onmouseover="this.style.color='#ec4899'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#1e40af'; this.style.transform='scale(1)'"
                 ><span style="font-size: 18px">🚀</span> Contact</a
               >
             </li>
@@ -1939,7 +2086,7 @@
                 href="/admin.html"
                 style="
                   font-family: 'Nunito', sans-serif;
-                  color: #d8b4fe;
+                  color: #1e40af;
                   text-decoration: none;
                   font-size: 16px;
                   transition: color 0.3s ease, transform 0.3s ease;
@@ -1948,8 +2095,8 @@
                   justify-content: center;
                   gap: 10px;
                 "
-                onmouseover="this.style.color='#6ff1b8'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#d8b4fe'; this.style.transform='scale(1)'"
+                onmouseover="this.style.color='#ec4899'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#1e40af'; this.style.transform='scale(1)'"
                 ><span style="font-size: 18px">🚀</span> Admin</a
               >
             </li>
@@ -1962,7 +2109,7 @@
             style="
               font-family: 'Rubik', sans-serif;
               font-size: clamp(24px, 5vw, 30px);
-              color: #ff6ff1;
+              color: #06b6d4;
               margin-bottom: 20px;
               text-transform: uppercase;
               letter-spacing: 1px;
@@ -1990,16 +2137,16 @@
                   justify-content: center;
                   width: 50px;
                   height: 50px;
-                  background: #3c1c6d;
+                  background: #dbeafe;
                   border-radius: 50%;
-                  color: #6ff1b8;
+                  color: #06b6d4;
                   font-size: 24px;
                   text-decoration: none;
                   transition: all 0.3s ease;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 "
-                onmouseover="this.style.background='#6ff1b8'; this.style.color='#1a1a3d'; this.style.transform='rotate(360deg)'"
-                onmouseout="this.style.background='#3c1c6d'; this.style.color='#6ff1b8'; this.style.transform='rotate(0deg)'"
+                onmouseover="this.style.background='#ec4899'; this.style.color='#ffffff'; this.style.transform='rotate(360deg)'"
+                onmouseout="this.style.background='#dbeafe'; this.style.color='#06b6d4'; this.style.transform='rotate(0deg)'"
                 >𝕏</a
               >
             </li>
@@ -2012,16 +2159,16 @@
                   justify-content: center;
                   width: 50px;
                   height: 50px;
-                  background: #3c1c6d;
+                  background: #dbeafe;
                   border-radius: 50%;
-                  color: #6ff1b8;
+                  color: #06b6d4;
                   font-size: 24px;
                   text-decoration: none;
                   transition: all 0.3s ease;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 "
-                onmouseover="this.style.background='#6ff1b8'; this.style.color='#1a1a3d'; this.style.transform='rotate(360deg)'"
-                onmouseout="this.style.background='#3c1c6d'; this.style.color='#6ff1b8'; this.style.transform='rotate(0deg)'"
+                onmouseover="this.style.background='#ec4899'; this.style.color='#ffffff'; this.style.transform='rotate(360deg)'"
+                onmouseout="this.style.background='#dbeafe'; this.style.color='#06b6d4'; this.style.transform='rotate(0deg)'"
                 >f</a
               >
             </li>
@@ -2034,41 +2181,20 @@
                   justify-content: center;
                   width: 50px;
                   height: 50px;
-                  background: #3c1c6d;
+                  background: #dbeafe;
                   border-radius: 50%;
-                  color: #6ff1b8;
+                  color: #06b6d4;
                   font-size: 24px;
                   text-decoration: none;
                   transition: all 0.3s ease;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                 "
-                onmouseover="this.style.background='#6ff1b8'; this.style.color='#1a1a3d'; this.style.transform='rotate(360deg)'"
-                onmouseout="this.style.background='#3c1c6d'; this.style.color='#6ff1b8'; this.style.transform='rotate(0deg)'"
+                onmouseover="this.style.background='#ec4899'; this.style.color='#ffffff'; this.style.transform='rotate(360deg)'"
+                onmouseout="this.style.background='#dbeafe'; this.style.color='#06b6d4'; this.style.transform='rotate(0deg)'"
                 >📷</a
               >
             </li>
           </ul>
-          <p
-            style="
-              font-family: 'Nunito', sans-serif;
-              font-size: 14px;
-              margin: 0;
-              color: #d8b4fe;
-            "
-          >
-            Powered by
-            <a
-              href="https://zuridox.com"
-              style="
-                color: #6ff1b8;
-                text-decoration: none;
-                transition: color 0.3s ease;
-              "
-              onmouseover="this.style.color='#ffffff'"
-              onmouseout="this.style.color='#6ff1b8'"
-              >Zuridox</a
-            >
-          </p>
         </div>
       </div>
 
@@ -2079,14 +2205,25 @@
           margin-top: 40px;
           font-family: 'Nunito', sans-serif;
           font-size: clamp(13px, 3vw, 15px);
-          color: #d8b4fe;
+          color: #1e40af;
         "
       >
         ©
         <script>
           document.write(new Date().getFullYear());
         </script>
-        GOOGLAi ACADEMY - Blast Off to Greatness! 🚀
+        GOOGLAi ACADEMY - Blast Off to Greatness! 🚀 | Powered by
+        <a
+          href="https://zuridox.com"
+          style="
+            color: #ec4899;
+            text-decoration: none;
+            transition: color 0.3s ease;
+          "
+          onmouseover="this.style.color='#06b6d4'"
+          onmouseout="this.style.color='#ec4899'"
+          >Zuridox</a
+        >
       </div>
     </footer>
 
