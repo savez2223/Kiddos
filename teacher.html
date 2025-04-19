@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Googlai School</title>
+    <title>GOOGLAi SCHOOL</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css?family=Fredericka+the+Great"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="images/Staff image/favicon.png" />
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
@@ -53,6 +54,7 @@
 
   <body>
     <div class="py-0"></div>
+
     <nav
       style="
         background: linear-gradient(135deg, #ff5722, #0288d1);
@@ -65,7 +67,7 @@
     >
       <div
         style="
-          max-width: 1200px;
+          max-width: 1350px;
           margin: 0 auto;
           display: flex;
           align-items: center;
@@ -102,7 +104,7 @@
             background: none;
             border: none;
             color: #fff;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', sans-serif;
             font-size: 18px;
             padding: 10px;
             cursor: pointer;
@@ -138,7 +140,7 @@
               <a
                 href="index.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
@@ -150,75 +152,415 @@
                 >Home</a
               >
             </li>
-            <li style="position: relative">
+
+            <!-- About with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="about.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >About</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Founder Message</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Teacher with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="teacher.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >Teacher</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teachers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teacher Training Programme</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Child Introduction</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Program with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="courses.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >Program</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Program</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >What We Offer</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Inquiry Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Guidelines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >FAQ for Kids</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Gallery with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="Gallary.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Gallary</a
+                >Gallery</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Photos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Videos</a
+                  >
+                </li>
+              </ul>
             </li>
+
             <li style="position: relative">
               <a
                 href="contact.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
@@ -241,7 +583,7 @@
               color: #fff;
               border-radius: 25px;
               text-decoration: none;
-              font-family: 'Comic Sans MS', cursive;
+              font-family: 'Comic Sans MS', sans-serif;
               font-size: 16px;
               margin-left: 20px;
               animation: pulse 2s infinite;
@@ -249,11 +591,27 @@
             "
             onmouseover="this.style.background='#ff5722'"
             onmouseout="this.style.background='#4caf50'"
-            >GOOGLAi Academy</a
+            >GOOGLAi ACADEMY</a
           >
         </div>
       </div>
     </nav>
+
+    <script>
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
+      }
+
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
 
     <!-- Inline JavaScript for Mobile Toggle -->
     <script>
@@ -274,6 +632,7 @@
     <!-- END nav -->
 
     <!-- Hero Section -->
+
     <section
       style="
         background: url('images/bg_2.jpg') no-repeat center center/cover;
@@ -316,7 +675,7 @@
           <div style="max-width: 900px">
             <h1
               style="
-                font-family: 'Comic Sans MS', cursive;
+                font-family: 'Comic Sans MS', sans-serif;
                 font-size: 48px;
                 color: #ffeb3b;
                 margin-bottom: 15px;
@@ -355,919 +714,1630 @@
     <!-- Teachers Section -->
     <section
       style="
-        background: linear-gradient(135deg, #fff3e0, #b2ebf2);
-        padding: 60px 0;
+        background: linear-gradient(135deg, #f0f4c3, #b2dfdb);
+        padding: 40px 0;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+      <div style="max-width: 1200px; margin: 0 auto">
+        <div
+          style="display: flex; justify-content: center; margin-bottom: 40px"
+        >
+          <div style="text-align: center; max-width: 800px; padding: 0 15px">
+            <h2
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 36px;
+                color: #0288d1;
+                margin-bottom: 20px;
+              "
+            >
+              <span style="color: #ff5722">Certified</span> Teachers & Staff
+            </h2>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                font-size: 18px;
+                line-height: 1.6;
+              "
+            >
+              Our team consists of highly qualified educators and dedicated
+              support staff committed to providing the best experience for our
+              students.
+            </p>
+          </div>
+        </div>
+
+        <!-- Staff Section -->
+        <h2
+          style="
+            font-family: 'Arial', sans-serif;
+            font-size: 28px;
+            color: #0288d1;
+            text-align: center;
+            margin-bottom: 30px;
+          "
+        >
+          Staff
+        </h2>
         <div
           style="
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            margin-bottom: 40px;
           "
         >
-          <!-- Teacher 1 -->
+          <!-- Teacher Card 1 -->
           <div
             style="
-              flex: 1 1 22%;
-              min-width: 250px;
+              flex: 1 1 250px;
               background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
               transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
           >
             <div
               style="
-                height: 250px;
-                background: url('images/teacher-1.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #ff5722;
-                border-radius: 10px 10px 0 0;
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
               "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
+            >
+              <div
                 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ff5722;
-                  margin: 0 0 5px;
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
                 "
               >
-                Bianca Wilson
-              </h3>
-              <span
+                <img
+                  src="images/Staff image/SANGEETA.jpg"
+                  alt="Sangeeta"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">Sangeeta</h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Passionate about numbers and problem-solving.
+            </p>
+          </div>
+
+          <!-- Teacher Card 2 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
                 style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                  overflow: hidden;
                 "
-                >Teacher</span
               >
-              <p
+                <img
+                  src="images/Staff image/PANKAJRANI.jpg"
+                  alt="Pankaj Rani"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Pankaj Rani
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Assess student progress and provide feedback on performance at an
+              academy level.
+            </p>
+          </div>
+
+          <!-- Teacher Card 3 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
                 style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
                 "
               >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
+                <img
+                  src="images/Staff image/SNEHA.jpg"
+                  alt="Sneha Rani"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Sneha Rani
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Creativity starts with imagination.
+            </p>
+          </div>
+
+          <!-- Teacher Card 4 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/SHABNAM.jpg"
+                  alt="Shabnam"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">Shabnam</h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Assess student progress and provide constructive feedback on
+              assignments at a schooling level.
+            </p>
+          </div>
+
+          <!-- Teacher Card 5 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/PRBHATKUMAR.jpg"
+                  alt="Parbhat Kumar"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Parbhat Kumar
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Planning and delivering lessons, assessing students' progress
+              through tests and assignments.
+            </p>
+          </div>
+
+          <!-- Teacher Card 6 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/SUNILKUMAR.jpg"
+                  alt="Sunil Kumar"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Sunil Kumar
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Developed and implemented engaging lesson plans that catered to
+              diverse learning styles and abilities.
+            </p>
+          </div>
+
+          <!-- Teacher Card 7 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/MRKHAN.jpg"
+                  alt="M. R. Khan"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              M. R. Khan
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Create lesson plans and deliver engaging lectures.
+            </p>
+          </div>
+
+          <!-- Teacher Card 8 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/QARIAABID.jpg"
+                  alt="Qari Mohd. Aabid"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              Qari Mohd. Aabid
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Assessment Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              "A good teacher is like a candle, immersed in himself to make
+              light for others!" - Arabic proverb.
+            </p>
+          </div>
+
+          <!-- Teacher Card 10 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/DAVIDSIR.jpg"
+                  alt="David Sir"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">
+              David Sir
+            </h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >English Spoken Teacher</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              English Spoken Teacher, IELTS & TOEFL Coach & Corporate Trainer.
+            </p>
+          </div>
+
+          <!-- Non-Teaching Card 1 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/SAHIL.jpg"
+                  alt="Sahil"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">Sahil</h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Computer Operator</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Manages technical support and computer operations.
+            </p>
+          </div>
+
+          <!-- Non-Teaching Card 3 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/NERU.jpg"
+                  alt="Neru"
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">Neru</h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Child Care Taker & Warden</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Ensures the safety and well-being of students.
+            </p>
+          </div>
+
+          <!-- Non-Teaching Card 4 -->
+          <div
+            style="
+              flex: 1 1 250px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+              text-align: center;
+              padding: 20px;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+              "
+            >
+              <div
+                style="
+                  width: 120px;
+                  height: 120px;
+                  border-radius: 50%;
+                  background: #e0e0e0;
+                  border: 4px solid #0288d1;
+                "
+              >
+                <img
+                  src="images/Staff image/1.webp"
+                  alt="Mubeena"
+                  d
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                  "
+                />
+              </div>
+            </div>
+            <h3 style="color: #ff5722; font-size: 22px; margin: 0">Mubeena</h3>
+            <span style="color: #0288d1; font-size: 16px; margin-bottom: 10px"
+              >Food Team Member</span
+            >
+            <p style="color: #666; font-size: 14px; margin: 10px 0">
+              Supports meal preparation and service for students.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- counter  -->
+    <section
+      style="
+        background: url('images/bg_4.jpg') no-repeat center center;
+        background-size: cover;
+        position: relative;
+        padding: 60px 0;
+      "
+      data-stellar-background-ratio="0.5"
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(33, 150, 243, 0.7);
+          z-index: 1;
+        "
+      ></div>
+      <div
+        style="
+          position: relative;
+          z-index: 2;
+          max-width: 1200px;
+          margin: 0 auto;
+        "
+      >
+        <div style="text-align: center; margin-bottom: 40px; padding: 0 15px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 40px;
+              color: #ffeb3b;
+              margin-bottom: 20px;
+              display: inline-block;
+              perspective: 1000px;
+            "
+          >
+            <span
+              style="
+                display: inline-block;
+                color: #ff5722;
+                transform-style: preserve-3d;
+                animation: flip 4s infinite;
+              "
+              >5 Years of</span
+            >
+            Experience
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #fff;
+              font-size: 18px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 0 auto;
+              text-align: center;
+            "
+          >
+            With 5 years of experience, we specialize in nurturing young minds
+            and building strong foundations for the future. Our focus is on
+            creating a positive, engaging learning environment where students
+            can thrive. Through dedicated teaching and personalized attention,
+            we guide each child toward success. Together, we shape tomorrow’s
+            leaders, one lesson at a time.
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+          "
+        >
+          <!-- Certified Teachers -->
+          <div
+            style="
+              flex: 1 1 22%;
+              min-width: 200px;
+              text-align: center;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                background: #ff5722;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+              "
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
+              </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', sans-serif;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="18"
+                  >10+</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Certified Teachers</span
+                >
+              </div>
             </div>
           </div>
-          <!-- Teacher 2 -->
+          <!-- Successful Kids -->
           <div
             style="
               flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              min-width: 200px;
+              text-align: center;
               transition: transform 0.3s ease;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
           >
             <div
               style="
-                height: 250px;
-                background: url('images/teacher-2.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #0288d1;
-                border-radius: 10px 10px 0 0;
+                background: #0288d1;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
               "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #0288d1;
-                  margin: 0 0 5px;
-                "
-              >
-                Mitch Parker
-              </h3>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
-                "
-                >English Teacher</span
-              >
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
-                "
-              >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
+              </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', sans-serif;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="351"
+                  >300+</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Successful Kids</span
+                >
+              </div>
             </div>
           </div>
-          <!-- Teacher 3 -->
+          <!-- Happy Parents -->
           <div
             style="
               flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              min-width: 200px;
+              text-align: center;
               transition: transform 0.3s ease;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
           >
             <div
               style="
-                height: 250px;
-                background: url('images/teacher-3.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #4caf50;
-                border-radius: 10px 10px 0 0;
+                background: #4caf50;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
               "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #4caf50;
-                  margin: 0 0 5px;
-                "
-              >
-                Stella Smith
-              </h3>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
-                "
-                >Art Teacher</span
-              >
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
-                "
-              >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
+              </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', sans-serif;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="564"
+                  >300+</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Happy Parents</span
+                >
+              </div>
             </div>
           </div>
-          <!-- Teacher 4 -->
+          <!-- Awards Won -->
           <div
             style="
               flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              min-width: 200px;
+              text-align: center;
               transition: transform 0.3s ease;
             "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
           >
             <div
               style="
-                height: 250px;
-                background: url('images/teacher-4.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #ff4081;
-                border-radius: 10px 10px 0 0;
+                background: #ff4081;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
               "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ff4081;
-                  margin: 0 0 5px;
-                "
-              >
-                Monshe Henderson
-              </h3>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
-                "
-                >Science Teacher</span
-              >
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
-                "
-              >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
-            </div>
-          </div>
-          <!-- Teacher 5 -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div
-              style="
-                height: 250px;
-                background: url('images/teacher-5.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #ff5722;
-                border-radius: 10px 10px 0 0;
-              "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ff5722;
-                  margin: 0 0 5px;
-                "
-              >
-                Daniel Tribor
-              </h3>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
-                "
-                >Teacher</span
-              >
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
-                "
-              >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
-            </div>
-          </div>
-          <!-- Teacher 6 -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div
-              style="
-                height: 250px;
-                background: url('images/teacher-6.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #0288d1;
-                border-radius: 10px 10px 0 0;
-              "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #0288d1;
-                  margin: 0 0 5px;
-                "
-              >
-                Mitch Parker
-              </h3>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
-                "
-                >English Teacher</span
-              >
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
-                "
-              >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
-            </div>
-          </div>
-          <!-- Teacher 7 -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div
-              style="
-                height: 250px;
-                background: url('images/teacher-7.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #4caf50;
-                border-radius: 10px 10px 0 0;
-              "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #4caf50;
-                  margin: 0 0 5px;
-                "
-              >
-                Stella Smith
-              </h3>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
-                "
-                >Art Teacher</span
-              >
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
-                "
-              >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
-            </div>
-          </div>
-          <!-- Teacher 8 -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div
-              style="
-                height: 250px;
-                background: url('images/teacher-8.jpg') no-repeat center
-                  center/cover;
-                border: 5px solid #ff4081;
-                border-radius: 10px 10px 0 0;
-              "
-            ></div>
-            <div style="padding: 20px; text-align: center">
-              <h3
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ff4081;
-                  margin: 0 0 5px;
-                "
-              >
-                Monshe Henderson
-              </h3>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  color: #666;
-                  display: block;
-                  margin-bottom: 10px;
-                "
-                >Science Teacher</span
-              >
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  font-size: 14px;
-                  color: #333;
-                  margin: 0;
-                "
-              >
-                I am an ambitious workaholic, but apart from that, pretty simple
-                person.
-              </p>
+            >
+              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
+                <span class="flaticon-doctor"></span>
+              </div>
+              <div>
+                <strong
+                  style="
+                    font-family: 'Comic Sans MS', sans-serif;
+                    font-size: 36px;
+                    color: #ffeb3b;
+                    display: block;
+                  "
+                  data-number="300"
+                  >2</strong
+                >
+                <span
+                  style="
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    color: #fff;
+                  "
+                  >Awards Won</span
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer
+    <!-- teacher traning program  -->
+
+    <section
       style="
-        background: linear-gradient(135deg, #0288d1, #ff5722);
-        padding: 60px 0;
-        color: #fff;
+        background: linear-gradient(
+          135deg,
+          #fff176,
+          #ff80ab
+        ); /* Yellow to pink gradient */
+        padding: clamp(20px, 5vw, 40px) 0; /* Responsive padding */
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        overflow: hidden;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div
-          style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px"
-        >
-          <!-- Contact Info -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Have a Question?
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <span style="font-size: 20px; color: #fff; margin-right: 10px"
-                    >📍</span
-                  >
-                  <span
-                    style="font-family: 'Arial', sans-serif; font-size: 16px"
-                    >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA -
-                    122107</span
-                  >
-                </li>
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <a
-                    href="tel:+918000007583"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">📞</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >+91 8000007583</span
-                    >
-                  </a>
-                </li>
-                <li style="display: flex; align-items: center">
-                  <a
-                    href="mailto:googlaischool@email.com"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">✉️</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >googlaischool@email.com</span
-                    >
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <!-- Background Decoration -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%225%22 cy=%225%22 r=%223%22 fill=%23ff4081%22/%3E%3Ccircle cx=%2220%22 cy=%2215%22 r=%222%22 fill=%23fff176%22/%3E%3Ccircle cx=%2240%22 cy=%2210%22 r=%222.5%22 fill=%23d81b60%22/%3E%3Ccircle cx=%2270%22 cy=%2220%22 r=%223%22 fill=%23ff5722%22/%3E%3Ccircle cx=%2290%22 cy=%225%22 r=%222%22 fill=%23fff176%22/%3E%3C/svg%3E')
+            repeat;
+          opacity: 0.2;
+          z-index: 0;
+        "
+      ></div>
 
-          <!-- Recent Blog -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Recent Blog
-              </h2>
-              <div style="display: flex; margin-bottom: 20px">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_1.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ff5722'"
-                      onmouseout="this.style.color='#fff'"
-                      >How AI Helps Kids Learn Faster</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 20, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 5</span>
-                  </div>
-                </div>
-              </div>
-              <div style="display: flex">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_2.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#0288d1'"
-                      onmouseout="this.style.color='#fff'"
-                      >Fun Coding Activities for Kids</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 18, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 4</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Links -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Quick Links
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/index.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Home</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/about.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>About</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/career.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Career</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/courses.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Program</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/contact.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Subscribe & Social -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Subscribe Us!
-              </h2>
-              <form
-                action="#"
-                style="display: flex; flex-direction: column; gap: 10px"
-              >
-                <input
-                  type="text"
-                  placeholder="Enter email address"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #fff;
-                    color: #333;
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    text-align: center;
-                    outline: none;
-                  "
-                />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #ff5722;
-                    color: #fff;
-                    font-family: 'Comic Sans MS', cursive;
-                    font-size: 16px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
-                  "
-                  onmouseover="this.style.background='#0288d1'"
-                  onmouseout="this.style.background='#ff5722'"
-                />
-              </form>
-            </div>
-            <div>
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 15px;
-                "
-              >
-                Connect With Us
-              </h2>
-              <ul
-                style="list-style: none; padding: 0; display: flex; gap: 15px"
-              >
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >𝕏</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >f</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >📷</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div style="text-align: center">
-          <p
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 clamp(10px, 2vw, 15px); /* Responsive padding */
+          width: 100%;
+          box-sizing: border-box;
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <!-- Header -->
+        <div
+          style="
+            text-align: center;
+            margin-bottom: clamp(20px, 4vw, 40px); /* Responsive margin */
+          "
+        >
+          <h2
             style="
-              font-family: 'Arial', sans-serif;
-              font-size: 14px;
-              color: #e0f7fa;
-              margin: 0;
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: clamp(28px, 6vw, 36px); /* Responsive font size */
+              color: #ff4081; /* Bright pink */
+              margin-bottom: clamp(10px, 2vw, 20px);
+              display: inline-block;
+              overflow: hidden;
+              white-space: nowrap;
+              animation: typewriter 3s steps(20) infinite;
+              text-shadow: 2px 2px 4px #fff176; /* Yellow shadow */
             "
           >
-            Copyright ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            All rights reserved | Developed by
+            <span style="color: #ff5722">Teacher</span> Training Programme
+          </h2>
+          <p
+            style="
+              font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+              color: #d81b60; /* Vibrant magenta */
+              font-size: clamp(16px, 3.5vw, 18px); /* Responsive font size */
+              line-height: 1.5;
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            Empowering educators with world-class training for early childhood
+            education.
+          </p>
+        </div>
+
+        <!-- Content Box -->
+        <div
+          style="
+            background: #fff;
+            border-radius: 25px; /* More rounded */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            padding: clamp(15px, 3vw, 30px); /* Responsive padding */
+            max-width: 800px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+            border: 3px dashed #ffca28; /* Playful yellow dashed border */
+            position: relative;
+            overflow: hidden;
+          "
+        >
+          <!-- Decorative Elements -->
+          <div
+            style="
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              font-size: clamp(20px, 4vw, 30px); /* Responsive size */
+              color: #0288d1; /* Bright blue */
+              animation: bounce 2s infinite;
+            "
+          >
+            📚
+          </div>
+          <div
+            style="
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              font-size: clamp(20px, 4vw, 30px);
+              color: #ff5722; /* Bright orange */
+              animation: spin 3s linear infinite;
+            "
+          >
+            🌟
+          </div>
+
+          <!-- Text Content -->
+          <p
+            style="
+              font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+              color: #d81b60; /* Vibrant magenta */
+              font-size: clamp(14px, 3vw, 16px); /* Responsive font size */
+              line-height: 1.5;
+              margin: 0 0 clamp(8px, 2vw, 15px);
+              text-align: justify;
+            "
+          >
+            The Preschool Teacher Training Program is an initiative of GOOGLAi
+            SCHOOL Learning. As a pioneer in ECCE (Early Childhood Care and
+            Education), we have set unmatched standards in the CDE (Child
+            Development and Education) space.
+          </p>
+          <p
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              color: #d81b60;
+              font-size: clamp(14px, 3vw, 16px);
+              line-height: 1.5;
+              margin: 0;
+              text-align: justify;
+            "
+          >
+            With the introduction of NEP regulating preschool education in
+            India, it is mandatory that all preschool teachers are trained in
+            early childhood education to be able to teach at the foundational
+            stage.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- child intro  -->
+    <section
+      style="
+        background: linear-gradient(
+          135deg,
+          #ffeb3b,
+          #ff80ab
+        ); /* Yellow to pink gradient */
+        padding: clamp(20px, 5vw, 40px) 0; /* Responsive padding */
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Background Decoration -->
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%225%22 cy=%225%22 r=%223%22 fill=%23fff176%22/%3E%3Ccircle cx=%2220%22 cy=%2215%22 r=%222%22 fill=%23ff4081%22/%3E%3Ccircle cx=%2240%22 cy=%2210%22 r=%222.5%22 fill=%23d81b60%22/%3E%3Ccircle cx=%2270%22 cy=%2220%22 r=%223%22 fill=%23ff5722%22/%3E%3Ccircle cx=%2290%22 cy=%225%22 r=%222%22 fill=%23fff176%22/%3E%3C/svg%3E')
+            repeat;
+          opacity: 0.2;
+          z-index: 0;
+        "
+      ></div>
+
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 clamp(10px, 2vw, 15px); /* Responsive padding */
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <!-- Header -->
+        <div
+          style="
+            text-align: center;
+            margin-bottom: clamp(20px, 4vw, 40px); /* Responsive margin */
+          "
+        >
+          <h2
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: clamp(28px, 6vw, 36px); /* Responsive font size */
+              color: #ff4081; /* Bright pink */
+              margin-bottom: clamp(10px, 2vw, 20px);
+              display: inline-block;
+              overflow: hidden;
+              white-space: nowrap;
+              animation: typewriter 3s steps(20) infinite;
+              text-shadow: 2px 2px 4px #fff176; /* Yellow shadow */
+            "
+          >
+            <span style="color: #ff5722">Child</span> Introduction
+          </h2>
+          <p
+            style="
+              font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+              color: #d81b60; /* Vibrant magenta */
+              font-size: clamp(16px, 3.5vw, 18px); /* Responsive font size */
+              line-height: 1.5;
+              max-width: 800px;
+              margin: 0 auto;
+            "
+          >
+            Nurturing young minds for a lifetime of learning and growth.
+          </p>
+        </div>
+
+        <!-- Content Box -->
+        <div
+          style="
+            background: #fff;
+            border-radius: 25px; /* More rounded */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            padding: clamp(15px, 3vw, 30px); /* Responsive padding */
+            max-width: 800px;
+            margin: 0 auto;
+            border: 3px dashed #ffca28; /* Playful yellow dashed border */
+            position: relative;
+            overflow: hidden;
+          "
+        >
+          <!-- Decorative Elements -->
+          <div
+            style="
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              font-size: clamp(20px, 4vw, 30px); /* Responsive size */
+              color: #ff5722; /* Bright orange */
+              animation: bounce 2s infinite;
+            "
+          >
+            🌟
+          </div>
+          <div
+            style="
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              font-size: clamp(20px, 4vw, 30px);
+              color: #ff4081; /* Bright pink */
+              animation: spin 3s linear infinite;
+            "
+          >
+            🎈
+          </div>
+
+          <!-- Text Content -->
+          <p
+            style="
+              font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+              color: #d81b60; /* Vibrant magenta */
+              font-size: clamp(14px, 3vw, 16px); /* Responsive font size */
+              line-height: 1.5;
+              margin: 0 0 clamp(8px, 2vw, 15px);
+              text-align: justify;
+            "
+          >
+            Children receive their most important education even before the age
+            of six. Until this age, each morning for children is the dawn of
+            another wonderful adventure. Our focus is not only on developing
+            academic skills, but also intellectual, emotional, linguistic,
+            physical, social, and moral skills, which will ensure the all-round
+            development of children.
+          </p>
+          <p
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              color: #d81b60;
+              font-size: clamp(14px, 3vw, 16px);
+              line-height: 1.5;
+              margin: 0 0 clamp(8px, 2vw, 15px);
+              text-align: justify;
+            "
+          >
+            We believe that children are active learners who learn best by
+            interacting with nature, other children, and adults in
+            child-centered activities. We provide opportunities for the child to
+            grow and develop while reading, listening, and playing.
+          </p>
+          <p
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              color: #d81b60;
+              font-size: clamp(14px, 3vw, 16px);
+              line-height: 1.5;
+              margin: 0;
+              text-align: justify;
+            "
+          >
+            Love and affection are the hallmarks of all these activities.
+            Child-friendly equipment, engaging toys, and games help the child to
+            listen and discover, imagine and create.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
+
+    <footer
+      style="
+        background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
+        padding: 40px 15px;
+        color: #fff;
+        font-family: 'Comic Sans MS', sans-serif;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Fun Background Shapes -->
+      <div
+        style="
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 80px;
+          height: 80px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 20px;
+          transform: rotate(45deg);
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 20px;
+          right: 30px;
+          width: 100px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+        "
+      ></div>
+
+      <div
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <!-- Contact Info -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Let’s Talk!
+          </h2>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              gap: 8px;
+              line-height: 1.4;
+            "
+          >
+            <span style="font-size: 24px">🏡</span> Hidayat Colony, Ward No. 04,
+            City Nuh, Haryana – 122107
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">📞</span>
+            <a
+              href="tel:+918930064006"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >+91 89-3006-4006</a
+            >
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">✉️</span>
+            <a
+              href="mailto:googalischool@gmail.com"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >googalischool@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <!-- Fun Links -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #3f51b5;
+              animation: bounce 2s infinite;
+            "
+          >
+            Play & Learn!
+          </h2>
+          <ul style="list-style: none; padding: 0">
+            <li style="margin-bottom: 10px">
+              <a
+                href="/index.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Home</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/about.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> About</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/career.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Career</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/courses.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Program</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/contact.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Contact</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/admin.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Admin</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Fun -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Be Our Buddy!
+          </h2>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              margin-bottom: 20px;
+            "
+          >
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >𝕏</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >f</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >📷</a
+              >
+            </li>
+          </ul>
+          <p style="font-size: 14px; margin: 0; text-shadow: 1px 1px #3f51b5">
+            Made with ❤️ by
             <a
               href="https://zuridox.com"
-              target="_blank"
               style="
                 color: #ffeb3b;
                 text-decoration: none;
@@ -1280,7 +2350,35 @@
           </p>
         </div>
       </div>
+
+      <!-- Copyright -->
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: clamp(12px, 3vw, 14px);
+          text-shadow: 1px 1px #ff4081;
+        "
+      >
+        ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        GOOGLAi - Let’s Have Fun Together! 🌟
+      </div>
     </footer>
+
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen">

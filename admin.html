@@ -3,99 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin - Quote Requests & Job Applications</title>
+    <title>Admin - Super Fun Quote Requests & Jobs</title>
     <style>
       body {
-        font-family: "Arial", sans-serif;
-        background: linear-gradient(135deg, #f0f4c3, #b2dfdb);
+        font-family: "Bubblegum Sans", "Arial", sans-serif;
+        background: url("https://www.transparenttextures.com/patterns/candy.png")
+            repeat,
+          #ffe6f0;
         margin: 0;
-        padding: 20px;
+        padding: 30px;
+        min-height: 100vh;
+        overflow-x: hidden;
       }
       h1 {
-        font-family: "Comic Sans MS", sans-serif;
-        font-size: 36px;
-        color: #ff5722;
+        font-size: 40px;
+        color: #ff3366;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px #ffd700;
+        animation: bounce 2s infinite;
       }
       h2 {
-        font-family: "Comic Sans MS", sans-serif;
         font-size: 28px;
-        color: #0288d1;
-        margin: 20px 0;
+        color: #00cc99;
+        margin: 30px 0 15px;
+        text-shadow: 1px 1px #fff;
+        font-weight: bold;
       }
       table {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto 40px;
         background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        border-collapse: collapse;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        border: 4px solid #ffcc00;
+        overflow: hidden;
       }
       th,
       td {
         padding: 15px;
         text-align: left;
-        border-bottom: 1px solid #ddd;
       }
       th {
-        background: #ff5722;
+        background: #ff6699;
         color: #fff;
-        font-family: "Comic Sans MS", sans-serif;
         font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
       td {
         color: #333;
         font-size: 16px;
-      }
-      tr:nth-child(even) {
-        background: #f9f9f9;
+        border-bottom: 2px dashed #ffcc00;
       }
       tr:hover {
-        background: #f1f1f1;
+        background: #f0f8ff;
+        transform: scale(1.02);
+        transition: transform 0.2s ease, background 0.2s ease;
       }
       button {
-        padding: 8px 15px;
-        border: none;
-        border-radius: 5px;
-        background: #0288d1;
+        padding: 10px 20px;
+        border: 2px solid #ff3366;
+        border-radius: 25px;
+        background: #00cc99;
         color: #fff;
         cursor: pointer;
-        font-family: "Arial", sans-serif;
-        font-size: 14px;
+        font-size: 16px;
+        font-weight: bold;
+        box-shadow: 2px 2px #ffd700;
       }
       button:hover {
-        background: #ff5722;
+        background: #ff3366;
+        border-color: #00cc99;
+        transform: translateY(-3px);
+        box-shadow: 4px 4px #ffd700;
+        transition: all 0.3s ease;
       }
       #quoteTable,
       #applicationTable {
-        display: none; /* Hidden until data loads */
+        display: none;
       }
       #loading {
         text-align: center;
-        font-size: 18px;
-        color: #666;
+        font-size: 20px;
+        color: #ff6699;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        margin: 20px auto;
+        width: 200px;
       }
       #content {
-        display: none; /* Hidden until password is correct */
+        display: none;
+      }
+      #passwordPrompt {
+        max-width: 450px;
+        margin: 100px auto;
+        background: #fff;
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        border: 5px solid #ffcc00;
+        position: relative;
+      }
+      #passwordInput {
+        width: 100%;
+        padding: 15px;
+        margin: 20px 0;
+        font-size: 18px;
+        border: 3px solid #00cc99;
+        border-radius: 20px;
+        background: #f0f8ff;
+        box-sizing: border-box;
+        font-family: "Bubblegum Sans", "Arial", sans-serif;
+      }
+      #passwordPrompt button {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+      }
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+      @media (max-width: 768px) {
+        body {
+          padding: 15px;
+        }
+        table {
+          font-size: 14px;
+        }
+        th,
+        td {
+          padding: 10px;
+        }
+        h1 {
+          font-size: 28px;
+        }
+        h2 {
+          font-size: 22px;
+        }
+      }
+      .home-button-container {
+        text-align: center;
+        margin-bottom: 20px;
       }
     </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="passwordPrompt">
-      <h1>Admin Login</h1>
+      <h1>Super Secret Login!</h1>
       <input
         type="password"
         id="passwordInput"
-        placeholder="Enter password"
-        style="padding: 10px; margin: 10px; font-size: 16px"
+        placeholder="Type the magic word!"
       />
-      <button onclick="checkPassword()">Submit</button>
+      <button onclick="checkPassword()">Unlock Fun!</button>
     </div>
     <div id="content">
-      <h1>Admin - Quote Requests & Job Applications</h1>
-      <div id="loading">Loading data...</div>
+      <div class="home-button-container">
+        <button onclick="window.location.href='index.html'">
+          Back to Home
+        </button>
+      </div>
+      <h1>Admin - Super Fun Quote Requests & Jobs</h1>
+      <div id="loading">Loading awesome stuff...</div>
 
       <h2>Quote Requests</h2>
       <table id="quoteTable">
@@ -132,18 +221,17 @@
       </table>
     </div>
 
-    <!-- Import jsPDF and Firebase JS as modules -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script type="module" src="admin.js"></script>
     <script>
-      const correctPassword = "admin123"; // Change this to your desired password
+      const correctPassword = "Googlai@Mrkhan";
       function checkPassword() {
         const input = document.getElementById("passwordInput").value;
         if (input === correctPassword) {
           document.getElementById("passwordPrompt").style.display = "none";
           document.getElementById("content").style.display = "block";
         } else {
-          alert("Incorrect password!");
+          alert("Oops! Wrong magic word!");
         }
       }
     </script>

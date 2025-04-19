@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Googlai School</title>
+    <title>GOOGLAi SCHOOL</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <link rel="icon" type="image/png" href="images/Staff image/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -32,6 +32,15 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
     <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
       @keyframes typewriter {
         0% {
           width: 0;
@@ -223,7 +232,7 @@
     >
       <div
         style="
-          max-width: 1200px;
+          max-width: 1350px;
           margin: 0 auto;
           display: flex;
           align-items: center;
@@ -308,7 +317,9 @@
                 >Home</a
               >
             </li>
-            <li style="position: relative">
+
+            <!-- About with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="about.html"
                 style="
@@ -319,12 +330,101 @@
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >About</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Vision</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Founder Message</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Teacher with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="teacher.html"
                 style="
@@ -335,12 +435,101 @@
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >Teacher</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teachers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teacher Training Programme</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Child Introduction</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Program with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="courses.html"
                 style="
@@ -351,12 +540,118 @@
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >Program</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Program</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >What We Offer</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Inquiry Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Guidelines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >FAQ for Kids</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Gallery with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="Gallary.html"
                 style="
@@ -367,11 +662,65 @@
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Gallary</a
+                >Gallery</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Photos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Videos</a
+                  >
+                </li>
+              </ul>
             </li>
+
             <li style="position: relative">
               <a
                 href="contact.html"
@@ -407,11 +756,27 @@
             "
             onmouseover="this.style.background='#ff5722'"
             onmouseout="this.style.background='#4caf50'"
-            >GOOGLAi Academy</a
+            >GOOGLAi ACADEMY</a
           >
         </div>
       </div>
     </nav>
+
+    <script>
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
+      }
+
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
 
     <!-- Inline JavaScript for Mobile Toggle -->
     <script>
@@ -432,22 +797,77 @@
     <!-- END nav -->
 
     <section
-      class="hero-wrap hero-wrap-2"
-      style="background-image: url('images/bg_2.jpg')"
+      style="
+        background: url('images/bg_2.jpg') no-repeat center center/cover;
+        position: relative;
+        padding: 100px 0;
+      "
     >
-      <div class="overlay"></div>
-      <div class="container">
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            135deg,
+            rgba(255, 87, 34, 0.7),
+            rgba(33, 150, 243, 0.7)
+          );
+          z-index: 1;
+        "
+      ></div>
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+          position: relative;
+          z-index: 2;
+        "
+      >
         <div
-          class="row no-gutters slider-text align-items-center justify-content-center"
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          "
         >
-          <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">About Us</h1>
-            <p class="breadcrumbs">
-              <span class="mr-2"
-                ><a href="index.html"
-                  >Home <i class="ion-ios-arrow-forward"></i></a
-              ></span>
-              <span>About us <i class="ion-ios-arrow-forward"></i></span>
+          <div style="max-width: 900px">
+            <h1
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 48px;
+                color: #ffeb3b;
+                margin-bottom: 15px;
+                animation: bounce 2s infinite;
+              "
+            >
+              About Us
+            </h1>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 18px;
+                color: #fff;
+              "
+            >
+              <span style="margin-right: 10px">
+                <a
+                  href="index.html"
+                  style="
+                    color: #ffeb3b;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                  "
+                  onmouseover="this.style.color='#fff'"
+                  onmouseout="this.style.color='#ffeb3b'"
+                  >Home ➔</a
+                >
+              </span>
+              <span>About Us ➔</span>
             </p>
           </div>
         </div>
@@ -457,195 +877,220 @@
     <!-- // welcome section -->
     <section
       style="
-        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-        padding: 40px 0;
+        background: linear-gradient(
+          135deg,
+          #ffeb3b,
+          #81d4fa
+        ); /* Bright yellow to blue */
+        padding: clamp(20px, 5vw, 40px) 0; /* Responsive padding */
+        position: relative;
+        overflow: hidden;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto">
-        <div style="display: flex; flex-wrap: wrap; gap: 20px">
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 clamp(10px, 2vw, 20px); /* Responsive padding */
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(10px, 2vw, 20px); /* Responsive gap */
+          "
+        >
           <!-- About Section -->
           <div
             style="
               flex: 1 1 40%;
               order: 2;
-              background: #ffffff;
-              padding: 30px;
-              border-radius: 20px;
-              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              background: #fff;
+              padding: clamp(15px, 3vw, 30px); /* Responsive padding */
+              border-radius: 25px; /* More rounded */
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              border: 3px dashed #ff4081; /* Playful pink dashed border */
+              min-width: 280px; /* Minimum width for small screens */
             "
           >
-            <div style="padding: 0 20px">
+            <div style="padding: 0 clamp(10px, 2vw, 20px)">
               <h2
                 style="
                   font-family: 'Comic Sans MS', sans-serif;
-                  color: #0288d1;
-                  font-size: 32px;
-                  margin-bottom: 20px;
-                  display: inline-block;
+                  color: #ff4081; /* Bright pink */
+                  font-size: clamp(24px, 5vw, 32px); /* Responsive font size */
+                  margin-bottom: clamp(10px, 2vw, 20px);
+                  text-align: center;
+                  text-shadow: 1px 1px 3px #fff176; /* Yellow shadow */
                 "
               >
-                <span
-                  style="display: inline-block; animation: bounce 2s infinite"
-                  >W</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.1s;
-                  "
-                  >e</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.2s;
-                  "
-                  >l</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.3s;
-                  "
-                  >c</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.4s;
-                  "
-                  >o</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.5s;
-                  "
-                  >m</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.6s;
-                  "
-                  >e</span
-                >
-                <span style="display: inline-block"> </span>
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.7s;
-                  "
-                  >t</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.8s;
-                  "
-                  >o</span
-                >
-                <span style="display: inline-block"> </span>
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 0.9s;
-                  "
-                  >G</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.1s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.2s;
-                  "
-                  >G</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.3s;
-                  "
-                  >L</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.4s;
-                  "
-                  >A</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.5s;
-                  "
-                  >i</span
-                >
-                <span style="display: inline-block"> </span>
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.6s;
-                  "
-                  >S</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.7s;
-                  "
-                  >C</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.8s;
-                  "
-                  >H</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 1.9s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 2s;
-                  "
-                  >O</span
-                >
-                <span
-                  style="
-                    display: inline-block;
-                    animation: bounce 2s infinite 2.1s;
-                  "
-                  >L</span
-                >
+                <span style="display: block; white-space: nowrap">
+                  <span
+                    style="display: inline-block; animation: bounce 2s infinite"
+                    >W</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.1s;
+                    "
+                    >e</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.2s;
+                    "
+                    >l</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.3s;
+                    "
+                    >c</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.4s;
+                    "
+                    >o</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.5s;
+                    "
+                    >m</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.6s;
+                    "
+                    >e</span
+                  >
+                  <span style="display: inline-block"> </span>
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.7s;
+                    "
+                    >t</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.8s;
+                    "
+                    >o</span
+                  >
+                </span>
+                <span style="display: block; white-space: nowrap">
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 0.9s;
+                    "
+                    >G</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.1s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.2s;
+                    "
+                    >G</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.3s;
+                    "
+                    >L</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.4s;
+                    "
+                    >A</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.5s;
+                    "
+                    >i</span
+                  >
+                  <span style="display: inline-block"> </span>
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.6s;
+                    "
+                    >S</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.7s;
+                    "
+                    >C</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.8s;
+                    "
+                    >H</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 1.9s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 2s;
+                    "
+                    >O</span
+                  >
+                  <span
+                    style="
+                      display: inline-block;
+                      animation: bounce 2s infinite 2.1s;
+                    "
+                    >L</span
+                  >
+                </span>
               </h2>
               <p
                 style="
-                  font-family: 'Arial', sans-serif;
-                  color: #333;
-                  font-size: 16px;
-                  line-height: 1.6;
-                  margin-bottom: 15px;
+                  font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+                  color: #d81b60; /* Vibrant magenta */
+                  font-size: clamp(14px, 3vw, 16px); /* Responsive font size */
+                  line-height: 1.5;
+                  margin-bottom: clamp(8px, 2vw, 15px);
+                  text-align: justify; /* Justified for larger screens */
                 "
               >
                 GOOGLAi SCHOOL is an innovative and technologically advanced
@@ -655,11 +1100,12 @@
               </p>
               <p
                 style="
-                  font-family: 'Arial', sans-serif;
-                  color: #333;
-                  font-size: 16px;
-                  line-height: 1.6;
-                  margin-bottom: 15px;
+                  font-family: 'Comic Sans MS', sans-serif;
+                  color: #d81b60;
+                  font-size: clamp(14px, 3vw, 16px);
+                  line-height: 1.5;
+                  margin-bottom: clamp(8px, 2vw, 15px);
+                  text-align: justify;
                 "
               >
                 Our school's curriculum is specially designed to take into
@@ -669,11 +1115,12 @@
               </p>
               <p
                 style="
-                  font-family: 'Arial', sans-serif;
-                  color: #333;
-                  font-size: 16px;
-                  line-height: 1.6;
-                  margin-bottom: 15px;
+                  font-family: 'Comic Sans MS', sans-serif;
+                  color: #d81b60;
+                  font-size: clamp(14px, 3vw, 16px);
+                  line-height: 1.5;
+                  margin-bottom: clamp(8px, 2vw, 15px);
+                  text-align: justify;
                 "
               >
                 By using AI and advanced technologies in our school, our
@@ -686,17 +1133,17 @@
                   href="/about.html"
                   style="
                     display: inline-block;
-                    background: #0288d1;
+                    background: #ff4081; /* Bright pink */
                     color: #fff;
-                    padding: 12px 25px;
-                    border-radius: 25px;
+                    padding: clamp(8px, 2vw, 12px) clamp(15px, 3vw, 25px); /* Responsive padding */
+                    border-radius: 20px;
                     text-decoration: none;
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    transition: background 0.3s ease;
+                    font-family: 'Comic Sans MS', sans-serif;
+                    font-size: clamp(14px, 3vw, 16px);
+                    transition: background 0.3s ease, transform 0.3s ease;
                   "
-                  onmouseover="this.style.background='#0277bd'"
-                  onmouseout="this.style.background='#0288d1'"
+                  onmouseover="this.style.background='#d81b60'; this.style.transform='scale(1.05)'"
+                  onmouseout="this.style.background='#ff4081'; this.style.transform='scale(1)'"
                   >Read More</a
                 >
               </p>
@@ -704,14 +1151,21 @@
           </div>
 
           <!-- What We Offer Section -->
-          <div style="flex: 1 1 55%; padding: 30px 0">
+          <div
+            style="
+              flex: 1 1 55%;
+              padding: clamp(15px, 3vw, 30px) 0;
+              min-width: 280px; /* Minimum width for small screens */
+            "
+          >
             <h2
               style="
                 font-family: 'Comic Sans MS', sans-serif;
-                color: #ff5722;
-                font-size: 32px;
-                margin-bottom: 20px;
-                display: inline-block;
+                color: #ff5722; /* Bright orange */
+                font-size: clamp(24px, 5vw, 32px); /* Responsive font size */
+                margin-bottom: clamp(10px, 2vw, 20px);
+                text-align: center; /* Centered for smaller screens */
+                text-shadow: 1px 1px 3px #fff176; /* Yellow shadow */
               "
             >
               <span style="display: inline-block; animation: bounce 2s infinite"
@@ -789,65 +1243,78 @@
             </h2>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #333;
-                font-size: 16px;
-                line-height: 1.6;
-                margin-bottom: 30px;
+                font-family: 'Comic Sans MS', sans-serif;
+                color: #d81b60; /* Vibrant magenta */
+                font-size: clamp(14px, 3vw, 16px);
+                line-height: 1.5;
+                margin-bottom: clamp(15px, 3vw, 30px);
+                text-align: justify; /* Centered for smaller screens */
               "
             >
               At GOOGLAi SCHOOL, we provide a safe, enriching, and well-equipped
               learning environment to help children build a brighter future.
             </p>
-            <div style="display: flex; flex-wrap: wrap; gap: 20px">
+            <div
+              style="
+                display: flex;
+                flex-wrap: wrap;
+                gap: clamp(10px, 2vw, 20px); /* Responsive gap */
+              "
+            >
               <!-- Safety First -->
               <div
                 style="
                   flex: 1 1 45%;
                   background: #fff;
-                  padding: 20px;
+                  padding: clamp(10px, 2vw, 20px); /* Responsive padding */
                   border-radius: 15px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                   transition: transform 0.3s ease;
+                  min-width: 200px; /* Minimum width for small screens */
+                  border: 2px dashed #ffca28; /* Playful yellow dashed border */
                 "
-                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseover="this.style.transform='scale(1.05)'"
                 onmouseout="this.style.transform='scale(1)'"
               >
-                <div style="display: flex; align-items: flex-start">
+                <div style="display: flex; align-items: center">
                   <div
                     style="
-                      margin: 5px 15px 0 0;
-                      width: 50px;
-                      height: 50px;
-                      background: #ffca28;
+                      margin: 0 clamp(5px, 1vw, 15px) 0 0;
+                      width: clamp(40px, 8vw, 50px); /* Responsive size */
+                      height: clamp(40px, 8vw, 50px);
+                      background: #ffca28; /* Bright yellow */
                       border-radius: 50%;
                       display: flex;
                       justify-content: center;
                       align-items: center;
                     "
                   >
-                    <span
-                      class="flaticon-security"
-                      style="font-size: 30px; color: #fff"
-                    ></span>
+                    <span style="font-size: clamp(20px, 4vw, 30px); color: #fff"
+                      >🛡️</span
+                    >
                   </div>
                   <div>
                     <h3
                       style="
                         font-family: 'Comic Sans MS', sans-serif;
                         color: #ffca28;
-                        font-size: 20px;
-                        margin-bottom: 10px;
+                        font-size: clamp(
+                          16px,
+                          3vw,
+                          20px
+                        ); /* Responsive font size */
+                        margin-bottom: clamp(5px, 1vw, 10px);
                       "
                     >
                       Safety First
                     </h3>
                     <p
                       style="
-                        font-family: 'Arial', sans-serif;
-                        color: #333;
-                        font-size: 14px;
-                        margin-bottom: 10px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #d81b60;
+                        font-size: clamp(12px, 2.5vw, 14px);
+                        margin-bottom: clamp(5px, 1vw, 10px);
+                        text-align: justify;
                       "
                     >
                       We ensure a secure school environment with CCTV
@@ -857,15 +1324,13 @@
                       style="
                         list-style: none;
                         padding: 0;
-                        font-family: 'Arial', sans-serif;
-                        color: #666;
-                        font-size: 14px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #ff4081;
+                        font-size: clamp(12px, 2.5vw, 14px);
                       "
                     >
-                      <li style="margin-bottom: 5px">
-                        • Secure and comfortable atmosphere
-                      </li>
-                      <li>• Awareness of safety protocols</li>
+                      <li style="margin-bottom: 5px">• Secure and comfy fun</li>
+                      <li>• Safety superpowers</li>
                     </ul>
                   </div>
                 </div>
@@ -875,49 +1340,50 @@
                 style="
                   flex: 1 1 45%;
                   background: #fff;
-                  padding: 20px;
+                  padding: clamp(10px, 2vw, 20px);
                   border-radius: 15px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                   transition: transform 0.3s ease;
+                  min-width: 200px;
+                  border: 2px dashed #0288d1; /* Playful blue dashed border */
                 "
-                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseover="this.style.transform='scale(1.05)'"
                 onmouseout="this.style.transform='scale(1)'"
               >
-                <div style="display: flex; align-items: flex-start">
+                <div style="display: flex; align-items: center">
                   <div
                     style="
-                      margin: 5px 15px 0 0;
-                      width: 50px;
-                      height: 50px;
-                      background: #0288d1;
+                      margin: 0 clamp(5px, 1vw, 15px) 0 0;
+                      width: clamp(40px, 8vw, 50px);
+                      height: clamp(40px, 8vw, 50px);
+                      background: #0288d1; /* Bright blue */
                       border-radius: 50%;
                       display: flex;
                       justify-content: center;
                       align-items: center;
                     "
                   >
-                    <span
-                      class="flaticon-reading"
-                      style="font-size: 30px; color: #fff"
-                    ></span>
+                    <span style="font-size: clamp(20px, 4vw, 30px); color: #fff"
+                      >📚</span
+                    >
                   </div>
                   <div>
                     <h3
                       style="
                         font-family: 'Comic Sans MS', sans-serif;
                         color: #0288d1;
-                        font-size: 20px;
-                        margin-bottom: 10px;
+                        font-size: clamp(16px, 3vw, 20px);
+                        margin-bottom: clamp(5px, 1vw, 10px);
                       "
                     >
                       Regular Classes
                     </h3>
                     <p
                       style="
-                        font-family: 'Arial', sans-serif;
-                        color: #333;
-                        font-size: 14px;
-                        margin-bottom: 10px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #d81b60;
+                        font-size: clamp(12px, 2.5vw, 14px);
+                        margin-bottom: clamp(5px, 1vw, 10px);
                       "
                     >
                       Consistent attendance fosters knowledge and skill
@@ -927,13 +1393,13 @@
                       style="
                         list-style: none;
                         padding: 0;
-                        font-family: 'Arial', sans-serif;
-                        color: #666;
-                        font-size: 14px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #ff4081;
+                        font-size: clamp(12px, 2.5vw, 14px);
                       "
                     >
-                      <li style="margin-bottom: 5px">• Structured learning</li>
-                      <li>• Face-to-face interaction</li>
+                      <li style="margin-bottom: 5px">• Fun learning plans</li>
+                      <li>• Chatting with teachers</li>
                     </ul>
                   </div>
                 </div>
@@ -943,49 +1409,50 @@
                 style="
                   flex: 1 1 45%;
                   background: #fff;
-                  padding: 20px;
+                  padding: clamp(10px, 2vw, 20px);
                   border-radius: 15px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                   transition: transform 0.3s ease;
+                  min-width: 200px;
+                  border: 2px dashed #ff5722; /* Playful orange dashed border */
                 "
-                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseover="this.style.transform='scale(1.05)'"
                 onmouseout="this.style.transform='scale(1)'"
               >
-                <div style="display: flex; align-items: flex-start">
+                <div style="display: flex; align-items: center">
                   <div
                     style="
-                      margin: 5px 15px 0 0;
-                      width: 50px;
-                      height: 50px;
-                      background: #ff5722;
+                      margin: 0 clamp(5px, 1vw, 15px) 0 0;
+                      width: clamp(40px, 8vw, 50px);
+                      height: clamp(40px, 8vw, 50px);
+                      background: #ff5722; /* Bright orange */
                       border-radius: 50%;
                       display: flex;
                       justify-content: center;
                       align-items: center;
                     "
                   >
-                    <span
-                      class="flaticon-education"
-                      style="font-size: 30px; color: #fff"
-                    ></span>
+                    <span style="font-size: clamp(20px, 4vw, 30px); color: #fff"
+                      >🏫</span
+                    >
                   </div>
                   <div>
                     <h3
                       style="
                         font-family: 'Comic Sans MS', sans-serif;
                         color: #ff5722;
-                        font-size: 20px;
-                        margin-bottom: 10px;
+                        font-size: clamp(16px, 3vw, 20px);
+                        margin-bottom: clamp(5px, 1vw, 10px);
                       "
                     >
                       Sufficient Classrooms
                     </h3>
                     <p
                       style="
-                        font-family: 'Arial', sans-serif;
-                        color: #333;
-                        font-size: 14px;
-                        margin-bottom: 10px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #d81b60;
+                        font-size: clamp(12px, 2.5vw, 14px);
+                        margin-bottom: clamp(5px, 1vw, 10px);
                       "
                     >
                       Adequate space enhances learning, ensuring personalized
@@ -995,15 +1462,13 @@
                       style="
                         list-style: none;
                         padding: 0;
-                        font-family: 'Arial', sans-serif;
-                        color: #666;
-                        font-size: 14px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #ff4081;
+                        font-size: clamp(12px, 2.5vw, 14px);
                       "
                     >
-                      <li style="margin-bottom: 5px">
-                        • Well-organized, comfortable environment
-                      </li>
-                      <li>• Proper lighting and facilities</li>
+                      <li style="margin-bottom: 5px">• Cozy, bright rooms</li>
+                      <li>• Super cool lights</li>
                     </ul>
                   </div>
                 </div>
@@ -1013,49 +1478,50 @@
                 style="
                   flex: 1 1 45%;
                   background: #fff;
-                  padding: 20px;
+                  padding: clamp(10px, 2vw, 20px);
                   border-radius: 15px;
-                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
                   transition: transform 0.3s ease;
+                  min-width: 200px;
+                  border: 2px dashed #4caf50; /* Playful green dashed border */
                 "
-                onmouseover="this.style.transform='scale(1.03)'"
+                onmouseover="this.style.transform='scale(1.05)'"
                 onmouseout="this.style.transform='scale(1)'"
               >
-                <div style="display: flex; align-items: flex-start">
+                <div style="display: flex; align-items: center">
                   <div
                     style="
-                      margin: 5px 15px 0 0;
-                      width: 50px;
-                      height: 50px;
-                      background: #4caf50;
+                      margin: 0 clamp(5px, 1vw, 15px) 0 0;
+                      width: clamp(40px, 8vw, 50px);
+                      height: clamp(40px, 8vw, 50px);
+                      background: #4caf50; /* Bright green */
                       border-radius: 50%;
                       display: flex;
                       justify-content: center;
                       align-items: center;
                     "
                   >
-                    <span
-                      class="flaticon-kids"
-                      style="font-size: 30px; color: #fff"
-                    ></span>
+                    <span style="font-size: clamp(20px, 4vw, 30px); color: #fff"
+                      >⚽</span
+                    >
                   </div>
                   <div>
                     <h3
                       style="
                         font-family: 'Comic Sans MS', sans-serif;
                         color: #4caf50;
-                        font-size: 20px;
-                        margin-bottom: 10px;
+                        font-size: clamp(16px, 3vw, 20px);
+                        margin-bottom: clamp(5px, 1vw, 10px);
                       "
                     >
                       Sports Facilities
                     </h3>
                     <p
                       style="
-                        font-family: 'Arial', sans-serif;
-                        color: #333;
-                        font-size: 14px;
-                        margin-bottom: 10px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #d81b60;
+                        font-size: clamp(12px, 2.5vw, 14px);
+                        margin-bottom: clamp(5px, 1vw, 10px);
                       "
                     >
                       Physical education is prioritized with rooftop outdoor
@@ -1065,15 +1531,13 @@
                       style="
                         list-style: none;
                         padding: 0;
-                        font-family: 'Arial', sans-serif;
-                        color: #666;
-                        font-size: 14px;
+                        font-family: 'Comic Sans MS', sans-serif;
+                        color: #ff4081;
+                        font-size: clamp(12px, 2.5vw, 14px);
                       "
                     >
-                      <li style="margin-bottom: 5px">
-                        • Design challenges & field trips
-                      </li>
-                      <li>• Fitness and extracurricular engagement</li>
+                      <li style="margin-bottom: 5px">• Fun games & trips</li>
+                      <li>• Super active playtime</li>
                     </ul>
                   </div>
                 </div>
@@ -1087,8 +1551,12 @@
     <!-- About Us Section: Sunny, Playful Vibe -->
     <section
       style="
-        background: #fffde7;
-        padding: 40px 0;
+        background: linear-gradient(
+          135deg,
+          #ffeb3b,
+          #ff80ab
+        ); /* Bright yellow to pink gradient */
+        padding: 30px 0; /* Slightly reduced padding */
         position: relative;
         overflow: hidden;
       "
@@ -1100,28 +1568,29 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1440 320%22%3E%3Cpath fill=%22%23ffeb3b%22 fill-opacity=%220.3%22 d=%22M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,229.3C672,235,768,213,864,186.7C960,160,1056,128,1152,138.7C1248,149,1344,203,1392,229.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z%22%3E%3C/path%3E%3C/svg%3E')
+          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1440 320%22%3E%3Cpath fill=%22%23fff176%22 fill-opacity=%220.4%22 d=%22M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,229.3C672,235,768,213,864,186.7C960,160,1056,128,1152,138.7C1248,149,1344,203,1392,229.3L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z%22%3E%3C/path%3E%3C/svg%3E')
             no-repeat bottom center/cover;
           z-index: 0;
         "
       ></div>
       <div
         style="
-          max-width: 1200px;
+          max-width: 1000px; /* Slightly smaller max-width */
           margin: 0 auto;
           padding: 0 15px;
           position: relative;
           z-index: 1;
         "
       >
-        <div style="text-align: center; margin-bottom: 40px">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 30px">
           <h2
             style="
               font-family: 'Comic Sans MS', sans-serif;
-              font-size: 36px;
-              color: #ff5722;
-              margin: 0 0 15px;
-              text-shadow: 2px 2px #ffca28;
+              font-size: 38px; /* Slightly larger for emphasis */
+              color: #d81b60; /* Vibrant magenta */
+              margin: 0 0 10px;
+              text-shadow: 2px 2px #fff176; /* Bright yellow shadow */
             "
           >
             <span style="display: inline-block; animation: bounce 2s infinite"
@@ -1146,7 +1615,7 @@
             <span style="display: inline-block"> </span>
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 0.5s;
               "
@@ -1154,7 +1623,7 @@
             >
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 0.6s;
               "
@@ -1162,103 +1631,144 @@
             >
           </h2>
         </div>
+
+        <!-- Content -->
         <div
           style="
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px; /* Slightly reduced gap */
             align-items: center;
             justify-content: center;
           "
         >
-          <div style="flex: 1 1 30%; min-width: 250px; text-align: center">
+          <!-- Image Section -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 200px; /* Smaller min-width for mobile */
+              text-align: center;
+            "
+          >
             <div
               style="position: relative; transition: transform 0.3s ease"
-              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseover="this.style.transform='scale(1.1)'"
               onmouseout="this.style.transform='scale(1)'"
             >
               <div
                 style="
-                  width: 220px;
-                  height: 220px;
-                  background: url('images/mission.jpg') no-repeat center
+                  width: 180px; /* Smaller size */
+                  height: 180px;
+                  background: url('images/about.png') no-repeat center
                     center/cover;
                   border-radius: 50%;
-                  border: 10px solid #ffca28;
+                  border: 8px solid #fff176; /* Bright yellow border */
                   margin: 0 auto;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 "
               ></div>
               <div
                 style="
                   position: absolute;
-                  bottom: -15px;
+                  bottom: -10px;
                   left: 50%;
                   transform: translateX(-50%);
-                  background: #ff5722;
+                  background: #ff4081; /* Bright pink */
                   color: #fff;
-                  padding: 8px 15px;
-                  border-radius: 15px;
+                  padding: 6px 12px;
+                  border-radius: 20px;
                   font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 16px;
+                  font-size: 14px;
                   animation: pulse 2s infinite;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
                 "
               >
-                Sunny Days!
+                Happy Vibes!
               </div>
             </div>
           </div>
+
+          <!-- Text Section -->
           <div
             style="
               flex: 1 1 65%;
-              min-width: 300px;
-              background: #fff;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              padding: 25px;
-              border-left: 5px solid #ffeb3b;
+              min-width: 280px; /* Adjusted for mobile */
+              background: #ffffff;
+              border-radius: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+              padding: 20px;
+              border-left: 6px solid #ff4081; /* Bright pink border */
+              position: relative;
+              overflow: hidden;
+              border: 3px dashed #fff176; /* Playful dashed border */
             "
           >
-            <p
+            <!-- Decorative Elements -->
+            <!-- <div
               style="
-                font-family: 'Arial', sans-serif;
-                color: #333;
-                font-size: 16px;
-                line-height: 1.6;
-                margin-bottom: 15px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 30px;
+                color: #3f51b5; /* Bright blue */
+                animation: bounce 2s infinite;
               "
             >
-              GOOGLAi SCHOOL is an innovative and technologically advanced
-              educational institution that started its journey in 2024. Our aim
-              is to provide children with a safe, secure, and interactive
-              learning environment.
+              🌟
+            </div> -->
+            <div
+              style="
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                font-size: 30px;
+                color: #d81b60; /* Vibrant magenta */
+                animation: spin 3s linear infinite;
+              "
+            >
+              🎈
+            </div>
+
+            <!-- Text Content -->
+            <p
+              style="
+                font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+                color: #d81b60; /* Vibrant magenta */
+                font-size: 18px; /* Larger for kids */
+                line-height: 1.5;
+                margin-bottom: 10px;
+                text-align: justify;
+              "
+            >
+              Hiya, friends! GOOGLAi SCHOOL is a super cool place that started
+              in 2024. We make learning fun, safe, and full of giggles for YOU!
             </p>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #333;
-                font-size: 16px;
-                line-height: 1.6;
-                margin-bottom: 15px;
+                font-family: 'Comic Sans MS', sans-serif;
+                color: #d81b60;
+                font-size: 18px;
+                line-height: 1.5;
+                margin-bottom: 10px;
+                text-align: justify;
               "
             >
-              Our school's curriculum is specially designed that takes into
-              account each child's individual learning needs. At GOOGLAi SCHOOL,
-              we use advanced intelligent systems that make each student's
-              learning experience personalized and efficient.
+              Our school has special magic tricks (like AI!) to help every kid
+              learn in their own special way. It’s like a big adventure just for
+              you!
             </p>
             <p
               style="
-                font-family: 'Arial', sans-serif;
-                color: #333;
-                font-size: 16px;
-                line-height: 1.6;
-                margin-bottom: 15px;
+                font-family: 'Comic Sans MS', sans-serif;
+                color: #d81b60;
+                font-size: 18px;
+                line-height: 1.5;
+                margin-bottom: 0;
+                text-align: justify;
               "
             >
-              By using AI and advanced technologies in our school, our
-              AI-powered approach provides children with a dynamic and adaptive
-              learning environment where they can grow at their own learning
-              pace.
+              With our fun tech, you can grow big and strong at your own speed.
+              GOOGLAi SCHOOL is all about happy learning and big smiles!
             </p>
           </div>
         </div>
@@ -1268,8 +1778,12 @@
     <!-- Mission Section: Space Adventure Vibe -->
     <section
       style="
-        background: #1a237e;
-        padding: 40px 0;
+        background: linear-gradient(
+          135deg,
+          #ffeb3b,
+          #64b5f6
+        ); /* Yellow to light blue gradient */
+        padding: 30px 0; /* Slightly reduced padding */
         position: relative;
         overflow: hidden;
       "
@@ -1281,28 +1795,29 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%225%22 cy=%225%22 r=%222%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2220%22 cy=%2215%22 r=%221%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2240%22 cy=%2210%22 r=%221.5%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2270%22 cy=%2220%22 r=%222%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2290%22 cy=%225%22 r=%221%22 fill=%22%23fff%22/%3E%3C/svg%3E')
+          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%225%22 cy=%225%22 r=%223%22 fill=%22%23ff4081%22/%3E%3Ccircle cx=%2220%22 cy=%2215%22 r=%222%22 fill=%23fff176%22/%3E%3Ccircle cx=%2240%22 cy=%2210%22 r=%222.5%22 fill=%23d81b60%22/%3E%3Ccircle cx=%2270%22 cy=%2220%22 r=%223%22 fill=%23ff5722%22/%3E%3Ccircle cx=%2290%22 cy=%225%22 r=%222%22 fill=%23fff176%22/%3E%3C/svg%3E')
             repeat;
-          opacity: 0.2;
+          opacity: 0.3; /* Slightly more visible dots */
         "
       ></div>
       <div
         style="
-          max-width: 1200px;
+          max-width: 1000px; /* Smaller max-width for a tighter layout */
           margin: 0 auto;
           padding: 0 15px;
           position: relative;
           z-index: 1;
         "
       >
-        <div style="text-align: center; margin-bottom: 40px">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 25px">
           <h2
             style="
               font-family: 'Comic Sans MS', sans-serif;
-              font-size: 36px;
-              color: #ffca28;
-              margin: 0 0 15px;
-              text-shadow: 0 0 10px #0288d1;
+              font-size: 38px; /* Slightly larger for emphasis */
+              color: #ff4081; /* Bright pink */
+              margin: 0 0 10px;
+              text-shadow: 2px 2px 4px #fff176; /* Bright yellow shadow */
             "
           >
             <span style="display: inline-block; animation: bounce 2s infinite"
@@ -1319,7 +1834,7 @@
             <span style="display: inline-block"> </span>
             <span
               style="
-                color: #4caf50;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.3s;
               "
@@ -1327,7 +1842,7 @@
             >
             <span
               style="
-                color: #4caf50;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.4s;
               "
@@ -1335,7 +1850,7 @@
             >
             <span
               style="
-                color: #4caf50;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.5s;
               "
@@ -1343,7 +1858,7 @@
             >
             <span
               style="
-                color: #4caf50;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.6s;
               "
@@ -1351,7 +1866,7 @@
             >
             <span
               style="
-                color: #4caf50;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.7s;
               "
@@ -1359,7 +1874,7 @@
             >
             <span
               style="
-                color: #4caf50;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.8s;
               "
@@ -1367,7 +1882,7 @@
             >
             <span
               style="
-                color: #4caf50;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.9s;
               "
@@ -1375,73 +1890,113 @@
             >
           </h2>
         </div>
+
+        <!-- Content -->
         <div
           style="
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px; /* Reduced gap for a cozier feel */
             align-items: center;
             justify-content: center;
           "
         >
-          <div style="flex: 1 1 30%; min-width: 250px; text-align: center">
+          <!-- Image Section -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 200px; /* Smaller min-width for mobile */
+              text-align: center;
+            "
+          >
             <div
               style="position: relative; transition: transform 0.3s ease"
-              onmouseover="this.style.transform='rotate(5deg) scale(1.05)'"
+              onmouseover="this.style.transform='rotate(5deg) scale(1.1)'"
               onmouseout="this.style.transform='rotate(0deg) scale(1)'"
             >
               <div
                 style="
-                  width: 200px;
-                  height: 300px;
-                  background: url('images/mission.jpg') no-repeat center
+                  width: 180px; /* Smaller size */
+                  height: 180px; /* Adjusted height */
+                  background: url('images/vision\ \(1\).png') no-repeat center
                     center/cover;
-                  border-radius: 30px 30px 0 0;
-                  border: 8px solid #0288d1;
-                  border-bottom: none;
+                  border-radius: 40px; /* More rounded */
+                  border: 6px solid #fff176; /* Bright yellow border */
                   margin: 0 auto;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 "
               ></div>
               <div
                 style="
                   position: absolute;
-                  top: -25px;
-                  right: -20px;
-                  font-size: 50px;
-                  color: #ff5722;
+                  top: -20px;
+                  right: -15px;
+                  font-size: 40px;
+                  color: #ff5722; /* Bright orange */
                   animation: bounce 2s infinite;
                 "
               >
-                🚀
+                🌈
               </div>
             </div>
           </div>
+
+          <!-- Text Section -->
           <div
             style="
               flex: 1 1 65%;
-              min-width: 300px;
-              background: rgba(255, 255, 255, 0.9);
-              border-radius: 0 20px 20px 0;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              padding: 25px;
-              border-right: 5px solid #4caf50;
+              min-width: 280px; /* Adjusted for mobile */
+              background: rgba(255, 255, 255, 0.95);
+              border-radius: 25px; /* More rounded */
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+              padding: 20px;
+              border: 4px dashed #ff4081; /* Playful dashed pink border */
+              position: relative;
+              overflow: hidden;
             "
           >
-            <p
+            <!-- Decorative Elements -->
+            <!-- <div
               style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #fff;
-                line-height: 1.6;
-                margin: 0 0 20px;
-                text-shadow: 1px 1px 2px #1a237e;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                font-size: 30px;
+                color: #3f51b5; /* Bright blue */
+                animation: spin 3s linear infinite;
               "
             >
-              At GOOGLAi SCHOOL, our mission is to give every kid a super cool
-              learning place with AI magic! We want you to spark your
-              creativity, think big, and solve fun puzzles. Our smart tech will
-              help you grow into super-smart kids who can shine all over the
-              world!
+              🎉
+            </div> -->
+            <div
+              style="
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                font-size: 30px;
+                color: #fff176; /* Bright yellow */
+                animation: bounce 2s infinite;
+              "
+            >
+              ⭐
+            </div>
+
+            <!-- Text Content -->
+            <p
+              style="
+                font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+                font-size: 18px; /* Larger for kids */
+                color: #d81b60; /* Vibrant magenta */
+                line-height: 1.5;
+                margin: 0;
+                text-shadow: none; /* Removed shadow for clarity */
+                text-align: justify;
+              "
+            >
+              Hiya, super kids! At GOOGLAi SCHOOL, we’ve got a big, fun mission:
+              to make learning a blast with AI magic! You’ll get to dream big,
+              create cool stuff, and solve fun mysteries. Our smart tech helps
+              you shine like a superstar, all around the world!
             </p>
           </div>
         </div>
@@ -1451,8 +2006,13 @@
     <!-- Vision Section: Dreamy, Global Explorer Vibe -->
     <section
       style="
-        background: linear-gradient(to bottom, #b2ebf2, #e0f7fa 50%, #f8bbd0);
-        padding: 40px 0;
+        background: linear-gradient(
+          to bottom,
+          #ffeb3b,
+          #81d4fa 50%,
+          #f06292
+        ); /* Bright yellow to blue to pink */
+        padding: 30px 0; /* Slightly reduced padding */
         position: relative;
         overflow: hidden;
       "
@@ -1464,28 +2024,29 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1440 320%22%3E%3Cpath fill=%22%23fff%22 fill-opacity=%220.5%22 d=%22M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,112C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z%22%3E%3C/path%3E%3C/svg%3E')
+          background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1440 320%22%3E%3Cpath fill=%22%23fff176%22 fill-opacity=%220.5%22 d=%22M0,96L48,106.7C96,117,192,139,288,138.7C384,139,480,117,576,112C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z%22%3E%3C/path%3E%3C/svg%3E')
             no-repeat bottom center/cover;
           z-index: 0;
         "
       ></div>
       <div
         style="
-          max-width: 1200px;
+          max-width: 1000px; /* Slightly smaller max-width */
           margin: 0 auto;
           padding: 0 15px;
           position: relative;
           z-index: 1;
         "
       >
-        <div style="text-align: center; margin-bottom: 40px">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 25px">
           <h2
             style="
               font-family: 'Comic Sans MS', sans-serif;
-              font-size: 36px;
-              color: #0288d1;
-              margin: 0 0 15px;
-              text-shadow: 2px 2px #ff4081;
+              font-size: 38px; /* Slightly larger for emphasis */
+              color: #ff4081; /* Bright pink */
+              margin: 0 0 10px;
+              text-shadow: 2px 2px 4px #fff176; /* Bright yellow shadow */
             "
           >
             <span style="display: inline-block; animation: bounce 2s infinite"
@@ -1502,7 +2063,7 @@
             <span style="display: inline-block"> </span>
             <span
               style="
-                color: #ff4081;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.3s;
               "
@@ -1510,7 +2071,7 @@
             >
             <span
               style="
-                color: #ff4081;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.4s;
               "
@@ -1518,7 +2079,7 @@
             >
             <span
               style="
-                color: #ff4081;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.5s;
               "
@@ -1526,7 +2087,7 @@
             >
             <span
               style="
-                color: #ff4081;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.6s;
               "
@@ -1534,7 +2095,7 @@
             >
             <span
               style="
-                color: #ff4081;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.7s;
               "
@@ -1542,7 +2103,7 @@
             >
             <span
               style="
-                color: #ff4081;
+                color: #d81b60;
                 display: inline-block;
                 animation: bounce 2s infinite 0.8s;
               "
@@ -1550,1027 +2111,160 @@
             >
           </h2>
         </div>
+
+        <!-- Content -->
         <div
           style="
             display: flex;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 15px; /* Reduced gap for a playful feel */
             align-items: center;
             justify-content: center;
           "
         >
-          <div style="flex: 1 1 30%; min-width: 250px; text-align: center">
+          <!-- Image Section -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 200px; /* Smaller min-width for mobile */
+              text-align: center;
+            "
+          >
             <div
               style="position: relative; transition: transform 0.3s ease"
-              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseover="this.style.transform='scale(1.1)'"
               onmouseout="this.style.transform='scale(1)'"
             >
               <div
                 style="
-                  width: 250px;
-                  height: 200px;
-                  background: url('images/mission.jpg') no-repeat center
+                  width: 220px; /* Slightly smaller */
+                  height: 180px; /* Adjusted height */
+                  background: url('images/mission.png') no-repeat center
                     center/cover;
-                  border-radius: 15px;
-                  border: 6px dashed #4caf50;
+                  border-radius: 25px; /* More rounded */
+                  border: 6px dashed #fff176; /* Bright yellow dashed border */
                   margin: 0 auto;
+                  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
                 "
               ></div>
               <div
                 style="
                   position: absolute;
-                  bottom: -20px;
-                  right: -20px;
-                  font-size: 40px;
-                  color: #ffca28;
-                  animation: spin 4s linear infinite;
+                  bottom: -15px;
+                  right: -15px;
+                  font-size: 35px;
+                  color: #ff5722; /* Bright orange */
+                  animation: spin 3s linear infinite;
                 "
               >
-                🌍
+                🌟
               </div>
             </div>
           </div>
+
+          <!-- Text Section -->
           <div
             style="
               flex: 1 1 65%;
-              min-width: 300px;
-              background: rgba(255, 255, 255, 0.8);
-              border-radius: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              padding: 25px;
-              border-top: 5px solid #ff4081;
+              min-width: 280px; /* Adjusted for mobile */
+              background: rgba(255, 255, 255, 0.9);
+              border-radius: 25px; /* More rounded */
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+              padding: 20px;
+              border-top: 6px solid #ff4081; /* Bright pink top border */
+              position: relative;
+              overflow: hidden;
+              border: 3px dashed #fff176; /* Playful yellow dashed border */
             "
           >
-            <p
+            <!-- Decorative Elements -->
+            <!-- <div
+          style="
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 30px;
+            color: #3f51b5; /* Bright blue */
+            animation: bounce 2s infinite;
+          "
+        >
+          🎈
+        </div> -->
+            <div
               style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #333;
-                line-height: 1.6;
-                margin: 0 0 20px;
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                font-size: 30px;
+                color: #d81b60; /* Vibrant magenta */
+                animation: spin 3s linear infinite;
               "
             >
-              GOOGLAi vision to be an institution where every student gets
-              access to quality education and advanced technologies along with
-              future-ready skills. We want our students to achieve their goals
-              by becoming responsible, confident and innovative global citizens.
-              The holistic use and application of AI in the education sector is
-              to bring a revolution in education that prioritizes humanity on a
-              global platform.
+              🎉
+            </div>
+
+            <!-- Text Content -->
+            <p
+              style="
+                font-family: 'Comic Sans MS', sans-serif; /* Playful font */
+                font-size: 18px; /* Larger for kids */
+                color: #d81b60; /* Vibrant magenta */
+                line-height: 1.5;
+                margin: 0;
+                text-align: justify;
+              "
+            >
+              Hey, awesome kids! At GOOGLAi SCHOOL, we dream BIG! We want to
+              give you the coolest learning ever with fun tech and super skills.
+              You’ll grow into confident, happy explorers who can make the world
+              smile—using AI magic to be the best YOU!
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- gap  -->
-    <section
-      style="
-        background: url('images/bg_4.jpg') no-repeat center center;
-        background-size: cover;
-        position: relative;
-        padding: 60px 0;
-      "
-      data-stellar-background-ratio="0.5"
-    >
-      <div
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: rgba(33, 150, 243, 0.7);
-          z-index: 1;
-        "
-      ></div>
-      <div
-        style="
-          position: relative;
-          z-index: 2;
-          max-width: 1200px;
-          margin: 0 auto;
-        "
-      >
-        <div style="text-align: center; margin-bottom: 40px; padding: 0 15px">
-          <h2
-            style="
-              font-family: 'Comic Sans MS', sans-serif;
-              font-size: 40px;
-              color: #ffeb3b;
-              margin-bottom: 20px;
-              display: inline-block;
-              perspective: 1000px;
-            "
-          >
-            <span
-              style="
-                display: inline-block;
-                color: #ff5722;
-                transform-style: preserve-3d;
-                animation: flip 4s infinite;
-              "
-              >20 Years of</span
-            >
-            Experience
-          </h2>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #fff;
-              font-size: 18px;
-              line-height: 1.6;
-              max-width: 700px;
-              margin: 0 auto;
-            "
-          >
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
-        </div>
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-          "
-        >
-          <!-- Certified Teachers -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 200px;
-              text-align: center;
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-            <div
-              style="
-                background: #ff5722;
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-              "
-            >
-              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
-                <span class="flaticon-doctor"></span>
-              </div>
-              <div>
-                <strong
-                  style="
-                    font-family: 'Comic Sans MS', sans-serif;
-                    font-size: 36px;
-                    color: #ffeb3b;
-                    display: block;
-                  "
-                  data-number="18"
-                  >18</strong
-                >
-                <span
-                  style="
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    color: #fff;
-                  "
-                  >Certified Teachers</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Successful Kids -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 200px;
-              text-align: center;
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-            <div
-              style="
-                background: #0288d1;
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-              "
-            >
-              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
-                <span class="flaticon-doctor"></span>
-              </div>
-              <div>
-                <strong
-                  style="
-                    font-family: 'Comic Sans MS', sans-serif;
-                    font-size: 36px;
-                    color: #ffeb3b;
-                    display: block;
-                  "
-                  data-number="351"
-                  >351</strong
-                >
-                <span
-                  style="
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    color: #fff;
-                  "
-                  >Successful Kids</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Happy Parents -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 200px;
-              text-align: center;
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-            <div
-              style="
-                background: #4caf50;
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-              "
-            >
-              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
-                <span class="flaticon-doctor"></span>
-              </div>
-              <div>
-                <strong
-                  style="
-                    font-family: 'Comic Sans MS', sans-serif;
-                    font-size: 36px;
-                    color: #ffeb3b;
-                    display: block;
-                  "
-                  data-number="564"
-                  >564</strong
-                >
-                <span
-                  style="
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    color: #fff;
-                  "
-                  >Happy Parents</span
-                >
-              </div>
-            </div>
-          </div>
-          <!-- Awards Won -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 200px;
-              text-align: center;
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-            <div
-              style="
-                background: #ff4081;
-                padding: 20px;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-              "
-            >
-              <div style="font-size: 40px; color: #fff; margin-bottom: 10px">
-                <span class="flaticon-doctor"></span>
-              </div>
-              <div>
-                <strong
-                  style="
-                    font-family: 'Comic Sans MS', sans-serif;
-                    font-size: 36px;
-                    color: #ffeb3b;
-                    display: block;
-                  "
-                  data-number="300"
-                  >300</strong
-                >
-                <span
-                  style="
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    color: #fff;
-                  "
-                  >Awards Won</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- // testimonial section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #e0f7fa, #f8bbd0);
-        padding: 60px 0;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto">
-        <div style="text-align: center; margin-bottom: 40px; padding: 0 15px">
-          <h2
-            style="
-              font-family: 'Comic Sans MS', Arial, Helvetica, sans-serif;
-              font-size: 40px;
-              color: #ff5722;
-              margin-bottom: 20px;
-              display: inline-block;
-            "
-          >
-            <span style="color: #0288d1">What Parents</span> Say About Us
-          </h2>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #333;
-              font-size: 18px;
-              line-height: 1.6;
-              max-width: 700px;
-              margin: 0 auto;
-            "
-          >
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
-        </div>
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-          "
-        >
-          <!-- Testimonial 1 -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              border-radius: 50px;
-              padding: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              position: relative;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div style="flex: 1">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 40px;
-                  height: 40px;
-                  background: #ffeb3b;
-                  border-radius: 50%;
-                  position: absolute;
-                  top: -20px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  animation: bounce 2s infinite;
-                "
-              >
-                <i
-                  class="icon-quote-left"
-                  style="font-size: 20px; color: #ff5722"
-                ></i>
-              </span>
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 16px;
-                  margin: 20px 0 10px;
-                "
-              >
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <p
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  color: #ff5722;
-                  font-size: 18px;
-                  margin: 0;
-                "
-              >
-                Racky Henderson
-              </p>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #0288d1;
-                  font-size: 14px;
-                "
-                >Father</span
-              >
-            </div>
-          </div>
-          <!-- Testimonial 2 -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              border-radius: 50px;
-              padding: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              position: relative;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div style="flex: 1">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 40px;
-                  height: 40px;
-                  background: #ffeb3b;
-                  border-radius: 50%;
-                  position: absolute;
-                  top: -20px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  animation: bounce 2s infinite;
-                "
-              >
-                <i
-                  class="icon-quote-left"
-                  style="font-size: 20px; color: #0288d1"
-                ></i>
-              </span>
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 16px;
-                  margin: 20px 0 10px;
-                "
-              >
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <p
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  color: #0288d1;
-                  font-size: 18px;
-                  margin: 0;
-                "
-              >
-                Henry Dee
-              </p>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #ff5722;
-                  font-size: 14px;
-                "
-                >Mother</span
-              >
-            </div>
-          </div>
-          <!-- Testimonial 3 -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              border-radius: 50px;
-              padding: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              position: relative;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div style="flex: 1">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 40px;
-                  height: 40px;
-                  background: #ffeb3b;
-                  border-radius: 50%;
-                  position: absolute;
-                  top: -20px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  animation: bounce 2s infinite;
-                "
-              >
-                <i
-                  class="icon-quote-left"
-                  style="font-size: 20px; color: #4caf50"
-                ></i>
-              </span>
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 16px;
-                  margin: 20px 0 10px;
-                "
-              >
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <p
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  color: #4caf50;
-                  font-size: 18px;
-                  margin: 0;
-                "
-              >
-                Mark Huff
-              </p>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #ff5722;
-                  font-size: 14px;
-                "
-                >Mother</span
-              >
-            </div>
-          </div>
-          <!-- Testimonial 4 -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              border-radius: 50px;
-              padding: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              position: relative;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div style="flex: 1">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 40px;
-                  height: 40px;
-                  background: #ffeb3b;
-                  border-radius: 50%;
-                  position: absolute;
-                  top: -20px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  animation: bounce 2s infinite;
-                "
-              >
-                <i
-                  class="icon-quote-left"
-                  style="font-size: 20px; color: #ff4081"
-                ></i>
-              </span>
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 16px;
-                  margin: 20px 0 10px;
-                "
-              >
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <p
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  color: #ff4081;
-                  font-size: 18px;
-                  margin: 0;
-                "
-              >
-                Rodel Golez
-              </p>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #0288d1;
-                  font-size: 14px;
-                "
-                >Mother</span
-              >
-            </div>
-          </div>
-          <!-- Testimonial 5 -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              border-radius: 50px;
-              padding: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              position: relative;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <div style="flex: 1">
-              <span
-                style="
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  width: 40px;
-                  height: 40px;
-                  background: #ffeb3b;
-                  border-radius: 50%;
-                  position: absolute;
-                  top: -20px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  animation: bounce 2s infinite;
-                "
-              >
-                <i
-                  class="icon-quote-left"
-                  style="font-size: 20px; color: #ff5722"
-                ></i>
-              </span>
-              <p
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 16px;
-                  margin: 20px 0 10px;
-                "
-              >
-                Far far away, behind the word mountains, far from the countries
-                Vokalia and Consonantia, there live the blind texts.
-              </p>
-              <p
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  color: #ff5722;
-                  font-size: 18px;
-                  margin: 0;
-                "
-              >
-                Ken Bosh
-              </p>
-              <span
-                style="
-                  font-family: 'Arial', sans-serif;
-                  color: #0288d1;
-                  font-size: 14px;
-                "
-                >Mother</span
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- // request a quote -->
-    <section
-      style="
-        background: url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743573169/bg_5x_naezbo.jpg?_s=public-apps') no-repeat center center;
-        background-size: cover;
-        position: relative;
-        padding: 60px 0;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        min-height: 600px;
-      "
-    >
-      <div
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            135deg,
-            rgba(255, 87, 34, 0.7),
-            rgba(33, 150, 243, 0.7)
-          );
-          z-index: 1;
-        "
-      ></div>
-      <div
-        style="
-          width: 90%;
-          max-width: 600px;
-          background: #fff;
-          padding: 40px;
-          border-radius: 20px;
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-          position: relative;
-          z-index: 2;
-          transition: transform 0.3s ease;
-          margin-right: 20px;
-          flex: 0 0 auto;
-        "
-        onmouseover="this.style.transform='translateY(-10px)'"
-        onmouseout="this.style.transform='translateY(0)'"
-      >
-        <div style="text-align: center; margin-bottom: 25px">
-          <h2
-            style="
-              font-family: 'Comic Sans MS', sans-serif;
-              font-size: 36px;
-              color: #ff5722;
-              margin: 0;
-              animation: pulse 2s infinite;
-            "
-          >
-            Request A Quote
-          </h2>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #333;
-              font-size: 16px;
-              line-height: 1.6;
-              margin: 10px 0 0;
-            "
-          >
-            You can connect with us via email, send a message, request a quote
-            using the Request for Quotation (RFQ) document, and fill out this
-            form and submit it.
-          </p>
-        </div>
-        <form id="quoteForm" style="display: flex; flex-wrap: wrap; gap: 15px">
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <input
-              type="text"
-              id="childName"
-              placeholder="Child Name"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #ff5722;
-                border-radius: 10px;
-                background: #fff3e0;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#0288d1'"
-              onblur="this.style.borderColor='#ff5722'"
-              required
-            />
-          </div>
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <input
-              type="text"
-              id="fatherName"
-              placeholder="Father Name"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #0288d1;
-                border-radius: 10px;
-                background: #e0f7fa;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#ff5722'"
-              onblur="this.style.borderColor='#0288d1'"
-              required
-            />
-          </div>
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <select
-              id="program"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #4caf50;
-                border-radius: 10px;
-                background: #c8e6c9;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#ff5722'"
-              onblur="this.style.borderColor='#4caf50'"
-              required
-            >
-              <option value="">Select your program*</option>
-              <option value="Pre-Nursery">Pre-Nursery</option>
-              <option value="Nursery">Nursery</option>
-              <option value="LKG">LKG</option>
-              <option value="UKG">UKG</option>
-            </select>
-          </div>
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <input
-              type="tel"
-              id="phone"
-              placeholder="Phone"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #ff4081;
-                border-radius: 10px;
-                background: #f8bbd0;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#0288d1'"
-              onblur="this.style.borderColor='#ff4081'"
-              required
-            />
-          </div>
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <input
-              type="email"
-              id="email"
-              placeholder="Email ID"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #ff5722;
-                border-radius: 10px;
-                background: #fff3e0;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#0288d1'"
-              onblur="this.style.borderColor='#ff5722'"
-              required
-            />
-          </div>
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <select
-              id="gender"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #0288d1;
-                border-radius: 10px;
-                background: #e0f7fa;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#ff5722'"
-              onblur="this.style.borderColor='#0288d1'"
-              required
-            >
-              <option value="">Select gender*</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </div>
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <input
-              type="text"
-              id="address"
-              placeholder="Address"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #4caf50;
-                border-radius: 10px;
-                background: #c8e6c9;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#ff5722'"
-              onblur="this.style.borderColor='#4caf50'"
-              required
-            />
-          </div>
-          <div style="flex: 1 1 100%; margin-bottom: 15px">
-            <textarea
-              id="message"
-              placeholder="Message"
-              rows="3"
-              style="
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #ff4081;
-                border-radius: 10px;
-                background: #f8bbd0;
-                color: #333;
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                outline: none;
-                resize: none;
-                transition: border-color 0.3s ease;
-              "
-              onfocus="this.style.borderColor='#0288d1'"
-              onblur="this.style.borderColor='#ff4081'"
-            ></textarea>
-          </div>
-          <div style="flex: 1 1 100%; text-align: center">
-            <input
-              type="submit"
-              value="Submit Request"
-              style="
-                padding: 12px 25px;
-                border: none;
-                border-radius: 25px;
-                background: #ff5722;
-                color: #fff;
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 18px;
-                cursor: pointer;
-                transition: background 0.3s ease, transform 0.3s ease;
-              "
-              onmouseover="this.style.background='#0288d1'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.background='#ff5722'; this.style.transform='scale(1)'"
-            />
-          </div>
-        </form>
-      </div>
-    </section>
-
     <!-- founder message -->
     <section
       style="
-        background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-        padding: 40px 0;
+        background: linear-gradient(
+          135deg,
+          #ffebee,
+          #fff9c4
+        ); /* Bright, playful gradient */
+        padding: 30px 0; /* Slightly reduced padding */
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+      <div
+        style="
+          max-width: 1000px; /* Slightly smaller max-width for simplicity */
+          margin: 0 auto;
+          padding: 0 15px;
+        "
+      >
         <!-- Founder Message Header -->
-        <div style="text-align: center; margin-bottom: 40px">
+        <div style="text-align: center; margin-bottom: 30px">
           <h2
             style="
               font-family: 'Comic Sans MS', sans-serif;
-              font-size: 36px;
-              color: #ff5722;
-              margin: 0 0 15px;
+              font-size: 34px; /* Slightly smaller for mobile */
+              color: #ff4081; /* Bright pink for kids */
+              margin: 0 0 10px;
+              text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Softer shadow */
             "
           >
             <span style="display: inline-block; animation: bounce 2s infinite"
-              >F</span
+              >C</span
             >
             <span
               style="display: inline-block; animation: bounce 2s infinite 0.1s"
-              >o</span
+              >E</span
             >
             <span
               style="display: inline-block; animation: bounce 2s infinite 0.2s"
-              >u</span
+              >O</span
             >
-            <span
+            <!-- <span
               style="display: inline-block; animation: bounce 2s infinite 0.3s"
               >n</span
             >
@@ -2585,11 +2279,11 @@
             <span
               style="display: inline-block; animation: bounce 2s infinite 0.6s"
               >r</span
-            >
+            > -->
             <span style="display: inline-block"> </span>
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 0.7s;
               "
@@ -2597,7 +2291,7 @@
             >
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 0.8s;
               "
@@ -2605,7 +2299,7 @@
             >
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 0.9s;
               "
@@ -2613,7 +2307,7 @@
             >
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 1s;
               "
@@ -2621,7 +2315,7 @@
             >
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 1.1s;
               "
@@ -2629,7 +2323,7 @@
             >
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 1.2s;
               "
@@ -2637,7 +2331,7 @@
             >
             <span
               style="
-                color: #0288d1;
+                color: #3f51b5;
                 display: inline-block;
                 animation: bounce 2s infinite 1.3s;
               "
@@ -2649,936 +2343,429 @@
         <!-- Founder Content -->
         <div
           style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: stretch;
-            justify-content: center;
+            background: #ffffff; /* White background for the message box */
+            border-radius: 25px; /* More rounded corners */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+            padding: 25px; /* Slightly less padding */
+            position: relative;
+            overflow: hidden;
+            border: 3px dashed #ffca28; /* Playful dashed border */
           "
         >
-          <!-- Founder Photo, Name, and Designation -->
-          <div style="flex: 1 1 30%; min-width: 250px; text-align: center">
-            <div
-              style="
-                position: relative;
-                display: inline-block;
-                transition: transform 0.3s ease;
-              "
-              onmouseover="this.style.transform='scale(1.05)'"
-              onmouseout="this.style.transform='scale(1)'"
-            >
-              <div
-                style="
-                  width: 200px;
-                  height: 200px;
-                  background: url('images/image\ \(7\).png') no-repeat center
-                    center/cover;
-                  border-radius: 50%;
-                  border: 8px solid #ffca28;
-                  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                  margin: 0 auto;
-                "
-              ></div>
-              <div
-                style="
-                  position: absolute;
-                  top: -20px;
-                  left: 50%;
-                  transform: translateX(-50%);
-                  background: #ff5722;
-                  color: #fff;
-                  padding: 10px 20px;
-                  border-radius: 20px;
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 18px;
-                  animation: pulse 2s infinite;
-                "
-              >
-                Hi, Kids!
-              </div>
-            </div>
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 24px;
-                color: #0288d1;
-                margin: 15px 0 5px;
-                animation: bounce 2s infinite;
-              "
-            >
-              Er. Md Savez
-            </h3>
-            <p
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 18px;
-                color: #ff5722;
-                margin: 0;
-                animation: pulse 2s infinite;
-              "
-            >
-              Founder & Visionary
-            </p>
-          </div>
-
           <!-- Founder Message -->
-
-          <div
-            style="
-              flex: 1 1 65%;
-              min-width: 300px;
-              background: #fff;
-              border-radius: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              padding: 30px;
-              position: relative;
-              overflow: hidden;
-            "
-          >
-            <div
-              style="
-                position: absolute;
-                top: 10px;
-                right: 10px;
-                font-size: 40px;
-                color: #ffca28;
-                animation: spin 4s linear infinite;
-              "
-            >
-              🌟
-            </div>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #333;
-                line-height: 1.6;
-                margin: 0 0 20px;
-              "
-            >
-              I’m super excited to tell you that we’ve started GOOGLAi SCHOOL!
-              Here, we want to give you a fun place to learn that’s not just
-              about books, but also about making friends and feeling happy. Our
-              big dream is to help you use cool tech and smart ways of learning
-              so you can grow into awesome, confident kids ready for the future!
-            </p>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #333;
-                line-height: 1.6;
-                margin: 0 0 20px;
-              "
-            >
-              We use artificial intelligence (AI) and super-smart tools to make
-              learning special just for YOU—making it fun and easy! I really
-              hope GOOGLAi becomes a magical spot where you can explore, find
-              your talents, and be happy every day. We’re thinking about your
-              whole life of learning, not just today!
-            </p>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #333;
-                line-height: 1.6;
-                margin: 0 0 20px;
-              "
-            >
-              Big thanks to our amazing teachers, students, and parents who are
-              helping us on this adventure. Together, we’ll make GOOGLAi SCHOOL
-              the best place ever!
-            </p>
-            <div
-              style="
-                position: absolute;
-                bottom: 10px;
-                left: 10px;
-                font-size: 40px;
-                color: #0288d1;
-                animation: bounce 2s infinite;
-              "
-            >
-              🚀
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Add this after the closing </section> of the "Certified Teachers" section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #e3f2fd, #b3e5fc);
-        padding: 40px 0;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div style="text-align: center; margin-bottom: 40px">
-          <h2
-            style="
-              font-family: 'Comic Sans MS', sans-serif;
-              font-size: 36px;
-              color: #0288d1;
-              margin-bottom: 20px;
-              display: inline-block;
-              overflow: hidden;
-              white-space: nowrap;
-              animation: typewriter 3s steps(20) infinite;
-            "
-          >
-            <span style="color: #ff5722">Admission</span> Guidelines
-          </h2>
           <p
             style="
-              font-family: 'Arial', sans-serif;
-              color: #333;
-              font-size: 18px;
-              line-height: 1.6;
-              max-width: 800px;
-              margin: 0 auto;
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 18px; /* Larger text for readability */
+              color: #d81b60; /* Vibrant magenta */
+              line-height: 1.5;
+              margin: 0 0 15px;
+              text-align: justify;
             "
           >
-            Everything you need to know to join the GOOGLAI SCHOOL Family.
+            Hey, awesome kids! Welcome to GOOGLAi SCHOOL, a super fun place
+            where you can learn cool stuff, play with friends, and smile every
+            day using magic tech like AI made just for YOU!
           </p>
-        </div>
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-          "
-        >
-          <!-- Guidelines Text -->
-          <div
+          <p
             style="
-              flex: 1 1 55%;
-              background: #fff;
-              border-radius: 20px;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-              padding: 30px;
-              min-width: 300px;
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 18px;
+              color: #d81b60;
+              line-height: 1.5;
+              margin: 0 0 15px;
+              text-align: justify;
             "
           >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                color: #ff5722;
-                font-size: 24px;
-                margin: 0 0 15px;
-              "
-            >
-              Policies & Requirements
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                line-height: 1.6;
-                margin: 0 0 15px;
-              "
-            >
-              Parents must follow the policies made by the schools. Please
-              inform the school authority about any pre-existing physical,
-              emotional issues or illnesses that the child may have or is likely
-              to have. You must allow the child to participate in events or
-              trips planned/organized by the school authority.
-            </p>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                line-height: 1.6;
-                margin: 0;
-              "
-            >
-              Parents must provide consent to the school authority to post their
-              child's photographs/videos taken in school or outside during any
-              school activity/event/trip in school or outside school on the
-              GOOGLAi official pages whether on social media or our own website
-              where it will be visible to the public.
-            </p>
-          </div>
-          <!-- Steps to Apply -->
-          <div
+            My dream is to help you grow into super smart and happy kids ready
+            for big adventures, with amazing teachers, students, and parents
+            making this the best spot ever—let’s have a blast together!
+          </p>
+
+          <!-- Founder Name -->
+          <h3
             style="
-              flex: 1 1 35%;
-              background: #fff;
-              border-radius: 20px;
-              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-              padding: 30px;
-              min-width: 300px;
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 28px; /* Slightly larger for emphasis */
+              color: #ff4081; /* Bright pink */
+              margin: 20px 0 0;
+              text-align: right;
+              animation: bounce 2s infinite;
             "
           >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                color: #ff5722;
-                font-size: 24px;
-                margin: 0 0 15px;
-              "
-            >
-              Steps to Apply
-            </h3>
-            <ol
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                line-height: 1.6;
-                padding-left: 20px;
-                margin: 0;
-              "
-            >
-              <li style="margin-bottom: 10px">
-                Fill the school admission inquiry form on the website.
-              </li>
-              <li style="margin-bottom: 10px">
-                We will invite you to the nearest preschool.
-              </li>
-              <li style="margin-bottom: 10px">
-                Visit the school for a campus tour.
-              </li>
-              <li>Join the GOOGLAI SCHOOL Family.</li>
-            </ol>
+            M. R. Khan Bin Samsuddin
+          </h3>
+
+          <!-- Playful Decorations -->
+          <div
+            style="
+              position: absolute;
+              top: 10px;
+              left: 10px;
+              font-size: 40px;
+              color: #3f51b5; /* Bright blue */
+              animation: bounce 2s infinite;
+            "
+          >
+            ⭐
           </div>
+          <!-- <div
+            style="
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              font-size: 40px;
+              color: #ffca28; /* Bright yellow */
+              animation: spin 4s linear infinite;
+            "
+          >
+            🎉
+          </div> -->
         </div>
       </div>
     </section>
 
-    <!-- Add this after the closing </section> of the "Admission Guidelines" section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #f3e5f5, #ce93d8);
-        padding: 40px 0;
-        width: 100%;
-        box-sizing: border-box;
-      "
-    >
-      <div
-        style="
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 15px;
-          width: 100%;
-          box-sizing: border-box;
-        "
-      >
-        <div style="text-align: center; margin-bottom: 40px">
-          <h2
-            style="
-              font-family: 'Comic Sans MS', sans-serif;
-              font-size: clamp(24px, 5vw, 36px);
-              color: #0288d1;
-              margin-bottom: 20px;
-              display: inline-block;
-              overflow: hidden;
-              white-space: nowrap;
-              animation: typewriter 3s steps(20) infinite;
-            "
-          >
-            <span style="color: #ff5722">Teacher</span> Training Programme
-          </h2>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #333;
-              font-size: clamp(16px, 3vw, 18px);
-              line-height: 1.6;
-              max-width: 800px;
-              margin: 0 auto;
-            "
-          >
-            Empowering educators with world-class training for early childhood
-            education.
-          </p>
-        </div>
-        <div
-          style="
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: clamp(20px, 5vw, 30px);
-            max-width: 800px;
-            margin: 0 auto;
-            width: 100%;
-            box-sizing: border-box;
-          "
-        >
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #666;
-              font-size: clamp(14px, 2.5vw, 16px);
-              line-height: 1.6;
-              margin: 0 0 15px;
-            "
-          >
-            The Preschool Teacher Training Program is an initiative of GOOGLAI
-            School Learning. As a pioneer in ECCE (Early Childhood Care and
-            Education), we have set unmatched standards in the CDE (Child
-            Development and Education) space.
-          </p>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #666;
-              font-size: clamp(14px, 2.5vw, 16px);
-              line-height: 1.6;
-              margin: 0;
-            "
-          >
-            With the introduction of NEP regulating preschool education in
-            India, it is mandatory that all preschool teachers are trained in
-            early childhood education to be able to teach at the foundational
-            stage.
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Add this before the "Certified Teachers" section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-        padding: 40px 0;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div style="text-align: center; margin-bottom: 40px">
-          <h2
-            style="
-              font-family: 'Comic Sans MS', sans-serif;
-              font-size: 36px;
-              color: #0288d1;
-              margin-bottom: 20px;
-              display: inline-block;
-              overflow: hidden;
-              white-space: nowrap;
-              animation: typewriter 3s steps(20) infinite;
-            "
-          >
-            <span style="color: #ff5722">Child</span> Introduction
-          </h2>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #333;
-              font-size: 18px;
-              line-height: 1.6;
-              max-width: 800px;
-              margin: 0 auto;
-            "
-          >
-            Nurturing young minds for a lifetime of learning and growth.
-          </p>
-        </div>
-        <div
-          style="
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            max-width: 800px;
-            margin: 0 auto;
-          "
-        >
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #666;
-              font-size: 16px;
-              line-height: 1.6;
-              margin: 0 0 15px;
-            "
-          >
-            Children receive their most important education even before the age
-            of six. Until this age, each morning for children is the dawn of
-            another wonderful adventure. Our focus is not only on developing
-            academic skills, but also intellectual, emotional, linguistic,
-            physical, social, and moral skills, which will ensure the all-round
-            development of children.
-          </p>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #666;
-              font-size: 16px;
-              line-height: 1.6;
-              margin: 0 0 15px;
-            "
-          >
-            We believe that children are active learners who learn best by
-            interacting with nature, other children, and adults in
-            child-centered activities. We provide opportunities for the child to
-            grow and develop while reading, listening, and playing.
-          </p>
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              color: #666;
-              font-size: 16px;
-              line-height: 1.6;
-              margin: 0;
-            "
-          >
-            Love and affection are the hallmarks of all these activities.
-            Child-friendly equipment, engaging toys, and games help the child to
-            listen and discover, imagine and create.
-          </p>
-        </div>
-      </div>
-    </section>
     <footer
       style="
-        background: linear-gradient(135deg, #0288d1, #ff5722);
-        padding: 60px 0;
+        background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
+        padding: 40px 15px;
         color: #fff;
+        font-family: 'Comic Sans MS', sans-serif;
+        position: relative;
+        overflow: hidden;
       "
     >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div
-          style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px"
-        >
-          <!-- Contact Info -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Have a Question?
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <span style="font-size: 20px; color: #fff; margin-right: 10px"
-                    >📍</span
-                  >
-                  <span
-                    style="font-family: 'Arial', sans-serif; font-size: 16px"
-                    >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA -
-                    122107</span
-                  >
-                </li>
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <a
-                    href="tel:+918000007583"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">📞</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >+91 8000007583</span
-                    >
-                  </a>
-                </li>
-                <li style="display: flex; align-items: center">
-                  <a
-                    href="mailto:googlaischool@email.com"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">✉️</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >googlaischool@email.com</span
-                    >
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+      <!-- Fun Background Shapes -->
+      <div
+        style="
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 80px;
+          height: 80px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 20px;
+          transform: rotate(45deg);
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 20px;
+          right: 30px;
+          width: 100px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+        "
+      ></div>
 
-          <!-- Recent Blog -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Recent Blog
-              </h2>
-              <div style="display: flex; margin-bottom: 20px">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_1.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', sans-serif;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ff5722'"
-                      onmouseout="this.style.color='#fff'"
-                      >How AI Helps Kids Learn Faster</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 20, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 5</span>
-                  </div>
-                </div>
-              </div>
-              <div style="display: flex">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_2.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', sans-serif;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#0288d1'"
-                      onmouseout="this.style.color='#fff'"
-                      >Fun Coding Activities for Kids</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 18, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 4</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Links -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Quick Links
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/index.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Home</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/about.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>About</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/career.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Career</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/courses.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Program</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/contact.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Subscribe & Social -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Subscribe Us!
-              </h2>
-              <form
-                action="#"
-                style="display: flex; flex-direction: column; gap: 10px"
-              >
-                <input
-                  type="text"
-                  placeholder="Enter email address"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #fff;
-                    color: #333;
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    text-align: center;
-                    outline: none;
-                  "
-                />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #ff5722;
-                    color: #fff;
-                    font-family: 'Comic Sans MS', sans-serif;
-                    font-size: 16px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
-                  "
-                  onmouseover="this.style.background='#0288d1'"
-                  onmouseout="this.style.background='#ff5722'"
-                />
-              </form>
-            </div>
-            <div>
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', sans-serif;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 15px;
-                "
-              >
-                Connect With Us
-              </h2>
-              <ul
-                style="list-style: none; padding: 0; display: flex; gap: 15px"
-              >
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >𝕏</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >f</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >📷</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div style="text-align: center">
-          <p
+      <div
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <!-- Contact Info -->
+        <div>
+          <h2
             style="
-              font-family: 'Arial', sans-serif;
-              font-size: 14px;
-              color: #e0f7fa;
-              margin: 0;
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
             "
           >
-            Copyright ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            All rights reserved | Developed by
+            Let’s Talk!
+          </h2>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              gap: 8px;
+              line-height: 1.4;
+            "
+          >
+            <span style="font-size: 24px">🏡</span> Hidayat Colony, Ward No. 04,
+            City Nuh, Haryana – 122107
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">📞</span>
+            <a
+              href="tel:+918930064006"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >+91 89-3006-4006</a
+            >
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">✉️</span>
+            <a
+              href="mailto:googalischool@gmail.com"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >googalischool@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <!-- Fun Links -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #3f51b5;
+              animation: bounce 2s infinite;
+            "
+          >
+            Play & Learn!
+          </h2>
+          <ul style="list-style: none; padding: 0">
+            <li style="margin-bottom: 10px">
+              <a
+                href="/index.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Home</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/about.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> About</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/career.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Career</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/courses.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Program</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/contact.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Contact</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/admin.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Admin</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Fun -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Be Our Buddy!
+          </h2>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              margin-bottom: 20px;
+            "
+          >
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >𝕏</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >f</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >📷</a
+              >
+            </li>
+          </ul>
+          <p style="font-size: 14px; margin: 0; text-shadow: 1px 1px #3f51b5">
+            Made with ❤️ by
             <a
               href="https://zuridox.com"
-              target="_blank"
               style="
                 color: #ffeb3b;
                 text-decoration: none;
@@ -3590,6 +2777,22 @@
             >
           </p>
         </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: clamp(12px, 3vw, 14px);
+          text-shadow: 1px 1px #ff4081;
+        "
+      >
+        ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        GOOGLAi - Let’s Have Fun Together! 🌟
       </div>
     </footer>
 
