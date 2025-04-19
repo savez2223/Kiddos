@@ -34,6 +34,40 @@
 
     <!-- Consolidated Keyframes -->
     <style>
+      @keyframes neonGlow {
+        from {
+          text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7, 0 0 30px #3b82f6;
+        }
+        to {
+          text-shadow: 0 0 20px #a855f7, 0 0 30px #3b82f6, 0 0 40px #3b82f6;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.3;
+        }
+      }
       @keyframes floatGlow {
         0% {
           transform: translateY(0);
@@ -1195,8 +1229,8 @@
     <!-- About Section -->
     <section
       style="
-        background: linear-gradient(135deg, #bfdbfe, #6ee7b7);
-        padding: 80px 0;
+        background: linear-gradient(135deg, #a21caf, #ec4899, #84cc16);
+        padding: 100px 0;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -1214,10 +1248,10 @@
         <h2
           style="
             font-family: 'Orbitron', sans-serif;
-            font-size: 48px;
+            font-size: 52px;
             color: #ffffff;
-            margin-bottom: 30px;
-            letter-spacing: 3px;
+            margin-bottom: 40px;
+            letter-spacing: 4px;
             animation: neonGlow 1.5s ease-in-out infinite alternate;
           "
         >
@@ -1226,11 +1260,11 @@
         <p
           style="
             font-family: 'Poppins', sans-serif;
-            color: #f1f5f9;
-            font-size: 20px;
-            line-height: 1.8;
+            color: #f4f4f5;
+            font-size: 22px;
+            line-height: 1.9;
             max-width: 900px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             opacity: 0;
             animation: fadeInUp 1s ease-out 0.5s forwards;
           "
@@ -1240,6 +1274,25 @@
           at your own pace. Our AI-driven platform adapts to YOU, making
           learning fun, dynamic, and totally next-gen.
         </p>
+        <a
+          href="#join"
+          style="
+            display: inline-block;
+            padding: 15px 30px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            background: linear-gradient(45deg, #ec4899, #84cc16);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          "
+          onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(132, 204, 22, 0.5)'"
+          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
+        >
+          Join the Future
+        </a>
       </div>
       <!-- Background Animation Elements -->
       <div
@@ -1260,30 +1313,66 @@
             height: 300px;
             background: radial-gradient(
               circle,
-              rgba(96, 165, 250, 0.3),
+              rgba(236, 72, 153, 0.4),
               transparent
             );
-            top: 10%;
-            left: 5%;
-            animation: float 6s ease-in-out infinite;
+            top: 5%;
+            left: 10%;
+            animation: pulse 5s ease-in-out infinite;
           "
         ></div>
         <div
           style="
             position: absolute;
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 250px;
             background: radial-gradient(
               circle,
-              rgba(110, 231, 183, 0.3),
+              rgba(132, 204, 22, 0.4),
               transparent
             );
-            bottom: 15%;
-            right: 10%;
-            animation: float 8s ease-in-out infinite;
+            bottom: 10%;
+            right: 15%;
+            animation: pulse 7s ease-in-out infinite;
           "
         ></div>
       </div>
+      <style>
+        @keyframes neonGlow {
+          from {
+            text-shadow: 0 0 10px #ec4899, 0 0 20px #ec4899, 0 0 30px #84cc16;
+          }
+          to {
+            text-shadow: 0 0 20px #ec4899, 0 0 30px #84cc16, 0 0 40px #84cc16;
+          }
+        }
+
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes pulse {
+          0% {
+            transform: scale(1);
+            opacity: 0.3;
+          }
+          50% {
+            transform: scale(1.2);
+            opacity: 0.5;
+          }
+          100% {
+            transform: scale(1);
+            opacity: 0.3;
+          }
+        }
+      </style>
     </section>
 
     <!-- Program Section -->
