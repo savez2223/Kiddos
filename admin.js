@@ -1,63 +1,116 @@
-// Import Firebase App and Realtime Database modules
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
-import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js';
+import { getDatabase, ref, onValue, remove } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js';
 
-// Get jsPDF from the global window object (loaded via CDN)
 const { jsPDF } = window.jspdf;
 
-// Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCAN1cgb86_9tZ7ZCQeU0jgQ8-b-m63pbw",
-  authDomain: "kiddos-c84e1.firebaseapp.com",
-  projectId: "kiddos-c84e1",
-  storageBucket: "kiddos-c84e1.firebasestorage.app",
-  messagingSenderId: "553799701005",
-  appId: "1:553799701005:web:4fecb866121a099f43fb44",
-  databaseURL: "https://kiddos-c84e1-default-rtdb.firebaseio.com/"
+  apiKey: "AIzaSyDATlDp9us459JwKlB3obDFlLXqQ2BrbBo",
+  authDomain: "kiddos-65959.firebaseapp.com",
+  projectId: "kiddos-65959",
+  storageBucket: "kiddos-65959.firebasestorage.app",
+  messagingSenderId: "475249839192",
+  appId: "1:475249839192:web:b62023a856436a1bf50e2d",
+  databaseURL: "https://kiddos-65959-default-rtdb.firebaseio.com/"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-// References to Firebase nodes
+const admissionsRef = ref(database, 'admissions');
 const quotesRef = ref(database, 'quotes');
 const applicationsRef = ref(database, 'jobApplications');
 
-// Function to generate PDF
-function generatePDF(data, type) {
-  const doc = new jsPDF();
-  doc.setFontSize(16);
-  doc.text(type === 'quote' ? 'Quote Request' : 'Job Application', 10, 10);
+let loadedSections = {
+  admissions: false,
+  quotes: false,
+  applications: false
+};
 
-  let y = 20;
-  Object.keys(data).forEach((key) => {
-    if (key !== 'timestamp') {
-      doc.text(`${key}: ${data[key] || 'N/A'}`, 10, y);
-      y += 10;
-    }
-  });
-  doc.text(`Timestamp: ${new Date(data.timestamp).toLocaleString()}`, 10, y);
+let allAdmissions = [];
+let allQuotes = [];
+let allApplications = [];
+let dateStart = null;
+let dateEnd = null;
+let nameFilter = '';
 
-  doc.save(`${type}_${data.name || data.childName}_${Date.now()}.pdf`);
+function updateLoading() {
+  const loading = document.getElementById('loading');
+  if (loadedSections.admissions && loadedSections.quotes && loadedSections.applications) {
+    loading.style.display = 'none';
+  }
 }
 
-// Fetch and display Quote Requests
-onValue(quotesRef, (snapshot) => {
-  const data = snapshot.val();
-  const tableBody = document.getElementById('quoteTableBody');
-  const table = document.getElementById('quoteTable');
-  const loading = document.getElementById('loading');
+function formatDate(timestamp) {
+  if (!timestamp) return 'N/A';
+  try {
+    return new Date(timestamp).toLocaleString();
+  } catch {
+    return 'Invalid';
+  }
+}
 
+function filterByDateAndName(data, nameField, secondaryNameField = null) {
+  return Object.entries(data || {}).filter(([_, entry]) => {
+    // Date filter
+    const timestamp = entry.timestamp || null;
+    let dateMatch = true;
+    if (timestamp && (dateStart || dateEnd)) {
+      const entryDate = new Date(timestamp);
+      if (dateStart && entryDate < new Date(dateStart)) dateMatch = false;
+      if (dateEnd && entryDate > new Date(dateEnd + 'T23:59:59')) dateMatch = false;
+    }
+
+    // Name filter
+    let nameMatch = true;
+    if (nameFilter) {
+      const searchTerm = nameFilter.toLowerCase();
+      const primaryName = entry[nameField] ? entry[nameField].toLowerCase() : '';
+      const secondaryName = secondaryNameField && entry[secondaryNameField] ? entry[secondaryNameField].toLowerCase() : '';
+      nameMatch = primaryName.includes(searchTerm) || (secondaryName && secondaryName.includes(searchTerm));
+    }
+
+    return dateMatch && nameMatch;
+  });
+}
+
+function renderAdmissions() {
+  const tableBody = document.getElementById('admissionsTableBody');
+  const table = document.getElementById('admissionsTable');
   tableBody.innerHTML = '';
 
-  if (data) {
+  const filteredAdmissions = filterByDateAndName(allAdmissions, 'guardianName');
+  if (filteredAdmissions.length > 0) {
     table.style.display = 'table';
-    Object.keys(data).forEach((key) => {
-      const quote = data[key];
+    filteredAdmissions.forEach(([key, admission]) => {
       const row = document.createElement('tr');
-      const date = quote.timestamp ? new Date(quote.timestamp).toLocaleString() : 'N/A';
+      row.innerHTML = `
+        <td>${admission.guardianName || 'N/A'}</td>
+        <td>${admission.phoneNumber || 'N/A'}</td>
+        <td>${admission.selectedClass || 'N/A'}</td>
+        <td>${formatDate(admission.timestamp)}</td>
+        <td>
+          <button onclick='generatePDF(${JSON.stringify(admission)}, "Admission", "${key}")'>Download</button>
+          <button onclick='deleteEntry("admissions", "${key}", "Admission")' style="background: #dc3545; margin-left: 5px;">Delete</button>
+        </td>
+      `;
+      tableBody.appendChild(row);
+    });
+  } else {
+    tableBody.innerHTML = '<tr><td colspan="5">No admissions found</td></tr>';
+    table.style.display = 'table';
+  }
+}
 
+function renderQuotes() {
+  const tableBody = document.getElementById('quoteTableBody');
+  const table = document.getElementById('quoteTable');
+  tableBody.innerHTML = '';
+
+  const filteredQuotes = filterByDateAndName(allQuotes, 'childName', 'fatherName');
+  if (filteredQuotes.length > 0) {
+    table.style.display = 'table';
+    filteredQuotes.forEach(([key, quote]) => {
+      const row = document.createElement('tr');
       row.innerHTML = `
         <td>${quote.childName || 'N/A'}</td>
         <td>${quote.fatherName || 'N/A'}</td>
@@ -67,66 +120,160 @@ onValue(quotesRef, (snapshot) => {
         <td>${quote.gender || 'N/A'}</td>
         <td>${quote.address || 'N/A'}</td>
         <td>${quote.message || 'N/A'}</td>
-        <td>${date}</td>
-        <td><button onclick='generatePDF(${JSON.stringify(quote)}, "quote")'>Download PDF</button></td>
+        <td>${formatDate(quote.timestamp)}</td>
+        <td>
+          <button onclick='generatePDF(${JSON.stringify(quote)}, "Quote", "${key}")'>Download PDF</button>
+          <button onclick='deleteEntry("quotes", "${key}", "Quote")' style="background: #dc3545; margin-left: 5px;">Delete</button>
+        </td>
       `;
       tableBody.appendChild(row);
     });
   } else {
     table.style.display = 'none';
   }
-  checkLoadingState();
-}, (error) => {
-  console.error('Error fetching quotes:', error);
-  document.getElementById('loading').textContent = 'Error loading data: ' + error.message;
-});
+}
 
-// Fetch and display Job Applications
-onValue(applicationsRef, (snapshot) => {
-  const data = snapshot.val();
+function renderApplications() {
   const tableBody = document.getElementById('applicationTableBody');
   const table = document.getElementById('applicationTable');
-  const loading = document.getElementById('loading');
-
   tableBody.innerHTML = '';
 
-  if (data) {
+  const filteredApplications = filterByDateAndName(allApplications, 'name');
+  if (filteredApplications.length > 0) {
     table.style.display = 'table';
-    Object.keys(data).forEach((key) => {
-      const application = data[key];
+    filteredApplications.forEach(([key, application]) => {
       const row = document.createElement('tr');
-      const date = application.timestamp ? new Date(application.timestamp).toLocaleString() : 'N/A';
-
       row.innerHTML = `
         <td>${application.name || 'N/A'}</td>
         <td>${application.phone || 'N/A'}</td>
         <td>${application.email || 'N/A'}</td>
         <td>${application.position || 'N/A'}</td>
-        <td>${date}</td>
-        <td><button onclick='generatePDF(${JSON.stringify(application)}, "application")'>Download PDF</button></td>
+        <td>${formatDate(application.timestamp)}</td>
+        <td>
+          <button onclick='generatePDF(${JSON.stringify(application)}, "Application", "${key}")'>Download PDF</button>
+          <button onclick='deleteEntry("jobApplications", "${key}", "Application")' style="background: #dc3545; margin-left: 5px;">Delete</button>
+        </td>
       `;
       tableBody.appendChild(row);
     });
   } else {
     table.style.display = 'none';
   }
-  checkLoadingState();
+}
+
+onValue(admissionsRef, (snapshot) => {
+  allAdmissions = snapshot.val() || {};
+  renderAdmissions();
+  loadedSections.admissions = true;
+  updateLoading();
+}, (error) => {
+  console.error('Error fetching admissions:', error);
+  document.getElementById('loading').textContent = 'Error loading data: ' + error.message;
+});
+
+onValue(quotesRef, (snapshot) => {
+  allQuotes = snapshot.val() || {};
+  renderQuotes();
+  loadedSections.quotes = true;
+  updateLoading();
+}, (error) => {
+  console.error('Error fetching quotes:', error);
+  document.getElementById('loading').textContent = 'Error loading data: ' + error.message;
+});
+
+onValue(applicationsRef, (snapshot) => {
+  allApplications = snapshot.val() || {};
+  renderApplications();
+  loadedSections.applications = true;
+  updateLoading();
 }, (error) => {
   console.error('Error fetching applications:', error);
   document.getElementById('loading').textContent = 'Error loading data: ' + error.message;
 });
 
-// Check if both tables are loaded to hide loading message
-function checkLoadingState() {
-  const quoteTable = document.getElementById('quoteTable');
-  const applicationTable = document.getElementById('applicationTable');
-  const loading = document.getElementById('loading');
+function generatePDF(data, type, key = '') {
+  const doc = new jsPDF();
+  doc.setFontSize(16);
+  doc.text(
+    type === 'Quote' ? 'Quote Request' :
+    type === 'Application' ? 'Job Application' : 'Admission Form',
+    10, 10
+  );
 
-  if ((quoteTable.style.display === 'table' || !quoteTable.children[1].children.length) &&
-      (applicationTable.style.display === 'table' || !applicationTable.children[1].children.length)) {
-    loading.style.display = 'none';
+  let y = 20;
+  for (const [field, value] of Object.entries(data)) {
+    if (field !== 'timestamp') {
+      doc.text(`${field}: ${value || 'N/A'}`, 10, y);
+      y += 10;
+    }
   }
+  if (data.timestamp) {
+    doc.text(`Timestamp: ${formatDate(data.timestamp)}`, 10, y);
+  }
+
+  const filename = `${type}_${key}_${Date.now()}.pdf`;
+  doc.save(filename);
 }
 
-// Expose generatePDF to global scope for onclick
+function deleteEntry(node, key, type) {
+  if (!confirm(`Are you sure you want to delete this ${type}?`)) return;
+
+  const entryRef = ref(database, `${node}/${key}`);
+  remove(entryRef)
+    .then(() => {
+      alert(`${type} deleted successfully!`);
+    })
+    .catch((error) => {
+      console.error(`Error deleting ${type}:`, error);
+      alert(`Failed to delete ${type}: ${error.message}`);
+    });
+}
+
+function setupFilters() {
+  const contentDiv = document.getElementById('content');
+  const filterDiv = document.createElement('div');
+  filterDiv.style = 'margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;';
+  filterDiv.innerHTML = `
+    <div>
+      <label style="margin-right: 5px;">Start Date:</label>
+      <input type="date" id="dateStart" style="padding: 5px;">
+    </div>
+    <div>
+      <label style="margin-right: 5px;">End Date:</label>
+      <input type="date" id="dateEnd" style="padding: 5px;">
+    </div>
+    <div>
+      <label style="margin-right: 5px;">Name:</label>
+      <input type="text" id="nameFilter" placeholder="Enter name..." style="padding: 5px;">
+    </div>
+  `;
+  contentDiv.insertBefore(filterDiv, contentDiv.querySelector('h1'));
+
+  document.getElementById('dateStart').addEventListener('change', (e) => {
+    dateStart = e.target.value;
+    renderAdmissions();
+    renderQuotes();
+    renderApplications();
+  });
+
+  document.getElementById('dateEnd').addEventListener('change', (e) => {
+    dateEnd = e.target.value;
+    renderAdmissions();
+    renderQuotes();
+    renderApplications();
+  });
+
+  document.getElementById('nameFilter').addEventListener('input', (e) => {
+    nameFilter = e.target.value;
+    renderAdmissions();
+    renderQuotes();
+    renderApplications();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupFilters();
+});
+
 window.generatePDF = generatePDF;
+window.deleteEntry = deleteEntry;

@@ -10,20 +10,19 @@ import {
 
 // Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCAN1cgb86_9tZ7ZCQeU0jgQ8-b-m63pbw",
-  authDomain: "kiddos-c84e1.firebaseapp.com",
-  projectId: "kiddos-c84e1",
-  storageBucket: "kiddos-c84e1.firebasestorage.app",
-  messagingSenderId: "553799701005",
-  appId: "1:553799701005:web:4fecb866121a099f43fb44",
-  databaseURL: "https://kiddos-c84e1-default-rtdb.firebaseio.com/",
+  apiKey: "AIzaSyDATlDp9us459JwKlB3obDFlLXqQ2BrbBo",
+  authDomain: "kiddos-65959.firebaseapp.com",
+  projectId: "kiddos-65959",
+  storageBucket: "kiddos-65959.firebasestorage.app",
+  messagingSenderId: "475249839192",
+  appId: "1:475249839192:web:b62023a856436a1bf50e2d",
+  databaseURL: "https://kiddos-65959-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-console.log("Firebase initialized:", app); // Check if Firebase initializes
 
 // Handle form submission
 document.getElementById("quoteForm").addEventListener("submit", function (e) {
@@ -80,4 +79,3 @@ document.getElementById("quoteForm").addEventListener("submit", function (e) {
     });
 });
 
-console.log("Hello");
