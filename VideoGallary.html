@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>GOOGLAi SCHOOL</title>
+    <title>GOOGLAi SCHOOL - Gallery</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <link rel="icon" type="image/png" href="images/Staff image/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -16,34 +16,20 @@
       href="https://fonts.googleapis.com/css?family=Fredericka+the+Great"
       rel="stylesheet"
     />
-<link rel="icon" type="image/png" href="images/Staff image/favicon.png" />
+
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
-
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
-
     <link rel="stylesheet" href="css/aos.css" />
-
     <link rel="stylesheet" href="css/ionicons.min.css" />
-
     <link rel="stylesheet" href="css/flaticon.css" />
     <link rel="stylesheet" href="css/icomoon.css" />
     <link rel="stylesheet" href="css/style.css" />
+
     <!-- Inline CSS Animation -->
     <style>
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    }
-  }
       @keyframes bounce {
         0%,
         20%,
@@ -59,6 +45,7 @@
           transform: translateY(-5px);
         }
       }
+
       @keyframes pulse {
         0% {
           transform: scale(1);
@@ -70,12 +57,61 @@
           transform: scale(1);
         }
       }
+
+      /* Gallery-specific styles */
+      .gallery-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .gallery-item {
+        flex: 1 1 30%;
+        min-width: 300px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.03);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .gallery-item iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+        border-radius: 5px;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .gallery-item {
+          flex: 1 1 100%;
+        }
+      }
     </style>
   </head>
-
   <body>
-    <div class="py-0">
-    </div>
     <nav
       style="
         background: linear-gradient(135deg, #ff5722, #0288d1);
@@ -554,12 +590,12 @@
                     "
                     onmouseover="this.style.color='#ffeb3b'"
                     onmouseout="this.style.color='#fff'"
-                    >Photos</a
+                    >Videos</a
                   >
                 </li>
                 <li>
                   <a
-                    href="VideoGallary.html"
+                    href="Gallary.html"
                     style="
                       font-family: 'Comic Sans MS', sans-serif;
                       font-size: 16px;
@@ -571,7 +607,7 @@
                     "
                     onmouseover="this.style.color='#ffeb3b'"
                     onmouseout="this.style.color='#fff'"
-                    >Videos</a
+                    >Images</a
                   >
                 </li>
               </ul>
@@ -617,7 +653,6 @@
         </div>
       </div>
     </nav>
-
     <script>
       function showDropdown(dropdown) {
         // Hide all dropdowns first
@@ -634,26 +669,6 @@
       }
     </script>
 
-    <!-- Inline JavaScript for Mobile Toggle -->
-    <script>
-      window.addEventListener("resize", function () {
-        const nav = document.getElementById("ftco-nav");
-        const toggler = document.querySelector("button");
-        if (window.innerWidth <= 991) {
-          toggler.style.display = "block";
-          nav.style.display = "none";
-        } else {
-          toggler.style.display = "none";
-          nav.style.display = "flex";
-        }
-      });
-      // Trigger resize on load
-      window.dispatchEvent(new Event("resize"));
-    </script>
-    <!-- END nav -->
-
-    <!-- Hero Section -->
-     
     <section
       style="
         background: url('images/bg_2.jpg') no-repeat center center/cover;
@@ -703,7 +718,7 @@
                 animation: bounce 2s infinite;
               "
             >
-              Career
+              Gallery
             </h1>
             <p
               style="
@@ -725,14 +740,14 @@
                   >Home ➔</a
                 >
               </span>
-              <span>Career ➔</span>
+              <span>Gallery ➔</span>
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Career Form and Map Section -->
+    <!-- Gallery Section -->
     <section
       style="
         background: linear-gradient(135deg, #fff3e0, #b2ebf2);
@@ -740,528 +755,540 @@
       "
     >
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: stretch;
-          "
-        >
-          <!-- Form -->
-          <div
-  style="
-    flex: 1 1 50%;
-    min-width: 300px;
-    background: linear-gradient(135deg, #e1bee7, #fffde7);
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    font-family: 'Comic Sans MS', sans-serif;
-  "
->
-  <h2
-    style="
-      font-size: 30px;
-      color: #d81b60;
-      text-align: center;
-      margin-bottom: 25px;
-      animation: bounce 2s infinite;
-    "
-  >
-    🎉 Please Fill Out the Form Below to Submit Your Job Application! 🎉
-  </h2>
-  <form
-    id="jobApplicationForm"
-    style="display: flex; flex-direction: column; gap: 15px"
-  >
-    <input
-      type="text"
-      id="name"
-      placeholder="👤 Name*"
-      required
-      style="padding: 15px; border-radius: 12px; border: none; background: #fff; font-size: 16px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); outline: none;"
-    />
-    <input
-      type="tel"
-      id="phone"
-      placeholder="📞 Phone Number*"
-      required
-      style="padding: 15px; border-radius: 12px; border: none; background: #fff; font-size: 16px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); outline: none;"
-    />
-    <input
-      type="email"
-      id="email"
-      placeholder="📧 E-mail*"
-      required
-      style="padding: 15px; border-radius: 12px; border: none; background: #fff; font-size: 16px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); outline: none;"
-    />
-    <input
-      type="text"
-      id="position"
-      placeholder="💼 Applied Position*"
-      required
-      style="padding: 15px; border-radius: 12px; border: none; background: #fff; font-size: 16px; box-shadow: 0 3px 6px rgba(0,0,0,0.1); outline: none;"
-    />
-    <label for="resume" style="font-size: 16px; color: #6a1b9a; font-family: 'Comic Sans MS', sans-serif; margin-bottom: 5px;">
-  📎 Upload Cover Letter*
-</label>
-<input
-  type="file"
-  id="resume"
-  required
-  style="
-    padding: 10px;
-    font-size: 16px;
-    font-family: 'Comic Sans MS', sans-serif;
-    background-color: #fff;
-    border: 2px dashed #ce93d8;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  "
-/>
-    
-    <label for="resume" style="font-size: 16px; color: #6a1b9a; font-family: 'Comic Sans MS', sans-serif; margin-bottom: 5px;">
-  📎 Upload Resume*
-</label>
-<input
-  type="file"
-  id="resume"
-  required
-  style="
-    padding: 10px;
-    font-size: 16px;
-    font-family: 'Comic Sans MS', sans-serif;
-    background-color: #fff;
-    border: 2px dashed #ce93d8;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  "
-/>
-    <p
-      style="
-        font-size: 14px;
-        color: #d81b60;
-        margin: 0;
-        text-align: center;
-      "
-    >
-      * All information is compulsory.
-    </p>
-    <div style="text-align: center">
-      <input
-        type="submit"
-        value="🚀 Submit Application"
-        style="
-          padding: 15px 30px;
-          border: none;
-          border-radius: 12px;
-          background: #8e24aa;
-          color: #fff;
-          font-size: 18px;
-          cursor: pointer;
-          transition: background 0.3s ease, transform 0.3s ease;
-        "
-        onmouseover="this.style.background='#3949ab'; this.style.transform='scale(1.05)'"
-        onmouseout="this.style.background='#8e24aa'; this.style.transform='scale(1)'"
-      />
-    </div>
-  </form>
-</div>
+        <div style="text-align: center; margin-bottom: 60px">
+          <h1
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 48px;
+              color: #ff5722;
+              margin: 0;
+              animation: bounce 2s infinite;
+            "
+          >
+            <span style="color: #0288d1">GOOGLAi</span> Gallery
+          </h1>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 20px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 10px auto;
+            "
+          >
+            Relive the vibrant moments of our school through Videos!
+          </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- YouTube Videos -->
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/sftubYREL4g?si=Ur78AARtIEA0iGzi" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/uo0VEXeyw-Q?si=0xcVqn56SzCXuHNB" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/dA-s2ErRlgM?si=YOSC-SnDk8xLICp7" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/EnPR7hWyXwI?si=SVIRB-SezIq8KsTi" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/x33gu1B9fc4?si=J3erhq0_Lf1VfJKg" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/czn78y9CZ94?si=pqOd82Rkoq2dxV4N" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/xsLmab5gUAU?si=8UEKZgxj8a2dRXuA" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/xkuls-zjXIE?si=6zmxGcdHbOWDRe1A" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/ZDi6y1np6BY?si=FuD3NbAunSyh86s3" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer
-  style="
-    background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
-    padding: 40px 15px;
-    color: #fff;
-    font-family: 'Comic Sans MS', sans-serif;
-    position: relative;
-    overflow: hidden;
-  "
->
-  <!-- Fun Background Shapes -->
-  <div
-    style="
-      position: absolute;
-      top: 10px;
-      left: 20px;
-      width: 80px;
-      height: 80px;
-      background: rgba(255, 255, 255, 0.3);
-      border-radius: 20px;
-      transform: rotate(45deg);
-    "
-  ></div>
-  <div
-    style="
-      position: absolute;
-      bottom: 20px;
-      right: 30px;
-      width: 100px;
-      height: 100px;
-      background: rgba(255, 255, 255, 0.2);
-      border-radius: 50%;
-    "
-  ></div>
+      style="
+        background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
+        padding: 40px 15px;
+        color: #fff;
+        font-family: 'Comic Sans MS', sans-serif;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Fun Background Shapes -->
+      <div
+        style="
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 80px;
+          height: 80px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 20px;
+          transform: rotate(45deg);
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 20px;
+          right: 30px;
+          width: 100px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+        "
+      ></div>
 
-  <div
-    style="
-      max-width: 1000px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    "
-  >
-    <!-- Contact Info -->
-    <div>
-      <h2
+      <div
         style="
-          font-size: clamp(22px, 5vw, 28px);
-          color: #fff;
-          margin-bottom: 15px;
-          text-shadow: 2px 2px #ff4081;
-          animation: bounce 2s infinite;
+          max-width: 1000px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
         "
       >
-        Let’s Talk!
-      </h2>
-      <p
-        style="
-          font-size: 14px;
-          margin: 0 0 10px;
-          display: flex;
-          align-items: flex-start;
-          justify-content: center;
-          gap: 8px;
-          line-height: 1.4;
-        "
-      >
-        <span style="font-size: 24px;">🏡</span> Hidayat Colony, Ward No. 04, City Nuh, Haryana – 122107
-      </p>
-      <p
-        style="
-          font-size: 14px;
-          margin: 0 0 10px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-        "
-      >
-        <span style="font-size: 24px;">📞</span>
-        <a
-          href="tel:+918930064006"
-          style="
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          "
-          onmouseover="this.style.color='#ffeb3b'"
-          onmouseout="this.style.color='#fff'"
-          >+91 89-3006-4006</a
-        >
-      </p>
-      <p
-        style="
-          font-size: 14px;
-          margin: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-        "
-      >
-        <span style="font-size: 24px;">✉️</span>
-        <a
-          href="mailto:googalischool@gmail.com"
-          style="
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          "
-          onmouseover="this.style.color='#ffeb3b'"
-          onmouseout="this.style.color='#fff'"
-          >googalischool@gmail.com</a
-        >
-      </p>
-    </div>
-
-    <!-- Fun Links -->
-    <div>
-      <h2
-        style="
-          font-size: clamp(22px, 5vw, 28px);
-          color: #fff;
-          margin-bottom: 15px;
-          text-shadow: 2px 2px #3f51b5;
-          animation: bounce 2s infinite;
-        "
-      >
-        Play & Learn!
-      </h2>
-      <ul style="list-style: none; padding: 0;">
-        <li style="margin-bottom: 10px;">
-          <a
-            href="/index.html"
+        <!-- Contact Info -->
+        <div>
+          <h2
             style="
+              font-size: clamp(22px, 5vw, 28px);
               color: #fff;
-              text-decoration: none;
-              font-size: 16px;
-              transition: color 0.3s ease, transform 0.3s ease;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Let's Talk!
+          </h2>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              gap: 8px;
+              line-height: 1.4;
+            "
+          >
+            <span style="font-size: 24px">🏡</span> Hidayat Colony, Ward No. 04,
+            City Nuh, Haryana – 122107
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
               display: flex;
               align-items: center;
               justify-content: center;
               gap: 8px;
             "
-            onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-            onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-            ><span style="font-size: 20px;">🌟</span> Home</a
           >
-        </li>
-        <li style="margin-bottom: 10px;">
-          <a
-            href="/about.html"
+            <span style="font-size: 24px">📞</span>
+            <a
+              href="tel:+918930064006"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >+91 89-3006-4006</a
+            >
+          </p>
+          <p
             style="
-              color: #fff;
-              text-decoration: none;
-              font-size: 16px;
-              transition: color 0.3s ease, transform 0.3s ease;
+              font-size: 14px;
+              margin: 0;
               display: flex;
               align-items: center;
               justify-content: center;
               gap: 8px;
             "
-            onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-            onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-            ><span style="font-size: 20px;">🌟</span> About</a
           >
-        </li>
-        <li style="margin-bottom: 10px;">
-          <a
-            href="/career.html"
-            style="
-              color: #fff;
-              text-decoration: none;
-              font-size: 16px;
-              transition: color 0.3s ease, transform 0.3s ease;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 8px;
-            "
-            onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-            onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-            ><span style="font-size: 20px;">🌟</span> Career</a
-          >
-        </li>
-        <li style="margin-bottom: 10px;">
-          <a
-            href="/courses.html"
-            style="
-              color: #fff;
-              text-decoration: none;
-              font-size: 16px;
-              transition: color 0.3s ease, transform 0.3s ease;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 8px;
-            "
-            onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-            onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-            ><span style="font-size: 20px;">🌟</span> Program</a
-          >
-        </li>
-        <li style="margin-bottom: 10px;">
-          <a
-            href="/contact.html"
-            style="
-              color: #fff;
-              text-decoration: none;
-              font-size: 16px;
-              transition: color 0.3s ease, transform 0.3s ease;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 8px;
-            "
-            onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-            onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-            ><span style="font-size: 20px;">🌟</span> Contact</a
-          >
-        </li>
-        <li style="margin-bottom: 10px;">
-          <a
-            href="/admin.html"
-            style="
-              color: #fff;
-              text-decoration: none;
-              font-size: 16px;
-              transition: color 0.3s ease, transform 0.3s ease;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              gap: 8px;
-            "
-            onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-            onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-            ><span style="font-size: 20px;">🌟</span> Admin</a
-          >
-        </li>
-      </ul>
-    </div>
+            <span style="font-size: 24px">✉️</span>
+            <a
+              href="mailto:googalischool@gmail.com"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >googalischool@gmail.com</a
+            >
+          </p>
+        </div>
 
-    <!-- Social Fun -->
-    <div>
-      <h2
+        <!-- Fun Links -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #3f51b5;
+              animation: bounce 2s infinite;
+            "
+          >
+            Play & Learn!
+          </h2>
+          <ul style="list-style: none; padding: 0">
+            <li style="margin-bottom: 10px">
+              <a
+                href="/index.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Home</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/about.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> About</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/career.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Career</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/courses.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Program</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/contact.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Contact</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/admin.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Admin</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Fun -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Be Our Buddy!
+          </h2>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              margin-bottom: 20px;
+            "
+          >
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >𝕏</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >f</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >📷</a
+              >
+            </li>
+          </ul>
+          <p style="font-size: 14px; margin: 0; text-shadow: 1px 1px #3f51b5">
+            Made with ❤️ by
+            <a
+              href="https://zuridox.com"
+              style="
+                color: #ffeb3b;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#fff'"
+              onmouseout="this.style.color='#ffeb3b'"
+              >Zuridox</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
         style="
-          font-size: clamp(22px, 5vw, 28px);
-          color: #fff;
-          margin-bottom: 15px;
-          text-shadow: 2px 2px #ff4081;
-          animation: bounce 2s infinite;
+          text-align: center;
+          margin-top: 30px;
+          font-size: clamp(12px, 3vw, 14px);
+          text-shadow: 1px 1px #ff4081;
         "
       >
-        Be Our Buddy!
-      </h2>
-      <ul
-        style="
-          list-style: none;
-          padding: 0;
-          display: flex;
-          gap: 15px;
-          justify-content: center;
-          margin-bottom: 20px;
-        "
-      >
-        <li>
-          <a
-            href="#"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 50px;
-              height: 50px;
-              background: #ffeb3b;
-              border-radius: 50%;
-              color: #ff4081;
-              font-size: 24px;
-              text-decoration: none;
-              transition: all 0.3s ease;
-              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-            "
-            onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
-            onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
-            >𝕏</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 50px;
-              height: 50px;
-              background: #ffeb3b;
-              border-radius: 50%;
-              color: #ff4081;
-              font-size: 24px;
-              text-decoration: none;
-              transition: all 0.3s ease;
-              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-            "
-            onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
-            onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
-            >f</a
-          >
-        </li>
-        <li>
-          <a
-            href="#"
-            style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 50px;
-              height: 50px;
-              background: #ffeb3b;
-              border-radius: 50%;
-              color: #ff4081;
-              font-size: 24px;
-              text-decoration: none;
-              transition: all 0.3s ease;
-              box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-            "
-            onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
-            onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
-            >📷</a
-          >
-        </li>
-      </ul>
-      <p
-        style="
-          font-size: 14px;
-          margin: 0;
-          text-shadow: 1px 1px #3f51b5;
-        "
-      >
-        Made with ❤️ by
-        <a
-          href="https://zuridox.com"
-          style="
-            color: #ffeb3b;
-            text-decoration: none;
-            transition: color 0.3s ease;
-          "
-          onmouseover="this.style.color='#fff'"
-          onmouseout="this.style.color='#ffeb3b'"
-          >Zuridox</a
-        >
-      </p>
-    </div>
-  </div>
+        ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        GOOGLAi - Let’s Have Fun Together! 🌟
+      </div>
+    </footer>
 
-  <!-- Copyright -->
-  <div
-    style="
-      text-align: center;
-      margin-top: 30px;
-      font-size: clamp(12px, 3vw, 14px);
-      text-shadow: 1px 1px #ff4081;
-    "
-  >
-    ©
-    <script>
-      document.write(new Date().getFullYear());
-    </script>
-    GOOGLAi - Let’s Have Fun Together! 🌟
-  </div>
-</footer>
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
 
-<style>
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-  }
-</style>
-
-    <!-- loader -->
+    <!-- Loader -->
     <div id="ftco-loader" class="show fullscreen">
       <svg class="circular" width="48px" height="48px">
         <circle
@@ -1286,6 +1313,7 @@
       </svg>
     </div>
 
+    <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -1298,9 +1326,70 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0W2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
-    <script type="module" src="jobApplication.js"></script>
+
+    <!-- Inline JavaScript for Mobile Toggle, Magnific Popup, and Image Protection -->
+    <script>
+      // Mobile Navigation Toggle
+      window.addEventListener("resize", function () {
+        const nav = document.getElementById("ftco-nav");
+        const toggler = document.querySelector("button");
+        if (window.innerWidth <= 991) {
+          toggler.style.display = "block";
+          nav.style.display = "none";
+        } else {
+          toggler.style.display = "none";
+          nav.style.display = "flex";
+        }
+      });
+      window.dispatchEvent(new Event("resize"));
+      $(document).ready(function () {
+  // Image popup configuration (unchanged)
+  $(".magnific-gallery").magnificPopup({
+    delegate: "a.image-popup",
+    type: "image",
+    gallery: {
+      enabled: true,
+    },
+    image: {
+      markup:
+        '<div class="mfp-figure">' +
+        '<div class="mfp-close"></div>' +
+        '<div class="mfp-img"></div>' +
+        "</div>",
+      tError: '<a href="%url%">The image</a> could not be loaded.',
+    },
+    callbacks: {
+      markupParse: function (template, values, item) {
+        template.find("img").attr("oncontextmenu", "return false;");
+        template.find("img").attr("ondragstart", "return false;");
+      },
+    },
+  });
+
+  // Video popup configuration
+  $(".magnific-gallery").magnificPopup({
+    delegate: "a.video-popup",
+    type: "iframe",
+    iframe: {
+      markup:
+        '<div class="mfp-iframe-scaler">' +
+        '<div class="mfp-close"></div>' +
+        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+        "</div>",
+      patterns: {
+        youtube: {
+          index: "youtube.com/",
+          id: "v=",
+          src: "//www.youtube.com/embed/%id%?autoplay=0&rel=0", // Prevent autoplay
+        },
+      },
+    },
+  });
+});
+
+    </script>
   </body>
 </html>
