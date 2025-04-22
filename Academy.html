@@ -475,7 +475,7 @@
       @media (max-width: 768px) {
         section {
           padding: 80px 0;
-          min-height: 400px;
+          min-height: 200px;
         }
         h1 {
           font-size: 40px;
@@ -1001,7 +1001,7 @@
                 </li>
                 <li>
                   <a
-                    href="VideoGallary.html"
+                    href="Gallary.html"
                     style="
                       font-family: 'Nunito', sans-serif;
                       font-size: 16px;
@@ -1099,186 +1099,271 @@
     <!-- END nav -->
 
     <!-- Hero Section -->
-  <section class="hero-section">
-  <div class="overlay"></div>
+    <section class="hero-section">
+      <!-- Images for different screen sizes -->
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps
+          "
+          class="mobile-img"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps
+          "
+          class="laptop-img"
+        />
+        <img
+          src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps"
+          alt="Hero Image"
+          class="hero-image"
+        />
+      </picture>
 
-  <!-- Content -->
-  <div class="content">
-    <h1 class="title">GOOGLAi ACADEMY</h1>
-    <p class="subtitle">
-      <span><a href="index.html" class="home-link">Home ➔</a></span>
-      <span>ACADEMY ➔</span>
-    </p>
-  </div>
+      <!-- Content -->
+      <!-- <div class="content">
+        <h1 class="title">GOOGLAi ACADEMY</h1>
+        <p class="subtitle">
+          <span><a href="index.html" class="home-link">Home ➔</a></span>
+          <span>ACADEMY ➔</span>
+        </p>
+      </div> -->
 
-  <!-- Background Animation Elements -->
-  <div class="animation-elements">
-    <div class="glow glow1"></div>
-    <div class="glow glow2"></div>
-  </div>
-</section>
+      <!-- Background Animation Elements -->
+      <div class="animation-elements">
+        <div class="glow glow1"></div>
+        <div class="glow glow2"></div>
+      </div>
+    </section>
 
-<style>
+    <style>
+      .hero-section {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        overflow: hidden;
+      }
 
+      .hero-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }
 
-  .hero-section {
-    background: url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps') no-repeat center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-  }
+      .content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 !important;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
 
-  .overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(135deg, rgba(30, 30, 74, 0.7), rgba(107, 70, 193, 0.7));
-    z-index: 1;
-  }
+      .title {
+        font-size: 48px;
+        color: #ffffff;
+        letter-spacing: 2px;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        animation: fadeInDown 1s ease-out;
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1.2;
+      }
 
-  .content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 !important;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-  }
+      .subtitle {
+        font-family: "Nunito", sans-serif;
+        font-size: 20px;
+        color: #ffffff;
+        animation: fadeInUp 1s ease-out 0.3s forwards;
+        opacity: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
 
-  .title {
-    font-size: 48px;
-    color: #ffffff;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    animation: fadeInDown 1s ease-out;
-    margin: 0 !important;
-    padding: 0 !important;
-    line-height: 1.2;
-  }
+      .home-link {
+        color: #6ff1b8;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease, transform 0.3s ease;
+        display: inline-block;
+        margin-right: 15px;
+      }
 
-  .subtitle {
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-    color: #ffffff;
-    animation: fadeInUp 1s ease-out 0.3s forwards;
-    opacity: 0;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+      .home-link:hover {
+        color: #ffffff;
+        transform: scale(1.1);
+      }
 
-  .home-link {
-    color: #6ff1b8;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    margin-right: 15px;
-  }
+      .animation-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        pointer-events: none;
+      }
 
-  .home-link:hover {
-    color: #ffffff;
-    transform: scale(1.1);
-  }
+      .glow {
+        position: absolute;
+        border-radius: 50%;
+        animation: pulseGlow infinite;
+      }
 
-  .animation-elements {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 1;
-    pointer-events: none;
-  }
+      .glow1 {
+        width: 150px;
+        height: 150px;
+        background: radial-gradient(
+          circle,
+          rgba(165, 180, 252, 0.2),
+          transparent
+        );
+        top: 15%;
+        left: 10%;
+        animation-duration: 6s;
+      }
 
-  .glow {
-    position: absolute;
-    border-radius: 50%;
-    animation: pulseGlow infinite;
-  }
+      .glow2 {
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(
+          circle,
+          rgba(111, 241, 184, 0.2),
+          transparent
+        );
+        bottom: 20%;
+        right: 15%;
+        animation-duration: 8s;
+      }
 
-  .glow1 {
-    width: 150px; height: 150px;
-    background: radial-gradient(circle, rgba(165, 180, 252, 0.2), transparent);
-    top: 15%; left: 10%;
-    animation-duration: 6s;
-  }
+      @keyframes fadeInDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-  .glow2 {
-    width: 100px; height: 100px;
-    background: radial-gradient(circle, rgba(111, 241, 184, 0.2), transparent);
-    bottom: 20%; right: 15%;
-    animation-duration: 8s;
-  }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-  @keyframes fadeInDown {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
+      @keyframes pulseGlow {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        50% {
+          transform: scale(1.3);
+          opacity: 0.4;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+      }
 
-  @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
+      /* Responsive tweaks */
+      @media (max-width: 479px) {
+        .hero-section {
+          height: auto;
+        }
+        .hero-image {
+          object-fit: contain;
+          height: auto;
+        }
+        .title {
+          font-size: 28px;
+        }
+        .subtitle {
+          font-size: 16px;
+        }
+        .glow1 {
+          width: 80px;
+          height: 80px;
+        }
+        .glow2 {
+          width: 60px;
+          height: 60px;
+        }
+      }
 
-  @keyframes pulseGlow {
-    0% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.3); opacity: 0.4; }
-    100% { transform: scale(1); opacity: 0.8; }
-  }
+      @media (min-width: 480px) and (max-width: 768px) {
+        .hero-section {
+          height: auto;
+        }
+        .hero-image {
+          object-fit: contain;
+          height: auto;
+        }
+        .title {
+          font-size: 36px;
+        }
+        .subtitle {
+          font-size: 18px;
+        }
+        .glow1 {
+          width: 100px;
+          height: 100px;
+        }
+        .glow2 {
+          width: 80px;
+          height: 80px;
+        }
+      }
 
-  /* Responsive tweaks */
-  @media (max-width: 479px) {
-    .hero-section {
-      height: 50vh;
-    }
-    .title { font-size: 28px; }
-    .subtitle { font-size: 16px; }
-    .glow1 { width: 80px; height: 80px; }
-    .glow2 { width: 60px; height: 60px; }
-  }
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .hero-image {
+          object-fit: cover;
+        }
+        .hero-section {
+          height: 70vh;
+        }
+        .title {
+          font-size: 42px;
+        }
+      }
 
-  @media (min-width: 480px) and (max-width: 768px) {
-    .hero-section {
-      height: 60vh;
-    }
-    .title { font-size: 36px; }
-    .subtitle { font-size: 18px; }
-    .glow1 { width: 100px; height: 100px; }
-    .glow2 { width: 80px; height: 80px; }
-  }
+      @media (min-width: 1025px) {
+        .hero-image {
+          object-fit: cover;
+        }
+        .hero-section {
+          height: 80vh;
+        }
+      }
+    </style>
 
-  @media (min-width: 769px) and (max-width: 1024px) {
-    .hero-section {
-      height: 70vh;
-    }
-    .title { font-size: 42px; }
-  }
-
-  @media (min-width: 1025px) {
-    .hero-section {
-      height: 80vh;
-    }
-  }
-</style>
-
-    
-    
     <!-- About Section -->
     <section
       style="
-        background: linear-gradient(135deg, #a21caf, #ec4899, #84cc16);
+        background: linear-gradient(135deg, #ffedd5, #a7f3d0);
         padding: 100px 0;
         text-align: center;
         position: relative;
@@ -1298,18 +1383,18 @@
           style="
             font-family: 'Orbitron', sans-serif;
             font-size: 52px;
-            color: #ffffff;
+            color: #e19558;
             margin-bottom: 40px;
             letter-spacing: 4px;
-            animation: neonGlow 1.5s ease-in-out infinite alternate;
+            animation: slideIn 1s ease-out;
           "
         >
           GOOGLAi ACADEMY
         </h2>
         <p
           style="
-            font-family: 'Poppins', sans-serif;
-            color: #f4f4f5;
+            font-family: 'Inter', sans-serif;
+            color: #475569;
             font-size: 22px;
             line-height: 1.9;
             max-width: 900px;
@@ -1323,25 +1408,6 @@
           at your own pace. Our AI-driven platform adapts to YOU, making
           learning fun, dynamic, and totally next-gen.
         </p>
-        <a
-          href="#join"
-          style="
-            display: inline-block;
-            padding: 15px 30px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: #ffffff;
-            background: linear-gradient(45deg, #ec4899, #84cc16);
-            border-radius: 50px;
-            text-decoration: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-          "
-          onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 5px 15px rgba(132, 204, 22, 0.5)'"
-          onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'"
-        >
-          Join the Future
-        </a>
       </div>
       <!-- Background Animation Elements -->
       <div
@@ -1389,10 +1455,10 @@
       <style>
         @keyframes neonGlow {
           from {
-            text-shadow: 0 0 10px #ec4899, 0 0 20px #ec4899, 0 0 30px #84cc16;
+            text-shadow: 0 0 10px #fb923c, 0 0 20px #fb923c, 0 0 30px #f97316;
           }
           to {
-            text-shadow: 0 0 20px #ec4899, 0 0 30px #84cc16, 0 0 40px #84cc16;
+            text-shadow: 0 0 20px #fb923c, 0 0 30px #f97316, 0 0 40px #f97316;
           }
         }
 
