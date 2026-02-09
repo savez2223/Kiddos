@@ -3,65 +3,235 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GOOGLAi - Choose Your Path</title>
+    <title>GOOGLAi</title>
+     
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',sans-serif;min-height:100vh;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px}
+        body{
+            font-family:'Segoe UI',sans-serif;
+            min-height:100vh;
+            background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            padding:20px
+        }
+
+        /* LOGO IMAGE */
+        .logo-image{
+            margin-bottom:15px;
+        }
+        .logo-image img{
+            width:200px;
+            height:auto;
+            filter:drop-shadow(0 6px 20px rgba(0,0,0,0.35));
+        }
+
         .logo-container{text-align:center;margin-bottom:40px}
-        .logo{font-size:48px;font-weight:900;color:#fff;text-shadow:0 4px 15px rgba(0,0,0,0.2);letter-spacing:2px}
+        .logo{
+            font-size:48px;
+            font-weight:900;
+            color:#fff;
+            text-shadow:0 4px 15px rgba(0,0,0,0.2);
+            letter-spacing:2px
+        }
         .logo span{color:#ffd700}
-        .subtitle{font-size:18px;color:rgba(255,255,255,0.9);margin-top:10px;letter-spacing:3px}
-        .container{display:flex;gap:30px;flex-wrap:wrap;justify-content:center;max-width:1400px}
-        .box{width:340px;height:380px;background:rgba(255,255,255,0.95);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:all 0.4s ease;box-shadow:0 20px 60px rgba(0,0,0,0.3);text-decoration:none;position:relative;overflow:hidden}
-        .box:hover{transform:translateY(-15px) scale(1.02);box-shadow:0 30px 80px rgba(0,0,0,0.4)}
-        .box-icon{width:120px;height:120px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:25px;box-shadow:0 10px 30px rgba(102,126,234,0.4);transition:transform 0.4s ease}
-        .box:hover .box-icon{transform:scale(1.1) rotate(5deg)}
-        .box-icon svg{width:60px;height:60px;fill:white}
-        .box-title{font-size:28px;font-weight:800;color:#333;margin-bottom:12px;text-align:center;letter-spacing:1px}
+        .subtitle{
+            font-size:18px;
+            color:rgba(255,255,255,0.9);
+            margin-top:10px;
+            letter-spacing:3px
+        }
+
+        .container{
+            display:flex;
+            gap:30px;
+            flex-wrap:wrap;
+            justify-content:center;
+            max-width:1400px
+        }
+
+        .box{
+            width:340px;
+            height:380px;
+            background:rgba(255,255,255,0.95);
+            border-radius:20px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+            cursor:pointer;
+            transition:all 0.4s ease;
+            box-shadow:0 20px 60px rgba(0,0,0,0.3);
+            text-decoration:none;
+            position:relative;
+            overflow:hidden
+        }
+
+        .box:hover{
+            transform:translateY(-15px) scale(1.02);
+            box-shadow:0 30px 80px rgba(0,0,0,0.4)
+        }
+
+        .box-icon{
+            width:120px;
+            height:120px;
+            background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+            border-radius:50%;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            margin-bottom:25px;
+            box-shadow:0 10px 30px rgba(102,126,234,0.4);
+            transition:transform 0.4s ease
+        }
+
+        .box:hover .box-icon{
+            transform:scale(1.1) rotate(5deg)
+        }
+
+        .box-icon svg{
+            width:60px;
+            height:60px;
+            fill:white
+        }
+
+        .box-title{
+            font-size:28px;
+            font-weight:800;
+            color:#333;
+            margin-bottom:12px;
+            text-align:center;
+            letter-spacing:1px
+        }
+
         .box-title span{color:#667eea}
-        .box-subtitle{font-size:15px;color:#666;text-align:center;padding:0 30px;line-height:1.5;margin-bottom:20px}
-        .enter-btn{padding:12px 35px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;border:none;border-radius:30px;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.3s ease;text-transform:uppercase;letter-spacing:2px}
-        .box:hover .enter-btn{background:linear-gradient(135deg,#764ba2 0%,#667eea 100%);transform:scale(1.05)}
-        .footer{margin-top:50px;text-align:center;color:rgba(255,255,255,0.8);font-size:14px}
-        .footer a{color:#ffd700;text-decoration:none}
-        @media(max-width:1200px){.box{width:300px;height:350px}}
-        @media(max-width:768px){.box{width:100%;max-width:340px;height:340px}.logo{font-size:36px}.box-title{font-size:24px}}
+
+        .box-subtitle{
+            font-size:15px;
+            color:#666;
+            text-align:center;
+            padding:0 30px;
+            line-height:1.5;
+            margin-bottom:20px
+        }
+
+        .enter-btn{
+            padding:12px 35px;
+            background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+            color:white;
+            border:none;
+            border-radius:30px;
+            font-size:14px;
+            font-weight:600;
+            cursor:pointer;
+            transition:all 0.3s ease;
+            text-transform:uppercase;
+            letter-spacing:2px
+        }
+
+        .box:hover .enter-btn{
+            background:linear-gradient(135deg,#764ba2 0%,#667eea 100%);
+            transform:scale(1.05)
+        }
+
+        .footer{
+            margin-top:50px;
+            text-align:center;
+            color:rgba(255,255,255,0.8);
+            font-size:14px
+        }
+
+        .footer a{
+            color:#ffd700;
+            text-decoration:none
+        }
+
+        @media(max-width:1200px){
+            .box{width:300px;height:350px}
+        }
+
+        @media(max-width:768px){
+            .box{width:100%;max-width:340px;height:340px}
+            .logo{font-size:36px}
+            .box-title{font-size:24px}
+            .logo-image img{width:90px}
+        }
     </style>
 </head>
 <body>
+
     <div class="logo-container">
-        <div class="logo">GOOGL<span>Ai</span></div>
+        <!-- LOGO IMAGE ADDED -->
+        <div class="logo-image">
+            <img src="/Kiddos/images/logo.jpg" alt="GOOGLAi Logo">
+        </div>
+
+        <div class="logo">GOOGL<span>Ai</span> EDUCATION GROUP</div>
         <div class="subtitle">Welcome to Future Education</div>
     </div>
+
     <div class="container">
+
         <a href="googlai-school.html" class="box">
             <div class="box-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
+                    <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+                </svg>
             </div>
             <div class="box-title">GOOGL<span>Ai</span> SCHOOL</div>
-            <div class="box-subtitle">Pre-Nursery to UKG<br>Early Education Excellence<br>Where Little Minds Grow</div>
+            <div class="box-subtitle">
+                PLAY SCHOOL <br>
+                Pre-Nursery to 2nd GRADE<br>
+                EARLY EDUCATION EXCELLENCE<br>
+                WHERE LITTLE MINDS GROW
+            </div>
             <button class="enter-btn">Enter School</button>
         </a>
+
         <a href="Academy.html" class="box">
             <div class="box-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
             </div>
-            <div class="box-title">GOOGL<span>Ai</span> ACADEMY boys</div>
-            <div class="box-subtitle">Advanced Learning Center<br>Skill Development & Training<br>Building Future Leaders</div>
+            <div class="box-title">GOOGL<span>Ai</span> ACADEMY</div>
+            <div class="box-subtitle">
+                BOYS:- RESIDENTIAL CAMPUS <br>
+                JMI | AMU | JNU ENTRANCE PREPARATION<br>
+                AI INTEGRATED ACADEMIC PROGRAM
+            </div>
             <button class="enter-btn">Enter Academy</button>
         </a>
 
-         <a href="Academy.html" class="box">
+        <a href="Academy.html" class="box">
             <div class="box-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
             </div>
             <div class="box-title">GOOGL<span>Ai</span> ACADEMY</div>
-            <div class="box-subtitle">Advanced Learning Center<br>Skill Development & Training<br>Building Future Leaders</div>
+            <div class="box-subtitle">
+                GIRLS:- RESIDENTIAL CAMPUS<br>
+                CLAT-UPSC FOUNDATION (CLASS 3 ONWARDS)<br>
+                DIGITAL AI COMMUNICATION SKILLS
+            </div>
             <button class="enter-btn">Enter Academy</button>
         </a>
+
     </div>
+
     <div class="footer">
-        <p>&copy; 2026 GOOGLAi - Let's Have Fun Together! <a href="contact.html">Contact Us</a></p>
+        <p>&copy; 2026 GOOGLAi - Let's Have Fun Together! 
+            <a href="contact.html">Contact Us</a>
+        </p>
     </div>
+
 </body>
 </html>
