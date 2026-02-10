@@ -24,31 +24,32 @@
                     },
                     colors: {
                         academy: {
-                            pink: '#EC4899',
-                            rose: '#BE123C',
-                            deep: '#1E1B4B',
-                            accent: '#8B5CF6',
+                            dark: '#0B0F19', // Deeper, richer black/blue
+                            card: '#151B2B',
+                            pink: '#F43F5E', // Vibrant Rose
+                            purple: '#8B5CF6',
+                            gold: '#F59E0B', // Premium Gold
+                            cyan: '#06B6D4',
                         }
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'float-delayed': 'float 6s ease-in-out 3s infinite',
                         'glow': 'glow 4s ease-in-out infinite',
-                        'morph': 'morph 8s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         float: {
-                            '0%, 100%': { transform: 'translateY(0) scale(1)' },
-                            '50%': { transform: 'translateY(-20px) scale(1.02)' },
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
                         },
                         glow: {
-                            '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
-                            '50%': { opacity: '0.6', transform: 'scale(1.1)' },
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(1.1)' },
                         },
-                        morph: {
-                            '0%, 100%': { 'border-radius': '60% 40% 30% 70% / 60% 30% 70% 40%' },
-                            '50%': { 'border-radius': '30% 60% 70% 40% / 50% 60% 30% 60%' },
-                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                     }
                 }
             }
@@ -56,298 +57,418 @@
     </script>
 
     <style>
-        body { background-color: #020617; color: #f8fafc; }
+        body { 
+            background-color: #0B0F19; 
+            color: #f8fafc; 
+            overflow-x: hidden;
+        }
+
+        /* Improved Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #0B0F19; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #F43F5E; }
+
+        /* Hero Image */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgba(11, 15, 25, 0.6), rgba(11, 15, 25, 0.95)),
+                        url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps alt=') center/cover no-repeat fixed;
+            color: white;
+            z-index: 1;
+        }
         
+        /* Ultra Premium Glass */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .premium-border {
-            border: 1px solid rgba(236, 72, 153, 0.2);
-            transition: all 0.4s ease;
-        }
-
-        .premium-border:hover {
-            border-color: rgba(236, 72, 153, 0.5);
-            box-shadow: 0 0 30px rgba(236, 72, 153, 0.15);
-        }
-
+        /* Modern Gradient Text */
         .text-gradient {
-            background: linear-gradient(to right, #F9a8d4, #EC4899, #8B5CF6);
+            background: linear-gradient(to right, #F43F5E, #D946EF, #8B5CF6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
+        .text-gradient-gold {
+            background: linear-gradient(to right, #F59E0B, #FBBF24, #FFFBEB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Abstract Glows */
         .hero-glow {
             position: absolute;
-            width: 50vw; height: 50vw;
-            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, transparent 70%);
-            filter: blur(80px);
-            z-index: 0;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(244, 63, 94, 0.12) 0%, transparent 60%);
+            filter: blur(120px);
+            z-index: -1;
+            pointer-events: none;
         }
 
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
+        /* Scroll Reveal */
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: all 0.8s ease-out; 
+        }
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
 
-        .card-hover-effect {
+        /* Button Glow */
+        .btn-glow {
             position: relative;
-            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
         }
-        .card-hover-effect:hover {
-            transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
-        }
-
-        .nav-link {
-            position: relative;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        .nav-link::after {
+        .btn-glow::after {
             content: '';
             position: absolute;
-            width: 0; height: 2px;
-            bottom: -4px; left: 0;
-            background: #EC4899;
-            transition: width 0.3s ease;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #F43F5E, #8B5CF6, #F43F5E);
+            z-index: -1;
+            border-radius: 9999px;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .nav-link:hover::after { width: 100%; }
+        .btn-glow:hover::after { opacity: 0.6; }
+
+        /* Card Hover Effects */
+        .program-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .program-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,255,255,0.2);
+        }
     </style>
 </head>
-<body class="font-sans antialiased overflow-x-hidden">
+<body class="font-sans antialiased selection:bg-pink-500 selection:text-white">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-[100] px-6 py-4 transition-all duration-500" id="main-nav">
-        <div class="max-w-7xl mx-auto flex justify-between items-center glass-panel px-6 py-3 rounded-2xl">
+    <nav class="fixed w-full z-[100] transition-all duration-300 border-b border-transparent" id="main-nav">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+            <!-- Logo -->
             <a href="#" class="flex items-center gap-3 group">
-                <!-- LOGO IMAGE: Replace src with your image URL -->
-                <div class="relative w-10 h-10 overflow-hidden rounded-xl border border-pink-500/30">
-                    <img src="https://placehold.co/100x100/DB2777/ffffff?text=GA" alt="Logo" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                <div class="relative w-10 h-10 flex items-center justify-center bg-gradient-to-br from-pink-600 to-rose-600 rounded-xl shadow-lg shadow-pink-600/20 group-hover:scale-105 transition-transform">
+                    <span class="text-white font-bold text-lg font-heading">G</span>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-xl font-black font-heading tracking-tighter leading-none">GOOGLAi</span>
-                    <span class="text-[9px] font-bold text-pink-500 tracking-[0.3em] uppercase">Girls Academy</span>
+                    <span class="text-xl font-bold font-heading tracking-tighter leading-none text-white">GOOGLAi</span>
+                    <span class="text-[10px] font-bold text-pink-500 tracking-[0.3em] uppercase group-hover:text-pink-400 transition-colors">Girls Academy</span>
                 </div>
             </a>
 
+            <!-- Desktop Menu -->
             <div class="hidden md:flex items-center gap-8">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#programs" class="nav-link">Programs</a>
-                <a href="#focus" class="nav-link">Focus Areas</a>
-                <a href="#contact" class="px-6 py-2 bg-pink-600 hover:bg-pink-700 rounded-full text-[11px] font-black uppercase tracking-widest transition-all shadow-lg shadow-pink-500/20">Enroll Now</a>
+                <a href="#about" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">About</a>
+                <a href="#programs" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Programs</a>
+                <a href="#focus" class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Focus</a>
+                <a href="#contact" class="px-6 py-2.5 bg-white text-academy-dark font-bold rounded-full hover:bg-pink-50 transition-all btn-glow shadow-lg text-xs tracking-wider uppercase">Enroll Now</a>
             </div>
+
+            <!-- Mobile Menu -->
+            <button class="md:hidden text-white p-2">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        <div class="hero-glow -top-20 -left-20 animate-glow"></div>
-        <div class="hero-glow bottom-0 right-0 animate-glow" style="animation-delay: 2s;"></div>
+    <section class="hero overflow-hidden">
+        <div class="hero-glow -top-40 -left-40 opacity-50"></div>
+        <div class="hero-glow bottom-0 right-0 opacity-30 bg-purple-600"></div>
 
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="reveal active">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-pink-500/10 border border-pink-500/20 rounded-full mb-6">
-                        <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span>
-                        <span class="text-[10px] font-black uppercase tracking-[0.2em] text-pink-400">Girls’ Residential Campus</span>
+        <div class="container mx-auto px-6 relative z-10 pt-20">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content (7 Cols) -->
+                <div class="lg:col-span-7 reveal active text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md hover:bg-white/10 transition-colors cursor-default">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-slate-300">Admissions Open 2024-25</span>
                     </div>
                     
-                    <h1 class="text-6xl md:text-8xl font-black font-heading leading-tight mb-6">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[1.1] mb-8 tracking-tight">
                         Empowering <br>
                         <span class="text-gradient">The Next Gen</span>
                     </h1>
                     
-                    <p class="text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed mb-10">
-                        A safe, nurturing, and empowering environment where <span class="text-white font-semibold">Academic Excellence</span> meets <span class="text-white font-semibold">Islamic Values</span>.
+                    <p class="text-slate-300 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed mb-10 font-light border-l-2 border-pink-500/50 pl-6">
+                        A world-class residential campus blending <span class="text-white font-medium">Academic Excellence</span> with <span class="text-white font-medium">Islamic Values</span> to shape future leaders.
                     </p>
 
-                    <div class="flex flex-wrap gap-4">
-                        <button class="px-8 py-4 bg-white text-indigo-950 font-black rounded-xl hover:bg-pink-500 hover:text-white transition-all shadow-xl">
-                            ADMISSIONS 2024-25
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                        <button class="px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold rounded-xl hover:shadow-[0_0_40px_rgba(244,63,94,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                            <span>Apply for Admission</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </button>
-                        <button class="px-8 py-4 glass-panel border border-white/10 text-white font-bold rounded-xl hover:bg-white/5 transition-all">
-                            OUR PHILOSOPHY
+                        <button class="px-8 py-4 glass-panel border border-white/10 text-white font-bold rounded-xl hover:bg-white/5 transition-all flex items-center justify-center gap-2 group">
+                            <div class="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i data-lucide="play" class="w-3 h-3 fill-current"></i>
+                            </div>
+                            <span>Watch Campus Tour</span>
                         </button>
                     </div>
                 </div>
 
-                <div class="relative reveal delay-300">
-                    <div class="relative z-10 w-full aspect-[4/5] max-w-lg mx-auto overflow-hidden animate-morph shadow-2xl border border-white/10">
-                        <img src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps" alt="Education" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-indigo-950/80 to-transparent"></div>
+                <!-- Visual Content (5 Cols) -->
+                <div class="lg:col-span-5 relative reveal delay-300 hidden lg:block">
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 group rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1887&auto=format&fit=crop" alt="Student" class="w-full aspect-[3/4] object-cover">
+                        
+                        <div class="absolute bottom-6 left-6 z-20">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            </div>
+                            <p class="text-white font-heading font-bold text-xl">World Class Facilities</p>
+                        </div>
                     </div>
                     
-                    <!-- Floating Stats -->
-                    <div class="absolute top-10 -right-4 glass-panel p-5 rounded-2xl animate-float">
-                        <p class="text-3xl font-black text-pink-500 leading-none">100%</p>
-                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mt-1">Safe Environment</p>
-                    </div>
-                    <div class="absolute bottom-10 -left-4 glass-panel p-5 rounded-2xl animate-float-delayed">
-                        <p class="text-xl font-black text-white leading-none italic">Islamic Values</p>
-                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mt-1">Faith Based Learning</p>
+                    <!-- Stats Card -->
+                    <div class="absolute -bottom-10 -left-10 glass-panel p-6 rounded-2xl animate-float border border-white/10 bg-[#0B0F19]/80 z-20 max-w-[200px]">
+                        <p class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">100%</p>
+                        <p class="text-xs text-slate-300 mt-1 leading-relaxed">Secure, Girls-Only Residential Campus Environment.</p>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+            <i data-lucide="chevrons-down" class="w-6 h-6 text-white"></i>
+        </div>
     </section>
 
-    <!-- Mission & About -->
-    <section id="about" class="py-24 relative bg-white/[0.01]">
+    <!-- Mission -->
+    <section id="about" class="py-24 relative bg-[#0B0F19]">
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center reveal">
-                <h2 class="text-3xl md:text-5xl font-black font-heading mb-8">Nurturing Confident <span class="text-pink-500">Principled Leaders</span></h2>
-                <p class="text-xl text-gray-400 leading-relaxed italic border-l-4 border-pink-500 pl-8 text-left py-4">
-                    "Provide holistic education combining strong academics with Islamic studies, Quranic learning, and moral development. Equip students with critical thinking, digital literacy, and practical life skills."
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Programs (Who Can Join) -->
-    <section id="programs" class="py-24 relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="reveal">
-                    <h3 class="text-4xl font-black font-heading mb-6">Who Can <span class="text-pink-500">Join?</span></h3>
-                    <div class="space-y-6">
-                        <div class="premium-card glass-panel p-8 rounded-3xl border-l-8 border-pink-600">
-                            <h4 class="text-2xl font-bold mb-3">Classes 3rd, 4th, 5th</h4>
-                            <p class="text-gray-400">Receive high-quality academic education combined with our <span class="text-white">AI-integrated learning program</span> to build strong foundations and future-ready skills.</p>
-                        </div>
-                        <div class="premium-card glass-panel p-8 rounded-3xl border-l-8 border-indigo-600">
-                            <h4 class="text-2xl font-bold mb-3">Exam Domination</h4>
-                            <p class="text-gray-400">Expert preparation for top-schooling competitive entrance exams across India.</p>
-                        </div>
-                    </div>
-                </div>
+                <h2 class="text-3xl md:text-5xl font-bold font-heading mb-10 text-white">Nurturing <span class="text-gradient">Principled Leaders</span></h2>
                 
-                <div class="reveal delay-200">
-                    <div class="glass-panel p-10 rounded-[3rem] premium-border">
-                        <div class="w-16 h-16 bg-pink-500/20 rounded-2xl flex items-center justify-center mb-8">
-                            <i data-lucide="award" class="text-pink-500 w-8 h-8"></i>
-                        </div>
-                        <h4 class="text-3xl font-black mb-6">CLAT & UPSC Foundation</h4>
-                        <p class="text-gray-400 leading-relaxed mb-8">
-                            A comprehensive, early-start programme designed to empower girls with strong academics, critical thinking, analytical skills, and strategic exam guidance.
-                        </p>
-                        <div class="flex gap-4">
-                            <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Early Start</span>
-                            <span class="px-4 py-2 bg-white/5 rounded-full text-xs font-bold uppercase tracking-widest border border-white/10">Strategic</span>
-                        </div>
+                <div class="glass-panel p-8 md:p-14 rounded-[3rem] relative overflow-hidden group border border-white/5">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <i data-lucide="quote" class="absolute top-10 left-10 text-white/5 w-20 h-20"></i>
+                    
+                    <p class="text-xl md:text-3xl text-slate-300 leading-relaxed font-light relative z-10 italic">
+                        "We don't just teach subjects; we build <strong class="text-white">character</strong>. We combine strong academics with Islamic studies to equip students with critical thinking, digital literacy, and moral compass."
+                    </p>
+                    
+                    <div class="mt-8 flex justify-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+                        <span class="w-2 h-2 rounded-full bg-slate-700"></span>
+                        <span class="w-2 h-2 rounded-full bg-slate-700"></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Areas of Focus (Grid) -->
-    <section id="focus" class="py-24 bg-indigo-950/20">
+    <!-- PERFECTED "WHO CAN JOIN US" SECTION -->
+    <section id="programs" class="py-32 relative bg-[#0F1420] overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-[url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps alt=')] opacity-10"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-academy-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="text-academy-cyan font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Your Pathway To Success</span>
+                <h2 class="text-4xl md:text-6xl font-bold font-heading text-white mb-6">Who Can <span class="text-gradient">Join Us?</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">We offer tailored programs designed to meet students at their current level and propel them towards their highest potential.</p>
+            </div>
+
+            <!-- The 3 Cards Layout -->
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Card 1: Foundation (Junior) -->
+                <div class="program-card group relative bg-academy-card rounded-[2rem] border border-white/5 hover:border-academy-cyan/50 overflow-hidden reveal">
+                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+                    <div class="p-8 h-full flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="sprout" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Junior Wing</h3>
+                        <p class="text-cyan-400 text-xs font-bold uppercase tracking-wider mb-6">Classes 3rd - 5th</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                            Building strong foundations. A mix of high-quality academics and our unique <span class="text-white">AI-integrated learning</span> to spark curiosity early on.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-cyan-500"></i> Concept Building</li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-cyan-500"></i> Logic & Reasoning</li>
+                        </ul>
+                        <a href="#" class="w-full py-3 rounded-xl border border-white/10 text-center text-sm font-bold text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all">View Curriculum</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Competitive (Exam Domination) -->
+                <div class="program-card group relative bg-academy-card rounded-[2rem] border border-white/5 hover:border-academy-purple/50 overflow-hidden reveal delay-100 transform md:-translate-y-4">
+                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="p-8 h-full flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="target" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Exam Domination</h3>
+                        <p class="text-purple-400 text-xs font-bold uppercase tracking-wider mb-6">Middle School</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                            Rigorous preparation for top-tier competitive entrance exams across India. We focus on <span class="text-white">speed, accuracy, and strategy</span>.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-purple-500"></i> Mock Tests Series</li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-purple-500"></i> Personalized Analysis</li>
+                        </ul>
+                        <a href="#" class="w-full py-3 rounded-xl bg-purple-600 text-center text-sm font-bold text-white hover:bg-purple-700 transition-all shadow-lg shadow-purple-900/20">Explore Strategy</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Elite (CLAT/UPSC) -->
+                <div class="program-card group relative bg-gradient-to-b from-[#1a1f35] to-[#0B0F19] rounded-[2rem] border border-amber-500/30 hover:border-amber-500/80 overflow-hidden reveal delay-200">
+                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-amber-400 to-orange-500"></div>
+                    <!-- Badge -->
+                    <div class="absolute top-4 right-4 bg-amber-500/20 border border-amber-500/30 text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                        Premium
+                    </div>
+
+                    <div class="p-8 h-full flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 text-amber-400 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
+                            <i data-lucide="crown" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">UPSC & CLAT</h3>
+                        <p class="text-amber-500 text-xs font-bold uppercase tracking-wider mb-6">Foundation Program</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                            An early-start program for future bureaucrats and legal eagles. Developing <span class="text-white">critical thinking, ethics, and leadership</span>.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Current Affairs</li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Analytical Skills</li>
+                        </ul>
+                        <a href="#" class="w-full py-3 rounded-xl border border-amber-500/30 text-center text-sm font-bold text-amber-500 hover:bg-amber-500 hover:text-black transition-all">Join Elite Batch</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas of Focus -->
+    <section id="focus" class="py-24 bg-[#0B0F19]">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 reveal">
-                <h2 class="text-4xl md:text-6xl font-black font-heading tracking-tight mb-4 uppercase">Areas of <span class="text-pink-500">Focus</span></h2>
-                <div class="h-1 w-24 bg-pink-600 mx-auto rounded-full"></div>
+                <span class="text-pink-500 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Holistic Development</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tight mb-4 uppercase text-white">Areas of Focus</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Academic -->
-                <div class="card-hover-effect glass-panel p-10 rounded-[2.5rem] reveal">
-                    <div class="text-pink-500 mb-6"><i data-lucide="book-open" class="w-10 h-10"></i></div>
-                    <h4 class="text-2xl font-bold mb-4">Academic Excellence</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Standard curriculum for class 3rd onwards, integrating <span class="text-white">STEM, AI, and competitive exam preparation</span>.</p>
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-pink-500 reveal">
+                    <div class="text-pink-500 mb-6"><i data-lucide="book-open" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Academic Excellence</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Standard curriculum integrating <span class="text-white">STEM, AI, and competitive exam preparation</span>.</p>
                 </div>
 
                 <!-- Islamic -->
-                <div class="card-hover-effect glass-panel p-10 rounded-[2.5rem] reveal delay-100">
-                    <div class="text-pink-500 mb-6"><i data-lucide="moon" class="w-10 h-10"></i></div>
-                    <h4 class="text-2xl font-bold mb-4">Islamic Studies</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Daily Quran recitation, Namaz, Arabic & Urdu classes, and a deep focus on <span class="text-white">Islamic ethics and values</span>.</p>
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-green-500 reveal delay-100">
+                    <div class="text-green-500 mb-6"><i data-lucide="moon" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Islamic Studies</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Quran recitation, Arabic, and a deep focus on <span class="text-white">Islamic ethics and values</span>.</p>
                 </div>
 
                 <!-- Leadership -->
-                <div class="card-hover-effect glass-panel p-10 rounded-[2.5rem] reveal delay-200">
-                    <div class="text-pink-500 mb-6"><i data-lucide="sparkles" class="w-10 h-10"></i></div>
-                    <h4 class="text-2xl font-bold mb-4">Life Skills & Leadership</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Communication, problem-solving, and <span class="text-white">entrepreneurship skills</span> specifically tailored for girls.</p>
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-amber-500 reveal delay-200">
+                    <div class="text-amber-500 mb-6"><i data-lucide="sparkles" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Life Skills</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Communication, problem-solving, and <span class="text-white">entrepreneurship skills</span> tailored for girls.</p>
                 </div>
 
                 <!-- Safety -->
-                <div class="card-hover-effect glass-panel p-10 rounded-[2.5rem] reveal delay-300">
-                    <div class="text-pink-500 mb-6"><i data-lucide="shield-check" class="w-10 h-10"></i></div>
-                    <h4 class="text-2xl font-bold mb-4">Safe & Secure Campus</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Fully supervised and <span class="text-white">girls-only environment</span> with premium residential and day-school options.</p>
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-blue-500 reveal delay-300">
+                    <div class="text-blue-500 mb-6"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Safe Campus</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Fully supervised <span class="text-white">girls-only environment</span> with premium residential options.</p>
                 </div>
 
                 <!-- Exposure -->
-                <div class="card-hover-effect glass-panel p-10 rounded-[2.5rem] reveal delay-400">
-                    <div class="text-pink-500 mb-6"><i data-lucide="globe" class="w-10 h-10"></i></div>
-                    <h4 class="text-2xl font-bold mb-4">Global Exposure</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Educational trips, practical workshops, and <span class="text-white">mentorship programs</span> for accelerated personal growth.</p>
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-purple-500 reveal delay-400">
+                    <div class="text-purple-500 mb-6"><i data-lucide="globe" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Global Exposure</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Educational trips, practical workshops, and <span class="text-white">mentorship programs</span>.</p>
                 </div>
 
                 <!-- Future Ready -->
-                <div class="card-hover-effect glass-panel p-10 rounded-[2.5rem] reveal delay-500 bg-pink-600/10 border-pink-500/30">
-                    <div class="text-pink-500 mb-6"><i data-lucide="trending-up" class="w-10 h-10"></i></div>
-                    <h4 class="text-2xl font-bold mb-4">Future Readiness</h4>
-                    <p class="text-gray-400 text-sm leading-relaxed">Blending strong academics and personality development to prepare for <span class="text-white">competitive success</span>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Islamic + Modern Integration Quote -->
-    <section class="py-32 relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto glass-panel p-16 rounded-[4rem] text-center border-t border-pink-500/30 reveal">
-                <h3 class="text-3xl md:text-4xl font-black mb-10 text-gradient uppercase tracking-tight">Islamic Education with Modern Education</h3>
-                <p class="text-2xl md:text-3xl text-gray-300 font-light leading-relaxed mb-10 italic">
-                    "We combine Islamic values, faith-based principles and contemporary learning to cultivate girls who are confident, principled, and capable of leading in every aspect of life."
-                </p>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-10 text-sm font-bold uppercase tracking-[0.3em] text-pink-400">
-                    <span>Moral Development</span>
-                    <span class="hidden md:block w-2 h-2 rounded-full bg-white/20"></span>
-                    <span>Intellectual Growth</span>
-                    <span class="hidden md:block w-2 h-2 rounded-full bg-white/20"></span>
-                    <span>Practical Skills</span>
+                <div class="group bg-gradient-to-br from-pink-900/20 to-purple-900/20 p-8 rounded-[2rem] border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 reveal delay-500">
+                    <div class="text-white mb-6 p-2 bg-gradient-to-br from-pink-500 to-purple-600 w-fit rounded-lg"><i data-lucide="trending-up" class="w-6 h-6"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Future Readiness</h4>
+                    <p class="text-pink-100 text-sm leading-relaxed">Blending strong academics and personality development for <span class="text-white">competitive success</span>.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black pt-32 pb-12 border-t border-white/5 relative">
+    <footer class="bg-[#050810] pt-24 pb-10 border-t border-white/5 relative">
         <div class="container mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-4 gap-12 mb-20">
                 <div class="col-span-2">
-                    <div class="flex items-center gap-4 mb-8">
-                        <img src="https://placehold.co/100x100/DB2777/ffffff?text=GA" alt="Logo" class="w-12 h-12 rounded-xl">
-                        <div class="flex flex-col">
-                            <span class="text-3xl font-black tracking-tighter">GOOGLAi</span>
-                            <span class="text-[10px] font-bold text-pink-500 tracking-[0.4em] uppercase">Girls Academy</span>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-pink-600 to-rose-600 rounded-lg">
+                            <span class="text-white font-bold text-lg">G</span>
                         </div>
+                        <span class="text-2xl font-bold tracking-tight text-white">GOOGLAi</span>
                     </div>
-                    <p class="text-gray-500 max-w-sm mb-10 leading-relaxed italic">Empowering students to nurture their families, make meaningful contributions to society, and become role models for others.</p>
+                    <p class="text-slate-500 max-w-sm mb-8 text-sm leading-relaxed">Empowering students to nurture their families, make meaningful contributions to society, and become role models.</p>
+                    
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all text-slate-400"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-slate-400"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all text-slate-400"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    </div>
                 </div>
+                
                 <div>
-                    <h4 class="text-white font-black text-xs uppercase tracking-[0.3em] mb-8">Quick Links</h4>
-                    <ul class="space-y-4 text-sm text-gray-600">
-                        <li class="hover:text-pink-500 cursor-pointer transition-colors font-bold">Curriculum</li>
-                        <li class="hover:text-pink-500 cursor-pointer transition-colors font-bold">Safe Campus</li>
-                        <li class="hover:text-pink-500 cursor-pointer transition-colors font-bold">Mentorship</li>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Explore</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Academics</li>
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Campus Life</li>
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Admission</li>
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Contact Us</li>
                     </ul>
                 </div>
+                
                 <div>
-                    <h4 class="text-white font-black text-xs uppercase tracking-[0.3em] mb-8">Connect</h4>
-                    <ul class="space-y-4 text-sm text-gray-600">
-                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-pink-500"></i> admissions@googlai.com</li>
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-pink-500"></i> +91 XXXX XXX XXX</li>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Contact</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-pink-500"></i> info@googlai.com</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-pink-500"></i> +91 98765 43210</li>
+                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-pink-500"></i> Education City, India</li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-white/5 pt-10 text-center">
-                <p class="text-gray-800 text-[11px] font-black uppercase tracking-[0.8em]">&copy; 2024 GOOGLAi GIRLS ACADEMY</p>
+            
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-600 text-xs font-bold uppercase tracking-widest">&copy; 2024 GOOGLAi GIRLS ACADEMY</p>
             </div>
         </div>
     </footer>
@@ -360,15 +481,15 @@
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('main-nav');
             if (window.scrollY > 50) {
-                nav.classList.add('py-2');
-                nav.querySelector('div').style.background = 'rgba(2, 6, 23, 0.9)';
+                nav.classList.add('glass-nav', 'py-3');
+                nav.classList.remove('py-4', 'border-transparent');
             } else {
-                nav.classList.remove('py-2');
-                nav.querySelector('div').style.background = 'rgba(255, 255, 255, 0.03)';
+                nav.classList.remove('glass-nav', 'py-3');
+                nav.classList.add('py-4', 'border-transparent');
             }
         });
 
-        // Reveal Animation on Scroll
+        // Reveal Animation
         function reveal() {
             const reveals = document.querySelectorAll(".reveal");
             for (let i = 0; i < reveals.length; i++) {
@@ -381,7 +502,7 @@
             }
         }
         window.addEventListener("scroll", reveal);
-        reveal(); // Initial check
+        setTimeout(reveal, 100);
     </script>
 </body>
 </html>
