@@ -41,7 +41,7 @@
         }
 
         .brand-logo img{
-    width:200px;
+    width:400px;
     height:auto;
     display:block;
 }
@@ -124,6 +124,28 @@
         }
         
         .sub-tagline::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .sub-toggle {
+            font-size: 1.2rem;
+            color: rgba(176, 216, 14, 0.7);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-top: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .sub-toggle::after {
             content: '';
             position: absolute;
             width: 50px;
@@ -346,7 +368,7 @@
     
         <div class="sub-tagline">Smart Learning I Holistic Growth I Global Vision</div>
         <br>
-        <div class="sub-tagline">Googlai educational group</div>
+        <div class="sub-toggle">Googlai educational group</div>
     </header>
 
     <!-- Cards Container -->
