@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOOGLAi Education Group | Future of Learning</title>
-    <!-- Importing Google Fonts for Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
@@ -28,7 +27,6 @@
         body {
             font-family: 'Poppins', sans-serif;
             min-height: 100vh;
-            background: radial-gradient(circle at top left, #1a2980, #26d0ce);
             background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: var(--text-main);
             display: flex;
@@ -41,10 +39,10 @@
         }
 
         .brand-logo img{
-    width:400px;
-    height:auto;
-    display:block;
-}
+            width:400px;
+            height:auto;
+            display:block;
+        }
 
         /* Animated Background Elements */
         .bg-shape {
@@ -72,91 +70,56 @@
             animation: fadeInDown 1s ease-out;
         }
 
-        /* Replacement for Broken Image Logo */
-        .brand-logo-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
-
-        /* Creating a vector-like icon with CSS */
-        .logo-icon-css {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #ffd700, #ff9a00);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: bold;
-            color: #0f0c29;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-        }
-
-        .main-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            background: linear-gradient(to right, #fff, #a5a5a5);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .main-title span {
-            color: var(--accent-color);
-            -webkit-text-fill-color: var(--accent-color);
-        }
-
+        /* --- NAYA DESIGN START: TAGLINE AUR TOGGLE --- */
+        
         .sub-tagline {
-            font-size: 1.2rem;
-            color: rgba(255,255,255,0.7);
-            letter-spacing: 4px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 5px;
             text-transform: uppercase;
-            font-weight: 300;
-            margin-top: 10px;
-            position: relative;
+            font-weight: 400;
+            margin-top: 20px;
             display: inline-block;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 8px;
         }
         
-        .sub-tagline::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 2px;
-            background: var(--accent-color);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
+        /* Gold dots for visual appeal */
+        .sub-tagline::before, .sub-tagline::after {
+            content: " • ";
+            color: var(--accent-color);
+            font-weight: bold;
         }
 
         .sub-toggle {
-            font-size: 1.2rem;
-            color: rgba(176, 216, 14, 0.7);
-            letter-spacing: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: #fff;
+            letter-spacing: 2px;
             text-transform: uppercase;
-            font-weight: 300;
-            margin-top: 10px;
-            position: relative;
+            font-weight: 800;
+            margin-top: 25px;
+            padding: 12px 35px;
             display: inline-block;
-        }
-        
-        .sub-toggle::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background: var(--accent-color);
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: 0.4s;
+            cursor: default;
         }
 
-        /* CARDS CONTAINER */
+        .sub-toggle:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        /* --- NAYA DESIGN END --- */
+
+        /* CARDS CONTAINER (AS IT IS) */
         .cards-container {
             display: flex;
             justify-content: center;
@@ -167,7 +130,7 @@
             z-index: 10;
         }
 
-        /* GLASS CARD DESIGN */
+        /* GLASS CARD DESIGN (AS IT IS) */
         .card {
             background: var(--card-bg);
             backdrop-filter: blur(15px);
@@ -187,7 +150,6 @@
             animation: fadeInUp 0.8s ease-out backwards;
         }
 
-        /* Staggered Animation delays */
         .card:nth-child(1) { animation-delay: 0.2s; }
         .card:nth-child(2) { animation-delay: 0.4s; }
         .card:nth-child(3) { animation-delay: 0.6s; }
@@ -199,22 +161,6 @@
             background: rgba(255, 255, 255, 0.15);
         }
 
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
-
-        .card:hover::before {
-            left: 100%;
-        }
-
-        /* ICONS */
         .icon-wrapper {
             width: 100px;
             height: 100px;
@@ -242,11 +188,8 @@
             transition: 0.3s;
         }
         
-        .card:hover .icon-wrapper svg {
-            fill: #0f0c29;
-        }
+        .card:hover .icon-wrapper svg { fill: #0f0c29; }
 
-        /* CARD CONTENT */
         .card-title {
             font-family: 'Montserrat', sans-serif;
             font-size: 24px;
@@ -277,7 +220,6 @@
             font-size: 15px;
         }
 
-        /* BUTTON */
         .action-btn {
             padding: 12px 40px;
             background: transparent;
@@ -289,21 +231,6 @@
             letter-spacing: 1px;
             cursor: pointer;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .action-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: var(--accent-color);
-            transition: 0.3s;
-            z-index: -1;
         }
 
         .card:hover .action-btn {
@@ -312,7 +239,6 @@
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
         }
 
-        /* FOOTER */
         .footer {
             margin-top: 60px;
             color: rgba(255,255,255,0.5);
@@ -320,15 +246,8 @@
             z-index: 10;
         }
 
-        .footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .footer a:hover { text-decoration: underline; color: #fff; }
+        .footer a { color: var(--accent-color); text-decoration: none; font-weight: bold; }
 
-        /* ANIMATIONS KEYFRAMES */
         @keyframes fadeInDown {
             from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -339,46 +258,32 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* MEDIA QUERIES */
-        @media (max-width: 1200px) {
-            .card { width: 300px; }
-        }
-
         @media (max-width: 768px) {
-            .main-title { font-size: 2.5rem; }
+            .sub-toggle { font-size: 1.3rem; padding: 10px 20px; }
+            .sub-tagline { font-size: 0.75rem; letter-spacing: 2px; }
             .card { width: 100%; max-width: 340px; }
-            .sub-tagline { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
     <div class="brand-logo">
-    <img src="./images/logo.jpg" alt="My Logo">
-</div>
-<br>
+        <img src="./images/logo.jpg" alt="My Logo">
+    </div>
 
-    <!-- Floating Background Shapes -->
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
     <div class="bg-shape shape-3"></div>
 
-    <!-- Header / Logo Section -->
     <header class="header-container">
-    
-        <div class="sub-tagline">Smart Learning I Holistic Growth I Global Vision</div>
+        <div class="sub-tagline">Smart Learning | Holistic Growth | Global Vision</div>
         <br>
-        <br>
-        <div class="sub-toggle">Googlai educational group</div>
+        <div class="sub-toggle">Googlai education group</div>
     </header>
 
-    <!-- Cards Container -->
     <main class="cards-container">
-
-        <!-- Card 1: School -->
         <a href="googlai-school.html" class="card">
             <div class="icon-wrapper">
-                <!-- Kids/School Icon -->
                 <svg viewBox="0 0 24 24">
                     <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/>
                     <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
@@ -393,10 +298,8 @@
             <button class="action-btn">Enter School</button>
         </a>
 
-        <!-- Card 2: Boys Academy -->
         <a href="Academy.html" class="card">
             <div class="icon-wrapper">
-                <!-- Graduation/Academy Icon -->
                 <svg viewBox="0 0 24 24">
                     <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                     <path d="M2 17l10 5 10-5"/>
@@ -412,10 +315,8 @@
             <button class="action-btn">Enter Campus</button>
         </a>
 
-        <!-- Card 3: Girls Academy -->
         <a href="academygirl.html" class="card">
             <div class="icon-wrapper">
-                <!-- Female/Education Icon -->
                 <svg viewBox="0 0 24 24">
                     <path d="M12 2c-4.97 0-9 4.03-9 9 0 4.17 2.84 7.67 6.69 8.69L9 22h6l-.69-2.31C18.16 18.67 21 15.17 21 11c0-4.97-4.03-9-9-9zm0 2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14c-2.33 0-4.31-1.46-5.11-3.5h10.22c-.8 2.04-2.78 3.5-5.11 3.5z"/>
                 </svg>
@@ -428,7 +329,6 @@
             </div>
             <button class="action-btn">Enter Campus</button>
         </a>
-
     </main>
 
     <footer class="footer">
