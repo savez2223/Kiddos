@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Quote Requests & Job Applications</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #f0f4c3, #b2dfdb);
+        margin: 0;
+        padding: 20px;
+      }
+      h1 {
+        font-family: "Comic Sans MS", sans-serif;
+        font-size: 36px;
+        color: #ff5722;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      h2 {
+        font-family: "Comic Sans MS", sans-serif;
+        font-size: 28px;
+        color: #0288d1;
+        margin: 20px 0;
+      }
+      table {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto 40px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background: #ff5722;
+        color: #fff;
+        font-family: "Comic Sans MS", sans-serif;
+        font-size: 18px;
+      }
+      td {
+        color: #333;
+        font-size: 16px;
+      }
+      tr:nth-child(even) {
+        background: #f9f9f9;
+      }
+      tr:hover {
+        background: #f1f1f1;
+      }
+      button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        background: #0288d1;
+        color: #fff;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+        font-size: 14px;
+      }
+      button:hover {
+        background: #ff5722;
+      }
+      #quoteTable,
+      #applicationTable {
+        display: none; /* Hidden until data loads */
+      }
+      #loading {
+        text-align: center;
+        font-size: 18px;
+        color: #666;
+      }
+      #content {
+        display: none; /* Hidden until password is correct */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="passwordPrompt">
+      <h1>Admin Login</h1>
+      <input
+        type="password"
+        id="passwordInput"
+        placeholder="Enter password"
+        style="padding: 10px; margin: 10px; font-size: 16px"
+      />
+      <button onclick="checkPassword()">Submit</button>
+    </div>
+    <div id="content">
+      <h1>Admin - Quote Requests & Job Applications</h1>
+      <div id="loading">Loading data...</div>
+
+      <h2>Quote Requests</h2>
+      <table id="quoteTable">
+        <thead>
+          <tr>
+            <th>Child Name</th>
+            <th>Father Name</th>
+            <th>Program</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Message</th>
+            <th>Timestamp</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody id="quoteTableBody"></tbody>
+      </table>
+
+      <h2>Job Applications</h2>
+      <table id="applicationTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Position</th>
+            <th>Timestamp</th>
+            <th>Download</th>
+          </tr>
+        </thead>
+        <tbody id="applicationTableBody"></tbody>
+      </table>
+    </div>
+
+    <!-- Import jsPDF and Firebase JS as modules -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script type="module" src="admin.js"></script>
+    <script>
+      const correctPassword = "admin123"; // Change this to your desired password
+      function checkPassword() {
+        const input = document.getElementById("passwordInput").value;
+        if (input === correctPassword) {
+          document.getElementById("passwordPrompt").style.display = "none";
+          document.getElementById("content").style.display = "block";
+        } else {
+          alert("Incorrect password!");
+        }
+      }
+    </script>
+  </body>
+</html>

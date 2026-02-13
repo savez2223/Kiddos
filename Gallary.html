@@ -1,178 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>GOOGLAi SCHOOL - Gallery</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="image/png" href="images/Staff image/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fredericka+the+Great"
+      rel="stylesheet"
+    />
 
-<head>
-  <title>Googlai School</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet" />
-
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-  <link rel="stylesheet" href="css/animate.css" />
-
-  <link rel="stylesheet" href="css/owl.carousel.min.css" />
-  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-  <link rel="stylesheet" href="css/magnific-popup.css" />
-
-  <link rel="stylesheet" href="css/aos.css" />
-
-  <link rel="stylesheet" href="css/ionicons.min.css" />
-
-  <link rel="stylesheet" href="css/flaticon.css" />
-  <link rel="stylesheet" href="css/icomoon.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Inline CSS Animation -->
-  <style>
-    @keyframes bounce {
-
-      0%,
-      20%,
-      50%,
-      80%,
-      100% {
-        transform: translateY(0);
+    <!-- Inline CSS Animation -->
+    <style>
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
       }
 
-      40% {
-        transform: translateY(-10px);
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
       }
 
-      60% {
-        transform: translateY(-5px);
-      }
-    }
-
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
+      /* Gallery-specific styles */
+      .gallery-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
       }
 
-      50% {
-        transform: scale(1.05);
+      .gallery-item {
+        flex: 1 1 22%;
+        min-width: 250px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
       }
 
-      100% {
-        transform: scale(1);
+      .gallery-item:hover {
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
       }
-    }
-  </style>
-</head>
 
-<body>
-  <div class="py-0"></div>
-  <nav style="
+      .gallery-item img,
+      .gallery-item iframe {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border: 5px solid #0288d1;
+        border-radius: 5px;
+        pointer-events: none; /* Prevents direct interaction */
+      }
+
+      .gallery-item .overlay {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: calc(100% - 30px);
+        height: 200px;
+        background: transparent;
+        z-index: 10; /* Places overlay above image/video */
+      }
+
+      /* Disable download in Magnific Popup */
+      .mfp-img {
+        pointer-events: none;
+      }
+      .mfp-container {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      style="
         background: linear-gradient(135deg, #ff5722, #0288d1);
         padding: 15px 0;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         position: sticky;
         top: 0;
         z-index: 1000;
-      ">
-    <div style="
-          max-width: 1200px;
+      "
+    >
+      <div
+        style="
+          max-width: 1350px;
           margin: 0 auto;
           display: flex;
           align-items: center;
           padding: 0 15px;
           flex-wrap: wrap;
-        ">
-      <!-- Logo -->
-      <a href="index.html" style="
+        "
+      >
+        <!-- Logo -->
+        <a
+          href="googlai-school.html"
+          style="
             display: flex;
             align-items: center;
             text-decoration: none;
             transition: transform 0.3s ease;
-          " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-        <img src="./images/logo_school.jpg" alt="GOOGLAi SCHOOL" style="
+          "
+          onmouseover="this.style.transform='scale(1.1)'"
+          onmouseout="this.style.transform='scale(1)'"
+        >
+          <img
+            src="./images/logo_school.jpg"
+            alt="GOOGLAi SCHOOL"
+            style="
               height: 46px;
               border-radius: 5px;
               box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            " />
-      </a>
+            "
+          />
+        </a>
 
-      <!-- Toggler Button -->
-      <button style="
+        <!-- Toggler Button -->
+        <button
+          style="
             background: none;
             border: none;
             color: #fff;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', sans-serif;
             font-size: 18px;
             padding: 10px;
             cursor: pointer;
             display: none;
           "
-        onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';">
-        <span style="margin-right: 5px">☰</span> Menu
-      </button>
+          onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';"
+        >
+          <span style="margin-right: 5px">☰</span> Menu
+        </button>
 
-      <!-- Navigation Links -->
-      <div style="
+        <!-- Navigation Links -->
+        <div
+          style="
             display: flex;
             align-items: center;
             margin-left: auto;
             flex-wrap: wrap;
             gap: 10px;
-          " id="ftco-nav">
-        <ul style="
+          "
+          id="ftco-nav"
+        >
+          <ul
+            style="
               list-style: none;
               padding: 0;
               margin: 0;
               display: flex;
               flex-wrap: wrap;
               gap: 15px;
-            ">
-          <li style="position: relative">
-            <a href="index.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Home</a>
-          </li>
-          <li style="position: relative">
-            <a href="about.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">About</a>
-          </li>
-          <li style="position: relative">
-            <a href="teacher.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Teacher</a>
-          </li>
-          <li style="position: relative">
-            <a href="courses.html" style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Courses</a>
-          </li>
-          <!-- <li style="position: relative">
+            "
+          >
+            <li style="position: relative">
               <a
-                href="blog.html"
+                href="googlai-school.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
@@ -181,791 +209,1567 @@
                 "
                 onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Blog</a
+                >Home</a
               >
-            </li> -->
-          <li style="position: relative">
-            <a href="contact.html" style="
-                  font-family: 'Comic Sans MS', cursive;
+            </li>
+
+            <!-- About with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="about.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
-                " onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-              onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'">Contact</a>
-          </li>
-        </ul>
-        <!-- Academy Button -->
-        <a href="./Academy.html" style="
-              display: inline-block;
-              padding: 10px 20px;
-              background: #4caf50;
-              color: #fff;
-              border-radius: 25px;
-              text-decoration: none;
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 16px;
-              margin-left: 20px;
-              animation: pulse 2s infinite;
-              transition: background 0.3s ease;
-            " onmouseover="this.style.background='#ff5722'" onmouseout="this.style.background='#4caf50'">GOOGLAi
-          Academy</a>
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >About</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Vision</a
+                  >
+                </li>
+                
+              </ul>
+            </li>
+
+            <!-- Teacher with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="teacher.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Staff</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Staff</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teacher Training Programme</a
+                  >
+                </li>
+                
+              </ul>
+            </li>
+
+            <!-- Program with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="courses.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Program</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Inquiry Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Guidelines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >FAQ for Kids</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Gallery with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="Gallary.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Gallery</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Photos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Videos</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li style="position: relative">
+              <a
+                href="contact.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <!-- Inline JavaScript for Mobile Toggle -->
-  <script>
-    window.addEventListener("resize", function () {
-      const nav = document.getElementById("ftco-nav");
-      const toggler = document.querySelector("button");
-      if (window.innerWidth <= 991) {
-        toggler.style.display = "block";
-        nav.style.display = "none";
-      } else {
-        toggler.style.display = "none";
-        nav.style.display = "flex";
+    </nav>
+    <script>
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
       }
-    });
-    // Trigger resize on load
-    window.dispatchEvent(new Event("resize"));
-  </script>
-  <!-- END nav -->
 
-  <section style="
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
+
+    <section
+      style="
+        background: url('images/bg_2.jpg') no-repeat center center/cover;
+        position: relative;
+        padding: 100px 0;
+      "
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+            135deg,
+            rgba(255, 87, 34, 0.7),
+            rgba(33, 150, 243, 0.7)
+          );
+          z-index: 1;
+        "
+      ></div>
+      <div
+        style="
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+          position: relative;
+          z-index: 2;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+          "
+        >
+          <div style="max-width: 900px">
+            <h1
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 48px;
+                color: #ffeb3b;
+                margin-bottom: 15px;
+                animation: bounce 2s infinite;
+              "
+            >
+              Gallary
+            </h1>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 18px;
+                color: #fff;
+              "
+            >
+              <span style="margin-right: 10px">
+                <a
+                  href="googlai-school.html"
+                  style="
+                    color: #ffeb3b;
+                    text-decoration: none;
+                    transition: color 0.3s ease;
+                  "
+                  onmouseover="this.style.color='#fff'"
+                  onmouseout="this.style.color='#ffeb3b'"
+                  >Home ➔</a
+                >
+              </span>
+              <span>Gallary ➔</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section
+      style="
         background: linear-gradient(135deg, #fff3e0, #b2ebf2);
         padding: 60px 0;
-      ">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-      <!-- Header -->
-      <div style="text-align: center; margin-bottom: 60px">
-        <h1 style="
-              font-family: 'Comic Sans MS', cursive;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div style="text-align: center; margin-bottom: 60px">
+          <h1
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
               font-size: 48px;
               color: #ff5722;
               margin: 0;
               animation: bounce 2s infinite;
-            ">
-          <span style="color: #0288d1">GOOGLAi</span> Gallery
-        </h1>
-        <p style="
+            "
+          >
+            <span style="color: #0288d1">GOOGLAi</span> Gallery
+          </h1>
+          <p
+            style="
               font-family: 'Arial', sans-serif;
               color: #333;
               font-size: 20px;
               line-height: 1.6;
               max-width: 700px;
               margin: 10px auto;
-            ">
-          Explore the exciting events and moments that make GOOGLAi SCHOOL
-          special!
-        </p>
-      </div>
+            "
+          >
+            Relive the vibrant moments of our school through photos!
+          </p>
+        </div>
 
-      <!-- Section 1: Learning Moments -->
-      <div style="margin-bottom: 60px">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #0288d1;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Learning Moments
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-3deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/bg_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/bg_2.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #0288d1;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Math Olympiad Prep
-            </p>
+        <!-- Gallery Grid -->
+        <div class="gallery-grid magnific-gallery">
+          <!-- Cloudinary Images -->
+
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0013_d5a93j.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0013_d5a93j.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
           </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(2deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/learning.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/learning.jpg') no-repeat center
-                    center;
-                  background-size: cover;
-                  border: 5px solid #0288d1;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Science Quiz Day
-            </p>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0002_mdujec.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0002_mdujec.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0036_xsh4gc.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0036_xsh4gc.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0035_hq7ewp.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0035_hq7ewp.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0034_uls2hz.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0034_uls2hz.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0033_otnter.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0033_otnter.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0032_fqg4v6.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0032_fqg4v6.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0025_rogc72.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0025_rogc72.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0024_cwliaa.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0024_cwliaa.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0023_esjf0u.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567272/IMG-20250328-WA0023_esjf0u.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0022_se718r.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0022_se718r.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0021_ctvhlt.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0021_ctvhlt.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0020_zllrfn.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0020_zllrfn.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0019_jbgi5i.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0019_jbgi5i.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0018_hrhbtg.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567273/IMG-20250328-WA0018_hrhbtg.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0017_abud7d.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0017_abud7d.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0016_v02fgk.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0016_v02fgk.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0015_r8jeyf.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0015_r8jeyf.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0014_gjar0z.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0014_gjar0z.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="http://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0012_veoghh.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="http://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0012_veoghh.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0011_s2ft7m.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567271/IMG-20250328-WA0011_s2ft7m.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0010_apwjve.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0010_apwjve.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0009_mof4fw.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567270/IMG-20250328-WA0009_mof4fw.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0008_z8ums0.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567276/IMG-20250328-WA0008_z8ums0.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0005_dchedo.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567269/IMG-20250328-WA0005_dchedo.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0004_ljyenb.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0004_ljyenb.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0003_dvz5a9.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567268/IMG-20250328-WA0003_dvz5a9.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1745244863/WhatsApp_Image_2025-04-21_at_16.46.23_887be9af_jsyfzt.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1745244863/WhatsApp_Image_2025-04-21_at_16.46.23_887be9af_jsyfzt.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1745244859/WhatsApp_Image_2025-04-21_at_16.46.24_10ca1c6d_mqzobq.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1745244859/WhatsApp_Image_2025-04-21_at_16.46.24_10ca1c6d_mqzobq.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
+          </div>
+          <div class="gallery-item" oncontextmenu="return false;">
+            <a
+              href="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1745244847/WhatsApp_Image_2025-04-21_at_16.46.23_393eac80_uicthc.jpg?_s=public-apps"
+              class="image-popup"
+            >
+              <img
+                src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1745244847/WhatsApp_Image_2025-04-21_at_16.46.23_393eac80_uicthc.jpg?_s=public-apps"
+                alt="Image"
+                loading="lazy"
+              />
+              <div class="overlay"></div>
+            </a>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Section 2: Tech Adventures -->
-      <div style="
-            background: linear-gradient(135deg, #e0f7fa, #fff);
-            padding: 40px 0;
-            margin-bottom: 60px;
-            border-radius: 20px;
-          ">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #ff5722;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Tech Adventures
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-1deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-1deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/tech_1.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/tech_1.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff5722;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Play Game
-            </p>
-          </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(3deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/tech_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/tech_2.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff5722;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Drawing
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 3: Outdoor Fun -->
-      <div style="margin-bottom: 60px">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #4caf50;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Outdoor Fun
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-2deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/outdoor_1.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/outdoor_1.jpg') no-repeat center
-                    center;
-                  background-size: cover;
-                  border: 5px solid #4caf50;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Sports Day
-            </p>
-          </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(1deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(1deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/outdoor_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/outdoor_2.jpg') no-repeat center
-                    center;
-                  background-size: cover;
-                  border: 5px solid #4caf50;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Nature Walk
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 4: Creative Arts -->
-      <div style="
-            background: linear-gradient(135deg, #f8bbd0, #fff);
-            padding: 40px 0;
-            border-radius: 20px;
-          ">
-        <h2 style="
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 36px;
-              color: #ff4081;
-              text-align: center;
-              margin-bottom: 30px;
-              animation: pulse 2s infinite;
-            ">
-          Creative Arts
-        </h2>
-        <div style="
-              display: flex;
-              flex-wrap: wrap;
-              gap: 20px;
-              justify-content: center;
-            ">
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(-3deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(-3deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/arts_1.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/arts_1.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff4081;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Art Exhibition
-            </p>
-          </div>
-          <div style="
-                flex: 1 1 22%;
-                min-width: 250px;
-                background: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-                transform: rotate(2deg);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-              "
-            onmouseover="this.style.transform='rotate(0deg) scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
-            onmouseout="this.style.transform='rotate(2deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'">
-            <a href="images/arts_2.jpg" style="
-                  display: block;
-                  height: 200px;
-                  background: url('images/arts_2.jpg') no-repeat center center;
-                  background-size: cover;
-                  border: 5px solid #ff4081;
-                  border-radius: 5px;
-                "></a>
-            <p style="
-                  font-family: 'Arial', sans-serif;
-                  color: #666;
-                  font-size: 14px;
-                  text-align: center;
-                  margin: 10px 0 0;
-                ">
-              Music Fest
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer style="
-        background: linear-gradient(135deg, #0288d1, #ff5722);
+    <!-- video section  -->
+    <section
+      style="
+        background: linear-gradient(135deg, #fff3e0, #b2ebf2);
         padding: 60px 0;
-        color: #fff;
-      ">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-      <div style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px">
-        <!-- Contact Info -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                ">
-              Have a Question?
-            </h2>
-            <ul style="list-style: none; padding: 0">
-              <li style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  ">
-                <span style="font-size: 20px; color: #fff; margin-right: 10px">📍</span>
-                <span style="font-family: 'Arial', sans-serif; font-size: 16px">HIDAYAT COLONY, WARD NO. 04, CITY NUH,
-                  HARYANA -
-                  122107</span>
-              </li>
-              <li style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  ">
-                <a href="tel:+918000007583" style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    ">
-                  <span style="font-size: 20px; margin-right: 10px">📞</span>
-                  <span style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#ffeb3b'" onmouseout="this.style.color='#fff'">+91
-                    8000007583</span>
-                </a>
-              </li>
-              <li style="display: flex; align-items: center">
-                <a href="mailto:googlaischool@email.com" style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    ">
-                  <span style="font-size: 20px; margin-right: 10px">✉️</span>
-                  <span style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#ffeb3b'"
-                    onmouseout="this.style.color='#fff'">googlaischool@email.com</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div style="text-align: center; margin-bottom: 60px">
+          <h1
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 48px;
+              color: #ff5722;
+              margin: 0;
+              animation: bounce 2s infinite;
+            "
+          >
+            <span style="color: #0288d1">Videos</span> Gallery
+          </h1>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 20px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 10px auto;
+            "
+          >
+            Relive the vibrant moments of our school through Videos!
+          </p>
         </div>
 
-        <!-- Recent Blog -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                ">
-              Recent Blog
-            </h2>
-            <div style="display: flex; margin-bottom: 20px">
-              <a href="#" style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_1.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "></a>
-              <div>
-                <h3 style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    ">
-                  <a href="#" style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'">How AI Helps Kids
-                    Learn Faster</a>
-                </h3>
-                <div style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    ">
-                  <span style="margin-right: 10px">📅 Mar 20, 2025</span>
-                  <span style="margin-right: 10px">👤 Admin</span>
-                  <span>💬 5</span>
-                </div>
-              </div>
-            </div>
-            <div style="display: flex">
-              <a href="#" style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_2.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "></a>
-              <div>
-                <h3 style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    ">
-                  <a href="#" style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      " onmouseover="this.style.color='#0288d1'" onmouseout="this.style.color='#fff'">Fun Coding
-                    Activities for Kids</a>
-                </h3>
-                <div style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    ">
-                  <span style="margin-right: 10px">📅 Mar 18, 2025</span>
-                  <span style="margin-right: 10px">👤 Admin</span>
-                  <span>💬 4</span>
-                </div>
-              </div>
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+          <!-- YouTube Videos -->
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/sftubYREL4g?si=Ur78AARtIEA0iGzi"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
             </div>
           </div>
-        </div>
-        <!-- Links -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                ">
-              Quick Links
-            </h2>
-            <ul style="list-style: none; padding: 0">
-              <li style="margin-bottom: 10px">
-                <a href="/index.html" style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Home</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/about.html" style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>About</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/career.html" style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Career</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/courses.html" style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Courses</a>
-              </li>
-              <li style="margin-bottom: 10px">
-                <a href="/contact.html" style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    " onmouseover="this.style.color='#ff5722'" onmouseout="this.style.color='#fff'"><span
-                    style="margin-right: 10px">➔</span>Contact</a>
-              </li>
-            </ul>
+
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/uo0VEXeyw-Q?si=0xcVqn56SzCXuHNB"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
           </div>
-        </div>
-        <!-- Subscribe & Social -->
-        <div style="flex: 1 1 22%; min-width: 250px">
-          <div style="margin-bottom: 40px">
-            <h2 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                ">
-              Subscribe Us!
-            </h2>
-            <form action="#" style="display: flex; flex-direction: column; gap: 10px">
-              <input type="text" placeholder="Enter email address" style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #fff;
-                    color: #333;
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    text-align: center;
-                    outline: none;
-                  " />
-              <input type="submit" value="Subscribe" style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #ff5722;
-                    color: #fff;
-                    font-family: 'Comic Sans MS', cursive;
-                    font-size: 16px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
-                  " onmouseover="this.style.background='#0288d1'" onmouseout="this.style.background='#ff5722'" />
-            </form>
+
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/dA-s2ErRlgM?si=YOSC-SnDk8xLICp7"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
           </div>
-          <div>
-            <h2 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 15px;
-                ">
-              Connect With Us
-            </h2>
-            <ul style="list-style: none; padding: 0; display: flex; gap: 15px">
-              <li>
-                <a href="#" style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                  onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                  onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'">𝕏</a>
-              </li>
-              <li>
-                <a href="#" style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                  onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                  onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'">f</a>
-              </li>
-              <li>
-                <a href="#" style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                  onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                  onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'">📷</a>
-              </li>
-            </ul>
+
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/EnPR7hWyXwI?si=SVIRB-SezIq8KsTi"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
           </div>
+
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/x33gu1B9fc4?si=J3erhq0_Lf1VfJKg"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/czn78y9CZ94?si=pqOd82Rkoq2dxV4N"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/xsLmab5gUAU?si=8UEKZgxj8a2dRXuA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/xkuls-zjXIE?si=6zmxGcdHbOWDRe1A"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- <div class="gallery-item">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/ZDi6y1np6BY?si=FuD3NbAunSyh86s3"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div> -->
         </div>
       </div>
-      <div style="text-align: center">
-        <p style="
-              font-family: 'Arial', sans-serif;
+    </section>
+
+    <!-- Footer (unchanged) -->
+    <footer
+      style="
+        background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
+        padding: 40px 15px;
+        color: #fff;
+        font-family: 'Comic Sans MS', sans-serif;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Fun Background Shapes -->
+      <div
+        style="
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 80px;
+          height: 80px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 20px;
+          transform: rotate(45deg);
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 20px;
+          right: 30px;
+          width: 100px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+        "
+      ></div>
+
+      <div
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <!-- Contact Info -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Let’s Talk!
+          </h2>
+          <p
+            style="
               font-size: 14px;
-              color: #e0f7fa;
-              margin: 0;
-            ">
-          Copyright ©
-          <script>
-            document.write(new Date().getFullYear());
-          </script>
-          All rights reserved | Developed by
-          <a href="https://zuridox.com" target="_blank" style="
-                color: #ffeb3b;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              gap: 8px;
+              line-height: 1.4;
+            "
+          >
+            <span style="font-size: 24px">🏡</span> Hidayat Colony, Ward No. 04,
+            City Nuh, Haryana – 122107
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">📞</span>
+            <a
+              href="tel:+918930064006"
+              style="
+                color: #fff;
                 text-decoration: none;
                 transition: color 0.3s ease;
-              " onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#ffeb3b'">Zuridox</a>
-        </p>
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >+91 89-3006-4006</a
+            >
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">✉️</span>
+            <a
+              href="mailto:googalischool@gmail.com"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >googalischool@gmail.com</a
+            >
+          </p>
+        </div>
+
+        <!-- Fun Links -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #3f51b5;
+              animation: bounce 2s infinite;
+            "
+          >
+            Play & Learn!
+          </h2>
+          <ul style="list-style: none; padding: 0">
+            <li style="margin-bottom: 10px">
+              <a
+                href="/googlai-school.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Home</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/about.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> About</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/career.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Career</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/courses.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Program</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/contact.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Contact</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/admin.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Admin</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Fun -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Be Our Buddy!
+          </h2>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              margin-bottom: 20px;
+            "
+          >
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >𝕏</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >f</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >📷</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </footer>
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
-    </svg>
-  </div>
+      <!-- Copyright -->
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: clamp(12px, 3vw, 14px);
+          text-shadow: 1px 1px #ff4081;
+        "
+      >
+        ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        GOOGLAi - Let’s Have Fun Together! 🌟
+      </div>
+    </footer>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-</body>
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
 
+    <!-- Loader (unchanged) -->
+    <!-- <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"
+        />
+      </svg>
+    </div> -->
+
+    <!-- Scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0 W2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Inline JavaScript for Mobile Toggle, Magnific Popup, and Image Protection -->
+    <script>
+      // Mobile Navigation Toggle
+      window.addEventListener("resize", function () {
+        const nav = document.getElementById("ftco-nav");
+        const toggler = document.querySelector("button");
+        if (window.innerWidth <= 991) {
+          toggler.style.display = "block";
+          nav.style.display = "none";
+        } else {
+          toggler.style.display = "none";
+          nav.style.display = "flex";
+        }
+      });
+      window.dispatchEvent(new Event("resize"));
+
+      // Magnific Popup Initialization
+      $(document).ready(function () {
+        $(".magnific-gallery").magnificPopup({
+          delegate: "a.image-popup",
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
+          image: {
+            markup:
+              '<div class="mfp-figure">' +
+              '<div class="mfp-close"></div>' +
+              '<div class="mfp-img"></div>' +
+              "</div>",
+            tError: '<a href="%url%">The image</a> could not be loaded.',
+          },
+          callbacks: {
+            markupParse: function (template, values, item) {
+              // Disable right-click and drag on popup image
+              template.find("img").attr("oncontextmenu", "return false;");
+              template.find("img").attr("ondragstart", "return false;");
+            },
+          },
+        });
+
+        $(".magnific-gallery").magnificPopup({
+          delegate: "a.video-popup",
+          type: "iframe",
+          iframe: {
+            markup:
+              '<div class="mfp-iframe-scaler">' +
+              '<div class="mfp-close"></div>' +
+              '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+              "</div>",
+          },
+        });
+      });
+
+      // Disable keyboard shortcuts for saving or inspecting
+      document.onkeydown = function (e) {
+        if (
+          e.ctrlKey &&
+          (e.keyCode === 83 || // Ctrl+S
+            e.keyCode === 67 || // Ctrl+C
+            e.keyCode === 85 || // Ctrl+U
+            e.keyCode === 73) // Ctrl+I or Ctrl+Shift+I
+        ) {
+          return false;
+        }
+        if (e.keyCode === 123) {
+          // F12
+          return false;
+        }
+      };
+
+      // Disable drag on images
+      document.querySelectorAll("img").forEach((img) => {
+        img.ondragstart = function () {
+          return false;
+        };
+      });
+    </script>
+  </body>
 </html>

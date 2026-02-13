@@ -1,1315 +1,561 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Googlai School</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOGLAi ACADEMY | Future Ready Learning</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Fredericka+the+Great"
-      rel="stylesheet"
-    />
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#2563EB',
+                            dark: '#0F172A',
+                            accent: '#F59E0B',
+                            purple: '#7C3AED'
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-
-    <link rel="stylesheet" href="css/aos.css" />
-
-    <link rel="stylesheet" href="css/ionicons.min.css" />
-
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Consolidated Keyframes -->
     <style>
-      @keyframes bounce {
-        0%,
-        20%,
-        50%,
-        80%,
-        100% {
-          transform: translateY(0);
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-        40% {
-          transform: translateY(-10px);
+        ::-webkit-scrollbar-track {
+            background: #0F172A;
         }
-        60% {
-          transform: translateY(-5px);
+        ::-webkit-scrollbar-thumb {
+            background: #2563EB;
+            border-radius: 5px;
         }
-      }
-      @keyframes pulse {
-        0% {
-          transform: scale(1);
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1d4ed8;
         }
-        50% {
-          transform: scale(1.05);
+
+        /* Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
         }
-        100% {
-          transform: scale(1);
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
-      }
+
+        /* Glassmorphism */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #60A5FA, #A78BFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .brand-logo img{
+    width:200px;
+    height:auto;
+    display:block;
+}
+
     </style>
-  </head>
+</head>
+<body class="bg-brand-dark text-gray-200 font-sans overflow-x-hidden selection:bg-brand-blue selection:text-white">
 
-  <body>
-    <div class="py-0"></div>
-    <nav
-      style="
-        background: linear-gradient(135deg, #ff5722, #0288d1);
-        padding: 15px 0;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      "
-    >
-      <div
-        style="
-          max-width: 1200px;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          padding: 0 15px;
-          flex-wrap: wrap;
-        "
-      >
-        <!-- Logo -->
-        <a
-          href="index.html"
-          style="
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
-          "
-          onmouseover="this.style.transform='scale(1.1)'"
-          onmouseout="this.style.transform='scale(1)'"
-        >
-          <img
-            src="./images/logo_academy.jpg"
-            alt="GOOGLAi SCHOOL"
-            style="
-              height: 46px;
-              border-radius: 5px;
-              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            "
-          />
-        </a>
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo Section Updated -->
+            <div class="brand-logo">
+    <img src="./images/logo_academy.jpg" alt="My Logo">
+</div>
 
-        <!-- Toggler Button -->
-        <button
-          style="
-            background: none;
-            border: none;
-            color: #fff;
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 18px;
-            padding: 10px;
-            cursor: pointer;
-            display: none;
-          "
-          onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';"
-        >
-          <span style="margin-right: 5px">☰</span> Menu
-        </button>
+            
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#home" class="hover:text-brand-blue transition-colors">Home</a>
+                <a href="#i30" class="hover:text-brand-blue transition-colors">i30 Program</a>
+                <a href="#academics" class="hover:text-brand-blue transition-colors">Academics</a>
+                <a href="#contact" class="px-6 py-2 bg-brand-blue hover:bg-blue-600 text-white rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-600/30">Join Now</a>
+            </div>
 
-        <!-- Navigation Links -->
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-            flex-wrap: wrap;
-            gap: 10px;
-          "
-          id="ftco-nav"
-        >
-          <ul
-            style="
-              list-style: none;
-              padding: 0;
-              margin: 0;
-              display: flex;
-              flex-wrap: wrap;
-              gap: 15px;
-            "
-          >
-            <li style="position: relative">
-              <a
-                href="index.html"
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Home</a
-              >
-            </li>
-            <li style="position: relative">
-              <a
-                href="about.html"
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >About</a
-              >
-            </li>
-            <li style="position: relative">
-              <a
-                href="teacher.html"
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Teacher</a
-              >
-            </li>
-            <li style="position: relative">
-              <a
-                href="courses.html"
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Courses</a
-              >
-            </li>
-            <li style="position: relative">
-              <a
-                href="Gallary.html"
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Gallery</a
-              >
-            </li>
-            <li style="position: relative">
-              <a
-                href="contact.html"
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  color: #fff;
-                  text-decoration: none;
-                  padding: 10px 15px;
-                  transition: color 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
-                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Contact</a
-              >
-            </li>
-          </ul>
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white hover:text-brand-blue" onclick="toggleMobileMenu()">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
         </div>
-      </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-gray-800 absolute w-full left-0 top-full p-6 flex flex-col gap-4">
+            <a href="#home" class="text-lg hover:text-brand-blue">Home</a>
+            <a href="#i30" class="text-lg hover:text-brand-blue">i30 Program</a>
+            <a href="#academics" class="text-lg hover:text-brand-blue">Academics</a>
+            <a href="#contact" class="text-lg text-brand-blue font-bold">Join Now</a>
+        </div>
     </nav>
 
-    <!-- Inline JavaScript for Mobile Toggle -->
-    <script>
-      window.addEventListener("resize", function () {
-        const nav = document.getElementById("ftco-nav");
-        const toggler = document.querySelector("button");
-        if (window.innerWidth <= 991) {
-          toggler.style.display = "block";
-          nav.style.display = "none";
-        } else {
-          toggler.style.display = "none";
-          nav.style.display = "flex";
-        }
-      });
-      // Trigger resize on load
-      window.dispatchEvent(new Event("resize"));
-    </script>
-    <!-- END nav -->
-
     <!-- Hero Section -->
-    <section
-      style="
-        background: url('images/bg_2.jpg') no-repeat center center/cover;
-        position: relative;
-        padding: 100px 0;
-      "
-    >
-      <div
-        style="
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            135deg,
-            rgba(255, 87, 34, 0.7),
-            rgba(33, 150, 243, 0.7)
-          );
-          z-index: 1;
-        "
-      ></div>
-      <div
-        style="
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 0 15px;
-          position: relative;
-          z-index: 2;
-        "
-      >
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-          "
-        >
-          <div style="max-width: 900px">
-            <h1
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 48px;
-                color: #ffeb3b;
-                margin-bottom: 15px;
-                animation: bounce 2s infinite;
-              "
-            >
-              Googlai Academy
-            </h1>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 18px;
-                color: #fff;
-              "
-            >
-              <span style="margin-right: 10px">
-                <a
-                  href="index.html"
-                  style="
-                    color: #ffeb3b;
-                    text-decoration: none;
-                    transition: color 0.3s ease;
-                  "
-                  onmouseover="this.style.color='#fff'"
-                  onmouseout="this.style.color='#ffeb3b'"
-                  >Home ➔</a
-                >
-              </span>
-              <span>Academy ➔</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #e0f7fa, #fff3e0);
-        padding: 60px 0;
-        text-align: center;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <h2
-          style="
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 40px;
-            color: #ff5722;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-          "
-        >
-          GOOGLAi Academy
-        </h2>
-        <p
-          style="
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-          "
-        >
-          GOOGLAi ACADEMY is an innovative and technologically advanced
-          educational institution. We aim to provide children with a safe,
-          secure, and interactive learning environment that takes into account
-          the individual learning needs of each child. Our AI-powered approach
-          provides children with a dynamic and adaptive learning environment
-          where they can grow at their own pace.
-        </p>
-      </div>
-    </section>
-
-    <!-- Program Section -->
-    <section style="background: #fff; padding: 60px 0; text-align: center">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <h2
-          style="
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 40px;
-            color: #0288d1;
-            margin-bottom: 20px;
-          "
-        >
-          Our Program - i30 (Intelligent-30)
-        </h2>
-        <p
-          style="
-            font-family: 'Arial', sans-serif;
-            color: #666;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
-          "
-        >
-          The academy is running a program named (Intelligent-30) i30, coaching
-          30 children from Mewat, preparing them fully for competitive exams.
-        </p>
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-          "
-        >
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
-              "
-            >
-              🎯 Who Can Apply?
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Students from <b style="color: #ff5722">5th and 8th grades</b> in
-              Mewat are eligible. We help them prepare for school entrance exams
-              in top government institutions.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
-              "
-            >
-              📚 Exam Preparation
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Our coaching covers
-              <b style="color: #0288d1"
-                >Jawahar Navodaya Vidyalaya, Jamia Millia Islamia, AMU, Sainik
-                School, Olympiad exams, and more</b
-              >.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #4caf50;
-                margin: 0 0 10px;
-              "
-            >
-              🚀 Holistic Development
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We provide
-              <b style="color: #4caf50"
-                >career counseling, motivation sessions, and competitive exam
-                guidance</b
-              >
-              to help students achieve their goals.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Areas of Focus Section -->
-    <section
-      style="
-        background: linear-gradient(135deg, #f8bbd0, #c8e6c9);
-        padding: 60px 0;
-        text-align: center;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <h2
-          style="
-            font-family: 'Comic Sans MS', cursive;
-            font-size: 40px;
-            color: #ff4081;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-          "
-        >
-          Areas of Focus
-        </h2>
-        <p
-          style="
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto 40px;
-          "
-        >
-          At GOOGLAi Academy, we focus on
-          <b style="color: #ff4081"
-            >academic excellence, skill development, and holistic education</b
-          >
-          to prepare students for future success.
-        </p>
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-          "
-        >
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
-              "
-            >
-              📖 Competitive Exam Training
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We ensure students are fully prepared for
-              <b style="color: #ff5722"
-                >school-level competitive exams (after 5th & 8th grade)</b
-              >.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
-              "
-            >
-              💻 Digital Literacy
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We equip students with
-              <b style="color: #0288d1">modern digital skills</b>, enabling them
-              to adapt to
-              <b style="color: #0288d1">technology-driven education</b>.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #4caf50;
-                margin: 0 0 10px;
-              "
-            >
-              🔬 STEM Education
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We emphasize
-              <b style="color: #4caf50"
-                >Science, Technology, Engineering, and Mathematics (STEM)</b
-              >
-              to enhance critical thinking and innovation.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff4081;
-                margin: 0 0 10px;
-              "
-            >
-              🌍 Holistic Development
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Our boarding facilities provide a
-              <b style="color: #ff4081">safe environment</b> where students gain
-              <b style="color: #ff4081">life skills, discipline, and values</b>.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #ff5722;
-                margin: 0 0 10px;
-              "
-            >
-              🛠 Practical Learning
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              Students engage in
-              <b style="color: #ff5722">hands-on projects</b> that develop
-              <b style="color: #ff5722">problem-solving abilities</b> and
-              creativity.
-            </p>
-          </div>
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 280px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              margin-top: 20px;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h4
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 22px;
-                color: #0288d1;
-                margin: 0 0 10px;
-              "
-            >
-              🌿 Organic Farming
-            </h4>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                color: #666;
-                font-size: 16px;
-                margin: 0;
-              "
-            >
-              We introduce
-              <b style="color: #0288d1">agriculture-based learning</b> by
-              engaging students in
-              <b style="color: #0288d1">organic farming</b> on our campus.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer
-      style="
-        background: linear-gradient(135deg, #0288d1, #ff5722);
-        padding: 60px 0;
-        color: #fff;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div
-          style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px"
-        >
-          <!-- Contact Info -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Have a Question?
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <span style="font-size: 20px; color: #fff; margin-right: 10px"
-                    >📍</span
-                  >
-                  <span
-                    style="font-family: 'Arial', sans-serif; font-size: 16px"
-                    >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA -
-                    122107</span
-                  >
-                </li>
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <a
-                    href="tel:+918000007583"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">📞</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >+91 8000007583</span
-                    >
-                  </a>
-                </li>
-                <li style="display: flex; align-items: center">
-                  <a
-                    href="mailto:googlaischool@email.com"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">✉️</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >googlaischool@email.com</span
-                    >
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Recent Blog -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Recent Blog
-              </h2>
-              <div style="display: flex; margin-bottom: 20px">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_1.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ff5722'"
-                      onmouseout="this.style.color='#fff'"
-                      >How AI Helps Kids Learn Faster</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 20, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 5</span>
-                  </div>
+    <header id="home" class="relative h-screen flex items-center justify-center hero-bg pt-16">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 reveal active">
+                <div class="inline-block px-4 py-1 bg-brand-blue/20 border border-brand-blue/40 rounded-full text-brand-blue text-sm font-semibold tracking-wide mb-2 animate-pulse-slow">
+                    BOYS' RESIDENTIAL CAMPUS
                 </div>
-              </div>
-              <div style="display: flex">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_2.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#0288d1'"
-                      onmouseout="this.style.color='#fff'"
-                      >Fun Coding Activities for Kids</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 18, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 4</span>
-                  </div>
+                <h1 class="text-5xl md:text-7xl font-bold font-heading leading-tight text-white">
+                    Blending Strong Academics with <span class="text-gradient">AI-Driven</span> Learning
+                </h1>
+                <p class="text-gray-400 text-lg md:text-xl max-w-xl">
+                    We build logical thinking, digital skills, and confidence, empowering students to excel in competitive exams and future careers through interactive teaching.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#i30" class="px-8 py-4 bg-white text-brand-dark font-bold rounded-full hover:bg-gray-100 transition-all hover:translate-y-1 text-center shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                        Explore i30 Program
+                    </a>
+                    <a href="#academics" class="px-8 py-4 bg-transparent border border-white/30 text-white font-bold rounded-full hover:bg-white/10 transition-all text-center backdrop-blur-sm">
+                        View Courses
+                    </a>
                 </div>
-              </div>
             </div>
-          </div>
-          <!-- Links -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Quick Links
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/index.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Home</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/about.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>About</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/career.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Career</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/courses.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Courses</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/contact.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Contact</a
-                  >
-                </li>
-              </ul>
+            
+            <div class="hidden md:flex justify-center relative reveal delay-200">
+                <!-- Floating Elements Animation -->
+                <div class="absolute -top-10 -left-10 w-20 h-20 bg-purple-500 rounded-full blur-[50px] opacity-40 animate-pulse"></div>
+                <div class="absolute bottom-10 -right-10 w-32 h-32 bg-blue-500 rounded-full blur-[60px] opacity-40 animate-pulse"></div>
+                
+                <img src="https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps alt=" Student Learning" class="relative z-10 rounded-2xl shadow-2xl border border-gray-700 animate-float w-3/4 mx-auto">
+                
+                <div class="absolute bottom-12 -left-4 bg-gray-900/90 backdrop-blur-md p-4 rounded-xl border border-gray-700 shadow-xl z-20 animate-float" style="animation-delay: 1s;">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-green-500/20 p-2 rounded-lg text-green-400">
+                            <i data-lucide="check-circle"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-400">Success Rate</p>
+                            <p class="font-bold text-white">Top Ranked</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <!-- Subscribe & Social -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Subscribe Us!
-              </h2>
-              <form
-                action="#"
-                style="display: flex; flex-direction: column; gap: 10px"
-              >
-                <input
-                  type="text"
-                  placeholder="Enter email address"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #fff;
-                    color: #333;
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    text-align: center;
-                    outline: none;
-                  "
-                />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #ff5722;
-                    color: #fff;
-                    font-family: 'Comic Sans MS', cursive;
-                    font-size: 16px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
-                  "
-                  onmouseover="this.style.background='#0288d1'"
-                  onmouseout="this.style.background='#ff5722'"
-                />
-              </form>
-            </div>
-            <div>
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 15px;
-                "
-              >
-                Connect With Us
-              </h2>
-              <ul
-                style="list-style: none; padding: 0; display: flex; gap: 15px"
-              >
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >𝕏</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >f</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >📷</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
-        <div style="text-align: center">
-          <p
-            style="
-              font-family: 'Arial', sans-serif;
-              font-size: 14px;
-              color: #e0f7fa;
-              margin: 0;
-            "
-          >
-            Copyright ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            All rights reserved | Developed by
-            <a
-              href="https://zuridox.com"
-              target="_blank"
-              style="
-                color: #ffeb3b;
-                text-decoration: none;
-                transition: color 0.3s ease;
-              "
-              onmouseover="this.style.color='#fff'"
-              onmouseout="this.style.color='#ffeb3b'"
-              >Zuridox</a
-            >
-          </p>
+        
+        <!-- Scroll Down Indicator -->
+        <a href="#intro" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 hover:text-white transition-colors animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </a>
+    </header>
+
+    <!-- Main Intro Section -->
+    <section id="intro" class="py-20 bg-brand-dark relative">
+        <div class="container mx-auto px-6 text-center max-w-4xl reveal">
+            <h2 class="text-3xl md:text-5xl font-bold font-heading mb-8 text-white">About <span class="text-brand-blue">GOOGLAi</span></h2>
+            <p class="text-xl text-gray-300 leading-relaxed">
+                GOOGLAi ACADEMY is a tech-powered learning hub. Through interactive teaching, mentoring, and practical exam strategies, we build logical thinking, digital skills, and confidence. We prepare students not just for exams, but for life.
+            </p>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 rounded-2xl bg-gray-800/50 hover:bg-gray-800 transition-all border border-gray-700">
+                    <i data-lucide="brain-circuit" class="w-10 h-10 text-purple-400 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Logical Thinking</h3>
+                </div>
+                <div class="p-6 rounded-2xl bg-gray-800/50 hover:bg-gray-800 transition-all border border-gray-700">
+                    <i data-lucide="monitor-smartphone" class="w-10 h-10 text-blue-400 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Digital Skills</h3>
+                </div>
+                <div class="p-6 rounded-2xl bg-gray-800/50 hover:bg-gray-800 transition-all border border-gray-700">
+                    <i data-lucide="trophy" class="w-10 h-10 text-yellow-400 mx-auto mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Confidence</h3>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- i30 Programme Section -->
+    <section id="i30" class="py-24 bg-gradient-to-br from-indigo-900 to-brand-dark relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 w-full h-full opacity-10" style="background-image: radial-gradient(#4f46e5 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2 reveal">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="h-1 w-12 bg-yellow-400"></span>
+                        <span class="text-yellow-400 font-bold uppercase tracking-widest text-sm">Elite Batch</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-bold font-heading text-white mb-6">
+                        intelligent - <span class="text-yellow-400 text-7xl italic">30</span>
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 leading-relaxed border-l-4 border-yellow-400 pl-6">
+                        The i30 Programme selects and mentors <strong>30 talented students</strong> (district-wise and programme-wise). We provide focused academic support and future career guidance to help them achieve competitive success with next-level preparation.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="text-green-400 w-6 h-6"></i>
+                            <span class="text-gray-200">Selective Mentorship for Top Talent</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="text-green-400 w-6 h-6"></i>
+                            <span class="text-gray-200">Focused Career Guidance</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle-2" class="text-green-400 w-6 h-6"></i>
+                            <span class="text-gray-200">Advanced Exam Strategy</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 reveal delay-200">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                        <div class="relative p-8 bg-gray-900 ring-1 ring-gray-800 rounded-2xl leading-none flex items-top justify-start space-x-6">
+                           <div class="space-y-6">
+                                <h3 class="text-2xl font-bold text-white mb-4">Why i30?</h3>
+                                <div class="grid grid-cols-2 gap-4">
+                                    <div class="bg-gray-800 p-4 rounded-lg text-center">
+                                        <div class="text-3xl font-bold text-white mb-1">30</div>
+                                        <div class="text-xs text-gray-400 uppercase">Students</div>
+                                    </div>
+                                    <div class="bg-gray-800 p-4 rounded-lg text-center">
+                                        <div class="text-3xl font-bold text-white mb-1">100%</div>
+                                        <div class="text-xs text-gray-400 uppercase">Focus</div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-400 text-sm">
+                                    Join an elite group of peers pushing each other towards excellence in national level competitions.
+                                </p>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who Can Join & Offerings -->
+    <section class="py-20 bg-brand-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-brand-blue font-bold tracking-wider uppercase text-sm">Eligibility</span>
+                <h2 class="text-3xl md:text-5xl font-bold font-heading text-white mt-2">Who Can Join?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-20">
+                <!-- Juniors -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gray-800 p-8 border border-gray-700 hover:border-brand-blue transition-all duration-300 reveal">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i data-lucide="backpack" class="w-32 h-32 text-brand-blue"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-white mb-2">Classes 3rd, 4th, 5th</h3>
+                        <p class="text-brand-blue font-semibold mb-4">Foundation Builders</p>
+                        <p class="text-gray-300 mb-6">Entrance Exam Preparation for:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-700 text-sm rounded text-white">JMI</span>
+                            <span class="px-3 py-1 bg-gray-700 text-sm rounded text-white">AMU</span>
+                            <span class="px-3 py-1 bg-gray-700 text-sm rounded text-white">JNV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seniors -->
+                <div class="group relative overflow-hidden rounded-2xl bg-gray-800 p-8 border border-gray-700 hover:border-purple-500 transition-all duration-300 reveal delay-100">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <i data-lucide="rocket" class="w-32 h-32 text-purple-500"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-bold text-white mb-2">Classes 6th, 7th, 8th</h3>
+                        <p class="text-purple-400 font-semibold mb-4">Future Leaders</p>
+                        <p class="text-gray-300 mb-6">AI-Integrated Academic Programme</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-700 text-sm rounded text-white">Up to Class 10th Syllabus</span>
+                            <span class="px-3 py-1 bg-gray-700 text-sm rounded text-white">Digital Skills</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Exam Domination -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all reveal">
+                    <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-6 text-red-400">
+                        <i data-lucide="swords"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Exam Domination</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Expert preparation for top-schooling competitive entrance exams across India (JNVST, Jamia Millia Islamia, AMU). We target next-level preparation strategies.
+                    </p>
+                </div>
+
+                <!-- Tech Wizardry -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all reveal delay-100">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 text-blue-400">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Tech Wizardry</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Mastering Digital & AI Skills. Learning next-generation tools and smart technologies for future-ready learning. Coding, AI basics, and automation.
+                    </p>
+                </div>
+
+                <!-- STEM Power -->
+                <div class="glass-card p-8 rounded-2xl hover:bg-white/5 transition-all reveal delay-200">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 text-green-400">
+                        <i data-lucide="flask-conical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">STEM Power</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Build strong foundations in Science, Technology, Engineering, and Mathematics through practical experiments and innovation-based activities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Detailed Features / Accordion Style -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl font-bold font-heading text-white mb-6">Entrance Exam Mastery</h2>
+                    <p class="text-gray-400 mb-8">Smart preparation with expert guidance to boost confidence and exam success. Our proven methodology includes:</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <i data-lucide="calendar-check" class="text-brand-blue"></i>
+                            <span class="text-sm font-medium">Daily Study Routine</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <i data-lucide="lightbulb" class="text-brand-blue"></i>
+                            <span class="text-sm font-medium">Concept Clarity</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <i data-lucide="file-check" class="text-brand-blue"></i>
+                            <span class="text-sm font-medium">Previous Papers</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <i data-lucide="bar-chart-3" class="text-brand-blue"></i>
+                            <span class="text-sm font-medium">Weekly Mocks</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <i data-lucide="refresh-cw" class="text-brand-blue"></i>
+                            <span class="text-sm font-medium">3-Time Revision</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-800 rounded-lg border border-gray-700">
+                            <i data-lucide="heart-pulse" class="text-brand-blue"></i>
+                            <span class="text-sm font-medium">Healthy Habits</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal delay-200">
+                    <div class="bg-gradient-to-br from-purple-900/50 to-blue-900/50 p-8 rounded-2xl border border-gray-700 relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold text-white mb-4">Exposure & Life Skills</h3>
+                            <p class="italic text-purple-300 mb-6">"Learn Beyond Classrooms: Real World, Real Skills!"</p>
+                            <p class="text-gray-300 mb-6 text-sm">
+                                We believe in holistic development. Our students participate in monthly visits to:
+                            </p>
+                            <div class="space-y-3">
+                                <div class="flex items-center gap-4 bg-gray-900/50 p-3 rounded-lg">
+                                    <i data-lucide="graduation-cap" class="text-yellow-400"></i>
+                                    <span>Universities & Colleges</span>
+                                </div>
+                                <div class="flex items-center gap-4 bg-gray-900/50 p-3 rounded-lg">
+                                    <i data-lucide="factory" class="text-yellow-400"></i>
+                                    <span>Industries</span>
+                                </div>
+                                <div class="flex items-center gap-4 bg-gray-900/50 p-3 rounded-lg">
+                                    <i data-lucide="microscope" class="text-yellow-400"></i>
+                                    <span>Science Centers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-20 text-center max-w-3xl mx-auto p-8 border border-brand-blue/30 rounded-2xl bg-brand-blue/5 reveal">
+                <i data-lucide="quote" class="mx-auto text-brand-blue mb-4 w-8 h-8"></i>
+                <p class="text-xl md:text-2xl font-heading font-medium text-white">
+                    At GOOGLAi ACADEMY, we blend strong academics, future-ready skills, and personality development to prepare students for competitive success and confident leadership.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-10 border-t border-gray-800 relative overflow-hidden">
+        <!-- Footer Background Glow -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <!-- Footer Logo Updated -->
+                        <img src="https://placehold.co/100x100/2563EB/ffffff?text=GA" alt="GOOGLAi Logo" class="w-10 h-10 rounded-lg shadow-blue-500/50 opacity-90">
+                        <span class="text-xl font-bold text-white">GOOGLAi</span>
+                    </div>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        Empowering the next generation with AI-driven education and strong ethical values. A boys' residential campus designed for excellence.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-blue hover:scale-110 transition-all">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-blue hover:scale-110 transition-all">
+                            <i data-lucide="twitter" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-blue hover:scale-110 transition-all">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#home" class="hover:text-brand-blue hover:pl-2 transition-all block">Home</a></li>
+                        <li><a href="#about" class="hover:text-brand-blue hover:pl-2 transition-all block">About Us</a></li>
+                        <li><a href="#i30" class="hover:text-brand-blue hover:pl-2 transition-all block">i30 Programme</a></li>
+                        <li><a href="#admissions" class="hover:text-brand-blue hover:pl-2 transition-all block">Admissions</a></li>
+                        <li><a href="#contact" class="hover:text-brand-blue hover:pl-2 transition-all block">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Programs</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-purple-400 hover:pl-2 transition-all block">Junior Foundation (3rd-5th)</a></li>
+                        <li><a href="#" class="hover:text-purple-400 hover:pl-2 transition-all block">Middle School AI (6th-8th)</a></li>
+                        <li><a href="#" class="hover:text-purple-400 hover:pl-2 transition-all block">JNV Selection Test</a></li>
+                        <li><a href="#" class="hover:text-purple-400 hover:pl-2 transition-all block">AMU/JMI Entrance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="text-brand-blue w-5 h-5 mt-1 shrink-0"></i>
+                            <span>Boys' Residential Campus,<br>District Headquarters,<br>India.</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="text-brand-blue w-5 h-5 shrink-0"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="mail" class="text-brand-blue w-5 h-5 shrink-0"></i>
+                            <span>admissions@googlai.edu</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+                <p>&copy; 2024 GOOGLAi ACADEMY. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- loader -->
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle
-          class="path-bg"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke="#eeeeee"
-        />
-        <circle
-          class="path"
-          cx="24"
-          cy="24"
-          r="22"
-          fill="none"
-          stroke-width="4"
-          stroke-miterlimit="10"
-          stroke="#F96D00"
-        />
-      </svg>
-    </div>
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-    <script src="js/google-map.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.replace('py-4', 'py-2');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.replace('py-2', 'py-4');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
 </html>

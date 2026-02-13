@@ -1,0 +1,2866 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GOOGLAi SCHOOL</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link rel="icon" type="image/png" href="images/Staff image/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Fredericka+the+Great"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <style>
+    /* popup start  */
+    /* Popup Animations */
+    @keyframes popupEnter {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+      }
+      70% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    @keyframes popupExit {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      30% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.05);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+        display: none;
+      }
+    }
+
+    /* Popup Show/Hide Classes */
+    #inquiryPopup.show {
+      display: block;
+      animation: popupEnter 0.4s ease-out forwards;
+    }
+
+    #inquiryPopup.hide {
+      animation: popupExit 0.4s ease-in forwards;
+    }
+
+    /* Popup Overlay */
+    #popupOverlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: none;
+    }
+
+    #popupOverlay.show {
+      display: block;
+      opacity: 1;
+    }
+
+    #popupOverlay.hide {
+      opacity: 0;
+    }
+
+    /* Optional: Global Styles */
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Responsive Button */
+    #openPopupBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 20px;
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    /* popup end  */
+
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-7px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 24px !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px !important;
+      }
+    }
+    .slider-item {
+      min-height: 600px; /* Default for laptops/desktops */
+    }
+
+    @media (max-width: 768px) {
+      .slider-item {
+        min-height: 400px; /* Adjusted for mobile */
+      }
+      .slider-item h1 {
+        font-size: 22px; /* Smaller heading for mobile */
+      }
+      .slider-item a {
+        padding: 10px 20px; /* Smaller button for mobile */
+        font-size: 14px;
+      }
+    }
+
+    @keyframes slide {
+      0% {
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      40% {
+        opacity: 1;
+      }
+      60% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+    @keyframes typewriter {
+      0% {
+        width: 0;
+      }
+      50% {
+        width: 100%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-5px) translateX(-50%);
+      }
+    }
+    @keyframes slide {
+      0% {
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      40% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 24px !important;
+      }
+      p {
+        font-size: 16px !important;
+      }
+      div[style*="flex: 1 1 70%"] {
+        flex: 1 1 100% !important;
+      }
+      div[style*="flex: 1 1 25%"] {
+        flex: 1 1 100% !important;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px !important;
+      }
+      p {
+        font-size: 14px !important;
+      }
+      section {
+        padding: 40px 0 !important;
+      }
+    }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-15px);
+      }
+      60% {
+        transform: translateY(-7px);
+      }
+    }
+    @keyframes flip {
+      0% {
+        transform: rotateX(0deg);
+      }
+      50% {
+        transform: rotateX(180deg);
+      }
+      100% {
+        transform: rotateX(360deg);
+      }
+    }
+  </style>
+
+  <body>
+    <div class="py-0"></div>
+    <nav
+      style="
+        background: linear-gradient(135deg, #ff5722, #0288d1);
+        padding: 15px 0;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      "
+    >
+      <div
+        style="
+          max-width: 1350px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          flex-wrap: wrap;
+        "
+      >
+        <!-- Logo -->
+        <a
+          href="index.html"
+          style="
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+          "
+          onmouseover="this.style.transform='scale(1.1)'"
+          onmouseout="this.style.transform='scale(1)'"
+        >
+          <img
+            src="./images/logo_school.jpg"
+            alt="GOOGLAi SCHOOL"
+            style="
+              height: 46px;
+              border-radius: 5px;
+              box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            "
+          />
+        </a>
+
+        <!-- Toggler Button -->
+        <button
+          style="
+            background: none;
+            border: none;
+            color: #fff;
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: 18px;
+            padding: 10px;
+            cursor: pointer;
+            display: none;
+          "
+          onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'flex' ? 'none' : 'flex';"
+        >
+          <span style="margin-right: 5px">☰</span> Menu
+        </button>
+
+        <!-- Navigation Links -->
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            flex-wrap: wrap;
+            gap: 10px;
+          "
+          id="ftco-nav"
+        >
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 15px;
+            "
+          >
+            <li style="position: relative">
+              <a
+                href="index.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Home</a
+              >
+            </li>
+
+            <!-- About with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="about.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >About</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Vision</a
+                  >
+                </li>
+                
+              </ul>
+            </li>
+
+            <!-- Teacher with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="teacher.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Staff</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Staff</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teacher Training Programme</a
+                  >
+                </li>
+               
+              </ul>
+            </li>
+
+            <!-- Program with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="courses.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Program</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Inquiry Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Guidelines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >FAQ for Kids</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Gallery with Dropdown -->
+            <li style="position: relative" class="nav-item">
+              <a
+                href="Gallary.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Gallery</a
+              >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Photos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Videos</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li style="position: relative">
+              <a
+                href="contact.html"
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  color: #fff;
+                  text-decoration: none;
+                  padding: 10px 15px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                >Contact</a
+              >
+            </li>
+          </ul>
+         
+        </div>
+      </div>
+    </nav>
+
+    <!-- Moving Marquee for Admission Info -->
+    <marquee
+      style="
+        background: #ffeb3b;
+        padding: 10px 0 0 0; /* Removed bottom padding */
+        margin-bottom: 0; /* Removed bottom margin */
+        font-family: 'Comic Sans MS', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+      "
+      behavior="scroll"
+      direction="left"
+      scrollamount="5"
+    >
+      <span style="color: #0288d1"
+        >ADMISSION OPEN FOR 2026-27 | PRE-NURSERY, NURSERY, UKG, AND LKG</span
+      >&nbsp;&nbsp;
+      <span style="color: #ff5722"
+        >ADMISSION OPEN FOR 2026-27 | PRE-NURSERY, NURSERY, UKG, AND LKG</span
+      >&nbsp;&nbsp;
+      <span style="color: #4caf50"
+        >ADMISSION OPEN FOR 2026-27 | PRE-NURSERY, NURSERY, UKG, AND LKG</span
+      >
+    </marquee>
+
+    <!-- Inline JavaScript for Mobile Toggle -->
+    <script>
+      window.addEventListener("resize", function () {
+        const nav = document.getElementById("ftco-nav");
+        const toggler = document.querySelector("button");
+        if (window.innerWidth <= 991) {
+          toggler.style.display = "block";
+          nav.style.display = "none";
+        } else {
+          toggler.style.display = "none";
+          nav.style.display = "flex";
+        }
+      });
+      // Trigger resize on load
+      window.dispatchEvent(new Event("resize"));
+    </script>
+
+    <!-- END nav -->
+    <!-- // banner -->
+    <section style="position: relative; overflow: hidden">
+      <!-- Slider Item 1 -->
+      <div
+        style="
+          background: url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743571115/banner_bg_1_sx3yr1.jpg?_s=public-apps')
+            no-repeat center center/cover;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          animation: slide 10s infinite;
+        "
+        class="slider-item"
+      >
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              135deg,
+              rgba(255, 87, 34, 0.7),
+              rgba(33, 150, 243, 0.7)
+            );
+            z-index: 1;
+          "
+        ></div>
+        <div
+          style="
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+          "
+        >
+          <div style="text-align: center">
+            <h1
+              style="
+                font-family: 'Comic Sans MS';
+                font-size: 48px;
+                color: #ffeb3b;
+                margin-bottom: 20px;
+                animation: bounce 2s infinite;
+              "
+            >
+              Kids Are The Best
+              <span style="color: #fff">Explorers In The World</span>
+            </h1>
+            <p style="margin: 0">
+              <a
+                href="#"
+                style="
+                  display: inline-block;
+                  padding: 15px 30px;
+                  background: #4caf50;
+                  color: #fff;
+                  border-radius: 25px;
+                  text-decoration: none;
+                  font-family: 'Comic Sans MS';
+                  font-size: 18px;
+                  transition: background 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.background='#ff5722'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.background='#4caf50'; this.style.transform='scale(1)'"
+                >Read More</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Slider Item 2 -->
+      <div
+        style="
+          background: url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743571112/banner_bg_3_kuwaus.jpg?_s=public-apps')
+            no-repeat center center/cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          animation: slide 10s infinite 5s;
+        "
+        class="slider-item"
+      >
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              135deg,
+              rgba(33, 150, 243, 0.7),
+              rgba(255, 87, 34, 0.7)
+            );
+            z-index: 1;
+          "
+        ></div>
+        <div
+          style="
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+            position: relative;
+            z-index: 2;
+          "
+        >
+          <div style="text-align: center">
+            <h1
+              style="
+                font-family: 'Comic Sans MS';
+                font-size: 48px;
+                color: #ffeb3b;
+                margin-bottom: 20px;
+                animation: bounce 2s infinite;
+              "
+            >
+              Perfect Learning <span style="color: #fff">For Your Child</span>
+            </h1>
+            <p style="margin: 0">
+              <a
+                href="#"
+                style="
+                  display: inline-block;
+                  padding: 15px 30px;
+                  background: #ff4081;
+                  color: #fff;
+                  border-radius: 25px;
+                  text-decoration: none;
+                  font-family: 'Comic Sans MS';
+                  font-size: 18px;
+                  transition: background 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.background='#0288d1'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.background='#ff4081'; this.style.transform='scale(1)'"
+                >Read More</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+         
+
+    <!-- popup  -->
+
+    <div id="popupOverlay"></div>
+
+    <!-- Inquiry Popup -->
+    <section
+      id="inquiryPopup"
+      style="
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: clamp(280px, 90%, 600px);
+        max-width: 95vw;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: clamp(15px, 3vw, 20px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        z-index: 1000;
+        display: none;
+        box-sizing: border-box;
+      "
+    >
+      <!-- Close Icon -->
+      <span
+        style="
+          position: absolute;
+          top: clamp(8px, 2vw, 10px);
+          right: clamp(12px, 2vw, 15px);
+          font-size: clamp(20px, 4vw, 24px);
+          color: #ff5722;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        "
+        onclick="closePopup()"
+        onmouseover="this.style.transform='scale(1.2)'"
+        onmouseout="this.style.transform='scale(1)'"
+        >✖</span
+      >
+
+      <!-- Admission Header -->
+      <h2
+        style="
+          font-family: 'Comic Sans MS', sans-serif;
+          font-size: clamp(20px, 5vw, 28px);
+          color: #ff5722;
+          margin-bottom: clamp(12px, 2vw, 15px);
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+          line-height: 1.2;
+        "
+      >
+        Admission Open for 2026-27<br />
+        <span style="font-size: clamp(16px, 4vw, 20px); color: #0288d1">
+          Pre-Nursery, Nursery, UKG, and LKG
+        </span>
+      </h2>
+
+      <!-- Inquiry Form -->
+      <form
+        id="admissionForm"
+        style="
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+          gap: clamp(6px, 1.5vw, 10px);
+        "
+        onsubmit="submitForm(event)"
+      >
+        <input
+          type="text"
+          name="guardianName"
+          placeholder="Guardian's Name"
+          style="
+            padding: clamp(6px, 2vw, 10px);
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: clamp(12px, 3vw, 16px);
+            border: 2px solid #ffeb3b;
+            border-radius: 10px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 44px);
+            box-sizing: border-box;
+            text-align: center;
+          "
+          onfocus="this.style.borderColor='#ff5722'"
+          onblur="this.style.borderColor='#ffeb3b'"
+          required
+        />
+        <input
+          type="tel"
+          name="phoneNumber"
+          placeholder="Phone Number"
+          pattern="[0-9]{10}"
+          style="
+            padding: clamp(6px, 2vw, 10px);
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: clamp(12px, 3vw, 16px);
+            border: 2px solid #ffeb3b;
+            border-radius: 10px;
+            outline: none;
+            transition: border-color 0.3s ease;
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 44px);
+            box-sizing: border-box;
+            text-align: center;
+          "
+          onfocus="this.style.borderColor='#ff5722'"
+          onblur="this.style.borderColor='#ffeb3b'"
+          required
+        />
+        <select
+          name="selectedClass"
+          style="
+            padding: clamp(6px, 2vw, 10px);
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: clamp(12px, 3vw, 16px);
+            border: 2px solid #ffeb3b;
+            border-radius: 10px;
+            outline: none;
+            background: #fff;
+            transition: border-color 0.3s ease;
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 44px);
+            box-sizing: border-box;
+            text-align: center;
+          "
+          onfocus="this.style.borderColor='#ff5722'"
+          onblur="this.style.borderColor='#ffeb3b'"
+          required
+        >
+          <option value="" disabled selected>Select Class</option>
+          <option value="pre-nursery">Pre-Nursery</option>
+          <option value="nursery">Nursery</option>
+          <option value="ukg">UKG</option>
+          <option value="lkg">LKG</option>
+        </select>
+        <button
+          type="submit"
+          style="
+            padding: clamp(8px, 2vw, 12px);
+            background: #ff5722;
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            font-family: 'Comic Sans MS', sans-serif;
+            font-size: clamp(14px, 3.5vw, 18px);
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+            width: clamp(250px, 80%, 400px);
+            height: clamp(36px, 5vw, 48px);
+            box-sizing: border-box;
+          "
+          onmouseover="this.style.transform='scale(1.05)'; this.style.background='#e64a19'"
+          onmouseout="this.style.transform='scale(1)'; this.style.background='#ff5722'"
+        >
+          Submit Inquiry
+        </button>
+      </form>
+    </section>
+
+    <!-- gap 1st -->
+    <section
+      style="
+        background: url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743571652/bg_3_bxcada.jpg?_s=public-apps')
+          no-repeat center center;
+        background-size: cover;
+        position: relative;
+        padding: 60px 0;
+        color: #fff;
+      "
+      data-stellar-background-ratio="0.5"
+    >
+      <div
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 150, 136, 0.7);
+          z-index: 1;
+        "
+      ></div>
+      <div
+        style="
+          position: relative;
+          z-index: 2;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 15px;
+        "
+      >
+        <div
+          style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px"
+        >
+          <div style="flex: 1 1 70%; padding: 0 15px">
+            <h2
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 36px;
+                color: #ffeb3b;
+                margin-bottom: 20px;
+                display: block;
+                line-height: 1.2;
+              "
+            >
+              <span style="display: inline-block; animation: bounce 2s infinite"
+                >T</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.1s;
+                "
+                >e</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.2s;
+                "
+                >a</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.3s;
+                "
+                >c</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.4s;
+                "
+                >h</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.5s;
+                "
+                >i</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.6s;
+                "
+                >n</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.7s;
+                "
+                >g</span
+              >
+              <span style="display: inline-block"> </span>
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.8s;
+                "
+                >Y</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 0.9s;
+                "
+                >o</span
+              >
+              <span
+                style="display: inline-block; animation: bounce 2s infinite 1s"
+                >u</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.1s;
+                "
+                >r</span
+              >
+              <span style="display: inline-block"> </span>
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.2s;
+                "
+                >C</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.3s;
+                "
+                >h</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.4s;
+                "
+                >i</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.5s;
+                "
+                >l</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.6s;
+                "
+                >d</span
+              >
+              <br />
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.7s;
+                "
+                >S</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.8s;
+                "
+                >o</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 1.9s;
+                "
+                >m</span
+              >
+              <span
+                style="display: inline-block; animation: bounce 2s infinite 2s"
+                >e</span
+              >
+              <span style="display: inline-block"> </span>
+
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.2s;
+                "
+                >G</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.3s;
+                "
+                >o</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.4s;
+                "
+                >o</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.5s;
+                "
+                >d</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.6s;
+                "
+              >
+              </span>
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.6s;
+                "
+                >M</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.8s;
+                "
+                >a</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 3.9s;
+                "
+                >n</span
+              >
+              <span
+                style="display: inline-block; animation: bounce 2s infinite 4s"
+                >n</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.1s;
+                "
+                >e</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.2s;
+                "
+                >r</span
+              >
+              <span
+                style="
+                  display: inline-block;
+                  animation: bounce 2s infinite 4.3s;
+                "
+                >s</span
+              >
+            </h2>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 18px;
+                color: #ffffff;
+                line-height: 1.6;
+                margin: 0;
+                text-align: justify;
+              "
+            >
+              Good Manners, Great Character: Teaching Your Child the Right Way!
+              emphasizes the importance of instilling good manners in children
+              to help build strong character. It suggests that teaching kids
+              proper etiquette is key to shaping their personality and behavior
+              in a positive direction.
+            </p>
+          </div>
+          <div
+            style="
+              flex: 1 1 25%;
+              padding: 0 15px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <p style="margin: 0">
+              <a
+                href="courses.html"
+                style="
+                  display: inline-block;
+                  background: #ff5722;
+                  color: #fff;
+                  padding: 15px 30px;
+                  border-radius: 30px;
+                  text-decoration: none;
+                  font-family: 'Comic Sans MS', sans-serif;
+                  font-size: 18px;
+                  transition: transform 0.3s ease, background 0.3s ease;
+                "
+                onmouseover="this.style.transform='scale(1.1)'; this.style.background='#e64a19'"
+                onmouseout="this.style.transform='scale(1)'; this.style.background='#ff5722'"
+                >Take a Course</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- // our program section -->
+    <section
+      style="
+        background: linear-gradient(135deg, #fdeff9, #ecf9ff);
+        padding: 60px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; text-align: center">
+        <h2
+          style="
+            font-family: 'Baloo Bhai 2', cursive;
+            font-size: 42px;
+            color: #ff6f91;
+            margin-bottom: 20px;
+          "
+        >
+          <span style="color: #6a89cc">Our</span> Program
+        </h2>
+        <p
+          style="
+            font-family: 'Poppins', sans-serif;
+            color: #555;
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            text-align: center;
+            line-height: 1.6;
+          "
+        >
+          Our play school programs nurture social, language, and motor skills in
+          a playful environment where sharing, laughter, and learning go hand in
+          hand!
+        </p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+          "
+        >
+          <!-- Card Start -->
+          <div
+            style="
+              background: #ffe0e6;
+              border-radius: 25px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                height: 180px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572422/course-3_kalfoa.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 20px; background: #fff">
+              <h3
+                style="
+                  color: #ff6f91;
+                  font-size: 22px;
+                  font-family: 'Baloo Bhai 2', cursive;
+                "
+              >
+                Pre-Nursery
+              </h3>
+              <p style="color: #666; font-size: 15px">
+                <strong>Duration:</strong> 4-4½ hours/day
+              </p>
+              <p style="color: #666; font-size: 15px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #999; font-size: 14px">
+                Learn basic manners, social skills, and language through fun!
+              </p>
+            </div>
+          </div>
+          <!-- Card End -->
+
+          <!-- Card Start -->
+          <div
+            style="
+              background: #d0f0fd;
+              border-radius: 25px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                height: 180px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572422/course-2_rzpwoo.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 20px; background: #fff">
+              <h3
+                style="
+                  color: #45aaf2;
+                  font-size: 22px;
+                  font-family: 'Baloo Bhai 2', cursive;
+                "
+              >
+                Nursery
+              </h3>
+              <p style="color: #666; font-size: 15px">
+                <strong>Duration:</strong> 4-4½ hours/day
+              </p>
+              <p style="color: #666; font-size: 15px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #999; font-size: 14px">
+                Fun-filled introduction to literacy and numeracy.
+              </p>
+            </div>
+          </div>
+          <!-- Card End -->
+
+          <!-- Card Start -->
+          <div
+            style="
+              background: #e2f7d4;
+              border-radius: 25px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                height: 180px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572423/course-1_df1ivr.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 20px; background: #fff">
+              <h3
+                style="
+                  color: #2ecc71;
+                  font-size: 22px;
+                  font-family: 'Baloo Bhai 2', cursive;
+                "
+              >
+                LKG
+              </h3>
+              <p style="color: #666; font-size: 15px">
+                <strong>Duration:</strong> 4-4½ hours/day
+              </p>
+              <p style="color: #666; font-size: 15px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #999; font-size: 14px">
+                Getting ready for school with exciting activities!
+              </p>
+            </div>
+          </div>
+          <!-- Card End -->
+
+          <!-- Card Start -->
+          <div
+            style="
+              background: #fce1f0;
+              border-radius: 25px;
+              box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              transition: transform 0.3s;
+            "
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+            <div
+              style="
+                height: 180px;
+                background: url('https://res.cloudinary.com/dadqwaqis/image/upload/v1743572421/course-4_xdyqxk.jpg')
+                  center/cover;
+              "
+            ></div>
+            <div style="padding: 20px; background: #fff">
+              <h3
+                style="
+                  color: #ff66b2;
+                  font-size: 22px;
+                  font-family: 'Baloo Bhai 2', cursive;
+                "
+              >
+                UKG
+              </h3>
+              <p style="color: #666; font-size: 15px">
+                <strong>Duration:</strong> 4-4½ hours/day
+              </p>
+              <p style="color: #666; font-size: 15px">
+                <strong>Seats:</strong> 20
+              </p>
+              <p style="color: #999; font-size: 14px">
+                Strengthen academic basics and social fun!
+              </p>
+            </div>
+          </div>
+          <!-- Card End -->
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- // blog section -->
+    <section
+      style="
+        background: linear-gradient(135deg, #f8bbd0, #e0f7fa);
+        padding: 60px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div style="text-align: center; margin-bottom: 40px">
+          <div style="max-width: 800px; margin: 0 auto">
+            <h2
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 40px;
+                color: #ff5722;
+                margin-bottom: 20px;
+                display: inline-block;
+                animation: bounce 2s infinite;
+              "
+            >
+              <span style="color: #0288d1">Recent</span> Blog
+            </h2>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                font-size: 18px;
+                line-height: 1.6;
+              "
+            >
+              Discover fun and educational insights from GOOGLAi SCHOOL to help
+              your child grow and learn!
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+          "
+        >
+          <!-- Blog Entry 1 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 300px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='rotate(2deg) scale(1.05)'"
+            onmouseout="this.style.transform='rotate(0deg) scale(1)'"
+          >
+            <a
+              href="#"
+              style="
+                display: block;
+                height: 200px;
+                background: url('images/image_1.jpg') no-repeat center center;
+                background-size: cover;
+                position: relative;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background: #ff5722;
+                  color: #fff;
+                  padding: 10px;
+                  border-radius: 10px;
+                  text-align: center;
+                "
+              >
+                <span
+                  style="
+                    display: block;
+                    font-size: 24px;
+                    font-family: 'Comic Sans MS', sans-serif;
+                  "
+                  >20</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 16px;
+                    font-family: 'Arial', sans-serif;
+                  "
+                  >March</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 16px;
+                    font-family: 'Arial', sans-serif;
+                  "
+                  >2025</span
+                >
+              </div>
+            </a>
+            <div style="padding: 20px">
+              <h3
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  color: #ff5722;
+                  font-size: 22px;
+                  margin: 0 0 10px;
+                "
+              >
+                <a href="#" style="text-decoration: none; color: #ff5722"
+                  >How AI Helps Kids Learn Faster</a
+                >
+              </h3>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 16px;
+                  margin: 0 0 15px;
+                "
+              >
+                Explore how artificial intelligence at GOOGLAi SCHOOL boosts
+                memory and creativity in young learners.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p style="margin: 0">
+                  <a
+                    href="#"
+                    style="
+                      display: inline-block;
+                      padding: 8px 15px;
+                      background: #0288d1;
+                      color: #fff;
+                      border-radius: 20px;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 14px;
+                      transition: background 0.3s ease;
+                    "
+                    onmouseover="this.style.background='#ff5722'"
+                    onmouseout="this.style.background='#0288d1'"
+                    >Read More <span style="margin-left: 5px">&#10132;</span></a
+                  >
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 14px;
+                    color: #333;
+                  "
+                >
+                  <a href="#" style="color: #0288d1; text-decoration: none"
+                    >Admin</a
+                  >
+                  <a
+                    href="#"
+                    style="
+                      color: #ff5722;
+                      text-decoration: none;
+                      margin-left: 10px;
+                    "
+                    ><span style="margin-right: 5px">&#128172;</span> 5</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Entry 2 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 300px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='rotate(-2deg) scale(1.05)'"
+            onmouseout="this.style.transform='rotate(0deg) scale(1)'"
+          >
+            <a
+              href="#"
+              style="
+                display: block;
+                height: 200px;
+                background: url('images/image_2.jpg') no-repeat center center;
+                background-size: cover;
+                position: relative;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background: #0288d1;
+                  color: #fff;
+                  padding: 10px;
+                  border-radius: 10px;
+                  text-align: center;
+                "
+              >
+                <span
+                  style="
+                    display: block;
+                    font-size: 24px;
+                    font-family: 'Comic Sans MS', sans-serif;
+                  "
+                  >18</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 16px;
+                    font-family: 'Arial', sans-serif;
+                  "
+                  >March</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 16px;
+                    font-family: 'Arial', sans-serif;
+                  "
+                  >2025</span
+                >
+              </div>
+            </a>
+            <div style="padding: 20px">
+              <h3
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  color: #0288d1;
+                  font-size: 22px;
+                  margin: 0 0 10px;
+                "
+              >
+                <a href="#" style="text-decoration: none; color: #0288d1"
+                  >Fun Coding Activities for Kids</a
+                >
+              </h3>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 16px;
+                  margin: 0 0 15px;
+                "
+              >
+                Learn simple coding games that spark creativity and
+                problem-solving in your child.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p style="margin: 0">
+                  <a
+                    href="#"
+                    style="
+                      display: inline-block;
+                      padding: 8px 15px;
+                      background: #ff5722;
+                      color: #fff;
+                      border-radius: 20px;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 14px;
+                      transition: background 0.3s ease;
+                    "
+                    onmouseover="this.style.background='#0288d1'"
+                    onmouseout="this.style.background='#ff5722'"
+                    >Read More <span style="margin-left: 5px">&#10132;</span></a
+                  >
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 14px;
+                    color: #333;
+                  "
+                >
+                  <a href="#" style="color: #0288d1; text-decoration: none"
+                    >Admin</a
+                  >
+                  <a
+                    href="#"
+                    style="
+                      color: #ff5722;
+                      text-decoration: none;
+                      margin-left: 10px;
+                    "
+                    ><span style="margin-right: 5px">&#128172;</span> 4</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Entry 3 -->
+          <div
+            style="
+              flex: 1 1 30%;
+              min-width: 300px;
+              background: #fff;
+              border-radius: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              overflow: hidden;
+              transition: transform 0.3s ease;
+            "
+            onmouseover="this.style.transform='rotate(2deg) scale(1.05)'"
+            onmouseout="this.style.transform='rotate(0deg) scale(1)'"
+          >
+            <a
+              href="#"
+              style="
+                display: block;
+                height: 200px;
+                background: url('images/image_3.jpg') no-repeat center center;
+                background-size: cover;
+                position: relative;
+              "
+            >
+              <div
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  background: #4caf50;
+                  color: #fff;
+                  padding: 10px;
+                  border-radius: 10px;
+                  text-align: center;
+                "
+              >
+                <span
+                  style="
+                    display: block;
+                    font-size: 24px;
+                    font-family: 'Comic Sans MS', sans-serif;
+                  "
+                  >15</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 16px;
+                    font-family: 'Arial', sans-serif;
+                  "
+                  >March</span
+                >
+                <span
+                  style="
+                    display: block;
+                    font-size: 16px;
+                    font-family: 'Arial', sans-serif;
+                  "
+                  >2025</span
+                >
+              </div>
+            </a>
+            <div style="padding: 20px">
+              <h3
+                style="
+                  font-family: 'Comic Sans MS', sans-serif;
+                  color: #4caf50;
+                  font-size: 22px;
+                  margin: 0 0 10px;
+                "
+              >
+                <a href="#" style="text-decoration: none; color: #4caf50"
+                  >Top 5 Tech Toys for Learning</a
+                >
+              </h3>
+              <p
+                style="
+                  font-family: 'Arial', sans-serif;
+                  color: #666;
+                  font-size: 16px;
+                  margin: 0 0 15px;
+                "
+              >
+                Check out the best tech toys that make learning fun and
+                interactive for kids.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                "
+              >
+                <p style="margin: 0">
+                  <a
+                    href="#"
+                    style="
+                      display: inline-block;
+                      padding: 8px 15px;
+                      background: #ff5722;
+                      color: #fff;
+                      border-radius: 20px;
+                      text-decoration: none;
+                      font-family: 'Arial', sans-serif;
+                      font-size: 14px;
+                      transition: background 0.3s ease;
+                    "
+                    onmouseover="this.style.background='#0288d1'"
+                    onmouseout="this.style.background='#ff5722'"
+                    >Read More <span style="margin-left: 5px">&#10132;</span></a
+                  >
+                </p>
+                <p
+                  style="
+                    margin: 0;
+                    font-family: 'Arial', sans-serif;
+                    font-size: 14px;
+                    color: #333;
+                  "
+                >
+                  <a href="#" style="color: #0288d1; text-decoration: none"
+                    >Admin</a
+                  >
+                  <a
+                    href="#"
+                    style="
+                      color: #ff5722;
+                      text-decoration: none;
+                      margin-left: 10px;
+                    "
+                    ><span style="margin-right: 5px">&#128172;</span> 3</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- gallary  -->
+    <section
+      style="
+        background: linear-gradient(135deg, #fff3e0, #b2ebf2);
+        padding: 60px 0;
+        user-select: none;
+      "
+      oncontextmenu="return false"
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div style="text-align: center; margin-bottom: 40px">
+          <h2
+            style="
+              font-family: 'Comic Sans MS', sans-serif;
+              font-size: 40px;
+              color: #ff5722;
+              margin: 0;
+              animation: bounce 2s infinite;
+            "
+          >
+            <span style="color: #0288d1">Our</span> Gallery
+          </h2>
+          <p
+            style="
+              font-family: 'Arial', sans-serif;
+              color: #333;
+              font-size: 18px;
+              line-height: 1.6;
+              max-width: 700px;
+              margin: 10px auto;
+            "
+          >
+            Capture the fun and learning moments at GOOGLAi SCHOOL!
+          </p>
+        </div>
+        <div
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+          "
+        >
+          <script>
+            const images = [
+              "images/image_1.jpg",
+              "images/image_2.jpg",
+              "images/image_3.jpg",
+              "images/image_4.jpg",
+              "images/image_5.jpg",
+              "images/image_6.jpg",
+              "images/image_x.jpg",
+              "images/image_1x.jpg",
+            ];
+
+            images.forEach((src, index) => {
+              document.write(`
+            <div
+              style="
+                flex: 1 1 22%;
+                min-width: 250px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transform: rotate(${
+                  (index % 2 === 0 ? "-" : "") + (index % 4)
+                }deg);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+                overflow: hidden;
+              "
+              onmouseover="this.style.transform='rotate(0deg) scale(1.05)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'"
+              onmouseout="this.style.transform='rotate(${
+                (index % 2 === 0 ? "-" : "") + (index % 4)
+              }deg) scale(1)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.2)'"
+            >
+              <a
+                href="${src}"
+                style="
+                  display: block;
+                  height: 200px;
+                  background: url('${src}') no-repeat center center;
+                  background-size: cover;
+                  border: 5px solid #ff5722;
+                  border-radius: 5px;
+                  pointer-events: none;
+                  user-select: none;
+                "
+                draggable="false"
+              >
+                <img 
+                  src="${src}" 
+                  loading="lazy" 
+                  alt="Gallery Image" 
+                  style="width: 100%; height: 200px; object-fit: cover; border-radius: 5px; display: none;"
+                  draggable="false"
+                  oncontextmenu="return false"
+                >
+                <!-- Anti-screenshot overlay -->
+                <div style="
+                  position: absolute;
+                  top: 0; left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: transparent;
+                  z-index: 5;
+                "></div>
+              </a>
+            </div>
+          `);
+            });
+          </script>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact us -->
+    <section
+      style="
+        background: linear-gradient(135deg, #e0f7fa, #fff3e0);
+        padding: 60px 0;
+      "
+    >
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 40px;
+          "
+        >
+          <div style="max-width: 800px">
+            <h2
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 40px;
+                color: #ff5722;
+                margin-bottom: 20px;
+                display: inline-block;
+                animation: bounce 2s infinite;
+              "
+            >
+              <span style="color: #0288d1">Contact</span> Us
+            </h2>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                color: #333;
+                font-size: 18px;
+                line-height: 1.6;
+              "
+            >
+              Find us easily on the map and visit our location for any
+              assistance you need.
+            </p>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2804.798121254505!2d77.0026952754812!3d28.09326947596345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDA1JzM1LjgiTiA3N8KwMDAnMTkuMCJF!5e1!3m2!1sen!2sin!4v1744301630948!5m2!1sen!2sin"
+            style="
+              width: 100%;
+              max-width: 800px;
+              height: 400px;
+              border: none;
+              border-radius: 15px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+              transition: transform 0.3s ease;
+            "
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            onmouseover="this.style.transform='scale(1.02)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+<footer
+  style="
+    background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
+    padding: 40px 15px;
+    color: #fff;
+    font-family: 'Comic Sans MS', sans-serif;
+    position: relative;
+    overflow: hidden;
+  "
+>
+  <!-- Fun Background Shapes -->
+  <div
+    style="
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      width: 80px;
+      height: 80px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      transform: rotate(45deg);
+    "
+  ></div>
+  <div
+    style="
+      position: absolute;
+      bottom: 20px;
+      right: 30px;
+      width: 100px;
+      height: 100px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+    "
+  ></div>
+
+  <div
+    style="
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    "
+  >
+    <!-- Contact Info -->
+    <div>
+      <h2
+        style="
+          font-size: clamp(22px, 5vw, 28px);
+          color: #fff;
+          margin-bottom: 15px;
+          text-shadow: 2px 2px #ff4081;
+          animation: bounce 2s infinite;
+        "
+      >
+        Let’s Talk!
+      </h2>
+      <p
+        style="
+          font-size: 14px;
+          margin: 0 0 10px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 8px;
+          line-height: 1.4;
+        "
+      >
+        <span style="font-size: 24px">🏡</span> Hidayat Colony, Ward No. 04, City Nuh, Haryana – 122107
+      </p>
+      <p
+        style="
+          font-size: 14px;
+          margin: 0 0 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        "
+      >
+        <span style="font-size: 24px">📞</span>
+        <a href="tel:+918930064006" style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffeb3b'" onmouseout="this.style.color='#fff'">+91 89-3006-4006</a>
+      </p>
+      <p
+        style="
+          font-size: 14px;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+        "
+      >
+        <span style="font-size: 24px">✉️</span>
+        <a href="mailto:googalischool@gmail.com" style="color: #fff; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#ffeb3b'" onmouseout="this.style.color='#fff'">googalischool@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- Fun Links -->
+    <div>
+      <h2
+        style="
+          font-size: clamp(22px, 5vw, 28px);
+          color: #fff;
+          margin-bottom: 15px;
+          text-shadow: 2px 2px #3f51b5;
+          animation: bounce 2s infinite;
+        "
+      >
+        Play & Learn!
+      </h2>
+      <ul style="list-style: none; padding: 0">
+        <li style="margin-bottom: 10px">
+          <a href="/index.html" style="color: #fff; text-decoration: none; font-size: 16px; transition: color 0.3s ease, transform 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"><span style="font-size: 20px">🌟</span> Home</a>
+        </li>
+        <li style="margin-bottom: 10px">
+          <a href="/about.html" style="color: #fff; text-decoration: none; font-size: 16px; transition: color 0.3s ease, transform 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"><span style="font-size: 20px">🌟</span> About</a>
+        </li>
+        <li style="margin-bottom: 10px">
+          <a href="/career.html" style="color: #fff; text-decoration: none; font-size: 16px; transition: color 0.3s ease, transform 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"><span style="font-size: 20px">🌟</span> Career</a>
+        </li>
+        <li style="margin-bottom: 10px">
+          <a href="/courses.html" style="color: #fff; text-decoration: none; font-size: 16px; transition: color 0.3s ease, transform 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"><span style="font-size: 20px">🌟</span> Program</a>
+        </li>
+        <li style="margin-bottom: 10px">
+          <a href="/contact.html" style="color: #fff; text-decoration: none; font-size: 16px; transition: color 0.3s ease, transform 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;" onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'" onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"><span style="font-size: 20px">🌟</span> Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Social Fun -->
+    <div>
+      <h2
+        style="
+          font-size: clamp(22px, 5vw, 28px);
+          color: #fff;
+          margin-bottom: 15px;
+          text-shadow: 2px 2px #ff4081;
+          animation: bounce 2s infinite;
+        "
+      >
+        Be Our Buddy!
+      </h2>
+      <ul style="list-style: none; padding: 0; display: flex; gap: 15px; justify-content: center; margin-bottom: 20px;">
+        <li>
+          <a href="#" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #ffeb3b; border-radius: 50%; color: #ff4081; font-size: 24px; text-decoration: none; transition: all 0.3s ease; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'" onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'">𝕏</a>
+        </li>
+        <li>
+          <a href="#" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #ffeb3b; border-radius: 50%; color: #ff4081; font-size: 24px; text-decoration: none; transition: all 0.3s ease; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'" onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'">f</a>
+        </li>
+        <li>
+          <a href="#" style="display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; background: #ffeb3b; border-radius: 50%; color: #ff4081; font-size: 24px; text-decoration: none; transition: all 0.3s ease; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);" onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'" onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'">📷</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Design Credit -->
+  <div style="text-align: center; margin-top: 15px; font-size: 14px; color: #fff; text-shadow: 1px 1px #3f51b5;">
+  Website designed & developed by 
+  <a href="https://www.digimaxia.com/" target="_blank" style="color: #fff; text-decoration: underline;">
+    <strong>Digimaxia</strong>
+  </a>
+</div>
+
+
+  <!-- Copyright -->
+  <div style="text-align: center; margin-top: 20px; font-size: clamp(12px, 3vw, 14px); text-shadow: 1px 1px #ff4081;">
+    © <script>document.write(new Date().getFullYear());</script> GOOGLAi - Let’s Have Fun Together! 🌟
+  </div>
+</footer>
+
+
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
+
+    <!-- loader -->
+    <!-- <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle
+          class="path-bg"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke="#eeeeee"
+        />
+        <circle
+          class="path"
+          cx="24"
+          cy="24"
+          r="22"
+          fill="none"
+          stroke-width="4"
+          stroke-miterlimit="10"
+          stroke="#F96D00"
+        />
+      </svg>
+    </div> -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Import Firebase JS as a module -->
+    <script type="module" src="firebase//firebase.js"></script>
+    <script type="module" src="./firebase//admissionForm.js"></script>
+
+    <script>
+      setTimeout(function () {
+        document.getElementById("inquiryPopup").style.display = "block";
+        document.body.style.overflow = "hidden"; // Locks scrolling
+      }, 3000); // 4000 milliseconds = 5 seconds
+    </script>
+    <script>
+      function openPopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        // Disable scroll on body
+        document.body.style.overflow = "hidden";
+
+        // Show overlay and popup
+        overlay.classList.remove("hide");
+        overlay.classList.add("show");
+
+        popup.classList.remove("hide");
+        popup.classList.add("show");
+      }
+
+      function closePopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        // Re-enable scroll on body
+        document.body.style.overflow = "auto";
+
+        // Hide popup and overlay
+        popup.classList.remove("show");
+        popup.classList.add("hide");
+
+        overlay.classList.remove("show");
+        overlay.classList.add("hide");
+
+        // Remove classes after animation completes
+        setTimeout(() => {
+          popup.classList.remove("hide");
+          popup.style.display = "none";
+          overlay.classList.remove("hide");
+          overlay.style.display = "none";
+        }, 400);
+      }
+
+      // Optional: Add a button to trigger popup
+      // function createOpenPopupButton() {
+      //   const button = document.createElement("button");
+      //   button.textContent = "Open Inquiry Popup";
+      //   button.onclick = openPopup;
+      //   document.body.appendChild(button);
+      // }
+
+      // Uncomment the line below to create a test button
+      // createOpenPopupButton();
+    </script>
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import {
+        getDatabase,
+        ref,
+        push,
+        set,
+        serverTimestamp,
+        onValue,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+
+      // Firebase config
+      const firebaseConfig = {
+        apiKey: "AIzaSyDATlDp9us459JwKlB3obDFlLXqQ2BrbBo",
+        authDomain: "kiddos-65959.firebaseapp.com",
+        projectId: "kiddos-65959",
+        storageBucket: "kiddos-65959.firebasestorage.app",
+        messagingSenderId: "475249839192",
+        appId: "1:475249839192:web:b62023a856436a1bf50e2d",
+        databaseURL: "https://kiddos-65959-default-rtdb.firebaseio.com/",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const database = getDatabase(app);
+
+      // DOM Elements for Data Display
+      const admissionsTable = document.getElementById("admissionsTable");
+      const admissionsTableBody = document.getElementById(
+        "admissionsTableBody"
+      );
+      const loading = document.getElementById("loading");
+
+      // Popup Functions
+      function openPopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        document.body.style.overflow = "hidden";
+        overlay.classList.remove("hide");
+        overlay.classList.add("show");
+        popup.classList.remove("hide");
+        popup.classList.add("show");
+
+        document.addEventListener("keydown", handleEscapeKey);
+      }
+
+      function closePopup() {
+        const popup = document.getElementById("inquiryPopup");
+        const overlay = document.getElementById("popupOverlay");
+
+        document.body.style.overflow = "auto";
+        popup.classList.remove("show");
+        popup.classList.add("hide");
+        overlay.classList.remove("show");
+        overlay.classList.add("hide");
+
+        setTimeout(() => {
+          popup.classList.remove("hide");
+          popup.style.display = "none";
+          overlay.classList.remove("hide");
+          overlay.style.display = "none";
+        }, 400);
+
+        document.removeEventListener("keydown", handleEscapeKey);
+      }
+
+      function handleEscapeKey(event) {
+        if (event.key === "Escape") {
+          closePopup();
+        }
+      }
+
+      // Form Submission Handler
+      window.submitForm = function (event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        const data = {
+          guardianName: formData.get("guardianName").trim(),
+          phoneNumber: formData.get("phoneNumber").trim(),
+          selectedClass: formData.get("selectedClass"),
+        };
+
+        if (
+          data.phoneNumber.length !== 10 ||
+          !/^\d{10}$/.test(data.phoneNumber)
+        ) {
+          alert("Please enter a valid 10-digit phone number.");
+          return;
+        }
+
+        // Firebase Save
+        const newEntryRef = ref(
+          database,
+          "admissions/" + push(ref(database, "admissions")).key
+        );
+        set(newEntryRef, {
+          ...data,
+          timestamp: serverTimestamp(),
+        })
+          .then(() => {
+            alert("Inquiry submitted successfully!");
+            closePopup();
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Firebase error:", error);
+            alert("Submission failed: " + error.message);
+          });
+      };
+
+      // Function to format timestamp
+      function formatTimestamp(timestamp) {
+        if (!timestamp) return "N/A";
+        try {
+          const date = new Date(timestamp);
+          return date.toLocaleString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+        } catch (error) {
+          console.error("Error formatting timestamp:", error);
+          return "Invalid";
+        }
+      }
+
+      // Function to generate PDF
+      window.generatePDF = function (data, type, id) {
+        try {
+          const { jsPDF } = window.jspdf;
+          const doc = new jsPDF();
+          doc.setFontSize(16);
+          doc.text(`${type} Details`, 20, 20);
+          doc.setFontSize(12);
+          let y = 30;
+          for (const [key, value] of Object.entries(data)) {
+            doc.text(`${key}: ${value || "N/A"}`, 20, y);
+            y += 10;
+          }
+          doc.save(`${type}_${id}.pdf`);
+        } catch (error) {
+          console.error("Error generating PDF:", error);
+          alert("Failed to generate PDF: " + error.message);
+        }
+      };
+
+      // Fetch and display admissions data
+      function loadAdmissionsData() {
+        const admissionsRef = ref(database, "admissions");
+        onValue(
+          admissionsRef,
+          (snapshot) => {
+            try {
+              admissionsTableBody.innerHTML = ""; // Clear table
+              const data = snapshot.val();
+              console.log("Fetched admissions data:", data); // Debug log
+              if (data) {
+                Object.entries(data).forEach(([id, entry]) => {
+                  const row = document.createElement("tr");
+                  row.innerHTML = `
+              <td>${entry.guardianName || "N/A"}</td>
+              <td>${entry.phoneNumber || "N/A"}</td>
+              <td>${entry.selectedClass || "N/A"}</td>
+              <td>${formatTimestamp(entry.timestamp)}</td>
+              <td><button onclick="generatePDF(${JSON.stringify(
+                entry
+              )}, 'Admission', '${id}')">Download</button></td>
+            `;
+                  admissionsTableBody.appendChild(row);
+                });
+                admissionsTable.style.display = "table";
+              } else {
+                admissionsTableBody.innerHTML =
+                  '<tr><td colspan="5">No admissions inquiries found.</td></tr>';
+                admissionsTable.style.display = "table";
+              }
+              if (loading) loading.style.display = "none";
+            } catch (error) {
+              console.error("Error processing admissions data:", error);
+              admissionsTableBody.innerHTML =
+                '<tr><td colspan="5">Error loading data: ' +
+                error.message +
+                "</td></tr>";
+              admissionsTable.style.display = "table";
+              if (loading) loading.style.display = "none";
+            }
+          },
+          (error) => {
+            console.error("Firebase fetch error:", error);
+            admissionsTableBody.innerHTML =
+              '<tr><td colspan="5">Failed to fetch data: ' +
+              error.message +
+              "</td></tr>";
+            admissionsTable.style.display = "table";
+            if (loading) loading.style.display = "none";
+          }
+        );
+      }
+
+      // Initialize data loading
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("Initializing admissions data load..."); // Debug log
+        loadAdmissionsData();
+      });
+    </script>
+
+    <script>
+
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
+      }
+
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

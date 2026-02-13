@@ -1,0 +1,21 @@
+{
+  "name": "kiddos",
+  "version": "1.0.0",
+  "main": "admin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/savez2223/Kiddos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/savez2223/Kiddos/issues"
+  },
+  "homepage": "https://github.com/savez2223/Kiddos#readme",
+  "description": ""
+}

@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOGLAi GIRLS ACADEMY | The Future of Empowerment</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Frameworks -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        heading: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        academy: {
+                            dark: '#0B0F19', // Deeper, richer black/blue
+                            card: '#151B2B',
+                            pink: '#F43F5E', // Vibrant Rose
+                            purple: '#8B5CF6',
+                            gold: '#F59E0B', // Premium Gold
+                            cyan: '#06B6D4',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 3s infinite',
+                        'glow': 'glow 4s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        glow: {
+                            '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+                            '50%': { opacity: '0.7', transform: 'scale(1.1)' },
+                        },
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { 
+            background-color: #1aaade; 
+            color: #f8fafc; 
+            overflow-x: hidden;
+        }
+
+        /* Improved Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #e9ebec; }
+        ::-webkit-scrollbar-thumb { background: #0db8e2; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #F43F5E; }
+
+        /* Hero Image */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom, rgba(11, 15, 25, 0.6), rgba(11, 15, 25, 0.95)),
+                        url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps alt=') center/cover no-repeat fixed;
+            color: white;
+            z-index: 1;
+        }
+        
+        /* Ultra Premium Glass */
+        .glass-panel {
+            background: rgba(7, 231, 189, 0.02);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .glass-nav {
+            background: rgba(11, 15, 25, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Modern Gradient Text */
+        .text-gradient {
+            background: linear-gradient(to right, #F43F5E, #D946EF, #8B5CF6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(to right, #F59E0B, #FBBF24, #FFFBEB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Abstract Glows */
+        .hero-glow {
+            position: absolute;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(244, 63, 94, 0.12) 0%, transparent 60%);
+            filter: blur(120px);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Scroll Reveal */
+        .reveal { 
+            opacity: 0; 
+            transform: translateY(30px); 
+            transition: all 0.8s ease-out; 
+        }
+        .reveal.active { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+
+        /* Button Glow */
+        .btn-glow {
+            position: relative;
+        }
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: -2px; right: -2px; bottom: -2px;
+            background: linear-gradient(45deg, #F43F5E, #8B5CF6, #F43F5E);
+            z-index: -1;
+            border-radius: 9999px;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .btn-glow:hover::after { opacity: 0.6; }
+
+        /* Card Hover Effects */
+        .program-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .program-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .brand-logo img{
+    width:200px;
+    height:auto;
+    display:block;
+}
+
+/* ===== HEADER BASE ===== */
+.academy-header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:999;
+    padding:18px 0;
+    transition:0.4s ease;
+}
+
+/* Scroll effect */
+.academy-header.scrolled{
+    background:rgba(87, 93, 93, 0.95);
+    backdrop-filter:blur(12px);
+    box-shadow:0 5px 25px rgba(0,0,0,0.4);
+    padding:12px 0;
+}
+
+/* Wrapper */
+.nav-wrapper{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+}
+
+/* Logo */
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    font-weight:700;
+    font-size:18px;
+}
+
+.brand img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* Nav Links */
+.nav-links{
+    display:flex;
+    gap:35px;
+    align-items:center;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#cbd5e1;
+    font-weight:600;
+    font-size:14px;
+    position:relative;
+    transition:0.3s ease;
+}
+
+.nav-links a:hover{
+    color:#ffffff;
+}
+
+/* Underline Animation */
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#ff3c78;
+    transition:0.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+/* Enroll Button */
+.enroll-btn{
+    background:#ffffff;
+    color:#0f172a !important;
+    padding:8px 22px;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.enroll-btn:hover{
+    background:#ff3c78;
+    color:#fff !important;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:25px;
+    height:3px;
+    background:white;
+    transition:0.3s;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+    .nav-links{
+        position:absolute;
+        top:100%;
+        right:0;
+        background:#0f172a;
+        flex-direction:column;
+        width:220px;
+        padding:25px;
+        gap:20px;
+        transform:translateX(100%);
+        transition:0.4s ease;
+    }
+
+    .nav-links.active{
+        transform:translateX(0);
+    }
+
+    .menu-toggle{
+        display:flex;
+    }
+}
+
+
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-pink-500 selection:text-white">
+
+    <!-- ===== Premium Unique Header ===== -->
+<header class="academy-header" id="academyHeader">
+
+    <div class="nav-wrapper">
+
+        <!-- Logo -->
+        <div class="brand-logo">
+    <img src="./images/logo_academy.jpg" alt="My Logo">
+</div>
+
+        <!-- Navigation -->
+        <nav class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#programs">Programs</a>
+            <a href="#focus">Focus</a>
+            <a href="#contact" class="enroll-btn">Enroll Now</a>
+        </nav>
+
+        <!-- Mobile Toggle -->
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero overflow-hidden">
+        <div class="hero-glow -top-40 -left-40 opacity-50"></div>
+        <div class="hero-glow bottom-0 right-0 opacity-30 bg-purple-600"></div>
+
+        <div class="container mx-auto px-6 relative z-10 pt-20">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Text Content (7 Cols) -->
+                <div class="lg:col-span-7 reveal active text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md hover:bg-white/10 transition-colors cursor-default">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span class="text-[11px] font-bold uppercase tracking-widest text-slate-300">Admissions Open 2024-25</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold font-heading leading-[1.1] mb-8 tracking-tight">
+                        Empowering <br>
+                        <span class="text-gradient">The Next Gen</span>
+                    </h1>
+                    
+                    <p class="text-slate-300 text-lg md:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed mb-10 font-light border-l-2 border-pink-500/50 pl-6">
+                        A world-class residential campus blending <span class="text-white font-medium">Academic Excellence</span> with <span class="text-white font-medium">Islamic Values</span> to shape future leaders.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+                        <button class="px-8 py-4 bg-gradient-to-r from-pink-600 to-rose-600 text-white font-bold rounded-xl hover:shadow-[0_0_40px_rgba(244,63,94,0.4)] hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                            <span>Apply for Admission</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </button>
+                        <button class="px-8 py-4 glass-panel border border-white/10 text-white font-bold rounded-xl hover:bg-white/5 transition-all flex items-center justify-center gap-2 group">
+                            <div class="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i data-lucide="play" class="w-3 h-3 fill-current"></i>
+                            </div>
+                            <span>Watch Campus Tour</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Visual Content (5 Cols) -->
+                <div class="lg:col-span-5 relative reveal delay-300 hidden lg:block">
+                    <div class="relative z-10 rounded-[2rem] overflow-hidden shadow-2xl border border-white/10 group rotate-1 hover:rotate-0 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1887&auto=format&fit=crop" alt="Student" class="w-full aspect-[3/4] object-cover">
+                        
+                        <div class="absolute bottom-6 left-6 z-20">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                                <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                            </div>
+                            <p class="text-white font-heading font-bold text-xl">World Class Facilities</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats Card -->
+                    <div class="absolute -bottom-10 -left-10 glass-panel p-6 rounded-2xl animate-float border border-white/10 bg-[#0B0F19]/80 z-20 max-w-[200px]">
+                        <p class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">100%</p>
+                        <p class="text-xs text-slate-300 mt-1 leading-relaxed">Secure, Girls-Only Residential Campus Environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce opacity-30">
+            <i data-lucide="chevrons-down" class="w-6 h-6 text-white"></i>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section id="about" class="py-24 relative bg-[#0B0F19]">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl md:text-5xl font-bold font-heading mb-10 text-white">Nurturing <span class="text-gradient">Principled Leaders</span></h2>
+                
+                <div class="glass-panel p-8 md:p-14 rounded-[3rem] relative overflow-hidden group border border-white/5">
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <i data-lucide="quote" class="absolute top-10 left-10 text-white/5 w-20 h-20"></i>
+                    
+                    <p class="text-xl md:text-3xl text-slate-300 leading-relaxed font-light relative z-10 italic">
+                        "We don't just teach subjects; we build <strong class="text-white">character</strong>. We combine strong academics with Islamic studies to equip students with critical thinking, digital literacy, and moral compass."
+                    </p>
+                    
+                    <div class="mt-8 flex justify-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+                        <span class="w-2 h-2 rounded-full bg-slate-700"></span>
+                        <span class="w-2 h-2 rounded-full bg-slate-700"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PERFECTED "WHO CAN JOIN US" SECTION -->
+    <section id="programs" class="py-32 relative bg-[#0F1420] overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 bg-[url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps alt=')] opacity-10"></div>
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-academy-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-20 reveal">
+                <span class="text-academy-cyan font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Your Pathway To Success</span>
+                <h2 class="text-4xl md:text-6xl font-bold font-heading text-white mb-6">Who Can <span class="text-gradient">Join Us?</span></h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-lg">We offer tailored programs designed to meet students at their current level and propel them towards their highest potential.</p>
+            </div>
+
+            <!-- The 3 Cards Layout -->
+            <div class="grid md:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Card 1: Foundation (Junior) -->
+                <div class="program-card group relative bg-academy-card rounded-[2rem] border border-white/5 hover:border-academy-cyan/50 overflow-hidden reveal">
+                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+                    <div class="p-8 h-full flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="sprout" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Junior Wing</h3>
+                        <p class="text-cyan-400 text-xs font-bold uppercase tracking-wider mb-6">Classes 3rd - 5th</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                            Building strong foundations. A mix of high-quality academics and our unique <span class="text-white">AI-integrated learning</span> to spark curiosity early on.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-cyan-500"></i> Concept Building</li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-cyan-500"></i> Logic & Reasoning</li>
+                        </ul>
+                        <a href="#" class="w-full py-3 rounded-xl border border-white/10 text-center text-sm font-bold text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all">View Curriculum</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Competitive (Exam Domination) -->
+                <div class="program-card group relative bg-academy-card rounded-[2rem] border border-white/5 hover:border-academy-purple/50 overflow-hidden reveal delay-100 transform md:-translate-y-4">
+                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
+                    <div class="p-8 h-full flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform duration-300">
+                            <i data-lucide="target" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Exam Domination</h3>
+                        <p class="text-purple-400 text-xs font-bold uppercase tracking-wider mb-6">Middle School</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                            Rigorous preparation for top-tier competitive entrance exams across India. We focus on <span class="text-white">speed, accuracy, and strategy</span>.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-purple-500"></i> Mock Tests Series</li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-purple-500"></i> Personalized Analysis</li>
+                        </ul>
+                        <a href="#" class="w-full py-3 rounded-xl bg-purple-600 text-center text-sm font-bold text-white hover:bg-purple-700 transition-all shadow-lg shadow-purple-900/20">Explore Strategy</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Elite (CLAT/UPSC) -->
+                <div class="program-card group relative bg-gradient-to-b from-[#1a1f35] to-[#0B0F19] rounded-[2rem] border border-amber-500/30 hover:border-amber-500/80 overflow-hidden reveal delay-200">
+                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-amber-400 to-orange-500"></div>
+                    <!-- Badge -->
+                    <div class="absolute top-4 right-4 bg-amber-500/20 border border-amber-500/30 text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                        Premium
+                    </div>
+
+                    <div class="p-8 h-full flex flex-col">
+                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 text-amber-400 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
+                            <i data-lucide="crown" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-2">UPSC & CLAT</h3>
+                        <p class="text-amber-500 text-xs font-bold uppercase tracking-wider mb-6">Foundation Program</p>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
+                            An early-start program for future bureaucrats and legal eagles. Developing <span class="text-white">critical thinking, ethics, and leadership</span>.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Current Affairs</li>
+                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Analytical Skills</li>
+                        </ul>
+                        <a href="#" class="w-full py-3 rounded-xl border border-amber-500/30 text-center text-sm font-bold text-amber-500 hover:bg-amber-500 hover:text-black transition-all">Join Elite Batch</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas of Focus -->
+    <section id="focus" class="py-24 bg-[#0B0F19]">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <span class="text-pink-500 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Holistic Development</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tight mb-4 uppercase text-white">Areas of Focus</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Academic -->
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-pink-500 reveal">
+                    <div class="text-pink-500 mb-6"><i data-lucide="book-open" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Academic Excellence</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Standard curriculum integrating <span class="text-white">STEM, AI, and competitive exam preparation</span>.</p>
+                </div>
+
+                <!-- Islamic -->
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-green-500 reveal delay-100">
+                    <div class="text-green-500 mb-6"><i data-lucide="moon" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Islamic Studies</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Quran recitation, Arabic, and a deep focus on <span class="text-white">Islamic ethics and values</span>.</p>
+                </div>
+
+                <!-- Leadership -->
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-amber-500 reveal delay-200">
+                    <div class="text-amber-500 mb-6"><i data-lucide="sparkles" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Life Skills</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Communication, problem-solving, and <span class="text-white">entrepreneurship skills</span> tailored for girls.</p>
+                </div>
+
+                <!-- Safety -->
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-blue-500 reveal delay-300">
+                    <div class="text-blue-500 mb-6"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Safe Campus</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Fully supervised <span class="text-white">girls-only environment</span> with premium residential options.</p>
+                </div>
+
+                <!-- Exposure -->
+                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-purple-500 reveal delay-400">
+                    <div class="text-purple-500 mb-6"><i data-lucide="globe" class="w-8 h-8"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Global Exposure</h4>
+                    <p class="text-slate-400 text-sm leading-relaxed">Educational trips, practical workshops, and <span class="text-white">mentorship programs</span>.</p>
+                </div>
+
+                <!-- Future Ready -->
+                <div class="group bg-gradient-to-br from-pink-900/20 to-purple-900/20 p-8 rounded-[2rem] border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 reveal delay-500">
+                    <div class="text-white mb-6 p-2 bg-gradient-to-br from-pink-500 to-purple-600 w-fit rounded-lg"><i data-lucide="trending-up" class="w-6 h-6"></i></div>
+                    <h4 class="text-xl font-bold mb-3 text-white">Future Readiness</h4>
+                    <p class="text-pink-100 text-sm leading-relaxed">Blending strong academics and personality development for <span class="text-white">competitive success</span>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#050810] pt-24 pb-10 border-t border-white/5 relative">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-pink-600 to-rose-600 rounded-lg">
+                            <span class="text-white font-bold text-lg">G</span>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-white">GOOGLAi</span>
+                    </div>
+                    <p class="text-slate-500 max-w-sm mb-8 text-sm leading-relaxed">Empowering students to nurture their families, make meaningful contributions to society, and become role models.</p>
+                    
+                    <div class="flex gap-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-pink-600 hover:text-white transition-all text-slate-400"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all text-slate-400"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-white/5 flex items-center justify-center hover:bg-sky-500 hover:text-white transition-all text-slate-400"><i data-lucide="twitter" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Explore</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Academics</li>
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Campus Life</li>
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Admission</li>
+                        <li class="hover:text-pink-500 cursor-pointer transition-colors">Contact Us</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Contact</h4>
+                    <ul class="space-y-3 text-sm text-slate-500">
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-pink-500"></i> info@googlai.com</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-pink-500"></i> +91 98765 43210</li>
+                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-pink-500"></i> Education City, India</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-600 text-xs font-bold uppercase tracking-widest">&copy; 2024 GOOGLAi GIRLS ACADEMY</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('glass-nav', 'py-3');
+                nav.classList.remove('py-4', 'border-transparent');
+            } else {
+                nav.classList.remove('glass-nav', 'py-3');
+                nav.classList.add('py-4', 'border-transparent');
+            }
+        });
+
+
+// Scroll Effect
+window.addEventListener("scroll", function(){
+    const header = document.getElementById("academyHeader");
+    header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// Mobile Toggle
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+
+      
+        // Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        setTimeout(reveal, 100);
+    </script>
+</body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Googlai School</title>
+    <title>GOOGLAi SCHOOL</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="images/Staff image/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Fredericka+the+Great"
       rel="stylesheet"
@@ -65,7 +66,7 @@
     >
       <div
         style="
-          max-width: 1200px;
+          max-width: 1350px;
           margin: 0 auto;
           display: flex;
           align-items: center;
@@ -75,7 +76,7 @@
       >
         <!-- Logo -->
         <a
-          href="index.html"
+          href="googlai-school.html"
           style="
             display: flex;
             align-items: center;
@@ -102,7 +103,7 @@
             background: none;
             border: none;
             color: #fff;
-            font-family: 'Comic Sans MS', cursive;
+            font-family: 'Comic Sans MS', sans-serif;
             font-size: 18px;
             padding: 10px;
             cursor: pointer;
@@ -136,9 +137,9 @@
           >
             <li style="position: relative">
               <a
-                href="index.html"
+                href="googlai-school.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
@@ -150,75 +151,350 @@
                 >Home</a
               >
             </li>
-            <li style="position: relative">
+
+            <!-- About with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="about.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
                 >About</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Mission</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Our Vision</a
+                  >
+                </li>
+                
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Teacher with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="teacher.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Teacher</a
+                >Staff</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Staff</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Experience</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="teacher.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Teacher Training Programme</a
+                  >
+                </li>
+                
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Program with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="courses.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Courses</a
+                >Program</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Inquiry Form</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Admission Guidelines</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="courses.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >FAQ for Kids</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li style="position: relative">
+
+            <!-- Gallery with Dropdown -->
+            <li style="position: relative" class="nav-item">
               <a
                 href="Gallary.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
                   padding: 10px 15px;
                   transition: color 0.3s ease, transform 0.3s ease;
                 "
-                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Gallary</a
+                >Gallery</a
               >
+              <ul
+                style="
+                  display: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  background: #0288d1;
+                  list-style: none;
+                  padding: 10px;
+                  margin: 0;
+                  min-width: 200px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                  border-radius: 5px;
+                  z-index: 1001;
+                "
+                onmouseover="this.style.display='block'"
+                onmouseout="hideDropdown(this)"
+              >
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Photos</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Gallary.html"
+                    style="
+                      font-family: 'Comic Sans MS', sans-serif;
+                      font-size: 16px;
+                      color: #fff;
+                      text-decoration: none;
+                      padding: 8px 15px;
+                      display: block;
+                      transition: color 0.3s ease;
+                    "
+                    onmouseover="this.style.color='#ffeb3b'"
+                    onmouseout="this.style.color='#fff'"
+                    >Videos</a
+                  >
+                </li>
+              </ul>
             </li>
+
             <li style="position: relative">
               <a
                 href="contact.html"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
+                  font-family: 'Comic Sans MS', sans-serif;
                   font-size: 18px;
                   color: #fff;
                   text-decoration: none;
@@ -231,29 +507,27 @@
               >
             </li>
           </ul>
-          <!-- Academy Button -->
-          <a
-            href="./Academy.html"
-            style="
-              display: inline-block;
-              padding: 10px 20px;
-              background: #4caf50;
-              color: #fff;
-              border-radius: 25px;
-              text-decoration: none;
-              font-family: 'Comic Sans MS', cursive;
-              font-size: 16px;
-              margin-left: 20px;
-              animation: pulse 2s infinite;
-              transition: background 0.3s ease;
-            "
-            onmouseover="this.style.background='#ff5722'"
-            onmouseout="this.style.background='#4caf50'"
-            >GOOGLAi Academy</a
-          >
+          
         </div>
       </div>
     </nav>
+    <script>
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
+      }
+
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
+
+    <!-- JavaScript to manage dropdowns -->
 
     <!-- Inline JavaScript for Mobile Toggle -->
     <script>
@@ -316,7 +590,7 @@
           <div style="max-width: 900px">
             <h1
               style="
-                font-family: 'Comic Sans MS', cursive;
+                font-family: 'Comic Sans MS', sans-serif;
                 font-size: 48px;
                 color: #ffeb3b;
                 margin-bottom: 15px;
@@ -334,7 +608,7 @@
             >
               <span style="margin-right: 10px">
                 <a
-                  href="index.html"
+                  href="googlai-school.html"
                   style="
                     color: #ffeb3b;
                     text-decoration: none;
@@ -353,10 +627,11 @@
     </section>
 
     <!-- Contact Info Section -->
+    <!-- googlai school -->
     <section
       style="
-        background: linear-gradient(135deg, #fff3e0, #b2ebf2);
-        padding: 60px 0;
+        background: linear-gradient(135deg, #fff7b3, #ffccff);
+        padding: 40px 0;
       "
     >
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
@@ -369,30 +644,35 @@
             margin-bottom: 40px;
           "
         >
-          <!-- Address -->
+          <!-- Googlai School Address -->
           <div
             style="
-              flex: 1 1 22%;
+              flex: 1 1 30%;
               min-width: 250px;
               background: #fff;
               padding: 20px;
-              border-radius: 15px;
+              border-radius: 20px;
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
               transition: transform 0.3s ease;
               text-align: center;
+              border: 4px solid #ff5722;
+              height: 150px; /* Fixed height for consistency */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
             "
             onmouseover="this.style.transform='translateY(-10px)'"
             onmouseout="this.style.transform='translateY(0)'"
           >
             <h3
               style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 24px;
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 26px;
                 color: #ff5722;
                 margin: 0 0 15px;
               "
             >
-              📍 Address
+              🏫 GOOGLAi SCHOOL
             </h3>
             <p
               style="
@@ -402,33 +682,39 @@
                 margin: 0;
               "
             >
-              HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA - 122107
+              HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA – 122107
             </p>
           </div>
-          <!-- Contact Number -->
+
+          <!-- Googlai School Contact -->
           <div
             style="
-              flex: 1 1 22%;
+              flex: 1 1 30%;
               min-width: 250px;
               background: #fff;
               padding: 20px;
-              border-radius: 15px;
+              border-radius: 20px;
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
               transition: transform 0.3s ease;
               text-align: center;
+              border: 4px double #0288d1;
+              height: 150px; /* Fixed height for consistency */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
             "
             onmouseover="this.style.transform='translateY(-10px)'"
             onmouseout="this.style.transform='translateY(0)'"
           >
             <h3
               style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 24px;
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 26px;
                 color: #0288d1;
                 margin: 0 0 15px;
               "
             >
-              📞 Contact Number
+              📞 Call Us!
             </h3>
             <p
               style="
@@ -439,7 +725,7 @@
               "
             >
               <a
-                href="tel:+918000007583"
+                href="tel:+918930064006"
                 style="
                   color: #0288d1;
                   text-decoration: none;
@@ -447,34 +733,40 @@
                 "
                 onmouseover="this.style.color='#ff5722'"
                 onmouseout="this.style.color='#0288d1'"
-                >+91 8000007583</a
+                >+91 89-3006-4006</a
               >
             </p>
           </div>
-          <!-- Email Address -->
+
+          <!-- Googlai School Email -->
           <div
             style="
-              flex: 1 1 22%;
+              flex: 1 1 30%;
               min-width: 250px;
               background: #fff;
               padding: 20px;
-              border-radius: 15px;
+              border-radius: 20px;
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
               transition: transform 0.3s ease;
               text-align: center;
+              border: 4px dotted #4caf50;
+              height: 150px; /* Fixed height for consistency */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
             "
             onmouseover="this.style.transform='translateY(-10px)'"
             onmouseout="this.style.transform='translateY(0)'"
           >
             <h3
               style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 24px;
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 26px;
                 color: #4caf50;
                 margin: 0 0 15px;
               "
             >
-              ✉️ Email Address
+              ✉️ Send a Note!
             </h3>
             <p
               style="
@@ -485,7 +777,7 @@
               "
             >
               <a
-                href="mailto:googlaischool@email.com"
+                href="mailto:googalischool@gmail.com"
                 style="
                   color: #4caf50;
                   text-decoration: none;
@@ -493,186 +785,39 @@
                 "
                 onmouseover="this.style.color='#ff5722'"
                 onmouseout="this.style.color='#4caf50'"
-                >googlaischool@email.com</a
-              >
-            </p>
-          </div>
-          <!-- Website -->
-          <div
-            style="
-              flex: 1 1 22%;
-              min-width: 250px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 15px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              text-align: center;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', cursive;
-                font-size: 24px;
-                color: #ff4081;
-                margin: 0 0 15px;
-              "
-            >
-              🌐 Website
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #666;
-                margin: 0;
-              "
-            >
-              <a
-                href="https://googlai.in"
-                style="
-                  color: #ff4081;
-                  text-decoration: none;
-                  transition: color 0.3s ease;
-                "
-                onmouseover="this.style.color='#0288d1'"
-                onmouseout="this.style.color='#ff4081'"
-                >googlai.in</a
+                >googalischool@gmail.com</a
               >
             </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Contact Form and Map Section -->
-    <section style="background: #fff; padding: 60px 0">
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: stretch;
-          "
-        >
-          <!-- Form -->
+        <!-- Googlai School Map -->
+        <div style="display: flex; justify-content: center">
           <div
             style="
-              flex: 1 1 50%;
-              min-width: 300px;
-              background: linear-gradient(135deg, #e0f7fa, #fff);
-              padding: 30px;
+              background: #fff;
+              padding: 20px;
               border-radius: 20px;
               box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              border: 4px solid #ff5722;
+              width: 100%;
+              max-width: 800px;
+              text-align: center;
             "
           >
-            <form
-              action="#"
-              style="display: flex; flex-direction: column; gap: 15px"
-            >
-              <input
-                type="text"
-                placeholder="Your Name"
-                style="
-                  width: 100%;
-                  padding: 15px;
-                  border: none;
-                  border-radius: 10px;
-                  background: #fff;
-                  color: #333;
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                  outline: none;
-                "
-              />
-              <input
-                type="text"
-                placeholder="Your Email"
-                style="
-                  width: 100%;
-                  padding: 15px;
-                  border: none;
-                  border-radius: 10px;
-                  background: #fff;
-                  color: #333;
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                  outline: none;
-                "
-              />
-              <input
-                type="text"
-                placeholder="Subject"
-                style="
-                  width: 100%;
-                  padding: 15px;
-                  border: none;
-                  border-radius: 10px;
-                  background: #fff;
-                  color: #333;
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                  outline: none;
-                "
-              />
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="7"
-                placeholder="Message"
-                style="
-                  width: 100%;
-                  padding: 15px;
-                  border: none;
-                  border-radius: 10px;
-                  background: #fff;
-                  color: #333;
-                  font-family: 'Arial', sans-serif;
-                  font-size: 16px;
-                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-                  outline: none;
-                  resize: vertical;
-                "
-              ></textarea>
-              <input
-                type="submit"
-                value="Send Message"
-                style="
-                  width: 100%;
-                  padding: 15px;
-                  border: none;
-                  border-radius: 10px;
-                  background: #ff5722;
-                  color: #fff;
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 18px;
-                  cursor: pointer;
-                  transition: background 0.3s ease, transform 0.3s ease;
-                "
-                onmouseover="this.style.background='#0288d1'; this.style.transform='scale(1.05)'"
-                onmouseout="this.style.background='#ff5722'; this.style.transform='scale(1)'"
-              />
-            </form>
-          </div>
-          <!-- Map -->
-          <div style="flex: 1 1 50%; min-width: 300px">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5770.25294010507!2d77.0026832039565!3d28.09937084600962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d327f5e7cf84d%3A0x103c193f28df5143!2sBus%20Station%20Nuh!5e1!3m2!1sen!2sin!4v1741282989981!5m2!1sen!2sin"
+            <h3
               style="
-                width: 100%;
-                height: 100%;
-                min-height: 400px;
-                border: 5px solid #ff5722;
-                border-radius: 15px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 24px;
+                color: #ff5722;
+                margin: 0 0 15px;
               "
+            >
+              📍 SCHOOL Location
+            </h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2804.798121254505!2d77.0026952754812!3d28.09326947596345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDA1JzM1LjgiTiA3N8KwMDAnMTkuMCJF!5e1!3m2!1sen!2sin!4v1744301630948!5m2!1sen!2sin"
+              style="width: 100%; height: 300px; border: 0; border-radius: 10px"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
@@ -682,467 +827,761 @@
       </div>
     </section>
 
-    <footer
+    <!-- googlai academy  -->
+
+    <section
       style="
-        background: linear-gradient(135deg, #0288d1, #ff5722);
-        padding: 60px 0;
-        color: #fff;
+        background: linear-gradient(135deg, #b3e5fc, #f8bbd0);
+        padding: 40px 0;
       "
     >
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
         <div
-          style="display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 40px"
+          style="
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 40px;
+          "
         >
-          <!-- Contact Info -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Have a Question?
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <span style="font-size: 20px; color: #fff; margin-right: 10px"
-                    >📍</span
-                  >
-                  <span
-                    style="font-family: 'Arial', sans-serif; font-size: 16px"
-                    >HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA -
-                    122107</span
-                  >
-                </li>
-                <li
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 15px;
-                  "
-                >
-                  <a
-                    href="tel:+918000007583"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">📞</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >+91 8000007583</span
-                    >
-                  </a>
-                </li>
-                <li style="display: flex; align-items: center">
-                  <a
-                    href="mailto:googlaischool@email.com"
-                    style="
-                      text-decoration: none;
-                      color: #fff;
-                      display: flex;
-                      align-items: center;
-                    "
-                  >
-                    <span style="font-size: 20px; margin-right: 10px">✉️</span>
-                    <span
-                      style="
-                        font-family: 'Arial', sans-serif;
-                        font-size: 16px;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ffeb3b'"
-                      onmouseout="this.style.color='#fff'"
-                      >googlaischool@email.com</span
-                    >
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <!-- Googlai Academy Address -->
+          <div
+            style="
+              flex: 1 1 40%;
+              min-width: 250px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 25px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              text-align: center;
+              border: 5px solid #ff4081;
+              height: 190px; /* Fixed height for consistency */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h3
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 26px;
+                color: #ff4081;
+                margin: 0 0 15px;
+              "
+            >
+              🎓 GOOGLAi ACADEMY
+            </h3>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                color: #666;
+                margin: 0;
+              "
+            >
+              PLOT NO. 05, BLOCK D, LIBRARY LANE, NEAR MANUU UNIVERSITY - SUB
+              REGIONAL CENTRE, DISTRICT NUH, HARYANA – 122107
+            </p>
           </div>
 
-          <!-- Recent Blog -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
+          <!-- Googlai Academy Contact -->
+          <div
+            style="
+              flex: 1 1 25%;
+              min-width: 250px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 25px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              text-align: center;
+              border: 5px dashed #0288d1;
+              height: 150px; /* Fixed height for consistency */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h3
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 26px;
+                color: #0288d1;
+                margin: 0 0 15px;
+              "
+            >
+              📞 Ring Ring!
+            </h3>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                color: #666;
+                margin: 0;
+              "
+            >
+              <a
+                href="tel:+917056655514"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
+                  color: #0288d1;
+                  text-decoration: none;
+                  transition: color 0.3s ease;
                 "
+                onmouseover="this.style.color='#ff4081'"
+                onmouseout="this.style.color='#0288d1'"
+                >+91 70566-55514</a
               >
-                Recent Blog
-              </h2>
-              <div style="display: flex; margin-bottom: 20px">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_1.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#ff5722'"
-                      onmouseout="this.style.color='#fff'"
-                      >How AI Helps Kids Learn Faster</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 20, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 5</span>
-                  </div>
-                </div>
-              </div>
-              <div style="display: flex">
-                <a
-                  href="#"
-                  style="
-                    width: 60px;
-                    height: 60px;
-                    background: url('images/image_2.jpg') no-repeat center
-                      center;
-                    background-size: cover;
-                    border-radius: 5px;
-                    margin-right: 15px;
-                  "
-                ></a>
-                <div>
-                  <h3
-                    style="
-                      font-family: 'Comic Sans MS', cursive;
-                      font-size: 16px;
-                      margin: 0 0 5px;
-                    "
-                  >
-                    <a
-                      href="#"
-                      style="
-                        color: #fff;
-                        text-decoration: none;
-                        transition: color 0.3s ease;
-                      "
-                      onmouseover="this.style.color='#0288d1'"
-                      onmouseout="this.style.color='#fff'"
-                      >Fun Coding Activities for Kids</a
-                    >
-                  </h3>
-                  <div
-                    style="
-                      font-family: 'Arial', sans-serif;
-                      font-size: 14px;
-                      color: #e0f7fa;
-                    "
-                  >
-                    <span style="margin-right: 10px">📅 Mar 18, 2025</span>
-                    <span style="margin-right: 10px">👤 Admin</span>
-                    <span>💬 4</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </p>
           </div>
-          <!-- Links -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
+
+          <!-- Googlai Academy Email -->
+          <div
+            style="
+              flex: 1 1 25%;
+              min-width: 250px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 25px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s ease;
+              text-align: center;
+              border: 5px double #4caf50;
+              height: 150px; /* Fixed height for consistency */
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+            "
+            onmouseover="this.style.transform='translateY(-10px)'"
+            onmouseout="this.style.transform='translateY(0)'"
+          >
+            <h3
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 26px;
+                color: #4caf50;
+                margin: 0 0 15px;
+              "
+            >
+              ✉️ Email Fun!
+            </h3>
+            <p
+              style="
+                font-family: 'Arial', sans-serif;
+                font-size: 16px;
+                color: #666;
+                margin: 0;
+              "
+            >
+              <a
+                href="mailto:googaliacademy@gmail.com"
                 style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
+                  color: #4caf50;
+                  text-decoration: none;
+                  transition: color 0.3s ease;
                 "
+                onmouseover="this.style.color='#ff4081'"
+                onmouseout="this.style.color='#4caf50'"
+                >googaliacademy@gmail.com</a
               >
-                Quick Links
-              </h2>
-              <ul style="list-style: none; padding: 0">
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/index.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Home</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/about.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>About</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/career.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Career</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/courses.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Courses</a
-                  >
-                </li>
-                <li style="margin-bottom: 10px">
-                  <a
-                    href="/contact.html"
-                    style="
-                      color: #fff;
-                      text-decoration: none;
-                      font-family: 'Arial', sans-serif;
-                      font-size: 16px;
-                      transition: color 0.3s ease;
-                    "
-                    onmouseover="this.style.color='#ff5722'"
-                    onmouseout="this.style.color='#fff'"
-                    ><span style="margin-right: 10px">➔</span>Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!-- Subscribe & Social -->
-          <div style="flex: 1 1 22%; min-width: 250px">
-            <div style="margin-bottom: 40px">
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 20px;
-                  animation: bounce 2s infinite;
-                "
-              >
-                Subscribe Us!
-              </h2>
-              <form
-                action="#"
-                style="display: flex; flex-direction: column; gap: 10px"
-              >
-                <input
-                  type="text"
-                  placeholder="Enter email address"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #fff;
-                    color: #333;
-                    font-family: 'Arial', sans-serif;
-                    font-size: 16px;
-                    text-align: center;
-                    outline: none;
-                  "
-                />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  style="
-                    width: 100%;
-                    padding: 12px;
-                    border: none;
-                    border-radius: 20px;
-                    background: #ff5722;
-                    color: #fff;
-                    font-family: 'Comic Sans MS', cursive;
-                    font-size: 16px;
-                    cursor: pointer;
-                    transition: background 0.3s ease;
-                  "
-                  onmouseover="this.style.background='#0288d1'"
-                  onmouseout="this.style.background='#ff5722'"
-                />
-              </form>
-            </div>
-            <div>
-              <h2
-                style="
-                  font-family: 'Comic Sans MS', cursive;
-                  font-size: 24px;
-                  color: #ffeb3b;
-                  margin-bottom: 15px;
-                "
-              >
-                Connect With Us
-              </h2>
-              <ul
-                style="list-style: none; padding: 0; display: flex; gap: 15px"
-              >
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >𝕏</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >f</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    style="
-                      display: block;
-                      width: 40px;
-                      height: 40px;
-                      background: #fff;
-                      border-radius: 50%;
-                      color: #0288d1;
-                      font-size: 20px;
-                      text-align: center;
-                      line-height: 40px;
-                      transition: transform 0.3s ease, background 0.3s ease;
-                    "
-                    onmouseover="this.style.transform='scale(1.2)'; this.style.background='#ff5722'; this.style.color='#fff'"
-                    onmouseout="this.style.transform='scale(1)'; this.style.background='#fff'; this.style.color='#0288d1'"
-                    >📷</a
-                  >
-                </li>
-              </ul>
-            </div>
+            </p>
           </div>
         </div>
-        <div style="text-align: center">
+
+        <!-- Googlai Academy Map -->
+        <div style="display: flex; justify-content: center">
+          <div
+            style="
+              background: #fff;
+              padding: 20px;
+              border-radius: 20px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              border: 5px solid #ff4081;
+              width: 100%;
+              max-width: 800px;
+              text-align: center;
+            "
+          >
+            <h3
+              style="
+                font-family: 'Comic Sans MS', sans-serif;
+                font-size: 24px;
+                color: #ff4081;
+                margin: 0 0 15px;
+              "
+            >
+              📍 ACADEMY Location
+            </h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2804.3013854296064!2d76.98986567548191!3d28.11227297595276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDA2JzQ0LjIiTiA3NsKwNTknMzIuOCJF!5e1!3m2!1sen!2sin!4v1744301679334!5m2!1sen!2sin"
+              style="width: 100%; height: 300px; border: 0; border-radius: 10px"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form and Map Section -->
+    <section
+      style="
+        background: linear-gradient(135deg, #fff9c4, #b2ebf2);
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Fun Background Decorations -->
+      <div
+        style="
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          font-size: 50px;
+          color: #ff4081;
+          animation: bounce 2s infinite;
+        "
+      >
+        ⭐
+      </div>
+      <div
+        style="
+          position: absolute;
+          bottom: 20px;
+          right: 20px;
+          font-size: 50px;
+          color: #ffca28;
+          animation: spin 4s linear infinite;
+        "
+      >
+        🎉
+      </div>
+
+      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
+        <!-- Heading and Tagline -->
+        <div style="text-align: center; margin-bottom: 40px">
+          <h2
+            style="
+              font-family: 'Arial', sans-serif;
+              font-size: 40px;
+              color: #ff5722;
+              margin: 0 0 10px;
+              text-shadow: 2px 2px 4px #ffca28;
+              animation: bounce 2s infinite;
+            "
+          >
+            Contact Us!
+          </h2>
           <p
             style="
               font-family: 'Arial', sans-serif;
-              font-size: 14px;
-              color: #e0f7fa;
+              font-size: 20px;
+              color: #0288d1;
               margin: 0;
             "
           >
-            Copyright ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            All rights reserved | Developed by
+            Send Us a Super Fun Message!
+          </p>
+        </div>
+
+        <!-- Form -->
+        <div style="display: flex; justify-content: center">
+          <div
+            style="
+              width: 100%;
+              max-width: 600px;
+              background: #fff;
+              padding: 30px;
+              border-radius: 25px;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+              border: 4px dashed #ff4081;
+              position: relative;
+            "
+          >
+            <form
+              action="#"
+              style="display: flex; flex-direction: column; gap: 20px"
+            >
+              <input
+                type="text"
+                placeholder="Your Cool Name"
+                style="
+                  width: 100%;
+                  padding: 15px;
+                  border: 3px solid #ffca28;
+                  border-radius: 15px;
+                  background: #fff9c4;
+                  color: #d81b60;
+                  font-family: 'Arial', sans-serif;
+                  font-size: 18px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  outline: none;
+                  transition: transform 0.3s ease;
+                "
+                onfocus="this.style.transform='scale(1.02)'"
+                onblur="this.style.transform='scale(1)'"
+              />
+              <input
+                type="text"
+                placeholder="Your Magic Email"
+                style="
+                  width: 100%;
+                  padding: 15px;
+                  border: 3px solid #0288d1;
+                  border-radius: 15px;
+                  background: #e0f7fa;
+                  color: #d81b60;
+                  font-family: 'Arial', sans-serif;
+                  font-size: 18px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  outline: none;
+                  transition: transform 0.3s ease;
+                "
+                onfocus="this.style.transform='scale(1.02)'"
+                onblur="this.style.transform='scale(1)'"
+              />
+              <input
+                type="text"
+                placeholder="What’s It About?"
+                style="
+                  width: 100%;
+                  padding: 15px;
+                  border: 3px solid #4caf50;
+                  border-radius: 15px;
+                  background: #f1f8e9;
+                  color: #d81b60;
+                  font-family: 'Arial', sans-serif;
+                  font-size: 18px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  outline: none;
+                  transition: transform 0.3s ease;
+                "
+                onfocus="this.style.transform='scale(1.02)'"
+                onblur="this.style.transform='scale(1)'"
+              />
+              <textarea
+                name=""
+                id=""
+                cols="30"
+                rows="7"
+                placeholder="Your Awesome Message"
+                style="
+                  width: 100%;
+                  padding: 15px;
+                  border: 3px solid #ff5722;
+                  border-radius: 15px;
+                  background: #ffebee;
+                  color: #d81b60;
+                  font-family: 'Arial', sans-serif;
+                  font-size: 18px;
+                  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                  outline: none;
+                  resize: vertical;
+                  transition: transform 0.3s ease;
+                "
+                onfocus="this.style.transform='scale(1.02)'"
+                onblur="this.style.transform='scale(1)'"
+              ></textarea>
+              <input
+                type="submit"
+                value="Send It!"
+                style="
+                  width: 100%;
+                  padding: 15px;
+                  border: none;
+                  border-radius: 15px;
+                  background: #ff5722;
+                  color: #fff;
+                  font-family: 'Arial', sans-serif;
+                  font-size: 20px;
+                  cursor: pointer;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                  transition: background 0.3s ease, transform 0.3s ease;
+                "
+                onmouseover="this.style.background='#ff4081'; this.style.transform='scale(1.05)'"
+                onmouseout="this.style.background='#ff5722'; this.style.transform='scale(1)'"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      style="
+        background: linear-gradient(120deg, #ffeb3b, #ff4081, #3f51b5);
+        padding: 40px 15px;
+        color: #fff;
+        font-family: 'Comic Sans MS', sans-serif;
+        position: relative;
+        overflow: hidden;
+      "
+    >
+      <!-- Fun Background Shapes -->
+      <div
+        style="
+          position: absolute;
+          top: 10px;
+          left: 20px;
+          width: 80px;
+          height: 80px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 20px;
+          transform: rotate(45deg);
+        "
+      ></div>
+      <div
+        style="
+          position: absolute;
+          bottom: 20px;
+          right: 30px;
+          width: 100px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+        "
+      ></div>
+
+      <div
+        style="
+          max-width: 1000px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+          text-align: center;
+          position: relative;
+          z-index: 1;
+        "
+      >
+        <!-- Contact Info -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Let’s Talk!
+          </h2>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+              gap: 8px;
+              line-height: 1.4;
+            "
+          >
+            <span style="font-size: 24px">🏡</span> Hidayat Colony, Ward No. 04,
+            City Nuh, Haryana – 122107
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0 0 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">📞</span>
             <a
-              href="https://zuridox.com"
-              target="_blank"
+              href="tel:+918930064006"
               style="
-                color: #ffeb3b;
+                color: #fff;
                 text-decoration: none;
                 transition: color 0.3s ease;
               "
-              onmouseover="this.style.color='#fff'"
-              onmouseout="this.style.color='#ffeb3b'"
-              >Zuridox</a
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >+91 89-3006-4006</a
+            >
+          </p>
+          <p
+            style="
+              font-size: 14px;
+              margin: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 8px;
+            "
+          >
+            <span style="font-size: 24px">✉️</span>
+            <a
+              href="mailto:googalischool@gmail.com"
+              style="
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+              "
+              onmouseover="this.style.color='#ffeb3b'"
+              onmouseout="this.style.color='#fff'"
+              >googalischool@gmail.com</a
             >
           </p>
         </div>
+
+        <!-- Fun Links -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #3f51b5;
+              animation: bounce 2s infinite;
+            "
+          >
+            Play & Learn!
+          </h2>
+          <ul style="list-style: none; padding: 0">
+            <li style="margin-bottom: 10px">
+              <a
+                href="/googlai-school.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Home</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/about.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> About</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/career.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Career</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/courses.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Program</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/contact.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Contact</a
+              >
+            </li>
+            <li style="margin-bottom: 10px">
+              <a
+                href="/admin.html"
+                style="
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 16px;
+                  transition: color 0.3s ease, transform 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                "
+                onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'"
+                onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
+                ><span style="font-size: 20px">🌟</span> Admin</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social Fun -->
+        <div>
+          <h2
+            style="
+              font-size: clamp(22px, 5vw, 28px);
+              color: #fff;
+              margin-bottom: 15px;
+              text-shadow: 2px 2px #ff4081;
+              animation: bounce 2s infinite;
+            "
+          >
+            Be Our Buddy!
+          </h2>
+          <ul
+            style="
+              list-style: none;
+              padding: 0;
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+              margin-bottom: 20px;
+            "
+          >
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >𝕏</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >f</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 50px;
+                  height: 50px;
+                  background: #ffeb3b;
+                  border-radius: 50%;
+                  color: #ff4081;
+                  font-size: 24px;
+                  text-decoration: none;
+                  transition: all 0.3s ease;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+                onmouseover="this.style.background='#fff'; this.style.transform='scale(1.2)'"
+                onmouseout="this.style.background='#ffeb3b'; this.style.transform='scale(1)'"
+                >📷</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div
+        style="
+          text-align: center;
+          margin-top: 30px;
+          font-size: clamp(12px, 3vw, 14px);
+          text-shadow: 1px 1px #ff4081;
+        "
+      >
+        ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        GOOGLAi - Let’s Have Fun Together! 🌟
       </div>
     </footer>
+
+    <style>
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+    </style>
 
     <!-- loader -->
     <div id="ftco-loader" class="show fullscreen">
@@ -1184,5 +1623,20 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      function showDropdown(dropdown) {
+        // Hide all dropdowns first
+        const allDropdowns = document.querySelectorAll("nav ul ul");
+        allDropdowns.forEach((dd) => {
+          dd.style.display = "none";
+        });
+        // Show the current dropdown
+        dropdown.style.display = "block";
+      }
+
+      function hideDropdown(dropdown) {
+        dropdown.style.display = "none";
+      }
+    </script>
   </body>
 </html>
