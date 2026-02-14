@@ -49,6 +49,140 @@
           transform: translateY(-5px);
         }
       }
+
+
+
+    /* ===== GOOGLAi Smart Contact Styling ===== */
+
+#glx-smart-contact {
+  padding: 120px 20px;
+  background: linear-gradient(to bottom, #c3cc44, #f3f4f6);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.glx-smart-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.glx-smart-heading {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.glx-smart-heading h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.glx-smart-heading p {
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+.glx-smart-line {
+  width: 80px;
+  height: 4px;
+  margin: 20px auto 0;
+  background: linear-gradient(to right, #2563eb, #ec4899);
+  border-radius: 10px;
+}
+
+.glx-smart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.glx-smart-card {
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 40px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+  transition: 0.4s ease;
+}
+
+.glx-smart-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.08);
+}
+
+.glx-smart-card h3 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.glx-campus-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.glx-address {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.glx-contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.glx-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.glx-action-btn.call {
+  background: #e0f2fe;
+  color: #0284c7;
+}
+
+.glx-action-btn.mail {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.glx-action-btn:hover {
+  transform: scale(1.03);
+}
+
+.glx-action-btn span {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.glx-whatsapp-box {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #dcfce7;
+  color: #15803d;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Accent Colors */
+.boys h3 { color: #2563eb; }
+.girls h3 { color: #ec4899; }
+.school h3 { color: #16a34a; }
+
+
     </style>
   </head>
 
@@ -626,408 +760,117 @@
       </div>
     </section>
 
-    <!-- Contact Info Section -->
-    <!-- googlai school -->
-    <section
-      style="
-        background: linear-gradient(135deg, #fff7b3, #ffccff);
-        padding: 40px 0;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 40px;
-          "
-        >
-          <!-- Googlai School Address -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 250px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              text-align: center;
-              border: 4px solid #ff5722;
-              height: 150px; /* Fixed height for consistency */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 26px;
-                color: #ff5722;
-                margin: 0 0 15px;
-              "
-            >
-              🏫 GOOGLAi SCHOOL
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #666;
-                margin: 0;
-              "
-            >
-              HIDAYAT COLONY, WARD NO. 04, CITY NUH, HARYANA – 122107
-            </p>
-          </div>
+   <!-- ===== GOOGLAi Smart Contact Section ===== -->
+<section id="glx-smart-contact">
 
-          <!-- Googlai School Contact -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 250px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              text-align: center;
-              border: 4px double #0288d1;
-              height: 150px; /* Fixed height for consistency */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 26px;
-                color: #0288d1;
-                margin: 0 0 15px;
-              "
-            >
-              📞 Call Us!
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #666;
-                margin: 0;
-              "
-            >
-              <a
-                href="tel:+918930064006"
-                style="
-                  color: #0288d1;
-                  text-decoration: none;
-                  transition: color 0.3s ease;
-                "
-                onmouseover="this.style.color='#ff5722'"
-                onmouseout="this.style.color='#0288d1'"
-                >+91 89-3006-4006</a
-              >
-            </p>
-          </div>
+  <div class="glx-smart-container">
 
-          <!-- Googlai School Email -->
-          <div
-            style="
-              flex: 1 1 30%;
-              min-width: 250px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              text-align: center;
-              border: 4px dotted #4caf50;
-              height: 150px; /* Fixed height for consistency */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 26px;
-                color: #4caf50;
-                margin: 0 0 15px;
-              "
-            >
-              ✉️ Send a Note!
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #666;
-                margin: 0;
-              "
-            >
-              <a
-                href="mailto:googalischool@gmail.com"
-                style="
-                  color: #4caf50;
-                  text-decoration: none;
-                  transition: color 0.3s ease;
-                "
-                onmouseover="this.style.color='#ff5722'"
-                onmouseout="this.style.color='#4caf50'"
-                >googalischool@gmail.com</a
-              >
-            </p>
-          </div>
-        </div>
+    <div class="glx-smart-heading">
+      <h2>Contact Our Campuses</h2>
+      <p>We’re here to assist you with admissions & inquiries</p>
+      <div class="glx-smart-line"></div>
+    </div>
 
-        <!-- Googlai School Map -->
-        <div style="display: flex; justify-content: center">
-          <div
-            style="
-              background: #fff;
-              padding: 20px;
-              border-radius: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              border: 4px solid #ff5722;
-              width: 100%;
-              max-width: 800px;
-              text-align: center;
-            "
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 24px;
-                color: #ff5722;
-                margin: 0 0 15px;
-              "
-            >
-              📍 SCHOOL Location
-            </h3>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2804.798121254505!2d77.0026952754812!3d28.09326947596345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDA1JzM1LjgiTiA3N8KwMDAnMTkuMCJF!5e1!3m2!1sen!2sin!4v1744301630948!5m2!1sen!2sin"
-              style="width: 100%; height: 300px; border: 0; border-radius: 10px"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+    <div class="glx-smart-grid">
+
+      <!-- Boys Campus -->
+      <div class="glx-smart-card boys">
+        <h3>GOOGLAi ACADEMY</h3>
+        <span class="glx-campus-label">BOYS’ – RESIDENTIAL CAMPUS</span>
+
+        <p class="glx-address">
+          Plot No. 05, Block D, Near MANUU,<br>
+          CTE Campus, Nuh, Haryana – 122107
+        </p>
+
+        <div class="glx-contact-actions">
+          <a href="tel:+918930064006" class="glx-action-btn call">
+            📞
+            <div>
+              <strong>Call Us</strong>
+              <span>89-3006-4006</span>
+            </div>
+          </a>
+
+          <a href="mailto:mail@googlai.in" class="glx-action-btn mail">
+            ✉️
+            <div>
+              <strong>Email Us</strong>
+              <span>mail@googlai.in</span>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- googlai academy  -->
+      <!-- Girls Campus -->
+      <div class="glx-smart-card girls">
+        <h3>GOOGLAi ACADEMY</h3>
+        <span class="glx-campus-label">GIRLS’ – RESIDENTIAL CAMPUS</span>
 
-    <section
-      style="
-        background: linear-gradient(135deg, #b3e5fc, #f8bbd0);
-        padding: 40px 0;
-      "
-    >
-      <div style="max-width: 1200px; margin: 0 auto; padding: 0 15px">
-        <div
-          style="
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-bottom: 40px;
-          "
-        >
-          <!-- Googlai Academy Address -->
-          <div
-            style="
-              flex: 1 1 40%;
-              min-width: 250px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 25px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              text-align: center;
-              border: 5px solid #ff4081;
-              height: 190px; /* Fixed height for consistency */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 26px;
-                color: #ff4081;
-                margin: 0 0 15px;
-              "
-            >
-              🎓 GOOGLAi ACADEMY
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #666;
-                margin: 0;
-              "
-            >
-              PLOT NO. 05, BLOCK D, LIBRARY LANE, NEAR MANUU UNIVERSITY - SUB
-              REGIONAL CENTRE, DISTRICT NUH, HARYANA – 122107
-            </p>
-          </div>
+        <p class="glx-address">
+          Plot No. 05, Block D, Near MANUU,<br>
+          CTE Campus, Nuh, Haryana – 122107
+        </p>
 
-          <!-- Googlai Academy Contact -->
-          <div
-            style="
-              flex: 1 1 25%;
-              min-width: 250px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 25px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              text-align: center;
-              border: 5px dashed #0288d1;
-              height: 150px; /* Fixed height for consistency */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 26px;
-                color: #0288d1;
-                margin: 0 0 15px;
-              "
-            >
-              📞 Ring Ring!
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #666;
-                margin: 0;
-              "
-            >
-              <a
-                href="tel:+917056655514"
-                style="
-                  color: #0288d1;
-                  text-decoration: none;
-                  transition: color 0.3s ease;
-                "
-                onmouseover="this.style.color='#ff4081'"
-                onmouseout="this.style.color='#0288d1'"
-                >+91 70566-55514</a
-              >
-            </p>
-          </div>
+        <div class="glx-contact-actions">
+          <a href="tel:+918930064006" class="glx-action-btn call">
+            📞
+            <div>
+              <strong>Call Us</strong>
+              <span>89-3006-4006</span>
+            </div>
+          </a>
 
-          <!-- Googlai Academy Email -->
-          <div
-            style="
-              flex: 1 1 25%;
-              min-width: 250px;
-              background: #fff;
-              padding: 20px;
-              border-radius: 25px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              transition: transform 0.3s ease;
-              text-align: center;
-              border: 5px double #4caf50;
-              height: 150px; /* Fixed height for consistency */
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-            "
-            onmouseover="this.style.transform='translateY(-10px)'"
-            onmouseout="this.style.transform='translateY(0)'"
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 26px;
-                color: #4caf50;
-                margin: 0 0 15px;
-              "
-            >
-              ✉️ Email Fun!
-            </h3>
-            <p
-              style="
-                font-family: 'Arial', sans-serif;
-                font-size: 16px;
-                color: #666;
-                margin: 0;
-              "
-            >
-              <a
-                href="mailto:googaliacademy@gmail.com"
-                style="
-                  color: #4caf50;
-                  text-decoration: none;
-                  transition: color 0.3s ease;
-                "
-                onmouseover="this.style.color='#ff4081'"
-                onmouseout="this.style.color='#4caf50'"
-                >googaliacademy@gmail.com</a
-              >
-            </p>
-          </div>
-        </div>
-
-        <!-- Googlai Academy Map -->
-        <div style="display: flex; justify-content: center">
-          <div
-            style="
-              background: #fff;
-              padding: 20px;
-              border-radius: 20px;
-              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-              border: 5px solid #ff4081;
-              width: 100%;
-              max-width: 800px;
-              text-align: center;
-            "
-          >
-            <h3
-              style="
-                font-family: 'Comic Sans MS', sans-serif;
-                font-size: 24px;
-                color: #ff4081;
-                margin: 0 0 15px;
-              "
-            >
-              📍 ACADEMY Location
-            </h3>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2804.3013854296064!2d76.98986567548191!3d28.11227297595276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDA2JzQ0LjIiTiA3NsKwNTknMzIuOCJF!5e1!3m2!1sen!2sin!4v1744301679334!5m2!1sen!2sin"
-              style="width: 100%; height: 300px; border: 0; border-radius: 10px"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          <a href="mailto:mail@googlai.in" class="glx-action-btn mail">
+            ✉️
+            <div>
+              <strong>Email Us</strong>
+              <span>mail@googlai.in</span>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
+
+      <!-- School -->
+      <div class="glx-smart-card school">
+        <h3>GOOGLAi SCHOOL</h3>
+        <span class="glx-campus-label">MAIN SCHOOL CAMPUS</span>
+
+        <p class="glx-address">
+          Hidayat Colony, Ward No. 04,<br>
+          City Nuh, Haryana – 122107
+        </p>
+
+        <div class="glx-contact-actions">
+          <a href="tel:+918930064006" class="glx-action-btn call">
+            📞
+            <div>
+              <strong>Call Us</strong>
+              <span>89-3006-4006</span>
+            </div>
+          </a>
+
+          <a href="mailto:mail@googlai.in" class="glx-action-btn mail">
+            ✉️
+            <div>
+              <strong>Email Us</strong>
+              <span>mail@googlai.in</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="glx-whatsapp-box">
+          💬 WhatsApp Only: <strong>+91 8000007-583</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
 
     <!-- Contact Form and Map Section -->
     <section
