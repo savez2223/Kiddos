@@ -354,7 +354,7 @@
                 "
                 onmouseover="this.style.color='#ffeb3b'; this.style.transform='scale(1.1)'; showDropdown(this.nextElementSibling)"
                 onmouseout="this.style.color='#fff'; this.style.transform='scale(1)'"
-                >Program</a
+                >Asmission & policy</a
               >
               <ul
                 style="
@@ -920,7 +920,7 @@
       </div>
     </section>
 
-    <section class="admission-section">
+   <section class="admission-section">
 
 <style>
 .admission-section{
@@ -940,7 +940,7 @@
     100%{background-position:0% 50%}
 }
 
-/* Floating Glow Circles */
+/* Glow Circles */
 .admission-section::before,
 .admission-section::after{
     content:"";
@@ -972,7 +972,6 @@
     text-align:center;
     margin-bottom:60px;
     color:#fff;
-    animation: fadeIn 1.2s ease forwards;
 }
 .admission-header h2{
     font-size:40px;
@@ -984,15 +983,15 @@
     opacity:0.9;
 }
 
-/* Cards */
+/* Grid */
 .admission-grid{
-    display:flex;
-    flex-wrap:wrap;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap:30px;
 }
 
+/* Card */
 .admission-card{
-    flex:1 1 45%;
     background:rgba(255,255,255,0.12);
     backdrop-filter: blur(15px);
     border-radius:20px;
@@ -1000,37 +999,36 @@
     color:#fff;
     box-shadow:0 15px 35px rgba(0,0,0,0.2);
     transition:0.4s ease;
-    animation: fadeUp 1s ease forwards;
 }
-
 .admission-card:hover{
     transform:translateY(-10px);
     box-shadow:0 25px 45px rgba(0,0,0,0.35);
 }
-
 .admission-card h3{
     margin-bottom:20px;
     font-size:22px;
 }
 
-.admission-card h4{
-    margin-top:20px;
-    font-size:16px;
+/* Step Box Style */
+.process-step{
+    background:rgba(255,255,255,0.15);
+    padding:14px 16px;
+    border-radius:12px;
+    margin-bottom:14px;
+    transition:0.3s ease;
+    border-left:4px solid #ffeb3b;
+}
+.process-step:hover{
+    background:rgba(255,255,255,0.25);
+    transform:translateX(6px);
+}
+.process-step strong{
     color:#ffeb3b;
+    display:block;
+    margin-bottom:4px;
 }
 
-.admission-card p,
-.admission-card li{
-    font-size:14px;
-    line-height:1.7;
-    opacity:0.95;
-}
-
-.admission-card ol{
-    padding-left:18px;
-}
-
-/* Glowing Button */
+/* Button */
 .glow-btn{
     display:inline-block;
     margin-top:10px;
@@ -1047,79 +1045,113 @@
     background:#fff;
     box-shadow:0 0 25px #fff;
 }
-
-/* Animations */
-@keyframes fadeIn{
-    from{opacity:0; transform:translateY(-20px);}
-    to{opacity:1; transform:translateY(0);}
-}
-@keyframes fadeUp{
-    from{opacity:0; transform:translateY(40px);}
-    to{opacity:1; transform:translateY(0);}
-}
-
-/* Responsive */
-@media(max-width:768px){
-    .admission-card{
-        flex:1 1 100%;
-    }
-}
 </style>
 
 <div class="admission-container">
 
 <div class="admission-header">
     <h2>Admission Guidelines</h2>
-    <p>Everything You Need to Know to Join the GOOGLAi Family.<br>
-    <b>Discover. Explore. Become a Part of the Future.</b></p>
+    <p>
+        Everything You Need to Know to Join the GOOGLAi Family.<br>
+        <b>Discover. Explore. Become a Part of the Future.</b>
+    </p>
 </div>
 
 <div class="admission-grid">
 
-<!-- LEFT CARD -->
+<!-- CARD 1 -->
 <div class="admission-card">
     <h3>Steps to Apply</h3>
-    <ol>
-        <li>Fill the admission inquiry form on the website.</li>
-        <li>
-            Register Your Student’s Google Form:<br>
-            <a href="https://forms.gle/Pjqs2UuaTeYrPpQa7" target="_blank" class="glow-btn">
-            Apply Now
-            </a>
-        </li>
-        <li>Selected students complete formalities immediately after results (same day process).</li>
-        <li>Submit required documents for verified enrollment.</li>
-        <li>Visit, explore and enroll only when fully satisfied.</li>
-    </ol>
 
-    <h4>Our Commitment</h4>
-    <p>
+    <div class="process-step">
+        1. Fill the admission inquiry form on the website.
+    </div>
+
+    <div class="process-step">
+        2. Register Your Student’s Google Form:<br><br>
+        <a href="https://forms.gle/Pjqs2UuaTeYrPpQa7" target="_blank" class="glow-btn">
+        Apply Now
+        </a>
+    </div>
+
+    <div class="process-step">
+        3. Selected students complete formalities immediately after results (same day process).
+    </div>
+
+    <div class="process-step">
+        4. Submit required documents for verified enrollment.
+    </div>
+
+    <div class="process-step">
+        5. Visit, explore and enroll only when fully satisfied.
+    </div>
+
+    <p style="margin-top:20px;font-weight:600;color:#ffeb3b;">
         We ensure transparency, excellence, innovation and student empowerment
         through structured and trusted policies.
     </p>
 </div>
 
-<!-- RIGHT CARD -->
+<!-- CARD 2 -->
 <div class="admission-card">
     <h3>Policies & Requirements</h3>
 
-    <h4>Parental Cooperation</h4>
-    <p>Parents must inform about any medical or emotional conditions at admission.</p>
+    <div class="process-step">
+        <strong>Parental Cooperation</strong>
+        Parents must inform about any medical or emotional conditions at admission.
+    </div>
 
-    <h4>Leave Policy</h4>
-    <p>Leaves must be approved in advance. Campus exit without permission is prohibited.</p>
+    <div class="process-step">
+        <strong>Leave Policy</strong>
+        Leaves must be approved in advance. Campus exit without permission is prohibited.
+    </div>
 
-    <h4>Fees Policy</h4>
-    <p>Fees must be paid on time. Late payments may attract surcharge. Fees are non-refundable after confirmation.</p>
+    <div class="process-step">
+        <strong>Fees Policy</strong>
+        Fees must be paid on time. Late payments may attract surcharge. Fees are non-refundable after confirmation.
+    </div>
 
-    <h4>Participation</h4>
-    <p>Students are expected to participate in all events, programs and trips.</p>
+    <div class="process-step">
+        <strong>Participation</strong>
+        Students are expected to participate in all events, programs and trips.
+    </div>
 
-    <h4>Media Consent</h4>
-    <p>Parents must provide consent for sharing student photos/videos on official platforms.</p>
+    <div class="process-step">
+        <strong>Media Consent</strong>
+        Parents must provide consent for sharing student photos/videos on official platforms.
+    </div>
 
     <p style="margin-top:20px;font-weight:600;color:#ffeb3b;">
         Transparency is our promise — Enroll only when completely satisfied.
+    </p>
+</div>
+
+<!-- CARD 3 -->
+<div class="admission-card">
+    <h3>Step-by-Step Admission Process</h3>
+
+    <div class="process-step">
+        <strong>1. Registration</strong>
+        Online / Offline Registration
+    </div>
+
+    <div class="process-step">
+        <strong>2. Entrance Test</strong>
+        Written test based on classes
+    </div>
+
+    <div class="process-step">
+        <strong>3. Interview / Counseling</strong>
+        Student & Parent interaction
+    </div>
+
+    <div class="process-step">
+        <strong>4. Final Selection</strong>
+        Merit + Need-Based Selection
+    </div>
+
+    <p style="margin-top:20px;font-weight:600;color:#ffeb3b;">
+        A Transparent & Structured Selection Journey
     </p>
 </div>
 
