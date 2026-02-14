@@ -97,11 +97,25 @@
         }
         
         .hero-bg {
-            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+    background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), 
+    url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps');
+    
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Mobile View Fix */
+@media (max-width: 768px) {
+    .hero-bg {
+        background-size: contain;   /* image poori dikhegi */
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-attachment: scroll;  /* mobile me fixed sahi kaam nahi karta */
+    }
+}
+
+        
         .brand-logo img{
     width:200px;
     height:auto;
@@ -151,7 +165,7 @@
                     BOYS' RESIDENTIAL CAMPUS
                 </div>
                 <h1 class="text-5xl md:text-7xl font-bold font-heading leading-tight text-white">
-                    Blending Strong Academics with <span class="text-gradient">AI-Driven</span> Learning
+                    Blending Strong Academics with <span class="text-gradient">Ai-Powered</span> Learning
                 </h1>
                 <p class="text-gray-400 text-lg md:text-xl max-w-xl">
                     We build logical thinking, digital skills, and confidence, empowering students to excel in competitive exams and future careers through interactive teaching.
@@ -200,20 +214,7 @@
             <p class="text-xl text-gray-300 leading-relaxed">
                 GOOGLAi ACADEMY is a tech-powered learning hub. Through interactive teaching, mentoring, and practical exam strategies, we build logical thinking, digital skills, and confidence. We prepare students not just for exams, but for life.
             </p>
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-6 rounded-2xl bg-gray-800/50 hover:bg-gray-800 transition-all border border-gray-700">
-                    <i data-lucide="brain-circuit" class="w-10 h-10 text-purple-400 mx-auto mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Logical Thinking</h3>
-                </div>
-                <div class="p-6 rounded-2xl bg-gray-800/50 hover:bg-gray-800 transition-all border border-gray-700">
-                    <i data-lucide="monitor-smartphone" class="w-10 h-10 text-blue-400 mx-auto mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Digital Skills</h3>
-                </div>
-                <div class="p-6 rounded-2xl bg-gray-800/50 hover:bg-gray-800 transition-all border border-gray-700">
-                    <i data-lucide="trophy" class="w-10 h-10 text-yellow-400 mx-auto mb-4"></i>
-                    <h3 class="text-xl font-bold mb-2">Confidence</h3>
-                </div>
-            </div>
+            
         </div>
     </section>
 
@@ -495,11 +496,11 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="phone" class="text-brand-blue w-5 h-5 shrink-0"></i>
-                            <span>+91 98765 43210</span>
+                            <span>+918930064006</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i data-lucide="mail" class="text-brand-blue w-5 h-5 shrink-0"></i>
-                            <span>admissions@googlai.edu</span>
+                            <span>mail@googlai.in</span>
                         </li>
                     </ul>
                 </div>
