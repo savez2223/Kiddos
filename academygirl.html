@@ -69,17 +69,34 @@
         ::-webkit-scrollbar-thumb:hover { background: #F43F5E; }
 
         /* Hero Image */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(to bottom, rgba(11, 15, 25, 0.6), rgba(11, 15, 25, 0.95)),
-                        url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps alt=') center/cover no-repeat fixed;
-            color: white;
-            z-index: 1;
-        }
+       .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(to bottom, rgba(11, 15, 25, 0.6), rgba(11, 15, 25, 0.95)),
+                url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: white;
+    z-index: 1;
+}
+
+/* 🔥 Mobile Fix */
+@media (max-width: 768px) {
+    .hero {
+        background-size: contain;        /* poori image show hogi */
+        background-position: center top; 
+        background-attachment: scroll;   /* mobile me fixed problem deta hai */
+    }
+}
+
         
         /* Ultra Premium Glass */
         .glass-panel {
@@ -408,168 +425,229 @@
         </div>
     </section>
 
-    <!-- Mission -->
-    <section id="about" class="py-24 relative bg-[#0B0F19]">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center reveal">
-                <h2 class="text-3xl md:text-5xl font-bold font-heading mb-10 text-white">Nurturing <span class="text-gradient">Principled Leaders</span></h2>
+    <!-- Mission - Light Mode -->
+<section id="about" class="py-24 relative bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center reveal">
+
+            <h2 class="text-3xl md:text-5xl font-bold font-heading mb-10 text-gray-900">
+                Nurturing <span class="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">Principled Leaders</span>
+            </h2>
+            
+            <div class="bg-gray-50 p-8 md:p-14 rounded-[3rem] relative overflow-hidden group border border-gray-200 shadow-lg hover:shadow-2xl transition-all duration-500">
                 
-                <div class="glass-panel p-8 md:p-14 rounded-[3rem] relative overflow-hidden group border border-white/5">
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <i data-lucide="quote" class="absolute top-10 left-10 text-white/5 w-20 h-20"></i>
-                    
-                    <p class="text-xl md:text-3xl text-slate-300 leading-relaxed font-light relative z-10 italic">
-                        "We don't just teach subjects; we build <strong class="text-white">character</strong>. We combine strong academics with Islamic studies to equip students with critical thinking, digital literacy, and moral compass."
+                <div class="absolute inset-0 bg-gradient-to-br from-pink-100/40 to-purple-100/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <i data-lucide="quote" class="absolute top-10 left-10 text-gray-200 w-20 h-20"></i>
+                
+                <p class="text-xl md:text-3xl text-gray-600 leading-relaxed font-light relative z-10 italic">
+                    "We don't just teach subjects; we build 
+                    <strong class="text-gray-900">character</strong>. 
+                    We combine strong academics with Islamic studies to equip students with critical thinking, digital literacy, and moral compass."
+                </p>
+                
+                <div class="mt-8 flex justify-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-pink-500"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                    <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+   <!-- WHO CAN JOIN US - WHITE VERSION -->
+<section id="programs" class="py-32 relative bg-white overflow-hidden">
+
+    <!-- Soft Blue Glow -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 blur-[120px] rounded-full pointer-events-none opacity-40"></div>
+
+    <div class="container mx-auto px-6 relative z-10">
+
+        <!-- Heading -->
+        <div class="text-center mb-20 reveal">
+            <span class="text-blue-600 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">
+                Your Pathway To Success
+            </span>
+
+            <h2 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+                Who Can <span class="text-blue-600">Join Us?</span>
+            </h2>
+
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg">
+                We offer tailored programs designed to meet students at their current level and propel them towards their highest potential.
+            </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid md:grid-cols-3 gap-8 items-stretch">
+
+            <!-- Card 1 -->
+            <div class="group relative bg-white rounded-[2rem] border border-gray-200 hover:border-blue-500 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 reveal">
+
+                <div class="absolute top-0 w-full h-1 bg-blue-500"></div>
+
+                <div class="p-8 h-full flex flex-col">
+
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 text-blue-500 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="sprout" class="w-7 h-7"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Junior Wing</h3>
+
+                    <p class="text-blue-500 text-xs font-bold uppercase tracking-wider mb-6">
+                        Classes 3rd - 5th
                     </p>
-                    
-                    <div class="mt-8 flex justify-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-pink-500"></span>
-                        <span class="w-2 h-2 rounded-full bg-slate-700"></span>
-                        <span class="w-2 h-2 rounded-full bg-slate-700"></span>
-                    </div>
+
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                        Building strong foundations. A mix of high-quality academics and our unique 
+                        <span class="text-gray-900">AI-integrated learning</span> to spark curiosity early on.
+                    </p>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-600 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Concept Building
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Logic & Reasoning
+                        </li>
+                    </ul>
+
+                    <a href="#" class="w-full py-3 rounded-xl border border-gray-300 text-center text-sm font-bold text-gray-900 hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all">
+                        View Curriculum
+                    </a>
                 </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="group relative bg-white rounded-[2rem] border border-gray-200 hover:border-blue-500 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 reveal delay-100 md:-translate-y-4">
+
+                <div class="absolute top-0 w-full h-1 bg-blue-500"></div>
+
+                <div class="p-8 h-full flex flex-col">
+
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 text-blue-500 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="target" class="w-7 h-7"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Exam Domination</h3>
+
+                    <p class="text-blue-500 text-xs font-bold uppercase tracking-wider mb-6">
+                        Middle School
+                    </p>
+
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                        Rigorous preparation for top-tier competitive entrance exams across India. 
+                        We focus on <span class="text-gray-900">speed, accuracy, and strategy</span>.
+                    </p>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-600 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Mock Tests Series
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Personalized Analysis
+                        </li>
+                    </ul>
+
+                    <a href="#" class="w-full py-3 rounded-xl bg-blue-500 text-center text-sm font-bold text-white hover:bg-blue-600 transition-all shadow-lg shadow-blue-200">
+                        Explore Strategy
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group relative bg-white rounded-[2rem] border border-gray-200 hover:border-blue-500 overflow-hidden shadow-md hover:shadow-2xl transition-all duration-500 reveal delay-200">
+
+                <div class="absolute top-0 w-full h-1 bg-blue-500"></div>
+
+                <div class="absolute top-4 right-4 bg-blue-100 text-blue-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
+                    Premium
+                </div>
+
+                <div class="p-8 h-full flex flex-col">
+
+                    <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 text-blue-500 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="crown" class="w-7 h-7"></i>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">UPSC & CLAT</h3>
+
+                    <p class="text-blue-500 text-xs font-bold uppercase tracking-wider mb-6">
+                        Foundation Program
+                    </p>
+
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
+                        An early-start program for future bureaucrats and legal eagles. 
+                        Developing <span class="text-gray-900">critical thinking, ethics, and leadership</span>.
+                    </p>
+
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-gray-600 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Current Affairs
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-600 text-sm">
+                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Analytical Skills
+                        </li>
+                    </ul>
+
+                    <a href="#" class="w-full py-3 rounded-xl border border-blue-500 text-center text-sm font-bold text-blue-500 hover:bg-blue-500 hover:text-white transition-all">
+                        Join Elite Batch
+                    </a>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- PERFECTED "WHO CAN JOIN US" SECTION -->
-    <section id="programs" class="py-32 relative bg-[#0F1420] overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 bg-[url('https://res.cloudinary.com/dadqwaqis/image/upload/fl_preserve_transparency/v1743567274/IMG-20250328-WA0038_nyp2x0.jpg?_s=public-apps alt=')] opacity-10"></div>
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-academy-purple/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center mb-20 reveal">
-                <span class="text-academy-cyan font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Your Pathway To Success</span>
-                <h2 class="text-4xl md:text-6xl font-bold font-heading text-white mb-6">Who Can <span class="text-gradient">Join Us?</span></h2>
-                <p class="text-slate-400 max-w-2xl mx-auto text-lg">We offer tailored programs designed to meet students at their current level and propel them towards their highest potential.</p>
-            </div>
+    <!-- Premium Islamic + Modern Education Section -->
+<section id="education" class="relative py-28 bg-white overflow-hidden">
 
-            <!-- The 3 Cards Layout -->
-            <div class="grid md:grid-cols-3 gap-8 items-stretch">
-                
-                <!-- Card 1: Foundation (Junior) -->
-                <div class="program-card group relative bg-academy-card rounded-[2rem] border border-white/5 hover:border-academy-cyan/50 overflow-hidden reveal">
-                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
-                    <div class="p-8 h-full flex flex-col">
-                        <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 flex items-center justify-center mb-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="sprout" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Junior Wing</h3>
-                        <p class="text-cyan-400 text-xs font-bold uppercase tracking-wider mb-6">Classes 3rd - 5th</p>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                            Building strong foundations. A mix of high-quality academics and our unique <span class="text-white">AI-integrated learning</span> to spark curiosity early on.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-cyan-500"></i> Concept Building</li>
-                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-cyan-500"></i> Logic & Reasoning</li>
-                        </ul>
-                        <a href="#" class="w-full py-3 rounded-xl border border-white/10 text-center text-sm font-bold text-white hover:bg-cyan-500 hover:border-cyan-500 transition-all">View Curriculum</a>
-                    </div>
-                </div>
+    <!-- Animated Gradient Blobs -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-pink-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+    <div class="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
 
-                <!-- Card 2: Competitive (Exam Domination) -->
-                <div class="program-card group relative bg-academy-card rounded-[2rem] border border-white/5 hover:border-academy-purple/50 overflow-hidden reveal delay-100 transform md:-translate-y-4">
-                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-500"></div>
-                    <div class="p-8 h-full flex flex-col">
-                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center mb-6 text-purple-400 group-hover:scale-110 transition-transform duration-300">
-                            <i data-lucide="target" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Exam Domination</h3>
-                        <p class="text-purple-400 text-xs font-bold uppercase tracking-wider mb-6">Middle School</p>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                            Rigorous preparation for top-tier competitive entrance exams across India. We focus on <span class="text-white">speed, accuracy, and strategy</span>.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-purple-500"></i> Mock Tests Series</li>
-                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-purple-500"></i> Personalized Analysis</li>
-                        </ul>
-                        <a href="#" class="w-full py-3 rounded-xl bg-purple-600 text-center text-sm font-bold text-white hover:bg-purple-700 transition-all shadow-lg shadow-purple-900/20">Explore Strategy</a>
-                    </div>
-                </div>
+    <div class="container mx-auto px-6 relative z-10">
 
-                <!-- Card 3: Elite (CLAT/UPSC) -->
-                <div class="program-card group relative bg-gradient-to-b from-[#1a1f35] to-[#0B0F19] rounded-[2rem] border border-amber-500/30 hover:border-amber-500/80 overflow-hidden reveal delay-200">
-                    <div class="absolute top-0 w-full h-1 bg-gradient-to-r from-amber-400 to-orange-500"></div>
-                    <!-- Badge -->
-                    <div class="absolute top-4 right-4 bg-amber-500/20 border border-amber-500/30 text-amber-400 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
-                        Premium
-                    </div>
+        <!-- Heading -->
+        <div class="text-center mb-16">
+            <span class="text-pink-600 font-semibold tracking-[0.25em] uppercase text-xs block mb-4">
+                Balanced Education Model
+            </span>
 
-                    <div class="p-8 h-full flex flex-col">
-                        <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center mb-6 text-amber-400 group-hover:scale-110 transition-transform duration-300 shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-                            <i data-lucide="crown" class="w-7 h-7"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2">UPSC & CLAT</h3>
-                        <p class="text-amber-500 text-xs font-bold uppercase tracking-wider mb-6">Foundation Program</p>
-                        <p class="text-slate-400 text-sm leading-relaxed mb-8 flex-grow">
-                            An early-start program for future bureaucrats and legal eagles. Developing <span class="text-white">critical thinking, ethics, and leadership</span>.
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Current Affairs</li>
-                            <li class="flex items-center gap-3 text-slate-300 text-sm"><i data-lucide="check" class="w-4 h-4 text-amber-500"></i> Analytical Skills</li>
-                        </ul>
-                        <a href="#" class="w-full py-3 rounded-xl border border-amber-500/30 text-center text-sm font-bold text-amber-500 hover:bg-amber-500 hover:text-black transition-all">Join Elite Batch</a>
-                    </div>
-                </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Islamic Education <span class="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">with Modern Education</span>
+            </h2>
 
-            </div>
+            <div class="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full"></div>
         </div>
-    </section>
 
-    <!-- Areas of Focus -->
-    <section id="focus" class="py-24 bg-[#0B0F19]">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 reveal">
-                <span class="text-pink-500 font-bold tracking-[0.2em] uppercase text-xs mb-3 block">Holistic Development</span>
-                <h2 class="text-4xl md:text-5xl font-bold font-heading tracking-tight mb-4 uppercase text-white">Areas of Focus</h2>
-            </div>
+        <!-- Content -->
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-600 text-lg md:text-xl leading-relaxed">
+                At <span class="font-bold text-gray-900">GOOGLAi ACADEMY</span>, we combine 
+                <span class="text-pink-600 font-semibold">Islamic values</span>, faith-based principles, 
+                and contemporary learning to cultivate girls who are confident, principled, 
+                and capable of leading in every aspect of life.
+            </p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Academic -->
-                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-pink-500 reveal">
-                    <div class="text-pink-500 mb-6"><i data-lucide="book-open" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Academic Excellence</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Standard curriculum integrating <span class="text-white">STEM, AI, and competitive exam preparation</span>.</p>
-                </div>
-
-                <!-- Islamic -->
-                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-green-500 reveal delay-100">
-                    <div class="text-green-500 mb-6"><i data-lucide="moon" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Islamic Studies</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Quran recitation, Arabic, and a deep focus on <span class="text-white">Islamic ethics and values</span>.</p>
-                </div>
-
-                <!-- Leadership -->
-                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-amber-500 reveal delay-200">
-                    <div class="text-amber-500 mb-6"><i data-lucide="sparkles" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Life Skills</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Communication, problem-solving, and <span class="text-white">entrepreneurship skills</span> tailored for girls.</p>
-                </div>
-
-                <!-- Safety -->
-                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-blue-500 reveal delay-300">
-                    <div class="text-blue-500 mb-6"><i data-lucide="shield-check" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Safe Campus</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Fully supervised <span class="text-white">girls-only environment</span> with premium residential options.</p>
-                </div>
-
-                <!-- Exposure -->
-                <div class="group glass-panel p-8 rounded-[2rem] hover:bg-white/[0.03] transition-all duration-300 border-l-4 border-l-transparent hover:border-l-purple-500 reveal delay-400">
-                    <div class="text-purple-500 mb-6"><i data-lucide="globe" class="w-8 h-8"></i></div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Global Exposure</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed">Educational trips, practical workshops, and <span class="text-white">mentorship programs</span>.</p>
-                </div>
-
-                <!-- Future Ready -->
-                <div class="group bg-gradient-to-br from-pink-900/20 to-purple-900/20 p-8 rounded-[2rem] border border-pink-500/20 hover:border-pink-500/50 transition-all duration-300 reveal delay-500">
-                    <div class="text-white mb-6 p-2 bg-gradient-to-br from-pink-500 to-purple-600 w-fit rounded-lg"><i data-lucide="trending-up" class="w-6 h-6"></i></div>
-                    <h4 class="text-xl font-bold mb-3 text-white">Future Readiness</h4>
-                    <p class="text-pink-100 text-sm leading-relaxed">Blending strong academics and personality development for <span class="text-white">competitive success</span>.</p>
-                </div>
-            </div>
+            <p class="text-gray-600 text-lg md:text-xl leading-relaxed mt-6">
+                Our unique program emphasizes 
+                <span class="text-purple-600 font-semibold">moral development</span>, 
+                intellectual growth, and practical skills — empowering students to nurture their families, 
+                make meaningful contributions to society, and become inspiring role models.
+            </p>
         </div>
-    </section>
+
+       
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="bg-[#050810] pt-24 pb-10 border-t border-white/5 relative">
