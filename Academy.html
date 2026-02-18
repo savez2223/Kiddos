@@ -126,6 +126,12 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: 0.4s;
 }
+.brand-logo:hover {
+           
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+            
+        }
 
     </style>
 </head>
@@ -158,7 +164,10 @@
         
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-gray-800 absolute w-full left-0 top-full p-6 flex flex-col gap-4">
-            <a href="#home" class="text-lg hover:text-brand-blue">Home</a>
+           <a href="index.html" class="hover:text-brand-blue transition-colors">Home</a>
+                  <a href="about.html" class="hover:text-brand-blue transition-colors">About</a>
+                <a href="teacher.html" class="hover:text-brand-blue transition-colors">Staff</a>
+                <a href="courses.html" class="hover:text-brand-blue transition-colors">Academics & Policy</a>
             <a href="#i30" class="text-lg hover:text-brand-blue">i30 Program</a>
             <a href="#academics" class="text-lg hover:text-brand-blue">Academics</a>
             <a href="#contact" class="text-lg text-brand-blue font-bold">Join Now</a>
@@ -175,9 +184,9 @@
                 
  
                 
-                <h1 class="text-4xl md:text-4xl font-bold font-heading leading-tight text-white">
+                <h2 class="text-4xl md:text-4xl font-bold font-heading leading-tight text-white">
                     Blending Strong Academics with <span class="text-gradient">Ai-Powered</span> Learning
-                </h1>
+                </h2>
                 
                 <p class="text-gray-400 text-lg md:text-xl max-w-xl">
                     We build logical thinking, digital skills, and confidence, empowering students to excel in competitive exams and future careers through interactive teaching.
