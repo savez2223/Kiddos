@@ -18,6 +18,14 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Custom Config -->
+     <style>
+        /* Ctrl + J se saare data ko justify karne ke liye */
+   .justify-all * {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;   /* better word breaking, lines zyada smooth */
+}
+     </style>
     <script>
         tailwind.config = {
             theme: {
@@ -47,6 +55,24 @@
                 }
             }
         }
+
+        
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 'j') {
+        e.preventDefault();   // Ye zaroori hai, warna Chrome Downloads khol dega!
+
+        // Toggle on/off (ek baar dabao = justify, dobara dabao = normal)
+        const activated = document.body.classList.toggle('justify-all');
+
+        if (activated) {
+            console.log("✅ Sab data justified ho gaya! (Ctrl+J)");
+            // agar chahe to alert('Sab formatting ho gaya!');  // uncomment kar sakte ho
+        } else {
+            console.log("Formatting normal ho gaya.");
+        }
+    }
+});
+
     </script>
 
     <style>
@@ -151,6 +177,7 @@
                   <a href="about.html" class="hover:text-brand-blue transition-colors">About</a>
                 <a href="teacher.html" class="hover:text-brand-blue transition-colors">Staff</a>
                 <a href="courses.html" class="hover:text-brand-blue transition-colors">Academics & Policy</a>
+                <a href="Gallary.html" class="hover:text-brand-blue transition-colors">Gallery</a>
                 <a href="#i30" class="hover:text-brand-blue transition-colors">i30 Program</a>
                 <a href="#academics" class="hover:text-brand-blue transition-colors">Academics</a>
                 <a href="contact.html" class="px-6 py-2 bg-brand-blue hover:bg-blue-600 text-white rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-600/30">Contact Now</a>
@@ -168,6 +195,7 @@
                   <a href="about.html" class="hover:text-brand-blue transition-colors">About</a>
                 <a href="teacher.html" class="hover:text-brand-blue transition-colors">Staff</a>
                 <a href="courses.html" class="hover:text-brand-blue transition-colors">Academics & Policy</a>
+                <a href="Gallary.html" class="hover:text-brand-blue transition-colors">Gallery</a>
                 <a href="#i30" class="hover:text-brand-blue transition-colors">i30 Program</a>
                 <a href="#academics" class="hover:text-brand-blue transition-colors">Academics</a>
                 <a href="contact.html" class="px-6 py-2 bg-brand-blue hover:bg-blue-600 text-white rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-600/30">Contact Now</a>
@@ -192,7 +220,7 @@
                     We build logical thinking, digital skills, and confidence, empowering students to excel in competitive exams and future careers through interactive teaching.
                 </p>
 
-               <div class="inline-block px-4 py-1 bg-brand-blue/20 border border-brand-blue/40 rounded-full text-brand-blue text-sm font-semibold tracking-wide mb-2 animate-pulse-slow">
+               <div class="inline-block px-4 py-1 bg-brand-Red/20 border border-brand-blue/40 rounded-full text-brand-red text-sm font-semibold tracking-wide mb-2 animate-pulse-slow">
                     BOYS' RESIDENTIAL CAMPUS
                 </div>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
@@ -283,7 +311,7 @@
                         <span class="text-yellow-400 font-bold uppercase tracking-widest text-sm">Elite Batch</span>
                     </div>
                     <h2 class="text-4xl md:text-6xl font-bold font-heading text-white mb-6">
-                        intelligent - <span class="text-yellow-400 text-7xl italic">30</span>
+                        intelligent - 30
                     </h2>
                     <p class="text-lg text-gray-300 mb-8 leading-relaxed border-l-4 border-yellow-400 pl-6">
                         The i30 Programme selects and mentors <strong>30 talented students</strong> (district-wise and programme-wise). We provide focused academic support and future career guidance to help them achieve competitive success with next-level preparation.
@@ -645,7 +673,7 @@
     <script>
       document.write(new Date().getFullYear());
     </script>
-    GOOGLAi - Let’s Have Fun Together! 🌟
+    GOOGLAi - Let’s Have Fun Together!🌟
   </div>
                 <div class="flex gap-6">
                     <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>

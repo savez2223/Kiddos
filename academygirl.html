@@ -15,6 +15,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <style>
+         /* Ctrl + J se saare data ko justify karne ke liye */
+   .justify-all * {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;   /* better word breaking, lines zyada smooth */
+}
+    </style>
+
     <script>
         tailwind.config = {
             theme: {
@@ -55,6 +64,24 @@
                 }
             }
         }
+
+        
+document.addEventListener('keydown', function(e) {
+    if (e.ctrlKey && e.key.toLowerCase() === 'j') {
+        e.preventDefault();   // Ye zaroori hai, warna Chrome Downloads khol dega!
+
+        // Toggle on/off (ek baar dabao = justify, dobara dabao = normal)
+        const activated = document.body.classList.toggle('justify-all');
+
+        if (activated) {
+            console.log("✅ Sab data justified ho gaya! (Ctrl+J)");
+            // agar chahe to alert('Sab formatting ho gaya!');  // uncomment kar sakte ho
+        } else {
+            console.log("Formatting normal ho gaya.");
+        }
+    }
+});
+
     </script>
 
     <style>
@@ -349,7 +376,7 @@
             <a href="about.html">About</a>
              <a href="teacher.html">Staff</a>
             <a href="#about">Admission & Policy</a>
-            
+            <a href="Gallary.html">Gallery</a>
             <a href="#programs">Programs</a>    
             <a href="contact.html" class="enroll-btn">Contact Now</a>
         </nav>
@@ -375,10 +402,10 @@
                 
                 <!-- Text Content (7 Cols) -->
                 <div class="lg:col-span-7 reveal active text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full mb-8 backdrop-blur-md hover:bg-white/10 transition-colors cursor-default">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-red/5 border border-red/10 rounded-full mb-8 backdrop-blur-md hover:bg-red/10 transition-colors cursor-default">
                         <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
                         </span>
                         <span class="text-[11px] font-bold uppercase tracking-widest text-slate-300">Admissions Open 2026-27</span>
                     </div>
@@ -492,7 +519,7 @@
                     <h3 class="text-2xl font-bold text-gray-900 mb-2">Junior Wing</h3>
 
                     <p class="text-blue-500 text-xs font-bold uppercase tracking-wider mb-6">
-                        Classes 3ʳᵈ - 5ᵗʰ
+                        Classes 3ʳᵈ To 5ᵗʰ
                     </p>
 
                     <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-grow">
@@ -580,7 +607,7 @@
 
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center gap-3 text-gray-600 text-sm">
-                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Current Affairs
+                            <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> NCERT Syllabus
                         </li>
                         <li class="flex items-center gap-3 text-gray-600 text-sm">
                             <i data-lucide="check" class="w-4 h-4 text-blue-500"></i> Analytical Skills
@@ -677,8 +704,8 @@
                     <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-6">Contact</h4>
                     <ul class="space-y-3 text-sm text-slate-500">
                         <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-pink-500"></i> mail@googlai.in</li>
-                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-pink-500"></i> +91 8930064006</li>
-                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-pink-500"></i> Education City, India</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-pink-500"></i> +91 89-3006-4006</li>
+                        <li class="flex items-center gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-pink-500"></i> Education City, Nuh, Mewat , India</li>
                     </ul>
                 </div>
             </div>
